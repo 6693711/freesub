@@ -55,7 +55,7 @@ RISK_KEYWORDS = [
 ]
 
 COUNTRY_NAMES = {
-    "TW": "台湾", "HK": "香港", "MO": "澳门", "CN": "大陆",
+    "TW": "中国台湾", "HK": "中国香港", "MO": "中国澳门", "CN": "中国大陆",
     "JP": "日本", "KR": "韩国", "SG": "新加坡", "US": "美国",
     "CA": "加拿大", "GB": "英国", "DE": "德国", "FR": "法国",
     "NL": "荷兰", "RU": "俄罗斯", "AU": "澳大利亚", "IN": "印度",
@@ -64,7 +64,6 @@ COUNTRY_NAMES = {
     "ZA": "南非", "OTHER": "其他"
 }
 
-# 正宗家庭宽带白名单
 RESIDENTIAL_ISPS = {
     "TW": [
         "chunghwa", "hinet", "data communication business group", "taiwan mobile",
@@ -94,7 +93,6 @@ RESIDENTIAL_ISPS = {
     "MY": ["telekom malaysia", "unifi", "maxis", "time dotcom"]
 }
 
-# 机房黑名单
 DATACENTER_BLACKLIST = [
     "colocrossing", "psychz", "quadranet", "zenlayer", "sharktech", "dedipath",
     "buyvm", "frantech", "racknerd", "hivelocity", "datapacket", "m247",
@@ -108,7 +106,7 @@ DATACENTER_BLACKLIST = [
 ]
 
 
-# ==================== 2. 全协议解析与严苛清洗 ====================
+# ==================== 2. 解析与清洗 ====================
 def decode_base64(s: str) -> str:
     s = s.strip().replace("\r", "").replace("\n", "")
     padding = len(s) % 4
@@ -211,7 +209,6 @@ def parse_vmess(uri: str, used_names: set):
         server = str(data.get("add", "")).strip()
         port = int(data.get("port", 0))
         uuid = str(data.get("id", "")).strip()
-
         if not server or port <= 0 or not uuid:
             return None
 
@@ -222,19 +219,12 @@ def parse_vmess(uri: str, used_names: set):
         path = str(data.get("path", "")).strip()
 
         clash_proxy = {
-            "name": name,
-            "type": "vmess",
-            "server": server,
-            "port": port,
-            "uuid": uuid,
-            "alterId": int(data.get("aid", 0)),
-            "cipher": "auto",
-            "udp": True,
+            "name": name, "type": "vmess", "server": server, "port": port,
+            "uuid": uuid, "alterId": int(data.get("aid", 0)), "cipher": "auto", "udp": True,
         }
         if tls:
             clash_proxy["tls"] = True
-            if host:
-                clash_proxy["servername"] = host
+            if host: clash_proxy["servername"] = host
         if net == "ws":
             clash_proxy["network"] = "ws"
             clash_proxy["ws-opts"] = {"path": path or "/", "headers": {"Host": host} if host else {}}
@@ -243,16 +233,10 @@ def parse_vmess(uri: str, used_names: set):
             clash_proxy["grpc-opts"] = {"grpc-service-name": path}
 
         singbox_out = {
-            "type": "vmess",
-            "tag": name,
-            "server": server,
-            "server_port": port,
-            "uuid": uuid,
-            "security": "auto",
-            "alter_id": int(data.get("aid", 0)),
+            "type": "vmess", "tag": name, "server": server, "server_port": port,
+            "uuid": uuid, "security": "auto", "alter_id": int(data.get("aid", 0)),
         }
-        if tls:
-            singbox_out["tls"] = {"enabled": True, "server_name": host or server}
+        if tls: singbox_out["tls"] = {"enabled": True, "server_name": host or server}
         if net == "ws":
             singbox_out["transport"] = {"type": "ws", "path": path or "/", "headers": {"Host": host} if host else {}}
         elif net == "grpc":
@@ -282,34 +266,21 @@ def parse_vless(uri: str, used_names: set):
         flow = str(params.get("flow", "")).strip()
         fp = str(params.get("fp", "chrome")).strip()
         pbk = str(params.get("pbk", "")).strip()
-
         raw_sid = params.get("sid") or params.get("short-id") or params.get("shortId") or params.get("short_id") or ""
         sid = clean_reality_sid(raw_sid)
-
         path = str(params.get("path", "")).strip()
         host = str(params.get("host", "")).strip()
         service_name = str(params.get("serviceName", "")).strip()
 
-        clash_proxy = {
-            "name": name,
-            "type": "vless",
-            "server": server,
-            "port": port,
-            "uuid": uuid,
-            "udp": True,
-        }
-        if flow:
-            clash_proxy["flow"] = flow
+        clash_proxy = {"name": name, "type": "vless", "server": server, "port": port, "uuid": uuid, "udp": True}
+        if flow: clash_proxy["flow"] = flow
         if security in ["tls", "reality"]:
             clash_proxy["tls"] = True
-            if sni:
-                clash_proxy["servername"] = sni
-            if fp:
-                clash_proxy["client-fingerprint"] = fp
+            if sni: clash_proxy["servername"] = sni
+            if fp: clash_proxy["client-fingerprint"] = fp
             if security == "reality" and pbk:
                 clash_proxy["reality-opts"] = {"public-key": str(pbk)}
-                if sid:
-                    clash_proxy["reality-opts"]["short-id"] = str(sid)
+                if sid: clash_proxy["reality-opts"]["short-id"] = str(sid)
 
         if net == "ws":
             clash_proxy["network"] = "ws"
@@ -318,25 +289,13 @@ def parse_vless(uri: str, used_names: set):
             clash_proxy["network"] = "grpc"
             clash_proxy["grpc-opts"] = {"grpc-service-name": service_name or path}
 
-        singbox_out = {
-            "type": "vless",
-            "tag": name,
-            "server": server,
-            "server_port": port,
-            "uuid": uuid,
-        }
-        if flow:
-            singbox_out["flow"] = flow
+        singbox_out = {"type": "vless", "tag": name, "server": server, "server_port": port, "uuid": uuid}
+        if flow: singbox_out["flow"] = flow
         if security in ["tls", "reality"]:
-            singbox_out["tls"] = {
-                "enabled": True,
-                "server_name": sni or server,
-                "utls": {"enabled": True, "fingerprint": fp or "chrome"},
-            }
+            singbox_out["tls"] = {"enabled": True, "server_name": sni or server, "utls": {"enabled": True, "fingerprint": fp or "chrome"}}
             if security == "reality" and pbk:
                 singbox_out["tls"]["reality"] = {"enabled": True, "public_key": str(pbk)}
-                if sid:
-                    singbox_out["tls"]["reality"]["short_id"] = str(sid)
+                if sid: singbox_out["tls"]["reality"]["short_id"] = str(sid)
         if net == "ws":
             singbox_out["transport"] = {"type": "ws", "path": path or "/", "headers": {"Host": host} if host else {}}
         elif net == "grpc":
@@ -372,23 +331,8 @@ def parse_ss(uri: str, used_names: set):
         server = server.strip()
         name = clean_name(raw_name or f"ss_{server}_{port}", used_names)
 
-        clash_proxy = {
-            "name": name,
-            "type": "ss",
-            "server": server,
-            "port": port,
-            "cipher": method,
-            "password": password,
-            "udp": True,
-        }
-        singbox_out = {
-            "type": "shadowsocks",
-            "tag": name,
-            "server": server,
-            "server_port": port,
-            "method": method,
-            "password": password,
-        }
+        clash_proxy = {"name": name, "type": "ss", "server": server, "port": port, "cipher": method, "password": password, "udp": True}
+        singbox_out = {"type": "shadowsocks", "tag": name, "server": server, "server_port": port, "method": method, "password": password}
         return {"name": name, "raw": raw_uri, "clash": clash_proxy, "singbox": singbox_out}
     except Exception:
         return None
@@ -400,31 +344,14 @@ def parse_trojan(uri: str, used_names: set):
         password = str(u.username or "").strip()
         server = str(u.hostname or "").strip()
         port = u.port
-        if not password or not server or not port:
-            return None
-
+        if not password or not server or not port: return None
         params = dict(urllib.parse.parse_qsl(u.query))
         raw_name = urllib.parse.unquote(u.fragment) if u.fragment else f"trojan_{server}_{port}"
         name = clean_name(raw_name, used_names)
         sni = str(params.get("sni", server)).strip()
 
-        clash_proxy = {
-            "name": name,
-            "type": "trojan",
-            "server": server,
-            "port": port,
-            "password": password,
-            "udp": True,
-            "sni": sni,
-        }
-        singbox_out = {
-            "type": "trojan",
-            "tag": name,
-            "server": server,
-            "server_port": port,
-            "password": password,
-            "tls": {"enabled": True, "server_name": sni},
-        }
+        clash_proxy = {"name": name, "type": "trojan", "server": server, "port": port, "password": password, "udp": True, "sni": sni}
+        singbox_out = {"type": "trojan", "tag": name, "server": server, "server_port": port, "password": password, "tls": {"enabled": True, "server_name": sni}}
         return {"name": name, "raw": uri, "clash": clash_proxy, "singbox": singbox_out}
     except Exception:
         return None
@@ -436,32 +363,15 @@ def parse_hy2(uri: str, used_names: set):
         password = str(u.username or u.password or "").strip()
         server = str(u.hostname or "").strip()
         port = u.port
-        if not server or not port or not password:
-            return None
-
+        if not server or not port or not password: return None
         params = dict(urllib.parse.parse_qsl(u.query))
         raw_name = urllib.parse.unquote(u.fragment) if u.fragment else f"hy2_{server}_{port}"
         name = clean_name(raw_name, used_names)
         sni = str(params.get("sni", server)).strip()
         insecure = params.get("insecure", "0") in ["1", "true"]
 
-        clash_proxy = {
-            "name": name,
-            "type": "hysteria2",
-            "server": server,
-            "port": port,
-            "password": password,
-            "sni": sni,
-            "skip-cert-verify": insecure,
-        }
-        singbox_out = {
-            "type": "hysteria2",
-            "tag": name,
-            "server": server,
-            "server_port": port,
-            "password": password,
-            "tls": {"enabled": True, "server_name": sni, "insecure": insecure},
-        }
+        clash_proxy = {"name": name, "type": "hysteria2", "server": server, "port": port, "password": password, "sni": sni, "skip-cert-verify": insecure}
+        singbox_out = {"type": "hysteria2", "tag": name, "server": server, "server_port": port, "password": password, "tls": {"enabled": True, "server_name": sni, "insecure": insecure}}
         return {"name": name, "raw": uri, "clash": clash_proxy, "singbox": singbox_out}
     except Exception:
         return None
@@ -474,36 +384,15 @@ def parse_tuic(uri: str, used_names: set):
         password = str(u.password or "").strip()
         server = str(u.hostname or "").strip()
         port = u.port
-        if not server or not port or not uuid:
-            return None
-
+        if not server or not port or not uuid: return None
         params = dict(urllib.parse.parse_qsl(u.query))
         raw_name = urllib.parse.unquote(u.fragment) if u.fragment else f"tuic_{server}_{port}"
         name = clean_name(raw_name, used_names)
         sni = str(params.get("sni", server)).strip()
         alpn = str(params.get("alpn", "h3")).strip()
 
-        clash_proxy = {
-            "name": name,
-            "type": "tuic",
-            "server": server,
-            "port": port,
-            "uuid": uuid,
-            "password": password,
-            "sni": sni,
-            "alpn": [alpn],
-            "reduce-rtt": True,
-            "udp": True,
-        }
-        singbox_out = {
-            "type": "tuic",
-            "tag": name,
-            "server": server,
-            "server_port": port,
-            "uuid": uuid,
-            "password": password,
-            "tls": {"enabled": True, "server_name": sni, "alpn": [alpn]},
-        }
+        clash_proxy = {"name": name, "type": "tuic", "server": server, "port": port, "uuid": uuid, "password": password, "sni": sni, "alpn": [alpn], "reduce-rtt": True, "udp": True}
+        singbox_out = {"type": "tuic", "tag": name, "server": server, "server_port": port, "uuid": uuid, "password": password, "tls": {"enabled": True, "server_name": sni, "alpn": [alpn]}}
         return {"name": name, "raw": uri, "clash": clash_proxy, "singbox": singbox_out}
     except Exception:
         return None
@@ -514,8 +403,7 @@ def parse_socks(uri: str, used_names: set):
         u = urllib.parse.urlparse(uri)
         server = str(u.hostname or "").strip()
         port = u.port
-        if not server or not port:
-            return None
+        if not server or not port: return None
         raw_name = urllib.parse.unquote(u.fragment) if u.fragment else f"socks_{server}_{port}"
         name = clean_name(raw_name, used_names)
 
@@ -523,12 +411,10 @@ def parse_socks(uri: str, used_names: set):
         if u.username:
             clash_proxy["username"] = u.username
             clash_proxy["password"] = u.password or ""
-
         singbox_out = {"type": "socks", "tag": name, "server": server, "server_port": port}
         if u.username:
             singbox_out["username"] = u.username
             singbox_out["password"] = u.password or ""
-
         return {"name": name, "raw": uri, "clash": clash_proxy, "singbox": singbox_out}
     except Exception:
         return None
@@ -537,42 +423,31 @@ def parse_socks(uri: str, used_names: set):
 def parse_node(uri: str, used_names: set):
     uri = uri.strip()
     node = None
-    if uri.startswith("vmess://"):
-        node = parse_vmess(uri, used_names)
-    elif uri.startswith("vless://"):
-        node = parse_vless(uri, used_names)
-    elif uri.startswith("ss://"):
-        node = parse_ss(uri, used_names)
-    elif uri.startswith("trojan://"):
-        node = parse_trojan(uri, used_names)
-    elif uri.startswith("hysteria2://") or uri.startswith("hy2://"):
-        node = parse_hy2(uri, used_names)
-    elif uri.startswith("tuic://"):
-        node = parse_tuic(uri, used_names)
-    elif uri.startswith("socks://") or uri.startswith("socks5://"):
-        node = parse_socks(uri, used_names)
+    if uri.startswith("vmess://"): node = parse_vmess(uri, used_names)
+    elif uri.startswith("vless://"): node = parse_vless(uri, used_names)
+    elif uri.startswith("ss://"): node = parse_ss(uri, used_names)
+    elif uri.startswith("trojan://"): node = parse_trojan(uri, used_names)
+    elif uri.startswith("hysteria2://") or uri.startswith("hy2://"): node = parse_hy2(uri, used_names)
+    elif uri.startswith("tuic://"): node = parse_tuic(uri, used_names)
+    elif uri.startswith("socks://") or uri.startswith("socks5://"): node = parse_socks(uri, used_names)
 
     if node and is_valid_clash_proxy(node["clash"]):
         return node
     return None
 
 
-# ==================== 3. 订阅抓取 ====================
 def fetch_all_nodes() -> list:
     print("[*] Fetching subscription sources...")
     raw_lines = set()
     headers = {"User-Agent": "ClashMeta/1.19.0 v2rayN/6.23"}
-
     for url in SUBSCRIBE_SOURCES:
         try:
             resp = requests.get(url, headers=headers, timeout=12)
-            if resp.status_code != 200:
-                continue
+            if resp.status_code != 200: continue
             content = resp.text.strip()
             if not any(proto in content for proto in ["vmess://", "vless://", "ss://", "trojan://", "hy2://"]):
                 decoded = decode_base64(content)
-                if decoded:
-                    content = decoded
+                if decoded: content = decoded
             for line in content.splitlines():
                 line = line.strip()
                 if any(line.startswith(p) for p in ["vmess://", "vless://", "ss://", "trojan://", "hysteria2://", "hy2://", "tuic://", "socks://", "socks5://"]):
@@ -585,22 +460,18 @@ def fetch_all_nodes() -> list:
     parsed_nodes = []
     for uri in raw_lines:
         node = parse_node(uri, used_names)
-        if node:
-            parsed_nodes.append(node)
+        if node: parsed_nodes.append(node)
     print(f"[+] Cleaned and validated nodes for Mihomo: {len(parsed_nodes)}")
     return parsed_nodes
 
 
-# ==================== 4. 预检自愈与内核启动 ====================
 def test_and_fix_mihomo_config(clash_proxies: list) -> list:
     os.makedirs(MIHOMO_TEMP_DIR, exist_ok=True)
     if os.path.exists("GeoLite2-Country.mmdb"):
         shutil.copy("GeoLite2-Country.mmdb", f"{MIHOMO_TEMP_DIR}/Country.mmdb")
 
     current_proxies = list(clash_proxies)
-    max_retries = 60
-
-    for attempt in range(max_retries):
+    for attempt in range(60):
         proxy_names = [p["name"] for p in current_proxies]
         config = {
             "mixed-port": MIXED_PORT,
@@ -611,19 +482,13 @@ def test_and_fix_mihomo_config(clash_proxies: list) -> list:
             "secret": CONTROLLER_SECRET,
             "geodata-mode": False,
             "proxies": current_proxies,
-            "proxy-groups": [
-                {"name": "GLOBAL", "type": "select", "proxies": proxy_names}
-            ],
+            "proxy-groups": [{"name": "GLOBAL", "type": "select", "proxies": proxy_names}],
             "rules": ["MATCH,GLOBAL"],
         }
         with open(f"{MIHOMO_TEMP_DIR}/config.yaml", "w", encoding="utf-8") as f:
             yaml.dump(config, f, allow_unicode=True)
 
-        res = subprocess.run(
-            ["mihomo", "-t", "-d", MIHOMO_TEMP_DIR],
-            capture_output=True,
-            text=True
-        )
+        res = subprocess.run(["mihomo", "-t", "-d", MIHOMO_TEMP_DIR], capture_output=True, text=True)
         if res.returncode == 0:
             print(f"[+] Mihomo config pre-check passed! Safe nodes: {len(current_proxies)}")
             return current_proxies
@@ -634,12 +499,9 @@ def test_and_fix_mihomo_config(clash_proxies: list) -> list:
             bad_idx = int(match.group(1))
             if 0 <= bad_idx < len(current_proxies):
                 dropped = current_proxies.pop(bad_idx)
-                print(f"[!] Pre-check auto-healed (attempt {attempt + 1}): removed bad proxy at index {bad_idx} ({dropped.get('name')})")
+                print(f"[!] Auto-healed: removed bad proxy at index {bad_idx} ({dropped.get('name')})")
                 continue
-
-        print(f"[!] Unhandled syntax error during pre-check:\n{err}")
         break
-
     return current_proxies
 
 
@@ -647,38 +509,25 @@ def start_mihomo(clash_proxies: list) -> tuple:
     safe_proxies = test_and_fix_mihomo_config(clash_proxies)
     log_path = f"{MIHOMO_TEMP_DIR}/mihomo.log"
     log_file = open(log_path, "w", encoding="utf-8")
-
-    proc = subprocess.Popen(
-        ["mihomo", "-d", MIHOMO_TEMP_DIR],
-        stdout=log_file,
-        stderr=subprocess.STDOUT,
-    )
+    proc = subprocess.Popen(["mihomo", "-d", MIHOMO_TEMP_DIR], stdout=log_file, stderr=subprocess.STDOUT)
 
     for _ in range(40):
         if proc.poll() is not None:
             log_file.close()
-            with open(log_path, "r", encoding="utf-8") as f:
-                output = f.read()
+            with open(log_path, "r", encoding="utf-8") as f: output = f.read()
             raise RuntimeError(f"Mihomo exited unexpectedly. Log:\n{output}")
         try:
-            r = requests.get(
-                f"http://127.0.0.1:{CONTROLLER_PORT}/version",
-                headers={"Authorization": f"Bearer {CONTROLLER_SECRET}"},
-                timeout=0.4
-            )
+            r = requests.get(f"http://127.0.0.1:{CONTROLLER_PORT}/version", headers={"Authorization": f"Bearer {CONTROLLER_SECRET}"}, timeout=0.4)
             if r.status_code == 200:
                 print("[+] Mihomo core started successfully.")
                 return proc, safe_proxies
         except Exception:
             time.sleep(0.3)
-
     log_file.close()
-    with open(log_path, "r", encoding="utf-8") as f:
-        output = f.read()
-    raise RuntimeError(f"Failed to start Mihomo controller within timeout. Log:\n{output}")
+    with open(log_path, "r", encoding="utf-8") as f: output = f.read()
+    raise RuntimeError(f"Failed to start Mihomo controller. Log:\n{output}")
 
 
-# ==================== 5. 两阶段防断流与精准落地识别 ====================
 async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
     test_url = "http://cp.cloudflare.com/generate_204"
     headers = {"Authorization": f"Bearer {CONTROLLER_SECRET}"}
@@ -697,7 +546,6 @@ async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
                         alive[name] = data.get("delay", 0)
             except Exception:
                 pass
-
         tasks = [check(name) for name in proxy_names]
         await asyncio.gather(*tasks)
     return alive
@@ -705,57 +553,32 @@ async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
 
 def check_is_residential(country_code: str, as_info: str) -> bool:
     info = as_info.lower()
-
-    # 1. 严格一票否决机房黑名单
     for dc in DATACENTER_BLACKLIST:
-        if dc in info:
-            return False
-
-    # 2. 正向白名单匹配国家级家庭宽带
+        if dc in info: return False
     whitelisted = RESIDENTIAL_ISPS.get(country_code, [])
     for isp in whitelisted:
-        if isp in info:
-            return True
-
-    # 3. 通用家宽特征
+        if isp in info: return True
     if any(kw in info for kw in ["home broadband", "residential", "consumer fiber"]):
         return True
-
     return False
 
 
 def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     try:
-        requests.put(
-            f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/GLOBAL",
-            headers={"Authorization": f"Bearer {CONTROLLER_SECRET}"},
-            json={"name": proxy_name},
-            timeout=2.0,
-        )
+        requests.put(f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/GLOBAL", headers={"Authorization": f"Bearer {CONTROLLER_SECRET}"}, json={"name": proxy_name}, timeout=2.0)
     except Exception:
         return None
 
     time.sleep(0.2)
     local_proxy = {"http": f"http://127.0.0.1:{MIXED_PORT}", "https": f"http://127.0.0.1:{MIXED_PORT}"}
 
-    # 防断流与反诈拦截二阶验证
     try:
-        check_204 = requests.get(
-            "http://cp.cloudflare.com/generate_204",
-            proxies=local_proxy,
-            timeout=3.5,
-            allow_redirects=False
-        )
-        if check_204.status_code != 204:
-            return None
+        check_204 = requests.get("http://cp.cloudflare.com/generate_204", proxies=local_proxy, timeout=3.5, allow_redirects=False)
+        if check_204.status_code != 204: return None
     except Exception:
         return None
 
-    egress_ip = None
-    country_code = None
-    as_info = ""
-
-    # 1. 穿透节点出口获取 IP 与 ASN
+    egress_ip, country_code, as_info = None, None, ""
     try:
         resp = requests.get("http://ip-api.com/json/?fields=status,countryCode,isp,org,as,query", proxies=local_proxy, timeout=4.0)
         if resp.status_code == 200:
@@ -767,59 +590,44 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     except Exception:
         pass
 
-    # 2. 备用出口识别端点
     if not egress_ip:
         try:
             resp = requests.get("http://api-ipv4.ip.sb/ip", proxies=local_proxy, timeout=3.0)
-            if resp.status_code == 200:
-                egress_ip = resp.text.strip()
+            if resp.status_code == 200: egress_ip = resp.text.strip()
         except Exception:
             pass
 
-    if not egress_ip:
-        return None
+    if not egress_ip: return None
 
-    # 3. 微软云离线高精国家识别
     if country_db:
         try:
             res = country_db.get(egress_ip)
-            if res and "country" in res:
-                country_code = res["country"]["iso_code"]
+            if res and "country" in res: country_code = res["country"]["iso_code"]
         except Exception:
             pass
-    if not country_code:
-        country_code = "OTHER"
+    if not country_code: country_code = "OTHER"
 
-    # 4. 离线 ASN 补充富化
     if asn_db:
         try:
             asn_res = asn_db.get(egress_ip)
-            if asn_res:
-                as_info += f" {asn_res.get('autonomous_system_organization', '')}".lower()
+            if asn_res: as_info += f" {asn_res.get('autonomous_system_organization', '')}".lower()
         except Exception:
             pass
 
-    # 5. 执行双重家宽判定
     is_residential = check_is_residential(country_code, as_info)
-
-    return {
-        "egress_ip": egress_ip,
-        "country": country_code.upper(),
-        "is_residential": is_residential,
-    }
+    return {"egress_ip": egress_ip, "country": country_code.upper(), "is_residential": is_residential}
 
 
-# ==================== 6. 首页 README 保护式更新（锚点替换，绝不丢失原教程与热度图） ====================
+# ==================== 6. 首页 README 保护式更新（局部插桩，保留你的 Worker 教程与热度图） ====================
 def render_flag(code: str) -> str:
     code = code.upper()
-    if code == "OTHER":
-        return "🌐"
+    if code == "OTHER": return "🌐"
     return f'<img src="https://flagcdn.com/20x15/{code.lower()}.png" width="20" height="15" alt="{code}">'
 
 
 def update_readme_safely(classified_nodes: list):
     """
-    通过正则精确定位替换表格，100% 保持你原来的 Cloudflare Worker 说明与热度趋势图
+    通过正则精确定位并替换总订阅与分类表格，100% 完整保留用户原本的 Cloudflare Worker 教程与 Star History 曲线图
     """
     if not os.path.exists("README.md"):
         return
@@ -842,7 +650,7 @@ def update_readme_safely(classified_nodes: list):
     sorted_countries = sorted(country_stats.items(), key=lambda x: x[1], reverse=True)
     sorted_res = sorted(res_country_stats.items(), key=lambda x: x[1], reverse=True)
 
-    # 1. 紧凑排版家宽表格（纯中文、防折行 <nobr>）
+    # 1. 家宽表格构建（防止折行）
     res_rows = []
     if sorted_res:
         for c, count in sorted_res:
@@ -864,7 +672,7 @@ def update_readme_safely(classified_nodes: list):
     else:
         res_rows.append("| <nobr>暂无家宽</nobr> | 0 | - | - | - |")
 
-    # 2. 紧凑排版国家分类表格
+    # 2. 国家分类表格构建
     country_rows = []
     for c, count in sorted_countries:
         c_name = COUNTRY_NAMES.get(c, c)
@@ -886,36 +694,27 @@ def update_readme_safely(classified_nodes: list):
     new_res_table = "| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(res_rows)
     new_country_table = "| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(country_rows)
 
-    # 3. 动态更新总节点数
+    # 3. 动态更新顶部总节点数徽章或表格中的数字
+    content = re.sub(r'(Total_Nodes-)(\d+)(-blue)', rf'\g<1>{total_nodes}\g<3>', content)
+    content = re.sub(r'(Residential-)(\d+)(-orange)', rf'\g<1>{total_res}\g<3>', content)
     content = re.sub(r'(<td>|\*\*)(1211|\d+)(</td>|\*\*)', rf'\g<1>{total_nodes}\g<3>', content)
 
-    # 4. 精准替换家宽表格
-    res_section_pattern = re.compile(
-        r'(###?\s*🏠?\s*按照家宽分类节点订阅.*?\n+).*?(\n+---|###?\s*🌍?|###?\s*🗺️?\s*按照国家)',
-        re.DOTALL
-    )
-    if res_section_pattern.search(content):
-        content = res_section_pattern.sub(
-            rf'\g<1>> 经 MaxMind ASN 离线库与核心运营商白名单严格甄别，剔除数据中心及云厂商，保留民用住宅宽带。当前可用家宽节点：**{total_res}** 个。\n\n{new_res_table}\n\n\g<2>',
-            content,
-            count=1
+    # 4. 精准替换家宽表格部分
+    res_pattern = re.compile(r'(###?\s*🏠?\s*按照家宽分类节点订阅.*?\n+).*?(\n+---|###?\s*🌍?|###?\s*🗺️?|###?\s*📌|\Z)', re.DOTALL)
+    if res_pattern.search(content):
+        content = res_pattern.sub(
+            rf'\g<1>> 经 MaxMind ASN 数据库与核心运营商白名单严格甄别，剔除所有机房与云厂商，保留正宗民用宽带。当前可用家宽节点：**{total_res}** 个。\n\n{new_res_table}\n\n\g<2>',
+            content, count=1
         )
 
-    # 5. 精准替换国家分类表格
-    country_section_pattern = re.compile(
-        r'(###?\s*🌍?|###?\s*🗺️?\s*按照国家.*?分类节点订阅.*?\n+).*?(\n+---|###?\s*⚡|###?\s*📌|\Z)',
-        re.DOTALL
-    )
-    if country_section_pattern.search(content):
-        content = country_section_pattern.sub(
-            rf'\g<1>{new_country_table}\n\n\g<2>',
-            content,
-            count=1
-        )
+    # 5. 精准替换国家分类表格部分
+    country_pattern = re.compile(r'(###?\s*🌍?|###?\s*🗺️?|###?\s*按照国家.*?分类节点订阅.*?\n+).*?(\n+---|###?\s*⚡|###?\s*📌|\Z)', re.DOTALL)
+    if country_pattern.search(content):
+        content = country_pattern.sub(rf'\g<1>{new_country_table}\n\n\g<2>', content, count=1)
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"[+] README.md safely updated! Alive nodes: {total_nodes}, Residential: {total_res}")
+    print(f"[+] README.md safely patched! Alive nodes: {total_nodes}, Residential: {total_res}")
 
 
 # ==================== 7. 文件分发与导出 ====================
@@ -927,30 +726,20 @@ def export_files(classified_nodes: list):
 
     def write_clash(path: str, proxies: list):
         cfg = {
-            "port": 7890,
-            "socks-port": 7891,
-            "allow-lan": False,
-            "mode": "rule",
-            "log-level": "info",
-            "proxies": proxies,
+            "port": 7890, "socks-port": 7891, "allow-lan": False, "mode": "rule",
+            "log-level": "info", "proxies": proxies,
             "proxy-groups": [{"name": "PROXY", "type": "select", "proxies": [p["name"] for p in proxies]}],
             "rules": ["MATCH,PROXY"],
         }
-        with open(path, "w", encoding="utf-8") as f:
-            yaml.dump(cfg, f, allow_unicode=True)
+        with open(path, "w", encoding="utf-8") as f: yaml.dump(cfg, f, allow_unicode=True)
 
     def write_singbox(path: str, outbounds: list):
-        cfg = {
-            "version": 1,
-            "outbounds": outbounds + [{"type": "direct", "tag": "direct"}, {"type": "dns", "tag": "dns-out"}],
-        }
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(cfg, f, indent=2, ensure_ascii=False)
+        cfg = {"version": 1, "outbounds": outbounds + [{"type": "direct", "tag": "direct"}, {"type": "dns", "tag": "dns-out"}]}
+        with open(path, "w", encoding="utf-8") as f: json.dump(cfg, f, indent=2, ensure_ascii=False)
 
     def write_v2ray(path: str, raw_links: list):
         encoded = base64.b64encode("\n".join(raw_links).encode("utf-8")).decode("utf-8")
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(encoded)
+        with open(path, "w", encoding="utf-8") as f: f.write(encoded)
 
     all_clash = [n["clash"] for n in classified_nodes]
     all_singbox = [n["singbox"] for n in classified_nodes]
@@ -965,13 +754,11 @@ def export_files(classified_nodes: list):
     write_singbox(f"{OUTPUT_DIR}/residential-singbox.json", [n["singbox"] for n in res_nodes])
     write_v2ray(f"{OUTPUT_DIR}/residential.txt", [n["raw"] for n in res_nodes])
 
-    country_map = {}
-    res_country_map = {}
+    country_map, res_country_map = {}, {}
     for n in classified_nodes:
         c = n["country"]
         country_map.setdefault(c, []).append(n)
-        if n["is_residential"]:
-            res_country_map.setdefault(c, []).append(n)
+        if n["is_residential"]: res_country_map.setdefault(c, []).append(n)
 
     for c, nodes in country_map.items():
         write_clash(f"{OUTPUT_DIR}/by-country/clash-{c}.yaml", [n["clash"] for n in nodes])
@@ -983,7 +770,6 @@ def export_files(classified_nodes: list):
         write_singbox(f"{OUTPUT_DIR}/residential-by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
         write_v2ray(f"{OUTPUT_DIR}/residential-by-country/{c}.txt", [n["raw"] for n in nodes])
 
-    # 导出文件后，安全局部更新 README.md
     update_readme_safely(classified_nodes)
     print(f"[SUCCESS] Export complete! Verified stable: {len(classified_nodes)}, Quality Residential: {len(res_nodes)}")
 
@@ -1002,7 +788,6 @@ def main():
         safe_names = {p["name"] for p in safe_clash_proxies}
         working_nodes = [n for n in nodes if n["name"] in safe_names]
 
-        # 【阶段一：全并发快速初筛】
         print(f"[*] Phase 1: Rapid concurrent ping for {len(working_nodes)} nodes...")
         alive_map = asyncio.run(run_delay_ping([n["name"] for n in working_nodes], timeout_ms=3500))
         print(f"[+] Phase 1 survivors: {len(alive_map)}")
@@ -1010,20 +795,17 @@ def main():
             print("[-] No nodes survived Phase 1.")
             return
 
-        # 【静置 3 秒防虚假握手】
         print("[*] Waiting 3 seconds for connection stability check...")
         time.sleep(3)
 
-        # 【阶段 1.5：二次复测剔除闪断/断流节点】
-        print("[*] Phase 1.5: Re-testing survivors to eliminate flapping/disconnecting nodes...")
+        print("[*] Phase 1.5: Re-testing survivors to eliminate flapping nodes...")
         stable_alive_map = asyncio.run(run_delay_ping(list(alive_map.keys()), timeout_ms=3500))
         stable_nodes = [n for n in working_nodes if n["name"] in stable_alive_map]
-        print(f"[+] Stable non-flapping nodes verified: {len(stable_nodes)} (Filtered {len(alive_map) - len(stable_nodes)} dropping nodes)")
+        print(f"[+] Stable non-flapping nodes verified: {len(stable_nodes)}")
 
         country_db = maxminddb.open_database("GeoLite2-Country.mmdb") if os.path.exists("GeoLite2-Country.mmdb") else None
         asn_db = maxminddb.open_database("GeoLite2-ASN.mmdb") if os.path.exists("GeoLite2-ASN.mmdb") else None
 
-        # 【阶段二：穿透中转落地识别、防劫持验证与家宽甄别】
         print(f"[*] Phase 2: Inspecting egress, anti-interception & residential attributes for {len(stable_nodes)} nodes...")
         final_nodes = []
         for idx, node in enumerate(stable_nodes, 1):
