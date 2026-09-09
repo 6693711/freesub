@@ -7,12 +7,13 @@ import asyncio
 import urllib.parse
 import subprocess
 import time
+import datetime
 import requests
 import aiohttp
 import yaml
 import maxminddb
 
-# ==================== 1. 订阅源配置 ====================
+# ==================== 1. 订阅源与基础配置 ====================
 SUBSCRIBE_SOURCES = [
     "https://wild-cloud-9893.heleimail.workers.dev",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
@@ -26,13 +27,16 @@ SUBSCRIBE_SOURCES = [
     "https://www.ermao.net/sub/v2ray/ermao.net",
 ]
 
+# GitHub 用户名与仓库名（用于拼接首页的 CDN 与 Raw 链接）
+REPO_USER = "hezhanleiok"
+REPO_NAME = "freesub"
+
 OUTPUT_DIR = "output"
 MIHOMO_TEMP_DIR = "/tmp/mihomo_runner"
 CONTROLLER_PORT = 9090
 MIXED_PORT = 7890
 CONTROLLER_SECRET = "freesub-test-token"
 
-# 正则校验器
 UUID_PATTERN = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
 HEX_CHARS = set("0123456789abcdefABCDEF")
 BASE64_CHARS = set("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_=/+")
@@ -45,15 +49,25 @@ VALID_SS_CIPHERS = {
     "rc4-md5", "chacha20-ietf"
 }
 
-# 高风险红色垃圾节点关键词（广告、提示、诈骗、死循环节点）
 RISK_KEYWORDS = [
     "官网", "通知", "返利", "备用", "地址", "购买", "广告", "群", "频道",
     "tg:", "t.me", "traffic", "expire", "reset", "bandwidth", "left", "gb",
     "剩余", "到期", "续费", "测速", "aff", "vip", "free"
 ]
 
+# 国家代码到中文名称映射（不带臃肿英文全称）
+COUNTRY_NAMES = {
+    "TW": "中国台湾", "HK": "中国香港", "MO": "中国澳门", "CN": "中国大陆",
+    "JP": "日本", "KR": "韩国", "SG": "新加坡", "US": "美国",
+    "CA": "加拿大", "GB": "英国", "DE": "德国", "FR": "法国",
+    "NL": "荷兰", "RU": "俄罗斯", "AU": "澳大利亚", "IN": "印度",
+    "MY": "马来西亚", "TH": "泰国", "VN": "越南", "PH": "菲律宾",
+    "ID": "印尼", "TR": "土耳其", "BR": "巴西", "AE": "阿联酋",
+    "ZA": "南非", "OTHER": "其他地区"
+}
 
-# ==================== 2. 全协议解析与严格清洗 ====================
+
+# ==================== 2. 全协议解析与严苛清洗 ====================
 def decode_base64(s: str) -> str:
     s = s.strip().replace("\r", "").replace("\n", "")
     padding = len(s) % 4
@@ -82,32 +96,22 @@ def clean_name(name: str, used_names: set) -> str:
 
 
 def clean_reality_sid(sid: str) -> str:
-    """严格校验 Reality short-id，不修改、不截断非法值"""
+    """严格校验 Reality short-id，不截断、不修补，非法值直接丢弃"""
     if sid is None:
         return ""
-
     sid = str(sid).strip().lower()
-
     if not sid or sid in {"null", "none", "undefined", "nan", "nil", "false", "true"}:
         return ""
-
-    # 必须全部为十六进制字符
     if not all(c in HEX_CHARS for c in sid):
         return ""
-
-    # 必须为偶数位（字节对齐）
     if len(sid) % 2 != 0:
         return ""
-
-    # 最多 16 个十六进制字符（8 字节）
     if len(sid) > 16:
         return ""
-
     return sid
 
 
 def is_private_host(host: str) -> bool:
-    """过滤本地回环及局域网保留 IP"""
     host = host.strip().lower()
     if not host or host in ["127.0.0.1", "localhost", "0.0.0.0"]:
         return True
@@ -117,7 +121,6 @@ def is_private_host(host: str) -> bool:
 
 
 def is_valid_clash_proxy(p: dict) -> bool:
-    """前置校验：过滤结构非法、脏参数及垃圾广告节点"""
     try:
         port = p.get("port")
         if not isinstance(port, int) or port < 1 or port > 65535:
@@ -243,22 +246,8 @@ def parse_vless(uri: str, used_names: set):
         fp = str(params.get("fp", "chrome")).strip()
         pbk = str(params.get("pbk", "")).strip()
 
-        # 兼容性提取并执行严格无损校验
-                # 兼容性提取并执行严格无损校验
-        raw_sid = (
-            params.get("sid")
-            or params.get("short-id")
-            or params.get("shortId")
-            or params.get("short_id")
-            or ""
-        )
-
+        raw_sid = params.get("sid") or params.get("short-id") or params.get("shortId") or params.get("short_id") or ""
         sid = clean_reality_sid(raw_sid)
-
-        # Reality 节点明确提供 short-id，但 short-id 非法：
-        # 直接丢弃整个节点，不允许把非法节点继续交给 Mihomo。
-        if raw_sid and not sid:
-            return None
 
         path = str(params.get("path", "")).strip()
         host = str(params.get("host", "")).strip()
@@ -531,7 +520,7 @@ def parse_node(uri: str, used_names: set):
     return None
 
 
-# ==================== 3. 抓取与清洗 ====================
+# ==================== 3. 订阅抓取 ====================
 def fetch_all_nodes() -> list:
     print("[*] Fetching subscription sources...")
     raw_lines = set()
@@ -565,9 +554,8 @@ def fetch_all_nodes() -> list:
     return parsed_nodes
 
 
-# ==================== 4. 智能自愈预检与内核启动 ====================
+# ==================== 4. 预检自愈与内核启动 ====================
 def test_and_fix_mihomo_config(clash_proxies: list) -> list:
-    """利用原生预检 mihomo -t 循环剔除任何使 Go 语法崩溃的未知坏节点"""
     os.makedirs(MIHOMO_TEMP_DIR, exist_ok=True)
     if os.path.exists("GeoLite2-Country.mmdb"):
         shutil.copy("GeoLite2-Country.mmdb", f"{MIHOMO_TEMP_DIR}/Country.mmdb")
@@ -652,11 +640,11 @@ def start_mihomo(clash_proxies: list) -> tuple:
     raise RuntimeError(f"Failed to start Mihomo controller within timeout. Log:\n{output}")
 
 
-# ==================== 5. 两阶段防断流与健康检测 ====================
-async def run_delay_ping(proxy_names: list, timeout_ms: int = 3000) -> dict:
+# ==================== 5. 两阶段防断流与落地识别 ====================
+async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
     test_url = "http://cp.cloudflare.com/generate_204"
     headers = {"Authorization": f"Bearer {CONTROLLER_SECRET}"}
-    timeout = aiohttp.ClientTimeout(total=4)
+    timeout = aiohttp.ClientTimeout(total=4.5)
     conn = aiohttp.TCPConnector(limit=50)
     alive = {}
 
@@ -678,31 +666,26 @@ async def run_delay_ping(proxy_names: list, timeout_ms: int = 3000) -> dict:
 
 
 def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
-    """
-    穿透中转落地：
-    1. 切换节点
-    2. 二阶防断流验证（3秒后必须依然保持通畅）
-    3. 防劫持验证（必须返回 204，拒绝 301/302 反诈跳转）
-    4. 提取真实出口 IP，识别高精国家与住宅 ISP
-    """
     try:
         requests.put(
             f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/GLOBAL",
             headers={"Authorization": f"Bearer {CONTROLLER_SECRET}"},
             json={"name": proxy_name},
-            timeout=1.5,
+            timeout=2.0,
         )
     except Exception:
         return None
 
+    # 留出 0.15 秒让内核完全切路上游连接
+    time.sleep(0.15)
     local_proxy = {"http": f"http://127.0.0.1:{MIXED_PORT}", "https": f"http://127.0.0.1:{MIXED_PORT}"}
 
-    # 防劫持与断流拦截验证
+    # 防劫持与断流二阶验证（必须严格返回 204，拒绝 301/302 反诈跳转）
     try:
         check_204 = requests.get(
             "http://cp.cloudflare.com/generate_204",
             proxies=local_proxy,
-            timeout=2.5,
+            timeout=3.0,
             allow_redirects=False
         )
         if check_204.status_code != 204:
@@ -715,9 +698,9 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     is_hosting = None
     as_info = ""
 
-    # 1. 穿透节点自身出口请求免限频 ip-api
+    # 1. 穿透节点出口请求免限频的 ip-api
     try:
-        resp = requests.get("http://ip-api.com/json/?fields=status,countryCode,isp,org,as,hosting,query", proxies=local_proxy, timeout=3)
+        resp = requests.get("http://ip-api.com/json/?fields=status,countryCode,isp,org,as,hosting,query", proxies=local_proxy, timeout=3.5)
         if resp.status_code == 200:
             data = resp.json()
             if data.get("status") == "success":
@@ -731,7 +714,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     # 2. 备用端点兜底出口 IP
     if not egress_ip:
         try:
-            resp = requests.get("http://api-ipv4.ip.sb/ip", proxies=local_proxy, timeout=2.5)
+            resp = requests.get("http://api-ipv4.ip.sb/ip", proxies=local_proxy, timeout=3.0)
             if resp.status_code == 200:
                 egress_ip = resp.text.strip()
         except Exception:
@@ -785,7 +768,126 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     }
 
 
-# ==================== 6. 导出归档 ====================
+# ==================== 6. 首页 README 动态生成（国旗图标 + 防错行排版） ====================
+def render_flag(code: str) -> str:
+    """生成不受 Windows 字体限制的彩色国旗图标"""
+    code = code.upper()
+    if code == "OTHER":
+        return "🌐"
+    return f'<img src="https://flagcdn.com/20x15/{code.lower()}.png" width="20" height="15" alt="{code}">'
+
+
+def generate_readme(classified_nodes: list):
+    """自动生成无错位、带真实国旗、数据实时同步的首页 README.md"""
+    total_nodes = len(classified_nodes)
+    res_nodes = [n for n in classified_nodes if n["is_residential"]]
+    total_res = len(res_nodes)
+
+    # 统计国家与家宽数量
+    country_stats = {}
+    res_country_stats = {}
+    for n in classified_nodes:
+        c = n["country"]
+        country_stats[c] = country_stats.get(c, 0) + 1
+        if n["is_residential"]:
+            res_country_stats[c] = res_country_stats.get(c, 0) + 1
+
+    # 降序排序
+    sorted_countries = sorted(country_stats.items(), key=lambda x: x[1], reverse=True)
+    sorted_res = sorted(res_country_stats.items(), key=lambda x: x[1], reverse=True)
+
+    update_time = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+    # 构建家宽表格内容
+    res_rows = []
+    if sorted_res:
+        for c, count in sorted_res:
+            c_name = COUNTRY_NAMES.get(c, c)
+            flag = render_flag(c)
+            loc = f"<nobr>{flag} {c} {c_name}</nobr>"
+            v2_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/residential-by-country/{c}.txt"
+            v2_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/residential-by-country/{c}.txt"
+            cl_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/residential-by-country/clash-{c}.yaml"
+            cl_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/residential-by-country/clash-{c}.yaml"
+            sb_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/residential-by-country/singbox-{c}.json"
+            sb_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/residential-by-country/singbox-{c}.json"
+
+            v2_links = f"<nobr>[⚡CDN]({v2_cdn}) · [🌐Raw]({v2_raw})</nobr>"
+            cl_links = f"<nobr>[⚡CDN]({cl_cdn}) · [🌐Raw]({cl_raw})</nobr>"
+            sb_links = f"<nobr>[⚡CDN]({sb_cdn}) · [🌐Raw]({sb_raw})</nobr>"
+
+            res_rows.append(f"| {loc} | {count} | {v2_links} | {cl_links} | {sb_links} |")
+    else:
+        res_rows.append("| <nobr>暂无家宽</nobr> | 0 | - | - | - |")
+
+    # 构建国家分类表格内容
+    country_rows = []
+    for c, count in sorted_countries:
+        c_name = COUNTRY_NAMES.get(c, c)
+        flag = render_flag(c)
+        loc = f"<nobr>{flag} {c} {c_name}</nobr>"
+        v2_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/by-country/{c}.txt"
+        v2_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/by-country/{c}.txt"
+        cl_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/by-country/clash-{c}.yaml"
+        cl_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/by-country/clash-{c}.yaml"
+        sb_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/by-country/singbox-{c}.json"
+        sb_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/by-country/singbox-{c}.json"
+
+        v2_links = f"<nobr>[⚡CDN]({v2_cdn}) · [🌐Raw]({v2_raw})</nobr>"
+        cl_links = f"<nobr>[⚡CDN]({cl_cdn}) · [🌐Raw]({cl_raw})</nobr>"
+        sb_links = f"<nobr>[⚡CDN]({sb_cdn}) · [🌐Raw]({sb_raw})</nobr>"
+
+        country_rows.append(f"| {loc} | {count} | {v2_links} | {cl_links} | {sb_links} |")
+
+    res_table_str = "\n".join(res_rows)
+    country_table_str = "\n".join(country_rows)
+
+    readme_content = f"""# 🚀 FreeSub - 免费多协议节点自动聚合与测活池
+
+> 🤖 **自动更新时间**：`{update_time}`  
+> 🛡️ **节点经过双重防断流探测、抗欺诈拦截与真实落地 Egress IP 归类**。
+
+---
+
+### 🌟 全量测活节点订阅（全协议合并）
+
+| 客户端类型 | 有效节点数 | ⚡ 免翻 CDN 直链 | 🌐 官方 Raw 直链 |
+| :--- | :---: | :--- | :--- |
+| **🐱 Clash / Mihomo (YAML)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/clash.yaml) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/clash.yaml) |
+| **⚡ V2RayN (Base64 格式)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/v2ray.txt) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/v2ray.txt) |
+| **📦 sing-box (JSON 格式)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/singbox.json) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/singbox.json) |
+
+---
+
+### 🏠 按照家宽分类节点订阅（住宅 IP 专区）
+
+> 经 MaxMind ASN 离线库与核心运营商白名单严格甄别，剔除数据中心及云厂商，保留民用住宅宽带。当前可用家宽节点：**{total_res}** 个。
+
+| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |
+| :--- | :---: | :--- | :--- | :--- |
+{res_table_str}
+
+---
+
+### 🌍 按照国家/地区分类节点订阅（落地出口）
+
+| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |
+| :--- | :---: | :--- | :--- | :--- |
+{country_table_str}
+
+---
+
+### 📌 订阅使用提示
+1. **CDN 直链**：适合国内网络直连拉取，已配置 jsDelivr 全球加速节点。
+2. **Raw 直链**：GitHub 官方源文件，适合挂代理环境下获取实时配置。
+"""
+
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(readme_content)
+    print(f"[+] README.md successfully generated with {total_nodes} alive nodes ({total_res} residential).")
+
+
+# ==================== 7. 文件分发与导出 ====================
 def export_files(classified_nodes: list):
     print("[*] Exporting result files...")
     shutil.rmtree(OUTPUT_DIR, ignore_errors=True)
@@ -850,10 +952,12 @@ def export_files(classified_nodes: list):
         write_singbox(f"{OUTPUT_DIR}/residential-by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
         write_v2ray(f"{OUTPUT_DIR}/residential-by-country/{c}.txt", [n["raw"] for n in nodes])
 
+    # 导出文件后，同步重新生成 README.md 首页
+    generate_readme(classified_nodes)
     print(f"[SUCCESS] Export complete! Verified stable: {len(classified_nodes)}, Quality Residential: {len(res_nodes)}")
 
 
-# ==================== 7. 主控流程 ====================
+# ==================== 8. 主控流程 ====================
 def main():
     nodes = fetch_all_nodes()
     if not nodes:
@@ -867,21 +971,21 @@ def main():
         safe_names = {p["name"] for p in safe_clash_proxies}
         working_nodes = [n for n in nodes if n["name"] in safe_names]
 
-        # 【阶段一：全并发连通性初筛】
+        # 【阶段一：全量并发初筛】
         print(f"[*] Phase 1: Rapid concurrent ping for {len(working_nodes)} nodes...")
-        alive_map = asyncio.run(run_delay_ping([n["name"] for n in working_nodes], timeout_ms=3000))
+        alive_map = asyncio.run(run_delay_ping([n["name"] for n in working_nodes], timeout_ms=3500))
         print(f"[+] Phase 1 survivors: {len(alive_map)}")
         if not alive_map:
             print("[-] No nodes survived Phase 1.")
             return
 
-        # 【抗断流缓冲：静置 3 秒防虚假握手】
+        # 【抗断流静置缓冲 3 秒】
         print("[*] Waiting 3 seconds for connection stability check...")
         time.sleep(3)
 
         # 【阶段 1.5：二次复测剔除闪断/断流节点】
         print("[*] Phase 1.5: Re-testing survivors to eliminate flapping/disconnecting nodes...")
-        stable_alive_map = asyncio.run(run_delay_ping(list(alive_map.keys()), timeout_ms=3000))
+        stable_alive_map = asyncio.run(run_delay_ping(list(alive_map.keys()), timeout_ms=3500))
         stable_nodes = [n for n in working_nodes if n["name"] in stable_alive_map]
         print(f"[+] Stable non-flapping nodes verified: {len(stable_nodes)} (Filtered {len(alive_map) - len(stable_nodes)} dropping nodes)")
 
