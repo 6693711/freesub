@@ -3,9 +3,18 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: firefox
+  name: 🏳️ ShatakVPN 266500
+  port: 8443
+  server: 195.162.69.203
+  servername: 195-162-69-203.sslip.io
+  tls: true
+  type: vless
+  udp: true
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1181146340
+  name: 🏳️ ShatakVPN 373378
   port: 443
   reality-opts:
     public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
@@ -19,7 +28,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1181146340
+  - 🏳️ ShatakVPN 266500
+  - 🏳️ ShatakVPN 373378
   type: select
 rules:
 - MATCH,PROXY

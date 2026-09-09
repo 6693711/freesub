@@ -3,28 +3,47 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇯🇵 Tokyo  13  Japan",
-      "server": "64.83.33.45",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "AyqX8KynyyQLReOZorQRQbsvmiwxBQOf"
+      "tag": "🇹🇼 Nantou City  NAN  Taiwan",
+      "server": "namrcg001640lrm.cybervena.com",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "a9a0d092-6f0e-4701-81ee-454643d6d506"
     },
     {
       "type": "vless",
-      "tag": "vless-1167245089",
-      "server": "ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com",
+      "tag": "vless-1211278471",
+      "server": "19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com",
       "server_port": 443,
-      "uuid": "fbf91120-50ba-11ef-a203-f23c91cfbbc9",
+      "uuid": "2ec58858-976b-11ea-82ef-f23c9164ca5d",
       "tls": {
         "enabled": true,
         "server_name": "updates.cdn-apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
           "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1175369236",
+      "server": "118.167.200.67",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE"
         }
       }
     },

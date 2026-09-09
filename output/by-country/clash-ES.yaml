@@ -3,23 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 290613
-  port: 19842
+  name: 🏳️ ShatakVPN 989082
+  port: 443
   reality-opts:
-    public-key: sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM
-    short-id: 25ebc9e0a912
-  server: 185.254.205.79
-  servername: www.tesla.com
+    public-key: Sgocj9v63XdHU04TV3-Pk141YPIT_E-UgLr9u4OkE0E
+    short-id: d27201f7bf5874f9
+  server: 107.189.19.27
+  servername: cdn.dodostatic.net
   tls: true
   type: vless
   udp: true
-  uuid: 43c23116-1115-4af4-a0f0-56f02841a605
+  uuid: 813a385c-f26f-48b5-9bbb-53204a9c5bcc
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 290613
+  - 🏳️ ShatakVPN 989082
   type: select
 rules:
 - MATCH,PROXY

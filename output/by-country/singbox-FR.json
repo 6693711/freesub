@@ -2,59 +2,58 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443",
-      "server": "162.19.10.99",
-      "server_port": 443,
-      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "nasnet-162191099-direct.mbghalibaf.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 994905",
-      "server": "62.210.91.2",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1175310397",
-      "server": "54.37.136.194",
-      "server_port": 2053,
-      "uuid": "2211972b-a45a-4951-a640-6173d573e637",
+      "type": "hysteria2",
+      "tag": "hysteria2-862083240",
+      "server": "151.247.197.253",
+      "server_port": 36723,
+      "password": "Krab9Hyst2_Rk7pQ2xL",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 20ms",
+      "server": "172.67.217.10",
+      "server_port": 443,
+      "uuid": "bfea31b5-371b-48d9-a9fa-4767ed6a5973",
+      "tls": {
+        "enabled": true,
+        "server_name": "bluerocketway-bcc.lat",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "3nFTPdoFnfcwN1xnLwegJmBycLqRH6TRsrbD2XnQbjM",
-          "short_id": "bfc5464d84de3b3b"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/jetiona",
+        "headers": {
+          "Host": "bluerocketway-bcc.lat"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 France",
+      "server": "51.83.192.80",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "itzvpn@321"
+    },
+    {
+      "type": "vless",
+      "tag": "[openproxylist.com] FR 12723523",
+      "server": "152.228.162.19",
+      "server_port": 80,
+      "uuid": "5ce84688-f535-46ad-a512-37b17becf6ea",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "akamaized.net"
         }
       }
     },

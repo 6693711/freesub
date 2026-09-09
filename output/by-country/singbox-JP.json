@@ -2,14 +2,56 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "vmess-1014860710",
+      "server": "155.248.176.44",
+      "server_port": 55216,
+      "uuid": "154dbc39-0921-cf11-29bd-156c5000d763",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-13527647",
+      "server": "45.88.43.116",
+      "server_port": 52454,
+      "password": "6c077487-06af-4fb1-9e46-d485d98f0a31",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "vless-1169011913",
-      "server": "freshjuniper.download",
+      "tag": "vless-1139775227",
+      "server": "13.114.89.187",
+      "server_port": 16611,
+      "uuid": "059fbe5b-21dc-413f-8f5c-dac39201914c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cDzA5Efsd52LehcCFXh9bS3eCuj7HQZwau-yjPqLPgQ",
+          "short_id": "701b0c5c9dee514d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 470809",
+      "server": "130.12.102.125",
       "server_port": 443,
       "uuid": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
       "tls": {
         "enabled": true,
-        "server_name": "freshjuniper.download",
+        "server_name": "localhost",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -21,8 +63,41 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-305203719",
+      "server": "85.121.122.25",
+      "server_port": 12765,
+      "password": "STYyftThFn",
+      "tls": {
+        "enabled": true,
+        "server_name": "freedom.chenlan.top",
+        "insecure": false
+      }
+    },
+    {
       "type": "vless",
-      "tag": "vless-1007755579",
+      "tag": "vless-222487013",
+      "server": "3.114.220.22",
+      "server_port": 18007,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-987610015",
       "server": "154.31.114.248",
       "server_port": 50159,
       "uuid": "d56624b2-35bb-468c-9b2a-e0b0df7230c1",
@@ -32,7 +107,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -43,10 +118,10 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1048993114",
-      "server": "13.231.19.51",
-      "server_port": 11690,
-      "uuid": "e2b8b217-cffb-4d66-9b8b-eca6e4334032",
+      "tag": "🏳️ ShatakVPN 138830",
+      "server": "13.230.66.70",
+      "server_port": 23607,
+      "uuid": "babf64f8-f9ee-4564-a097-16433f2ebd46",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -57,91 +132,29 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg",
-          "short_id": "034885e346fd30"
+          "public_key": "liATkHCbR_IPjdgOhHK5nZO6fgCO091bTab3v2G8Lm4",
+          "short_id": "701b0c5c9dee514d"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-701259234",
-      "server": "3.114.220.22",
-      "server_port": 18007,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "tag": "🏳️ ShatakVPN 468321",
+      "server": "43.207.162.145",
+      "server_port": 32913,
+      "uuid": "15836880-212b-4690-b29c-1889a749bf72",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.intel.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 Tokyo  13  Japan",
-      "server": "64.83.33.45",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "AyqX8KynyyQLReOZorQRQbsvmiwxBQOf"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-650665463",
-      "server": "45.88.43.116",
-      "server_port": 52454,
-      "password": "6c077487-06af-4fb1-9e46-d485d98f0a31",
-      "tls": {
-        "enabled": true,
-        "server_name": "45.88.43.116",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "vmess-1217107373",
-      "server": "168.110.60.104",
-      "server_port": 18112,
-      "uuid": "ad45f8f6-0f0a-4cc4-b907-c4582407dc94",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-318025219",
-      "server": "freedom.chenlan.top",
-      "server_port": 12765,
-      "password": "STYyftThFn",
-      "tls": {
-        "enabled": true,
-        "server_name": "freedom.chenlan.top",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1044739431",
-      "server": "13.231.7.104",
-      "server_port": 24620,
-      "uuid": "b969ef8f-7bdb-474f-9481-d8f3c5686fb8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amd.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI",
-          "short_id": "db2cb3b3c2dbb711"
+          "public_key": "iJhoNzfiPiua04PL88iAAyZz2u39su4ChSCiGVoekRQ",
+          "short_id": "a8f0a95931a52732"
         }
       }
     },

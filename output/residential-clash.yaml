@@ -3,29 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🇯🇵 Tokyo  13  Japan
-  password: AyqX8KynyyQLReOZorQRQbsvmiwxBQOf
-  port: 443
-  server: 64.83.33.45
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 Nantou City  NAN  Taiwan
+  password: a9a0d092-6f0e-4701-81ee-454643d6d506
+  port: 50099
+  server: namrcg001640lrm.cybervena.com
   type: ss
   udp: true
-- client-fingerprint: chrome
-  name: vless-1167245089
+- client-fingerprint: edge
+  name: vless-1211278471
   port: 443
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com
+  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
   servername: updates.cdn-apple.com
   tls: true
   type: vless
   udp: true
-  uuid: fbf91120-50ba-11ef-a203-f23c91cfbbc9
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+- client-fingerprint: qq
+  name: vless-1175369236
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  server: 118.167.200.67
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇯🇵 Tokyo  13  Japan
-  - vless-1167245089
+  - 🇹🇼 Nantou City  NAN  Taiwan
+  - vless-1211278471
+  - vless-1175369236
   type: select
 rules:
 - MATCH,PROXY

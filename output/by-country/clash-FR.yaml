@@ -3,47 +3,52 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: hysteria2-862083240
+  password: Krab9Hyst2_Rk7pQ2xL
+  port: 36723
+  server: 151.247.197.253
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: hysteria2
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
+  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 20ms
+  network: ws
   port: 443
-  server: 162.19.10.99
-  servername: nasnet-162191099-direct.mbghalibaf.com
+  server: 172.67.217.10
+  servername: bluerocketway-bcc.lat
   tls: true
   type: vless
   udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 994905
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
-  tls: true
+  uuid: bfea31b5-371b-48d9-a9fa-4767ed6a5973
+  ws-opts:
+    headers:
+      Host: bluerocketway-bcc.lat
+    path: /jetiona
+- cipher: aes-256-gcm
+  name: 🇫🇷 France
+  password: itzvpn@321
+  port: 8388
+  server: 51.83.192.80
+  type: ss
+  udp: true
+- name: '[openproxylist.com] FR 12723523'
+  network: ws
+  port: 80
+  server: 152.228.162.19
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: chrome
-  name: vless-1175310397
-  port: 2053
-  reality-opts:
-    public-key: 3nFTPdoFnfcwN1xnLwegJmBycLqRH6TRsrbD2XnQbjM
-    short-id: bfc5464d84de3b3b
-  server: 54.37.136.194
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2211972b-a45a-4951-a640-6173d573e637
+  uuid: 5ce84688-f535-46ad-a512-37b17becf6ea
+  ws-opts:
+    headers:
+      Host: akamaized.net
+    path: /vless/
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
-  - 🏳️ ShatakVPN 994905
-  - vless-1175310397
+  - hysteria2-862083240
+  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 20ms
+  - 🇫🇷 France
+  - '[openproxylist.com] FR 12723523'
   type: select
 rules:
 - MATCH,PROXY

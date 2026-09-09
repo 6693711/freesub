@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 994822
+  port: 40443
+  reality-opts:
+    public-key: mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ
+    short-id: beb4
+  server: 94.241.174.157
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 994822
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

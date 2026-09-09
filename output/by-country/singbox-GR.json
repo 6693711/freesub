@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 994822",
+      "server": "94.241.174.157",
+      "server_port": 40443,
+      "uuid": "8ac637bf-554e-4902-94d7-baf01780a83c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ",
+          "short_id": "beb4"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

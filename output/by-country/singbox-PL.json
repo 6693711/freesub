@@ -3,51 +3,30 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1166936357",
-      "server": "50.7.248.234",
+      "tag": "🏳️ ShatakVPN 512745",
+      "server": "144.31.5.64",
       "server_port": 443,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "viper-22.moriarty-web.com",
+        "server_name": "pl6.moritech.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1201061230",
-      "server": "191.44.113.220",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 826765",
+      "server": "144.31.93.126",
       "server_port": 443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
-      "flow": "xtls-rprx-vision",
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
-        "server_name": "eu-central-pl-1.hanvpn.biz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "NjIuu35vz5MthSzqd6kt8PbXbZxCCL2Rb2GbpMCRTEY",
-          "short_id": "12e3b7681806bc97"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 276217",
-      "server": "94.183.209.59",
-      "server_port": 443,
-      "uuid": "d23cb516-40db-4aa4-8142-6b45ff882f90",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {
@@ -63,24 +42,20 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-620179978",
-      "server": "admin.wwwinternetvideo.click",
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443",
+      "server": "144.31.5.64",
       "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": true
+        "server_name": "pl6.moritech.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-819466521",
-      "server": "217.30.10.44",
-      "server_port": 9063,
-      "method": "aes-256-cfb",
-      "password": "aQqJbtwFGcCCaeL3"
     },
     {
       "type": "direct",

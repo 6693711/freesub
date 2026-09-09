@@ -3,48 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '[openproxylist.com] IT 15191068'
-  port: 8443
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  server: 31.58.181.88
-  servername: tradingview.com
-  tls: true
-  type: vless
+- cipher: chacha20-ietf-poly1305
+  name: 🇦🇪 United Arab Emirates
+  password: tunnel-astrovpn_official
+  port: 8444
+  server: 188.208.110.58
+  type: ss
   udp: true
-  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: freegrpc
-  name: vless-1115899893
-  network: grpc
-  port: 2087
-  server: srv-21bac9.vless.monster
-  servername: srv-21bac9.vless.monster
-  tls: true
-  type: vless
-  udp: true
-  uuid: df9f5aca-eda0-428f-a752-e53866153d12
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 408683
-  port: 8443
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  server: 31.58.181.88
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cc422436-e0e9-4f15-bfe8-db3d816e5527
 proxy-groups:
 - name: PROXY
   proxies:
-  - '[openproxylist.com] IT 15191068'
-  - vless-1115899893
-  - 🏳️ ShatakVPN 408683
+  - 🇦🇪 United Arab Emirates
   type: select
 rules:
 - MATCH,PROXY

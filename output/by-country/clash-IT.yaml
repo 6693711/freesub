@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 623807
+  port: 32833
+  reality-opts:
+    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
+    short-id: a0a305ccc8e94aa8
+  server: 172.238.232.239
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 623807
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

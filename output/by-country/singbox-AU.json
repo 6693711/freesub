@@ -2,11 +2,29 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "vmess-1071045860",
+      "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-16067",
+      "server": "38.91.107.49",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
       "type": "vless",
-      "tag": "vless-1109323666",
+      "tag": "vless-983997925",
       "server": "51.161.199.124",
       "server_port": 443,
-      "uuid": "a763a884-deee-4598-9f5c-0cdc5fda71f7",
+      "uuid": "cba066ac-45d9-4bbc-bcbe-672a9faed36b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -23,46 +41,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-982065620",
-      "server": "51.161.199.124",
-      "server_port": 443,
-      "uuid": "57e8207e-f080-4ad9-adf9-e9996b3b00b9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "suetinklerartglass.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0",
-          "short_id": "0f4d3210977f51a5"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1048867197",
-      "server": "51.161.199.124",
-      "server_port": 443,
-      "uuid": "aeeff70d-5bf4-48dc-9120-0593eda94cdb",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "suetinklerartglass.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0",
-          "short_id": "0f4d3210977f51a5"
-        }
-      }
+      "type": "vmess",
+      "tag": "[openproxylist.com] US 14058854",
+      "server": "38.110.1.246",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",
