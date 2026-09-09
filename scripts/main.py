@@ -27,7 +27,6 @@ SUBSCRIBE_SOURCES = [
     "https://www.ermao.net/sub/v2ray/ermao.net",
 ]
 
-# GitHub 用户名与仓库名（用于拼接首页的 CDN 与 Raw 链接）
 REPO_USER = "hezhanleiok"
 REPO_NAME = "freesub"
 
@@ -55,7 +54,7 @@ RISK_KEYWORDS = [
     "剩余", "到期", "续费", "测速", "aff", "vip", "free"
 ]
 
-# 国家代码到中文名称映射（不带臃肿英文全称）
+# 纯中文名称映射，无冗长英文全称
 COUNTRY_NAMES = {
     "TW": "中国台湾", "HK": "中国香港", "MO": "中国澳门", "CN": "中国大陆",
     "JP": "日本", "KR": "韩国", "SG": "新加坡", "US": "美国",
@@ -63,11 +62,11 @@ COUNTRY_NAMES = {
     "NL": "荷兰", "RU": "俄罗斯", "AU": "澳大利亚", "IN": "印度",
     "MY": "马来西亚", "TH": "泰国", "VN": "越南", "PH": "菲律宾",
     "ID": "印尼", "TR": "土耳其", "BR": "巴西", "AE": "阿联酋",
-    "ZA": "南非", "OTHER": "其他地区"
+    "ZA": "南非", "OTHER": "其他"
 }
 
 
-# ==================== 2. 全协议解析与严苛清洗 ====================
+# ==================== 2. 全协议解析与清洗 ====================
 def decode_base64(s: str) -> str:
     s = s.strip().replace("\r", "").replace("\n", "")
     padding = len(s) % 4
@@ -96,7 +95,6 @@ def clean_name(name: str, used_names: set) -> str:
 
 
 def clean_reality_sid(sid: str) -> str:
-    """严格校验 Reality short-id，不截断、不修补，非法值直接丢弃"""
     if sid is None:
         return ""
     sid = str(sid).strip().lower()
@@ -104,9 +102,7 @@ def clean_reality_sid(sid: str) -> str:
         return ""
     if not all(c in HEX_CHARS for c in sid):
         return ""
-    if len(sid) % 2 != 0:
-        return ""
-    if len(sid) > 16:
+    if len(sid) % 2 != 0 or len(sid) > 16:
         return ""
     return sid
 
@@ -146,9 +142,8 @@ def is_valid_clash_proxy(p: dict) -> bool:
                 if not pbk or len(pbk) not in (43, 44) or not all(c in BASE64_CHARS for c in pbk):
                     return False
                 sid = str(ro.get("short-id", "")).strip()
-                if sid:
-                    if len(sid) > 16 or len(sid) % 2 != 0 or not all(c in HEX_CHARS for c in sid):
-                        return False
+                if sid and (len(sid) > 16 or len(sid) % 2 != 0 or not all(c in HEX_CHARS for c in sid)):
+                    return False
 
         elif ptype == "ss":
             cipher = str(p.get("cipher", "")).lower().strip()
@@ -565,9 +560,10 @@ def test_and_fix_mihomo_config(clash_proxies: list) -> list:
 
     for attempt in range(max_retries):
         proxy_names = [p["name"] for p in current_proxies]
+        # 【核心修正 1】：mode 必须设为 global，确保本地入站直接走 GLOBAL 策略组，绝不直连
         config = {
             "mixed-port": MIXED_PORT,
-            "mode": "rule",
+            "mode": "global",
             "log-level": "info",
             "allow-lan": False,
             "external-controller": f"127.0.0.1:{CONTROLLER_PORT}",
@@ -577,6 +573,7 @@ def test_and_fix_mihomo_config(clash_proxies: list) -> list:
             "proxy-groups": [
                 {"name": "GLOBAL", "type": "select", "proxies": proxy_names}
             ],
+            "rules": ["MATCH,GLOBAL"],
         }
         with open(f"{MIHOMO_TEMP_DIR}/config.yaml", "w", encoding="utf-8") as f:
             yaml.dump(config, f, allow_unicode=True)
@@ -640,7 +637,7 @@ def start_mihomo(clash_proxies: list) -> tuple:
     raise RuntimeError(f"Failed to start Mihomo controller within timeout. Log:\n{output}")
 
 
-# ==================== 5. 两阶段防断流与落地识别 ====================
+# ==================== 5. 两阶段防断流与精准落地识别 ====================
 async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
     test_url = "http://cp.cloudflare.com/generate_204"
     headers = {"Authorization": f"Bearer {CONTROLLER_SECRET}"}
@@ -666,6 +663,7 @@ async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
 
 
 def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
+    # 切换当前全局出站节点
     try:
         requests.put(
             f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/GLOBAL",
@@ -676,16 +674,15 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     except Exception:
         return None
 
-    # 留出 0.15 秒让内核完全切路上游连接
-    time.sleep(0.15)
+    time.sleep(0.2)
     local_proxy = {"http": f"http://127.0.0.1:{MIXED_PORT}", "https": f"http://127.0.0.1:{MIXED_PORT}"}
 
-    # 防劫持与断流二阶验证（必须严格返回 204，拒绝 301/302 反诈跳转）
+    # 防劫持与二阶连通性验证（拒绝 301/302 重定向反诈或拦截页）
     try:
         check_204 = requests.get(
             "http://cp.cloudflare.com/generate_204",
             proxies=local_proxy,
-            timeout=3.0,
+            timeout=3.5,
             allow_redirects=False
         )
         if check_204.status_code != 204:
@@ -698,9 +695,9 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     is_hosting = None
     as_info = ""
 
-    # 1. 穿透节点出口请求免限频的 ip-api
+    # 1. 穿透节点真实出网出口请求 ip-api
     try:
-        resp = requests.get("http://ip-api.com/json/?fields=status,countryCode,isp,org,as,hosting,query", proxies=local_proxy, timeout=3.5)
+        resp = requests.get("http://ip-api.com/json/?fields=status,countryCode,isp,org,as,hosting,query", proxies=local_proxy, timeout=4.0)
         if resp.status_code == 200:
             data = resp.json()
             if data.get("status") == "success":
@@ -734,7 +731,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     if not country_code:
         country_code = "OTHER"
 
-    # 4. 家宽（Residential）与机房甄别
+    # 4. 家宽与机房甄别
     if asn_db:
         try:
             asn_res = asn_db.get(egress_ip)
@@ -768,22 +765,32 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     }
 
 
-# ==================== 6. 首页 README 动态生成（国旗图标 + 防错行排版） ====================
+# ==================== 6. 首页 README 保护式更新（锚点替换） ====================
 def render_flag(code: str) -> str:
-    """生成不受 Windows 字体限制的彩色国旗图标"""
     code = code.upper()
     if code == "OTHER":
         return "🌐"
+    # 使用不受 Windows 字体限制的彩色国旗图标
     return f'<img src="https://flagcdn.com/20x15/{code.lower()}.png" width="20" height="15" alt="{code}">'
 
 
-def generate_readme(classified_nodes: list):
-    """自动生成无错位、带真实国旗、数据实时同步的首页 README.md"""
+def update_readme_safely(classified_nodes: list):
+    """
+    智能锚点替换更新：
+    100% 完整保留原 README 的热度曲线图、Cloudflare Worker 部署教程等
+    仅精确替换【节点数量】与【国家/家宽分类表格】
+    """
+    if not os.path.exists("README.md"):
+        return
+
+    with open("README.md", "r", encoding="utf-8") as f:
+        content = f.read()
+
     total_nodes = len(classified_nodes)
     res_nodes = [n for n in classified_nodes if n["is_residential"]]
     total_res = len(res_nodes)
 
-    # 统计国家与家宽数量
+    # 统计国家与家宽
     country_stats = {}
     res_country_stats = {}
     for n in classified_nodes:
@@ -792,13 +799,10 @@ def generate_readme(classified_nodes: list):
         if n["is_residential"]:
             res_country_stats[c] = res_country_stats.get(c, 0) + 1
 
-    # 降序排序
     sorted_countries = sorted(country_stats.items(), key=lambda x: x[1], reverse=True)
     sorted_res = sorted(res_country_stats.items(), key=lambda x: x[1], reverse=True)
 
-    update_time = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-
-    # 构建家宽表格内容
+    # 1. 紧凑排版家宽表格（纯中文、防折行 <nobr>，无冗余英文全称）
     res_rows = []
     if sorted_res:
         for c, count in sorted_res:
@@ -820,7 +824,7 @@ def generate_readme(classified_nodes: list):
     else:
         res_rows.append("| <nobr>暂无家宽</nobr> | 0 | - | - | - |")
 
-    # 构建国家分类表格内容
+    # 2. 紧凑排版国家分类表格
     country_rows = []
     for c, count in sorted_countries:
         c_name = COUNTRY_NAMES.get(c, c)
@@ -839,52 +843,39 @@ def generate_readme(classified_nodes: list):
 
         country_rows.append(f"| {loc} | {count} | {v2_links} | {cl_links} | {sb_links} |")
 
-    res_table_str = "\n".join(res_rows)
-    country_table_str = "\n".join(country_rows)
+    new_res_table = "| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(res_rows)
+    new_country_table = "| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(country_rows)
 
-    readme_content = f"""# 🚀 FreeSub - 免费多协议节点自动聚合与测活池
+    # 3. 动态替换原 README 中的总节点数（支持 <td>1211</td> 或 | **1211** |）
+    content = re.sub(r'(<td>|\*\*)(1211|\d+)(</td>|\*\*)', rf'\g<1>{total_nodes}\g<3>', content)
 
-> 🤖 **自动更新时间**：`{update_time}`  
-> 🛡️ **节点经过双重防断流探测、抗欺诈拦截与真实落地 Egress IP 归类**。
+    # 4. 精确替换家宽表格部分（保留周围所有说明与标题）
+    res_section_pattern = re.compile(
+        r'(###?\s*🏠?\s*按照家宽分类节点订阅.*?\n+).*?(\n+---|###?\s*🌍?\s*按照国家)',
+        re.DOTALL
+    )
+    if res_section_pattern.search(content):
+        content = res_section_pattern.sub(
+            rf'\g<1>> 经 MaxMind ASN 离线库与核心运营商白名单严格甄别，剔除数据中心及云厂商，保留民用住宅宽带。当前可用家宽节点：**{total_res}** 个。\n\n{new_res_table}\n\n\g<2>',
+            content,
+            count=1
+        )
 
----
-
-### 🌟 全量测活节点订阅（全协议合并）
-
-| 客户端类型 | 有效节点数 | ⚡ 免翻 CDN 直链 | 🌐 官方 Raw 直链 |
-| :--- | :---: | :--- | :--- |
-| **🐱 Clash / Mihomo (YAML)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/clash.yaml) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/clash.yaml) |
-| **⚡ V2RayN (Base64 格式)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/v2ray.txt) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/v2ray.txt) |
-| **📦 sing-box (JSON 格式)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/singbox.json) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/singbox.json) |
-
----
-
-### 🏠 按照家宽分类节点订阅（住宅 IP 专区）
-
-> 经 MaxMind ASN 离线库与核心运营商白名单严格甄别，剔除数据中心及云厂商，保留民用住宅宽带。当前可用家宽节点：**{total_res}** 个。
-
-| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |
-| :--- | :---: | :--- | :--- | :--- |
-{res_table_str}
-
----
-
-### 🌍 按照国家/地区分类节点订阅（落地出口）
-
-| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |
-| :--- | :---: | :--- | :--- | :--- |
-{country_table_str}
-
----
-
-### 📌 订阅使用提示
-1. **CDN 直链**：适合国内网络直连拉取，已配置 jsDelivr 全球加速节点。
-2. **Raw 直链**：GitHub 官方源文件，适合挂代理环境下获取实时配置。
-"""
+    # 5. 精确替换国家分类表格部分
+    country_section_pattern = re.compile(
+        r'(###?\s*🌍?\s*按照国家/地区分类节点订阅.*?\n+).*?(\n+---|###?\s*📌|\Z)',
+        re.DOTALL
+    )
+    if country_section_pattern.search(content):
+        content = country_section_pattern.sub(
+            rf'\g<1>{new_country_table}\n\n\g<2>',
+            content,
+            count=1
+        )
 
     with open("README.md", "w", encoding="utf-8") as f:
-        f.write(readme_content)
-    print(f"[+] README.md successfully generated with {total_nodes} alive nodes ({total_res} residential).")
+        f.write(content)
+    print(f"[+] README.md safely updated! Alive nodes: {total_nodes}, Residential: {total_res}")
 
 
 # ==================== 7. 文件分发与导出 ====================
@@ -952,8 +943,8 @@ def export_files(classified_nodes: list):
         write_singbox(f"{OUTPUT_DIR}/residential-by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
         write_v2ray(f"{OUTPUT_DIR}/residential-by-country/{c}.txt", [n["raw"] for n in nodes])
 
-    # 导出文件后，同步重新生成 README.md 首页
-    generate_readme(classified_nodes)
+    # 导出文件后，安全更新 README.md
+    update_readme_safely(classified_nodes)
     print(f"[SUCCESS] Export complete! Verified stable: {len(classified_nodes)}, Quality Residential: {len(res_nodes)}")
 
 
