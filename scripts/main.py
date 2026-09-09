@@ -12,7 +12,7 @@ import aiohttp
 import yaml
 import maxminddb
 
-# ==================== 1. 订阅源配置 ====================
+# ==================== 1. 订阅源配置（完整保留原仓库所有源） ====================
 SUBSCRIBE_SOURCES = [
     "https://wild-cloud-9893.heleimail.workers.dev",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
@@ -32,7 +32,10 @@ CONTROLLER_PORT = 9090
 MIXED_PORT = 7890
 CONTROLLER_SECRET = "freesub-test-token"
 
+# 正则校验器
 UUID_PATTERN = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
+HEX_PATTERN = re.compile(r"^[0-9a-fA-F]*$")
+BASE64_KEY_PATTERN = re.compile(r"^[0-9a-zA-Z+/=_-]{43,44}$")
 
 VALID_SS_CIPHERS = {
     "aes-128-gcm", "aes-256-gcm", "chacha20-ietf-poly1305",
@@ -42,8 +45,13 @@ VALID_SS_CIPHERS = {
     "rc4-md5", "chacha20-ietf"
 }
 
+RISK_KEYWORDS = [
+    "官网", "通知", "返利", "备用", "地址", "购买", "广告", "群", "频道",
+    "tg:", "t.me", "traffic", "expire", "reset", "bandwidth", "left", "gb"
+]
 
-# ==================== 2. 全协议解析与清洗 ====================
+
+# ==================== 2. 全协议解析与深度清洗 ====================
 def decode_base64(s: str) -> str:
     s = s.strip().replace("\r", "").replace("\n", "")
     padding = len(s) % 4
@@ -71,8 +79,22 @@ def clean_name(name: str, used_names: set) -> str:
     return unique_name
 
 
+def sanitize_short_id(sid: str) -> str:
+    """严谨清洗 Reality short-id，必须为偶数位十六进制且长度 <= 16"""
+    if not sid:
+        return ""
+    sid = sid.strip().lower()
+    if not HEX_PATTERN.match(sid):
+        return ""
+    if len(sid) % 2 != 0:
+        sid = sid[:-1]
+    if len(sid) > 16:
+        sid = sid[:16]
+    return sid
+
+
 def is_valid_clash_proxy(p: dict) -> bool:
-    """严谨的前置校验，防止任何脏节点导致 Mihomo 启动崩溃"""
+    """前置白名单校验，彻底杜绝导致 Mihomo 崩溃退出的语法错误"""
     try:
         port = p.get("port")
         if not isinstance(port, int) or port < 1 or port > 65535:
@@ -82,14 +104,23 @@ def is_valid_clash_proxy(p: dict) -> bool:
         if not server or not isinstance(server, str) or len(server.strip()) == 0:
             return False
 
+        # 过滤广告、提示类伪节点
+        name_lower = p.get("name", "").lower()
+        if any(kw in name_lower for kw in RISK_KEYWORDS):
+            return False
+
         ptype = p.get("type")
         if ptype in ["vmess", "vless"]:
             uuid = str(p.get("uuid", "")).strip()
             if not UUID_PATTERN.match(uuid):
                 return False
+
             if ptype == "vless" and p.get("reality-opts"):
-                pbk = p["reality-opts"].get("public-key", "")
-                if not pbk or len(pbk) < 30:
+                pbk = p["reality-opts"].get("public-key", "").strip()
+                if not pbk or not BASE64_KEY_PATTERN.match(pbk):
+                    return False
+                sid = p["reality-opts"].get("short-id", "")
+                if sid and (not HEX_PATTERN.match(sid) or len(sid) % 2 != 0):
                     return False
 
         elif ptype == "ss":
@@ -187,7 +218,7 @@ def parse_vless(uri: str, used_names: set):
         flow = str(params.get("flow", "")).strip()
         fp = str(params.get("fp", "chrome")).strip()
         pbk = str(params.get("pbk", "")).strip()
-        sid = str(params.get("sid", "")).strip()
+        sid = sanitize_short_id(params.get("sid", ""))
         path = str(params.get("path", "")).strip()
         host = str(params.get("host", "")).strip()
         service_name = str(params.get("serviceName", "")).strip()
@@ -209,7 +240,10 @@ def parse_vless(uri: str, used_names: set):
             if fp:
                 clash_proxy["client-fingerprint"] = fp
             if security == "reality" and pbk:
-                clash_proxy["reality-opts"] = {"public-key": pbk, "short-id": sid}
+                clash_proxy["reality-opts"] = {"public-key": pbk}
+                if sid:
+                    clash_proxy["reality-opts"]["short-id"] = sid
+
         if net == "ws":
             clash_proxy["network"] = "ws"
             clash_proxy["ws-opts"] = {"path": path or "/", "headers": {"Host": host} if host else {}}
@@ -484,15 +518,15 @@ def fetch_all_nodes() -> list:
         node = parse_node(uri, used_names)
         if node:
             parsed_nodes.append(node)
-    print(f"[+] Sanitized and valid nodes for Mihomo: {len(parsed_nodes)}")
+    print(f"[+] Cleaned and validated nodes for Mihomo: {len(parsed_nodes)}")
     return parsed_nodes
 
 
-# ==================== 4. 内核启动与测活 ====================
+# ==================== 4. 内核启动与并发测活 ====================
 def start_mihomo(clash_proxies: list) -> subprocess.Popen:
     os.makedirs(MIHOMO_TEMP_DIR, exist_ok=True)
 
-    # 关键修复：将工作流下载的 GeoIP 数据库拷贝到 Mihomo 工作目录，彻底避免从外网拉取 Geo 数据库卡死
+    # 预载本地 GeoIP 数据库，彻底避免外网拉取超时
     if os.path.exists("GeoLite2-Country.mmdb"):
         shutil.copy("GeoLite2-Country.mmdb", f"{MIHOMO_TEMP_DIR}/Country.mmdb")
 
@@ -522,10 +556,8 @@ def start_mihomo(clash_proxies: list) -> subprocess.Popen:
         stderr=subprocess.STDOUT,
     )
 
-    # 轮询检查外部控制器端口，最长等待 12 秒
     for _ in range(40):
         if proc.poll() is not None:
-            # 进程意外中断，立即输出底层日志
             log_file.close()
             with open(log_path, "r", encoding="utf-8") as f:
                 output = f.read()
@@ -549,7 +581,8 @@ def start_mihomo(clash_proxies: list) -> subprocess.Popen:
 
 
 async def batch_health_check(proxy_names: list) -> dict:
-    print(f"[*] Starting concurrent health check for {len(proxy_names)} nodes...")
+    """阶段一：全并发 HTTP 204 通道测活"""
+    print(f"[*] Starting Phase 1 health check for {len(proxy_names)} nodes...")
     alive_map = {}
     test_url = "http://cp.cloudflare.com/generate_204"
     headers = {"Authorization": f"Bearer {CONTROLLER_SECRET}"}
@@ -571,12 +604,19 @@ async def batch_health_check(proxy_names: list) -> dict:
         tasks = [check(name) for name in proxy_names]
         await asyncio.gather(*tasks)
 
-    print(f"[+] Alive nodes verified: {len(alive_map)}")
+    print(f"[+] Phase 1 verified alive: {len(alive_map)}")
     return alive_map
 
 
-# ==================== 5. 落地出口与家宽检测 ====================
-def inspect_egress(proxy_name: str, country_db, asn_db) -> dict:
+# ==================== 5. 阶段二：防断流验证、高风险过滤与家宽检测 ====================
+def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
+    """
+    穿透中转：
+    1. 切换节点
+    2. 执行阶段二稳定性探测（剔除闪断/断流节点）
+    3. 识别反诈/重定向拦截（剔除风险节点）
+    4. 提取真实落地 IP 并识别家宽/机房属性
+    """
     try:
         requests.put(
             f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/GLOBAL",
@@ -588,6 +628,22 @@ def inspect_egress(proxy_name: str, country_db, asn_db) -> dict:
         return None
 
     local_proxy = {"http": f"http://127.0.0.1:{MIXED_PORT}", "https": f"http://127.0.0.1:{MIXED_PORT}"}
+
+    # 【防断流与防劫持测试】：请求 204 探针，必须返回 204 且无重定向
+    try:
+        check_204 = requests.get(
+            "http://cp.cloudflare.com/generate_204",
+            proxies=local_proxy,
+            timeout=2.5,
+            allow_redirects=False
+        )
+        if check_204.status_code != 204:
+            # 返回 301/302/200 页面等均属于反诈拦截、认证页面或风险假节点
+            return None
+    except Exception:
+        # 初筛能连但二次连接失败，代表断流/闪断节点，直接丢弃
+        return None
+
     egress_ip = None
     country_code = None
     is_hosting = None
@@ -728,7 +784,7 @@ def export_files(classified_nodes: list):
         write_singbox(f"{OUTPUT_DIR}/residential-by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
         write_v2ray(f"{OUTPUT_DIR}/residential-by-country/{c}.txt", [n["raw"] for n in nodes])
 
-    print(f"[SUCCESS] Export complete! Total valid: {len(classified_nodes)}, Residential: {len(res_nodes)}")
+    print(f"[SUCCESS] Export complete! Total valid & stable: {len(classified_nodes)}, High Quality Residential: {len(res_nodes)}")
 
 
 # ==================== 7. 主流程 ====================
@@ -745,7 +801,7 @@ def main():
         proxy_names = [n["name"] for n in nodes]
         alive_map = asyncio.run(batch_health_check(proxy_names))
         if not alive_map:
-            print("[-] No nodes survived health check.")
+            print("[-] No nodes survived Phase 1 health check.")
             return
 
         alive_nodes = [n for n in nodes if n["name"] in alive_map]
@@ -753,17 +809,17 @@ def main():
         country_db = maxminddb.open_database("GeoLite2-Country.mmdb") if os.path.exists("GeoLite2-Country.mmdb") else None
         asn_db = maxminddb.open_database("GeoLite2-ASN.mmdb") if os.path.exists("GeoLite2-ASN.mmdb") else None
 
-        print(f"[*] Inspecting egress and residential info for {len(alive_nodes)} alive nodes...")
+        print(f"[*] Phase 2: Inspecting stability, anti-interception & residential attributes for {len(alive_nodes)} nodes...")
         final_nodes = []
         for idx, node in enumerate(alive_nodes, 1):
-            meta = inspect_egress(node["name"], country_db, asn_db)
+            meta = inspect_egress_and_stability(node["name"], country_db, asn_db)
             if meta:
                 node["country"] = meta["country"]
                 node["egress_ip"] = meta["egress_ip"]
                 node["is_residential"] = meta["is_residential"]
                 final_nodes.append(node)
             if idx % 20 == 0 or idx == len(alive_nodes):
-                print(f"[*] Processed {idx}/{len(alive_nodes)} nodes...")
+                print(f"[*] Processed {idx}/{len(alive_nodes)} nodes (Kept: {len(final_nodes)})...")
 
         export_files(final_nodes)
 
