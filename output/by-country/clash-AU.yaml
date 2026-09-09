@@ -3,45 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1109323630
-  port: 443
-  reality-opts:
-    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
-    short-id: 0f4d3210977f51a5
-  server: 51.161.199.124
-  servername: suetinklerartglass.co.uk
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3622f803-8a8e-407d-9fff-249a2e84b06e
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1131524310
-  port: 443
-  reality-opts:
-    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
-    short-id: 0f4d3210977f51a5
-  server: 51.161.199.124
-  servername: suetinklerartglass.co.uk
-  tls: true
-  type: vless
-  udp: true
-  uuid: cba066ac-45d9-4bbc-bcbe-672a9faed36b
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 498339
-  port: 443
-  reality-opts:
-    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
-    short-id: 0f4d3210977f51a5
-  server: 51.161.199.124
-  servername: suetinklerartglass.co.uk
-  tls: true
-  type: vless
-  udp: true
-  uuid: a014310a-96ad-4b54-8acb-a835a3850552
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🏳️ ShatakVPN 786908
@@ -55,22 +16,66 @@ proxies:
   type: vless
   udp: true
   uuid: 643cdd4d-8731-440b-9e46-9496f593aa27
-- alterId: 0
-  cipher: auto
-  name: vmess-16903
-  port: 18000
-  server: 84.17.41.2
-  type: vmess
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-970879989
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: cb90334f-8b30-4333-b82d-8f9e2fa1a6dd
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-986428449
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: a407c73c-acca-4530-97d9-13f99768b6bf
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1065909339
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: aeeff70d-5bf4-48dc-9120-0593eda94cdb
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1007755590
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: 61e7c286-6b7d-4667-955c-430d89979c4d
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1109323630
-  - vless-1131524310
-  - 🏳️ ShatakVPN 498339
   - 🏳️ ShatakVPN 786908
-  - vmess-16903
+  - vless-970879989
+  - vless-986428449
+  - vless-1065909339
+  - vless-1007755590
   type: select
 rules:
 - MATCH,PROXY

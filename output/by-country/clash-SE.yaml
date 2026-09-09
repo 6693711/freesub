@@ -1,0 +1,27 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249 443
+  network: ws
+  port: 443
+  server: 202.155.11.249
+  servername: cf2.rumedia-cdn.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  ws-opts:
+    headers:
+      Host: cf2.rumedia-cdn.com
+    path: /cdn/v3/live
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249 443
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

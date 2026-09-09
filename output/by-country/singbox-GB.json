@@ -2,176 +2,31 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1181423202",
-      "server": "51.89.194.151",
-      "server_port": 2053,
-      "uuid": "a8444f42-8aa2-4ef2-8755-2b0d82415fc6",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo",
-          "short_id": "949023ece91caa7c"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1157522828",
-      "server": "51.89.194.151",
-      "server_port": 2053,
-      "uuid": "a8444f42-8aa2-4ef2-8755-2b0d82415fc6",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo",
-          "short_id": "949023ece91caa7c"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 843080",
-      "server": "78.129.150.217",
-      "server_port": 443,
-      "uuid": "66e9b3dc-76e2-417b-a2f3-bc350a8e17dc",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "strapi.io",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
-          "short_id": "fd55b698ee8c3629"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇬🇧 Portsmouth  ENG  United Kingdom",
-      "server": "149.102.149.207",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "LXchLsIwtCeUAUgu"
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1048772437",
-      "server": "3.9.135.156",
-      "server_port": 51847,
-      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
-          "short_id": "0eec442e7b34d2f2"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 230843",
-      "server": "78.129.184.117",
+      "tag": "🇬🇧 Manchester  ENG  United Kingdom",
+      "server": "141.98.101.181",
       "server_port": 443,
-      "uuid": "06b7fc10-26d9-4430-a7c7-f01131ee625c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "strapi.io",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "_8LiLlqEXJGXbg_G8KI1fXBlPnRoM3no-0oxxRRMcSw",
-          "short_id": "efcfd3c41c1762b0"
-        }
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "vless",
-      "tag": "vless-1102948492",
-      "server": "95.154.196.62",
+      "tag": "🏳️ ShatakVPN 226187",
+      "server": "107.181.151.241",
       "server_port": 443,
-      "uuid": "1d9b247a-d20e-49fd-bd9c-bb06e1ea2a18",
+      "uuid": "317bc783-340f-453c-afb5-b6bf637c0b23",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "foodnetwork.com",
+        "server_name": "www.tradingview.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "wiu5fVlBM7keSI48Oi3dEnQTR1BnJXgHtXo9xBpAnTA",
-          "short_id": "16498ac98306ce31"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 185978",
-      "server": "87.117.234.19",
-      "server_port": 443,
-      "uuid": "4d583b2c-2f5a-47d0-8181-e95217fe8cd9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "strapi.io",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
-          "short_id": "fd55b698ee8c3629"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 845983",
-      "server": "78.129.150.216",
-      "server_port": 443,
-      "uuid": "60a52f57-536a-4327-9a4c-c64db318dab3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "strapi.io",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
-          "short_id": "fd55b698ee8c3629"
+          "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
+          "short_id": "fc994ae7eb10"
         }
       }
     },

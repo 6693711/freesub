@@ -3,14 +3,35 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 986237",
-      "server": "144.31.221.57",
-      "server_port": 443,
-      "password": "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8",
+      "tag": "🏳️ ShatakVPN 199358",
+      "server": "130.61.50.75",
+      "server_port": 6443,
+      "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "player.wwwinternetvideo.click",
+        "server_name": "130.61.50.75",
         "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 748964",
+      "server": "207.241.172.254",
+      "server_port": 4777,
+      "uuid": "12a9194f-16fc-4fb9-a6eb-441c076b70e2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "amp-api-edge.apps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo",
+          "short_id": "01115788253bc845"
+        }
       }
     },
     {

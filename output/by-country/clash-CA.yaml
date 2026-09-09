@@ -3,19 +3,19 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-92670921
-  port: 443
+  name: vless-827281118
+  port: 41373
   reality-opts:
-    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
-    short-id: 3d3c1e645f763ee3
-  server: 158.69.112.254
-  servername: www.speedtest.net
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: 0e
+  server: 130.107.73.148
+  servername: google.com
   tls: true
   type: vless
   udp: true
-  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: vless-1003491287
@@ -29,39 +29,16 @@ proxies:
   type: vless
   udp: true
   uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-- name: hysteria2-1026820218
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 15.223.183.81
-  skip-cert-verify: true
-  sni: 15.223.183.81
-  type: hysteria2
-- name: 🏳️ ShatakVPN 656364
-  network: ws
-  port: 2087
-  server: 130.94.115.231
-  type: vless
+- cipher: aes-256-gcm
+  name: 🇨🇦 QC  Canada
+  password: Y6R9pAtvxxzmGC
+  port: 5000
+  server: 51.222.200.165
+  type: ss
   udp: true
-  uuid: 8a51f3d9-30cc-44e6-8d31-700211a29066
-  ws-opts:
-    headers: {}
-    path: /721740e567c7
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-909039620
-  port: 443
-  reality-opts:
-    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
-    short-id: f98843107912e782
-  server: 209.200.246.148
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 511380
+  name: vless-67911628
   port: 443
   reality-opts:
     public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
@@ -75,12 +52,10 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-92670921
+  - vless-827281118
   - vless-1003491287
-  - hysteria2-1026820218
-  - 🏳️ ShatakVPN 656364
-  - vless-909039620
-  - 🏳️ ShatakVPN 511380
+  - 🇨🇦 QC  Canada
+  - vless-67911628
   type: select
 rules:
 - MATCH,PROXY

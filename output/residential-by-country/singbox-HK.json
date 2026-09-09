@@ -3,10 +3,29 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1202800800",
-      "server": "26a9920c-tla000-tyt0e8-1mh67.hk3.hyhuawei.com",
+      "tag": "vless-1191331911",
+      "server": "bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com",
       "server_port": 443,
-      "uuid": "e1c7fbbc-96b6-11ef-8563-f23c913c8d2b",
+      "uuid": "5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1167245218",
+      "server": "bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b",
       "tls": {
         "enabled": true,
         "server_name": "updates.cdn-apple.com",
@@ -22,16 +41,111 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1212481643",
+      "tag": "🏳️ ShatakVPN 730118",
       "server": "58.153.148.126",
       "server_port": 443,
-      "uuid": "de629d50-1711-11ed-bd7c-f23c913c8d2b",
+      "uuid": "5dc6fa05-a601-aba6-7761-ecde22d2b0fc",
       "tls": {
         "enabled": true,
         "server_name": "updates.cdn-apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1202800804",
+      "server": "e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "5f091cbe-fb34-11ea-9777-f23c9164ca5d",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1191331884",
+      "server": "6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "6d4abac0-86e6-11ef-83cc-f23c913c8d2b",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1197775770",
+      "server": "58.153.148.126",
+      "server_port": 443,
+      "uuid": "c12f73f6-e8c7-11ed-9246-f23c9164ca5d",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 931943",
+      "server": "58.153.148.126",
+      "server_port": 443,
+      "uuid": "c12f73f6-e8c7-11ed-9246-f23c9164ca5d",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1191331904",
+      "server": "e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "5f091cbe-fb34-11ea-9777-f23c9164ca5d",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,

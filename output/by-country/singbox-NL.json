@@ -2,33 +2,66 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 891970",
+      "server": "172.239.239.53",
+      "server_port": 22746,
+      "uuid": "a4846a6c-163f-4b12-a99f-378d814e5e09",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "B6bPTxNaLqqoUTuNggzTBP0pPxJEqE_Bd_Ob27MPvgU",
+          "short_id": "d9fd4fa80238cd05"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-628782749",
+      "server": "46.229.243.132",
+      "server_port": 8443,
+      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
+      "tls": {
+        "enabled": true,
+        "server_name": "grape-turbo-fr.roxa.org",
+        "insecure": false
+      }
+    },
+    {
       "type": "shadowsocks",
-      "tag": "shadowsocks-277388489",
-      "server": "193.29.139.129",
+      "tag": "shadowsocks-258605572",
+      "server": "82.38.31.201",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
     },
     {
       "type": "shadowsocks",
       "tag": "🇳🇱 The Netherlands",
-      "server": "82.38.31.149",
-      "server_port": 8080,
+      "server": "82.38.31.36",
+      "server_port": 443,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 203223",
-      "server": "82.38.31.155",
+      "tag": "🏳️ ShatakVPN 897365",
+      "server": "82.38.31.9",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 502222",
-      "server": "51.158.206.12",
+      "tag": "🏳️ ShatakVPN 287717",
+      "server": "51.158.206.20",
       "server_port": 23576,
       "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
       "flow": "xtls-rprx-vision",
@@ -48,215 +81,72 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 852321",
-      "server": "82.38.31.218",
-      "server_port": 8080,
+      "tag": "🏳️ ShatakVPN 389661",
+      "server": "193.29.139.129",
+      "server_port": 443,
       "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "shadowsocks",
       "tag": "🇳🇱 The Netherlands_1",
-      "server": "82.38.31.194",
+      "server": "82.38.31.204",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "k1dBOmOB4oqi7Ump37a1bQ"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-238",
-      "server": "82.38.31.217",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1209548093",
-      "server": "nl-two.online-vpn.online",
-      "server_port": 443,
-      "password": "32df539b-e48b-4f0b-8d2d-30edc856cd23",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl-two.online-vpn.online",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 694298",
-      "server": "51.158.206.93",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
-        }
-      }
     },
     {
       "type": "shadowsocks",
       "tag": "🇳🇱 The Netherlands_2",
-      "server": "193.29.139.225",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1027255353",
-      "server": "46.229.243.148",
-      "server_port": 8443,
-      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
-      "tls": {
-        "enabled": true,
-        "server_name": "grape-turbo-fr.roxa.org",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "[openproxylist.com] NL 5790345",
-      "server": "82.38.31.3",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 681546",
-      "server": "45.82.67.183",
-      "server_port": 443,
-      "uuid": "30c3f401-9768-4215-8752-776926c1d67c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "northwaleswildlifetrust.org.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU",
-          "short_id": "8880a9f75eb46d91"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1197831907",
-      "server": "31.76.76.28",
-      "server_port": 443,
-      "uuid": "de5906f3-df38-4463-aa9d-2b01320cc6ea",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇳🇱 The Netherlands_4",
-      "server": "82.38.31.176",
+      "server": "82.38.31.203",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "k1dBOmOB4oqi7Ump37a1bQ"
     },
     {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 245402",
-      "server": "45.82.67.183",
-      "server_port": 443,
-      "uuid": "abe7e676-068a-452f-be84-fbac1554fd6f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "northwaleswildlifetrust.org.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU",
-          "short_id": "8880a9f75eb46d91"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇳🇱 The Netherlands_5",
-      "server": "82.38.31.69",
+      "tag": "🏳️ ShatakVPN 411222",
+      "server": "193.29.139.225",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇳🇱 The Netherlands_6",
-      "server": "193.29.139.249",
-      "server_port": 443,
+      "tag": "🇳🇱 Amsterdam  NH  The Netherlands_1",
+      "server": "108.181.58.239",
+      "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 917577",
-      "server": "46.229.243.140",
-      "server_port": 8443,
-      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
-      "tls": {
-        "enabled": true,
-        "server_name": "grape-turbo-fr.roxa.org",
-        "insecure": false
-      }
+      "password": "CJmTCCx7Ltud"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇳🇱 The Netherlands_7",
-      "server": "82.38.31.48",
-      "server_port": 443,
+      "tag": "🇳🇱 The Netherlands_3",
+      "server": "82.38.31.39",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands_4",
+      "server": "82.38.31.212",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands_5",
+      "server": "82.38.31.2",
+      "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 716468",
-      "server": "72.56.102.31",
-      "server_port": 443,
-      "password": "BWAFlp8g53",
-      "tls": {
-        "enabled": true,
-        "server_name": "72.56.102.31",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1048283987",
-      "server": "72.56.16.243",
-      "server_port": 443,
-      "password": "EkF2Yw0Lc7",
-      "tls": {
-        "enabled": true,
-        "server_name": "72.56.16.243",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 200406",
-      "server": "72.56.92.120",
+      "tag": "hysteria2-961086808",
+      "server": "hys13.wba-pn.ru",
       "server_port": 443,
       "password": "CnVfXXvMzh",
       "tls": {
@@ -266,58 +156,69 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 953332",
-      "server": "193.23.194.167",
-      "server_port": 443,
-      "uuid": "32349ee8-8551-45fa-a265-8704cec72936",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands_6",
+      "server": "193.29.139.197",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇺🇸 US-69.46.46.112 443",
-      "server": "69.46.46.112",
-      "server_port": 443,
-      "uuid": "f3651e35-d7a5-4416-bece-ddcd3799ebc4",
-      "tls": {
-        "enabled": true,
-        "server_name": "vnova005.up.railway.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws/f3651e35-d7a5-4416-bece-ddcd3799ebc4",
-        "headers": {
-          "Host": "vnova005.up.railway.app"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands_7",
+      "server": "82.38.31.16",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-591436862",
-      "server": "46.229.243.131",
+      "tag": "🏳️ ShatakVPN 132861",
+      "server": "46.229.243.137",
       "server_port": 8443,
       "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
       "tls": {
         "enabled": true,
         "server_name": "grape-turbo-fr.roxa.org",
-        "insecure": true
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 477619",
+      "server": "51.158.206.19",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇳🇱 The Netherlands_8",
-      "server": "82.38.31.216",
-      "server_port": 8080,
+      "tag": "shadowsocks-482887637",
+      "server": "193.29.139.230",
+      "server_port": 443,
       "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam  NH  The Netherlands_2",
+      "server": "switcher-nick-croquet.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "9tqhMdIrTkgQ46PvhyAtMH"
     },
     {
       "type": "direct",

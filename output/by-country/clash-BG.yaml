@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 241475
+  name: '[openproxylist.com] FI 15588165'
   port: 443
   reality-opts:
-    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
-    short-id: 76132b3b39704c44
-  server: 193.238.154.18
-  servername: es1.hat.onl
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+  server: 144.31.50.236
+  servername: yandex.ru
   tls: true
   type: vless
   udp: true
-  uuid: 2297ea1f-2415-4a2c-be20-4a3a978283a2
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 241475
+  - '[openproxylist.com] FI 15588165'
   type: select
 rules:
 - MATCH,PROXY

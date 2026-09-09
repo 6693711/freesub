@@ -3,21 +3,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 | DEU",
-      "server": "brightharbor.download",
+      "tag": "🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249 443",
+      "server": "202.155.11.249",
       "server_port": 443,
-      "uuid": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
-      "flow": "xtls-rprx-vision",
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
       "tls": {
         "enabled": true,
-        "server_name": "localhost",
+        "server_name": "cf2.rumedia-cdn.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn/v3/live",
+        "headers": {
+          "Host": "cf2.rumedia-cdn.com"
         }
       }
     },

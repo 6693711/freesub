@@ -3,17 +3,31 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 986237
-  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
-  port: 443
-  server: 144.31.221.57
+- name: 🏳️ ShatakVPN 199358
+  password: zhangyang
+  port: 6443
+  server: 130.61.50.75
   skip-cert-verify: true
-  sni: player.wwwinternetvideo.click
+  sni: 130.61.50.75
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 748964
+  port: 4777
+  reality-opts:
+    public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
+    short-id: 01115788253bc845
+  server: 207.241.172.254
+  servername: amp-api-edge.apps.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 12a9194f-16fc-4fb9-a6eb-441c076b70e2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 986237
+  - 🏳️ ShatakVPN 199358
+  - 🏳️ ShatakVPN 748964
   type: select
 rules:
 - MATCH,PROXY

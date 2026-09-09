@@ -3,30 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: vless-816611169
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: chrome
-  name: vless-1118870666
-  port: 2053
-  reality-opts:
-    public-key: UKvonm_uE7TSwksQIVQuNYgYwmcidr_g4lDIE2JW_Ag
-    short-id: 4868e772d098f0af
-  server: 51.77.217.70
-  servername: www.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: c543f005-59f7-40c1-9ae6-37505691d5be
 - name: vless-1197832078
   network: ws
   port: 2096
@@ -37,12 +13,62 @@ proxies:
   ws-opts:
     headers: {}
     path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 145267
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.10
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: 🏳️ ShatakVPN 650759
+  network: ws
+  port: 2096
+  server: 45.144.28.39
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: usejh2.neobo-tooth.ru
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 877995
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.10
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: 🏳️ ShatakVPN 790520
+  network: ws
+  port: 2096
+  server: 45.144.28.39
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: usejh2.neobo-tooth.ru
+    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-816611169
-  - vless-1118870666
   - vless-1197832078
+  - 🏳️ ShatakVPN 145267
+  - 🏳️ ShatakVPN 650759
+  - 🏳️ ShatakVPN 877995
+  - 🏳️ ShatakVPN 790520
   type: select
 rules:
 - MATCH,PROXY

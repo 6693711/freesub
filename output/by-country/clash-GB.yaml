@@ -3,127 +3,31 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-1181423202
-  port: 2053
-  reality-opts:
-    public-key: T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo
-    short-id: 949023ece91caa7c
-  server: 51.89.194.151
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a8444f42-8aa2-4ef2-8755-2b0d82415fc6
-- client-fingerprint: random
-  name: vless-1157522828
-  port: 2053
-  reality-opts:
-    public-key: T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo
-    short-id: 949023ece91caa7c
-  server: 51.89.194.151
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a8444f42-8aa2-4ef2-8755-2b0d82415fc6
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 843080
+- cipher: aes-128-gcm
+  name: 🇬🇧 Manchester  ENG  United Kingdom
+  password: shadowsocks
   port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  server: 78.129.150.217
-  servername: strapi.io
-  tls: true
-  type: vless
-  udp: true
-  uuid: 66e9b3dc-76e2-417b-a2f3-bc350a8e17dc
-- cipher: aes-256-gcm
-  name: 🇬🇧 Portsmouth  ENG  United Kingdom
-  password: LXchLsIwtCeUAUgu
-  port: 80
-  server: 149.102.149.207
+  server: 141.98.101.181
   type: ss
   udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1048772437
-  port: 51847
-  reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  server: 3.9.135.156
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 230843
-  port: 443
-  reality-opts:
-    public-key: _8LiLlqEXJGXbg_G8KI1fXBlPnRoM3no-0oxxRRMcSw
-    short-id: efcfd3c41c1762b0
-  server: 78.129.184.117
-  servername: strapi.io
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06b7fc10-26d9-4430-a7c7-f01131ee625c
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1102948492
+  name: 🏳️ ShatakVPN 226187
   port: 443
   reality-opts:
-    public-key: wiu5fVlBM7keSI48Oi3dEnQTR1BnJXgHtXo9xBpAnTA
-    short-id: 16498ac98306ce31
-  server: 95.154.196.62
-  servername: foodnetwork.com
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: fc994ae7eb10
+  server: 107.181.151.241
+  servername: www.tradingview.com
   tls: true
   type: vless
   udp: true
-  uuid: 1d9b247a-d20e-49fd-bd9c-bb06e1ea2a18
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 185978
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  server: 87.117.234.19
-  servername: strapi.io
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d583b2c-2f5a-47d0-8181-e95217fe8cd9
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 845983
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  server: 78.129.150.216
-  servername: strapi.io
-  tls: true
-  type: vless
-  udp: true
-  uuid: 60a52f57-536a-4327-9a4c-c64db318dab3
+  uuid: 317bc783-340f-453c-afb5-b6bf637c0b23
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1181423202
-  - vless-1157522828
-  - 🏳️ ShatakVPN 843080
-  - 🇬🇧 Portsmouth  ENG  United Kingdom
-  - vless-1048772437
-  - 🏳️ ShatakVPN 230843
-  - vless-1102948492
-  - 🏳️ ShatakVPN 185978
-  - 🏳️ ShatakVPN 845983
+  - 🇬🇧 Manchester  ENG  United Kingdom
+  - 🏳️ ShatakVPN 226187
   type: select
 rules:
 - MATCH,PROXY
