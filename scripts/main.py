@@ -15,9 +15,17 @@ import maxminddb
 # ==================== 1. 订阅源配置 ====================
 # 请在此处填入您的订阅源链接（支持订阅 URL 或直接输出 Base64/明文节点的 Raw 链接）
 SUBSCRIBE_SOURCES = [
-    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",
+    "https://wild-cloud-9893.heleimail.workers.dev",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
+    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
+    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "https://open.heleimail.workers.dev/",
+    "https://www.ermao.net/sub/v2ray/ermao.net",
+
 ]
 
 OUTPUT_DIR = "output"
