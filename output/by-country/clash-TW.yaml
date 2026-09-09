@@ -3,16 +3,35 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-737135161
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: 'https:'
-  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1054437813
+  name: vless-1014145883
+  port: 40800
+  reality-opts:
+    public-key: zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo
+    short-id: 186e4c2732d61a3d
+  server: 104.199.219.172
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5859f6a7-cda1-47c2-8353-fcdee281f31d
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1019747843
+  port: 34376
+  reality-opts:
+    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
+    short-id: 8dbafb690450d8a9
+  server: 34.81.129.171
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1019746851
   port: 21776
   reality-opts:
     public-key: nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA
@@ -23,33 +42,12 @@ proxies:
   type: vless
   udp: true
   uuid: b0399730-1618-4727-8ddd-2baf94ab90d6
-- name: hysteria2-856679747
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world%5cu0026insecure%3d1%5cu0026allowinsecure%3d1
-  type: hysteria2
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1028233105
-  port: 30837
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  server: 35.201.163.218
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-737135161
-  - vless-1054437813
-  - hysteria2-856679747
-  - vless-1028233105
+  - vless-1014145883
+  - vless-1019747843
+  - vless-1019746851
   type: select
 rules:
 - MATCH,PROXY

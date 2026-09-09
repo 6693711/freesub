@@ -3,14 +3,42 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "[openproxylist.com] LV 15401737",
+      "tag": "🔒 VL-GRPC-TLS 🇱🇻 LV-89.36.161.222 2083",
       "server": "89.36.161.222",
-      "server_port": 2096,
+      "server_port": 2083,
       "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "laoye.in-gect.fun",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
       "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 154203",
+      "server": "89.36.161.222",
+      "server_port": 2053,
+      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg",
+          "short_id": "d26f4703cdd30f4e"
+        }
       }
     },
     {

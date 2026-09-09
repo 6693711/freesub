@@ -3,22 +3,17 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1197859493",
-      "server": "2.56.124.241",
+      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-50.7.249.170 443",
+      "server": "50.7.249.170",
       "server_port": 443,
-      "uuid": "eec2f6a7-c10f-43b0-b133-61f9bf9bbc27",
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.amazon.com",
+        "server_name": "pl1-ded.moritech.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw",
-          "short_id": "72104d27a0f5f62e"
         }
       }
     },

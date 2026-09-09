@@ -3,20 +3,103 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
-  name: vless-1162311252
-  network: ws
-  port: 443
-  server: 104.21.70.21
-  servername: jp3.yohototo.top
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-742657273
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1020075093
+  port: 11690
+  reality-opts:
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  server: 13.231.19.51
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
+- alterId: 0
+  cipher: auto
+  name: vmess-988399104
+  port: 55216
+  server: 155.248.176.44
+  type: vmess
+  udp: true
+  uuid: 154dbc39-0921-cf11-29bd-156c5000d763
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1010693009
+  port: 48086
+  reality-opts:
+    public-key: qq9vUmReS92PojPLpSyUY_c6CydUUtut7ffxc3V0LTo
+    short-id: 7083d685446ce576
+  server: 3.112.131.211
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 620ca966-d78b-4c88-a5c9-acf13c7d252f
+- client-fingerprint: chrome
+  name: vless-1169011913
+  port: 443
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+  server: freshjuniper.download
+  servername: freshjuniper.download
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1061497050
+  port: 18614
+  reality-opts:
+    public-key: w0jjW_RLHvQc2tk_7sbxfBawdMlJZfb7rKROwg051gA
+    short-id: c6966bed91ecd9
+  server: 13.114.124.85
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 926912d3-1656-4e83-9971-411b283f7998
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1121892112
+  port: 24620
+  reality-opts:
+    public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
+    short-id: db2cb3b3c2dbb711
+  server: 13.231.7.104
+  servername: www.amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1016793062
+  port: 30203
+  reality-opts:
+    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
+    short-id: 40150721499a92
+  server: 18.177.61.231
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: vless-1019527275
@@ -30,96 +113,22 @@ proxies:
   type: vless
   udp: true
   uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
-- cipher: aes-128-gcm
-  name: '[openproxylist.com] JP 1291802'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1139775227
-  port: 16611
-  reality-opts:
-    public-key: cDzA5Efsd52LehcCFXh9bS3eCuj7HQZwau-yjPqLPgQ
-    short-id: 701b0c5c9dee514d
-  server: 13.114.89.187
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 059fbe5b-21dc-413f-8f5c-dac39201914c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 885371
-  port: 23607
-  reality-opts:
-    public-key: liATkHCbR_IPjdgOhHK5nZO6fgCO091bTab3v2G8Lm4
-    short-id: 701b0c5c9dee514d
-  server: 13.230.66.70
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: babf64f8-f9ee-4564-a097-16433f2ebd46
-- client-fingerprint: chrome
-  name: vless-975999344
-  network: ws
-  port: 443
-  server: 172.67.156.147
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-479071124
-  port: 10583
+  name: vless-1107791215
+  port: 50159
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1023674356
-  port: 18921
-  reality-opts:
-    public-key: Ct9tvt4V8JSZ7uCbKWKuXNMG5Q7U_FMDWPHgi4YHAXw
-    short-id: 2e23c31063fcff
-  server: 54.249.200.131
-  servername: www.nvidia.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: fe113f0b-43fa-4662-9403-9f91b53fed1f
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
 - client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 815850
-  network: ws
-  port: 443
-  server: 162.159.254.3
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1019742849
+  name: vless-1015689230
   port: 48086
   reality-opts:
     public-key: qq9vUmReS92PojPLpSyUY_c6CydUUtut7ffxc3V0LTo
@@ -130,61 +139,34 @@ proxies:
   type: vless
   udp: true
   uuid: 620ca966-d78b-4c88-a5c9-acf13c7d252f
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1130434768
-  port: 16611
+  name: vless-1027296884
+  port: 29860
   reality-opts:
-    public-key: cDzA5Efsd52LehcCFXh9bS3eCuj7HQZwau-yjPqLPgQ
-    short-id: 701b0c5c9dee514d
-  server: 13.114.89.187
+    public-key: g7I81MzpM7J6K9WLbZdaMPS9We6GYeeNY3EKRvyiKW4
+    short-id: c992a34f288be189
+  server: 3.112.47.207
   servername: www.intel.com
   tls: true
   type: vless
   udp: true
-  uuid: 059fbe5b-21dc-413f-8f5c-dac39201914c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1048736492
-  port: 32913
-  reality-opts:
-    public-key: iJhoNzfiPiua04PL88iAAyZz2u39su4ChSCiGVoekRQ
-    short-id: a8f0a95931a52732
-  server: 43.207.162.145
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 15836880-212b-4690-b29c-1889a749bf72
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1109129713
-  port: 16611
-  reality-opts:
-    public-key: cDzA5Efsd52LehcCFXh9bS3eCuj7HQZwau-yjPqLPgQ
-    short-id: 701b0c5c9dee514d
-  server: 13.114.89.187
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 059fbe5b-21dc-413f-8f5c-dac39201914c
+  uuid: 7460547d-e83c-4843-b404-9142b22261a7
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1162311252
+  - vless-742657273
+  - vless-1020075093
+  - vmess-988399104
+  - vless-1010693009
+  - vless-1169011913
+  - vless-1061497050
+  - vless-1121892112
+  - vless-1016793062
   - vless-1019527275
-  - '[openproxylist.com] JP 1291802'
-  - vless-1139775227
-  - 🏳️ ShatakVPN 885371
-  - vless-975999344
-  - vless-479071124
-  - vless-1023674356
-  - 🏳️ ShatakVPN 815850
-  - vless-1019742849
-  - vless-1130434768
-  - vless-1048736492
-  - vless-1109129713
+  - vless-1107791215
+  - vless-1015689230
+  - vless-1027296884
   type: select
 rules:
 - MATCH,PROXY
