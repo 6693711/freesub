@@ -3,47 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-619897530
+- cipher: aes-128-gcm
+  name: '[openproxylist.com] CA 3255188'
+  password: shadowsocks
   port: 443
-  reality-opts:
-    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
-    short-id: 3d3c1e645f763ee3
-  server: 158.69.112.254
-  servername: www.speedtest.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-23853903
-  port: 443
-  reality-opts:
-    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
-    short-id: 3d3c1e645f763ee3
-  server: 158.69.112.254
-  servername: www.speedtest.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
-- cipher: aes-256-gcm
-  name: 🇨🇦 QC  Canada
-  password: Y6R9pAtvxxzmGC
-  port: 5601
-  server: 51.222.155.113
+  server: 149.22.95.183
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-704660105
-  port: 18000
-  server: 134.195.196.211
-  type: vmess
+- name: hysteria2-468892440
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-ca-001.fastervpn.world
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: '[openproxylist.com] CA 15366239'
+  password: FD3rCuOsxOay
+  port: 8388
+  server: 15.235.75.71
+  type: ss
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- cipher: aes-256-gcm
+  name: shadowsocks-809724024
+  password: cdBIDV42DCwnfIN
+  port: 8119
+  server: 51.79.64.198
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦 Canada
+  password: FD3rCuOsxOay
+  port: 8388
+  server: 15.235.75.71
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-2314770
@@ -57,28 +51,15 @@ proxies:
   type: vless
   udp: true
   uuid: 661f395d-b153-4199-a04b-693f5fe7f261
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1019921577
-  port: 41373
-  reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: 0e
-  server: 130.107.73.148
-  servername: google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-619897530
-  - vless-23853903
-  - 🇨🇦 QC  Canada
-  - vmess-704660105
+  - '[openproxylist.com] CA 3255188'
+  - hysteria2-468892440
+  - '[openproxylist.com] CA 15366239'
+  - shadowsocks-809724024
+  - 🇨🇦 Canada
   - vless-2314770
-  - vless-1019921577
   type: select
 rules:
 - MATCH,PROXY

@@ -3,36 +3,48 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1208270657
+  port: 443
+  reality-opts:
+    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
+    short-id: 5c256336e3b673fa
+  server: 195.123.213.28
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
+- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc
-  name: 🔒 VL-GRPC-TLS 🇱🇻 LV-89.36.161.222 2083
+  name: vless-718040241
   network: grpc
   port: 2083
-  server: 89.36.161.222
+  server: laoye.in-gect.fun
   servername: laoye.in-gect.fun
   tls: true
   type: vless
   udp: true
   uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 154203
-  port: 2053
-  reality-opts:
-    public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg
-    short-id: d26f4703cdd30f4e
+- name: 🏳️ ShatakVPN 315633
+  network: ws
+  port: 2096
   server: 89.36.161.222
-  servername: vk.ru
-  tls: true
   type: vless
   udp: true
   uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: laoye.in-gect.fun
+    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-GRPC-TLS 🇱🇻 LV-89.36.161.222 2083
-  - 🏳️ ShatakVPN 154203
+  - vless-1208270657
+  - vless-718040241
+  - 🏳️ ShatakVPN 315633
   type: select
 rules:
 - MATCH,PROXY

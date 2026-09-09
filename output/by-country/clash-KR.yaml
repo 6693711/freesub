@@ -3,6 +3,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: hysteria2-655819436
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  port: 443
+  server: vpn-kr-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-kr-002.fastervpn.world
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-656230613
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: random
   flow: xtls-rprx-vision
   name: vless-1051696565
@@ -16,27 +36,59 @@ proxies:
   type: vless
   udp: true
   uuid: 83973343-90db-423d-a5f7-2e3b56aeb8f4
-- name: hysteria2-756343223
-  password: 9cfc9458e48c028ec03ff86ebc71c744
-  port: 50160
-  server: 150-230-252-217.liao.kdns.fr
-  skip-cert-verify: false
-  sni: 150-230-252-217.liao.kdns.fr
+- name: hysteria2-591454513
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: 3.36.93.74
   type: hysteria2
 - alterId: 0
   cipher: auto
-  name: vmess-700407711
+  name: vmess-656230691
   port: 443
   server: 140.238.2.250
   type: vmess
   udp: true
   uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1048867158
+  port: 28482
+  reality-opts:
+    public-key: 8fsYG_Pg35aeg1E5Gc3HUaXou2OUQee4ukxVk99iR0s
+    short-id: fa1e592603c283
+  server: 43.202.46.25
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 83973343-90db-423d-a5f7-2e3b56aeb8f4
+- name: hysteria2-722298647
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: vk.com
+  type: hysteria2
+- name: hysteria2-650671509
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: 3.36.93.74
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
+  - hysteria2-655819436
+  - vless-656230613
   - vless-1051696565
-  - hysteria2-756343223
-  - vmess-700407711
+  - hysteria2-591454513
+  - vmess-656230691
+  - vless-1048867158
+  - hysteria2-722298647
+  - hysteria2-650671509
   type: select
 rules:
 - MATCH,PROXY

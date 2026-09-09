@@ -4,16 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  name: 🇧🇷 Osasco  SP  Brazil
-  password: owVdNnQcdPgthSyX
-  port: 8388
-  server: 216.128.168.190
+  name: 🇯🇵 Tokyo  13  Japan
+  password: AyqX8KynyyQLReOZorQRQbsvmiwxBQOf
+  port: 443
+  server: 64.83.33.45
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇧🇷 Osasco  SP  Brazil
+  - 🇯🇵 Tokyo  13  Japan
   type: select
 rules:
 - MATCH,PROXY

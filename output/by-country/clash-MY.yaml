@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 290613
-  port: 19842
+  name: vless-1202292479
+  port: 21874
   reality-opts:
-    public-key: sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM
-    short-id: 25ebc9e0a912
-  server: 185.254.205.79
-  servername: www.tesla.com
+    public-key: 75sTDYJk8ylA97-aBhAlF1tU4OaCfdOaOSIBshPW7Bs
+    short-id: 42e853a5559e1032
+  server: 43.217.16.8
+  servername: www.amd.com
   tls: true
   type: vless
   udp: true
-  uuid: 43c23116-1115-4af4-a0f0-56f02841a605
+  uuid: 85dd8227-0f12-4826-a712-6313211774b5
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 290613
+  - vless-1202292479
   type: select
 rules:
 - MATCH,PROXY

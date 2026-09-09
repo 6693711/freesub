@@ -3,8 +3,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1124738275",
-      "server": "31.56.189.27",
+      "tag": "[openproxylist.com] IT 15191068",
+      "server": "31.58.181.88",
+      "server_port": 8443,
+      "uuid": "d0da19f1-fb05-488e-99c2-262389b3537b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1115899893",
+      "server": "srv-21bac9.vless.monster",
       "server_port": 2087,
       "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
       "tls": {
@@ -12,12 +32,32 @@
         "server_name": "srv-21bac9.vless.monster",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "freegrpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 408683",
+      "server": "31.58.181.88",
+      "server_port": 8443,
+      "uuid": "cc422436-e0e9-4f15-bfe8-db3d816e5527",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
+        }
       }
     },
     {

@@ -1,0 +1,54 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1203669737
+  port: 443
+  reality-opts:
+    public-key: bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw
+    short-id: 72104d27a0f5f62e
+  server: 2.56.124.241
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1014821819
+  port: 40443
+  reality-opts:
+    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
+    short-id: 84fc
+  server: 5.253.42.163
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-620750830
+  port: 40443
+  reality-opts:
+    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
+    short-id: 84fc
+  server: preview.netraidly.ru
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1203669737
+  - vless-1014821819
+  - vless-620750830
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

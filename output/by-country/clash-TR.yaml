@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 262117
+  name: vless-1181146340
   port: 443
   reality-opts:
-    public-key: urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ
-    short-id: 46babe29a750b634
-  server: 151.242.168.180
-  servername: kibi-institut.de
+    public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
+    short-id: 5606d4a25c99e7af
+  server: 156.67.63.231
+  servername: sync-bridge.org
   tls: true
   type: vless
   udp: true
-  uuid: 05020afd-d476-406b-8950-ee7dd63a6e64
+  uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 262117
+  - vless-1181146340
   type: select
 rules:
 - MATCH,PROXY

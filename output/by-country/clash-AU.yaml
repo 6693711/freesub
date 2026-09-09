@@ -1,0 +1,54 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1109323666
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: a763a884-deee-4598-9f5c-0cdc5fda71f7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-982065620
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57e8207e-f080-4ad9-adf9-e9996b3b00b9
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1048867197
+  port: 443
+  reality-opts:
+    public-key: qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0
+    short-id: 0f4d3210977f51a5
+  server: 51.161.199.124
+  servername: suetinklerartglass.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: aeeff70d-5bf4-48dc-9120-0593eda94cdb
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1109323666
+  - vless-982065620
+  - vless-1048867197
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

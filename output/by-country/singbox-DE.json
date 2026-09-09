@@ -2,20 +2,29 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-730511436",
-      "server": "replay.wwwinternetvideo.click",
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 787673",
+      "server": "185.227.108.241",
       "server_port": 443,
-      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
+      "uuid": "2da9c09a-842f-4aed-a099-8a07c0266efc",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "replay.wwwinternetvideo.click",
-        "insecure": false
+        "server_name": "de-2.srv.dvzh.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0",
+          "short_id": "e4e77e76e6e49da7"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 418524",
+      "tag": "🏳️ ShatakVPN 702271",
       "server": "163.8.195.241",
       "server_port": 2087,
       "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
@@ -23,34 +32,6 @@
         "type": "ws",
         "path": "/29c8fed7ca22",
         "headers": {}
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Frankfurt am Main  HE  Germany",
-      "server": "185.226.172.8",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74"
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 261048",
-      "server": "93.152.217.41",
-      "server_port": 40443,
-      "uuid": "969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA",
-          "short_id": "5b97"
-        }
       }
     },
     {
@@ -75,31 +56,18 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-209",
-      "server": "209.46.102.22",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "1hhrqrokj3ag"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-757486810",
-      "server": "replay.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "replay.wwwinternetvideo.click",
-        "insecure": true
-      }
+      "type": "vless",
+      "tag": "vless-1181503756",
+      "server": "91.107.179.8",
+      "server_port": 15003,
+      "uuid": "69d8dc73-20ff-4241-bdd8-a9d6d07553b6"
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 906347",
+      "tag": "🏳️ ShatakVPN 701461",
       "server": "207.241.172.254",
       "server_port": 4777,
-      "uuid": "9222652c-be81-4171-9d07-ebcdbd2a82ab",
+      "uuid": "1a083e25-c9e1-451a-8412-6358a09f803b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -116,23 +84,23 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1214976202",
-      "server": "172.236.207.245",
-      "server_port": 53719,
-      "uuid": "251e9d36-3eec-474f-9eb8-fe508e28ced6",
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 363494",
+      "server": "185.226.172.8",
+      "server_port": 8008,
+      "method": "aes-256-gcm",
+      "password": "XKFKl2rULjIp74"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 199358",
+      "server": "130.61.50.75",
+      "server_port": 6443,
+      "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "play-fe.googleapis.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9XG-o5CJH3_h4x6FDeGs-JsE1LzyJSyw5d-xi6LvVTc",
-          "short_id": "5d1caa44e652126d"
-        }
+        "server_name": "130.61.50.75",
+        "insecure": true
       }
     },
     {
