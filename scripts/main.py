@@ -12,7 +12,7 @@ import aiohttp
 import yaml
 import maxminddb
 
-# ==================== 1. 订阅源配置（完整保留原仓库所有源） ====================
+# ==================== 1. 订阅源配置 ====================
 SUBSCRIBE_SOURCES = [
     "https://wild-cloud-9893.heleimail.workers.dev",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
@@ -34,8 +34,8 @@ CONTROLLER_SECRET = "freesub-test-token"
 
 # 正则校验器
 UUID_PATTERN = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
-HEX_PATTERN = re.compile(r"^[0-9a-fA-F]*$")
-BASE64_KEY_PATTERN = re.compile(r"^[0-9a-zA-Z+/=_-]{43,44}$")
+HEX_CHARS = set("0123456789abcdefABCDEF")
+BASE64_CHARS = set("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_=/+")
 
 VALID_SS_CIPHERS = {
     "aes-128-gcm", "aes-256-gcm", "chacha20-ietf-poly1305",
@@ -45,13 +45,15 @@ VALID_SS_CIPHERS = {
     "rc4-md5", "chacha20-ietf"
 }
 
+# 高风险红色垃圾节点关键词（广告、提示、诈骗、死循环节点）
 RISK_KEYWORDS = [
     "官网", "通知", "返利", "备用", "地址", "购买", "广告", "群", "频道",
-    "tg:", "t.me", "traffic", "expire", "reset", "bandwidth", "left", "gb"
+    "tg:", "t.me", "traffic", "expire", "reset", "bandwidth", "left", "gb",
+    "剩余", "到期", "续费", "测速", "aff", "vip", "free"
 ]
 
 
-# ==================== 2. 全协议解析与深度清洗 ====================
+# ==================== 2. 全协议解析与严格清洗 ====================
 def decode_base64(s: str) -> str:
     s = s.strip().replace("\r", "").replace("\n", "")
     padding = len(s) % 4
@@ -79,32 +81,52 @@ def clean_name(name: str, used_names: set) -> str:
     return unique_name
 
 
-def sanitize_short_id(sid: str) -> str:
-    """严谨清洗 Reality short-id，必须为偶数位十六进制且长度 <= 16"""
-    if not sid:
+def clean_reality_sid(sid: str) -> str:
+    """严格校验 Reality short-id，不修改、不截断非法值"""
+    if sid is None:
         return ""
-    sid = sid.strip().lower()
-    if not HEX_PATTERN.match(sid):
+
+    sid = str(sid).strip().lower()
+
+    if not sid or sid in {"null", "none", "undefined", "nan", "nil", "false", "true"}:
         return ""
+
+    # 必须全部为十六进制字符
+    if not all(c in HEX_CHARS for c in sid):
+        return ""
+
+    # 必须为偶数位（字节对齐）
     if len(sid) % 2 != 0:
-        sid = sid[:-1]
+        return ""
+
+    # 最多 16 个十六进制字符（8 字节）
     if len(sid) > 16:
-        sid = sid[:16]
+        return ""
+
     return sid
 
 
+def is_private_host(host: str) -> bool:
+    """过滤本地回环及局域网保留 IP"""
+    host = host.strip().lower()
+    if not host or host in ["127.0.0.1", "localhost", "0.0.0.0"]:
+        return True
+    if re.match(r"^(10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|127\.|169\.254\.)", host):
+        return True
+    return False
+
+
 def is_valid_clash_proxy(p: dict) -> bool:
-    """前置白名单校验，彻底杜绝导致 Mihomo 崩溃退出的语法错误"""
+    """前置校验：过滤结构非法、脏参数及垃圾广告节点"""
     try:
         port = p.get("port")
         if not isinstance(port, int) or port < 1 or port > 65535:
             return False
 
-        server = p.get("server")
-        if not server or not isinstance(server, str) or len(server.strip()) == 0:
+        server = str(p.get("server", "")).strip()
+        if not server or is_private_host(server):
             return False
 
-        # 过滤广告、提示类伪节点
         name_lower = p.get("name", "").lower()
         if any(kw in name_lower for kw in RISK_KEYWORDS):
             return False
@@ -116,12 +138,14 @@ def is_valid_clash_proxy(p: dict) -> bool:
                 return False
 
             if ptype == "vless" and p.get("reality-opts"):
-                pbk = p["reality-opts"].get("public-key", "").strip()
-                if not pbk or not BASE64_KEY_PATTERN.match(pbk):
+                ro = p["reality-opts"]
+                pbk = str(ro.get("public-key", "")).strip()
+                if not pbk or len(pbk) not in (43, 44) or not all(c in BASE64_CHARS for c in pbk):
                     return False
-                sid = p["reality-opts"].get("short-id", "")
-                if sid and (not HEX_PATTERN.match(sid) or len(sid) % 2 != 0):
-                    return False
+                sid = str(ro.get("short-id", "")).strip()
+                if sid:
+                    if len(sid) > 16 or len(sid) % 2 != 0 or not all(c in HEX_CHARS for c in sid):
+                        return False
 
         elif ptype == "ss":
             cipher = str(p.get("cipher", "")).lower().strip()
@@ -218,7 +242,24 @@ def parse_vless(uri: str, used_names: set):
         flow = str(params.get("flow", "")).strip()
         fp = str(params.get("fp", "chrome")).strip()
         pbk = str(params.get("pbk", "")).strip()
-        sid = sanitize_short_id(params.get("sid", ""))
+
+        # 兼容性提取并执行严格无损校验
+                # 兼容性提取并执行严格无损校验
+        raw_sid = (
+            params.get("sid")
+            or params.get("short-id")
+            or params.get("shortId")
+            or params.get("short_id")
+            or ""
+        )
+
+        sid = clean_reality_sid(raw_sid)
+
+        # Reality 节点明确提供 short-id，但 short-id 非法：
+        # 直接丢弃整个节点，不允许把非法节点继续交给 Mihomo。
+        if raw_sid and not sid:
+            return None
+
         path = str(params.get("path", "")).strip()
         host = str(params.get("host", "")).strip()
         service_name = str(params.get("serviceName", "")).strip()
@@ -240,9 +281,9 @@ def parse_vless(uri: str, used_names: set):
             if fp:
                 clash_proxy["client-fingerprint"] = fp
             if security == "reality" and pbk:
-                clash_proxy["reality-opts"] = {"public-key": pbk}
+                clash_proxy["reality-opts"] = {"public-key": str(pbk)}
                 if sid:
-                    clash_proxy["reality-opts"]["short-id"] = sid
+                    clash_proxy["reality-opts"]["short-id"] = str(sid)
 
         if net == "ws":
             clash_proxy["network"] = "ws"
@@ -267,7 +308,9 @@ def parse_vless(uri: str, used_names: set):
                 "utls": {"enabled": True, "fingerprint": fp or "chrome"},
             }
             if security == "reality" and pbk:
-                singbox_out["tls"]["reality"] = {"enabled": True, "public_key": pbk, "short_id": sid}
+                singbox_out["tls"]["reality"] = {"enabled": True, "public_key": str(pbk)}
+                if sid:
+                    singbox_out["tls"]["reality"]["short_id"] = str(sid)
         if net == "ws":
             singbox_out["transport"] = {"type": "ws", "path": path or "/", "headers": {"Host": host} if host else {}}
         elif net == "grpc":
@@ -522,31 +565,60 @@ def fetch_all_nodes() -> list:
     return parsed_nodes
 
 
-# ==================== 4. 内核启动与并发测活 ====================
-def start_mihomo(clash_proxies: list) -> subprocess.Popen:
+# ==================== 4. 智能自愈预检与内核启动 ====================
+def test_and_fix_mihomo_config(clash_proxies: list) -> list:
+    """利用原生预检 mihomo -t 循环剔除任何使 Go 语法崩溃的未知坏节点"""
     os.makedirs(MIHOMO_TEMP_DIR, exist_ok=True)
-
-    # 预载本地 GeoIP 数据库，彻底避免外网拉取超时
     if os.path.exists("GeoLite2-Country.mmdb"):
         shutil.copy("GeoLite2-Country.mmdb", f"{MIHOMO_TEMP_DIR}/Country.mmdb")
 
-    proxy_names = [p["name"] for p in clash_proxies]
-    config = {
-        "mixed-port": MIXED_PORT,
-        "mode": "rule",
-        "log-level": "info",
-        "allow-lan": False,
-        "external-controller": f"127.0.0.1:{CONTROLLER_PORT}",
-        "secret": CONTROLLER_SECRET,
-        "geodata-mode": False,
-        "proxies": clash_proxies,
-        "proxy-groups": [
-            {"name": "GLOBAL", "type": "select", "proxies": proxy_names}
-        ],
-    }
-    with open(f"{MIHOMO_TEMP_DIR}/config.yaml", "w", encoding="utf-8") as f:
-        yaml.dump(config, f, allow_unicode=True)
+    current_proxies = list(clash_proxies)
+    max_retries = 60
 
+    for attempt in range(max_retries):
+        proxy_names = [p["name"] for p in current_proxies]
+        config = {
+            "mixed-port": MIXED_PORT,
+            "mode": "rule",
+            "log-level": "info",
+            "allow-lan": False,
+            "external-controller": f"127.0.0.1:{CONTROLLER_PORT}",
+            "secret": CONTROLLER_SECRET,
+            "geodata-mode": False,
+            "proxies": current_proxies,
+            "proxy-groups": [
+                {"name": "GLOBAL", "type": "select", "proxies": proxy_names}
+            ],
+        }
+        with open(f"{MIHOMO_TEMP_DIR}/config.yaml", "w", encoding="utf-8") as f:
+            yaml.dump(config, f, allow_unicode=True)
+
+        res = subprocess.run(
+            ["mihomo", "-t", "-d", MIHOMO_TEMP_DIR],
+            capture_output=True,
+            text=True
+        )
+        if res.returncode == 0:
+            print(f"[+] Mihomo config pre-check passed! Safe nodes: {len(current_proxies)}")
+            return current_proxies
+
+        err = (res.stderr + "\n" + res.stdout).strip()
+        match = re.search(r"proxy\s+(\d+):", err, re.IGNORECASE)
+        if match:
+            bad_idx = int(match.group(1))
+            if 0 <= bad_idx < len(current_proxies):
+                dropped = current_proxies.pop(bad_idx)
+                print(f"[!] Pre-check auto-healed (attempt {attempt + 1}): removed bad proxy at index {bad_idx} ({dropped.get('name')})")
+                continue
+
+        print(f"[!] Unhandled syntax error during pre-check:\n{err}")
+        break
+
+    return current_proxies
+
+
+def start_mihomo(clash_proxies: list) -> tuple:
+    safe_proxies = test_and_fix_mihomo_config(clash_proxies)
     log_path = f"{MIHOMO_TEMP_DIR}/mihomo.log"
     log_file = open(log_path, "w", encoding="utf-8")
 
@@ -561,7 +633,7 @@ def start_mihomo(clash_proxies: list) -> subprocess.Popen:
             log_file.close()
             with open(log_path, "r", encoding="utf-8") as f:
                 output = f.read()
-            raise RuntimeError(f"Mihomo exited unexpectedly with code {proc.returncode}. Log:\n{output}")
+            raise RuntimeError(f"Mihomo exited unexpectedly. Log:\n{output}")
         try:
             r = requests.get(
                 f"http://127.0.0.1:{CONTROLLER_PORT}/version",
@@ -570,52 +642,48 @@ def start_mihomo(clash_proxies: list) -> subprocess.Popen:
             )
             if r.status_code == 200:
                 print("[+] Mihomo core started successfully.")
-                return proc
+                return proc, safe_proxies
         except Exception:
             time.sleep(0.3)
 
     log_file.close()
     with open(log_path, "r", encoding="utf-8") as f:
         output = f.read()
-    raise RuntimeError(f"Failed to start Mihomo external controller within timeout. Log:\n{output}")
+    raise RuntimeError(f"Failed to start Mihomo controller within timeout. Log:\n{output}")
 
 
-async def batch_health_check(proxy_names: list) -> dict:
-    """阶段一：全并发 HTTP 204 通道测活"""
-    print(f"[*] Starting Phase 1 health check for {len(proxy_names)} nodes...")
-    alive_map = {}
+# ==================== 5. 两阶段防断流与健康检测 ====================
+async def run_delay_ping(proxy_names: list, timeout_ms: int = 3000) -> dict:
     test_url = "http://cp.cloudflare.com/generate_204"
     headers = {"Authorization": f"Bearer {CONTROLLER_SECRET}"}
     timeout = aiohttp.ClientTimeout(total=4)
     conn = aiohttp.TCPConnector(limit=50)
+    alive = {}
 
     async with aiohttp.ClientSession(connector=conn, timeout=timeout) as session:
         async def check(name):
             enc_name = urllib.parse.quote(name, safe="")
-            req_url = f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/{enc_name}/delay?url={test_url}&timeout=3000"
+            req_url = f"http://127.0.0.1:{CONTROLLER_PORT}/proxies/{enc_name}/delay?url={test_url}&timeout={timeout_ms}"
             try:
                 async with session.get(req_url, headers=headers) as resp:
                     if resp.status == 200:
                         data = await resp.json()
-                        alive_map[name] = data.get("delay", 0)
+                        alive[name] = data.get("delay", 0)
             except Exception:
                 pass
 
         tasks = [check(name) for name in proxy_names]
         await asyncio.gather(*tasks)
-
-    print(f"[+] Phase 1 verified alive: {len(alive_map)}")
-    return alive_map
+    return alive
 
 
-# ==================== 5. 阶段二：防断流验证、高风险过滤与家宽检测 ====================
 def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     """
-    穿透中转：
+    穿透中转落地：
     1. 切换节点
-    2. 执行阶段二稳定性探测（剔除闪断/断流节点）
-    3. 识别反诈/重定向拦截（剔除风险节点）
-    4. 提取真实落地 IP 并识别家宽/机房属性
+    2. 二阶防断流验证（3秒后必须依然保持通畅）
+    3. 防劫持验证（必须返回 204，拒绝 301/302 反诈跳转）
+    4. 提取真实出口 IP，识别高精国家与住宅 ISP
     """
     try:
         requests.put(
@@ -629,7 +697,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
 
     local_proxy = {"http": f"http://127.0.0.1:{MIXED_PORT}", "https": f"http://127.0.0.1:{MIXED_PORT}"}
 
-    # 【防断流与防劫持测试】：请求 204 探针，必须返回 204 且无重定向
+    # 防劫持与断流拦截验证
     try:
         check_204 = requests.get(
             "http://cp.cloudflare.com/generate_204",
@@ -638,10 +706,8 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
             allow_redirects=False
         )
         if check_204.status_code != 204:
-            # 返回 301/302/200 页面等均属于反诈拦截、认证页面或风险假节点
             return None
     except Exception:
-        # 初筛能连但二次连接失败，代表断流/闪断节点，直接丢弃
         return None
 
     egress_ip = None
@@ -649,7 +715,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     is_hosting = None
     as_info = ""
 
-    # 1. 穿透节点出口请求免限频的 ip-api
+    # 1. 穿透节点自身出口请求免限频 ip-api
     try:
         resp = requests.get("http://ip-api.com/json/?fields=status,countryCode,isp,org,as,hosting,query", proxies=local_proxy, timeout=3)
         if resp.status_code == 200:
@@ -685,7 +751,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     if not country_code:
         country_code = "OTHER"
 
-    # 4. 家宽与机房属性过滤
+    # 4. 家宽（Residential）与机房甄别
     if asn_db:
         try:
             asn_res = asn_db.get(egress_ip)
@@ -784,10 +850,10 @@ def export_files(classified_nodes: list):
         write_singbox(f"{OUTPUT_DIR}/residential-by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
         write_v2ray(f"{OUTPUT_DIR}/residential-by-country/{c}.txt", [n["raw"] for n in nodes])
 
-    print(f"[SUCCESS] Export complete! Total valid & stable: {len(classified_nodes)}, High Quality Residential: {len(res_nodes)}")
+    print(f"[SUCCESS] Export complete! Verified stable: {len(classified_nodes)}, Quality Residential: {len(res_nodes)}")
 
 
-# ==================== 7. 主流程 ====================
+# ==================== 7. 主控流程 ====================
 def main():
     nodes = fetch_all_nodes()
     if not nodes:
@@ -795,31 +861,45 @@ def main():
         return
 
     clash_proxies = [n["clash"] for n in nodes]
-    mihomo_proc = start_mihomo(clash_proxies)
+    mihomo_proc, safe_clash_proxies = start_mihomo(clash_proxies)
 
     try:
-        proxy_names = [n["name"] for n in nodes]
-        alive_map = asyncio.run(batch_health_check(proxy_names))
+        safe_names = {p["name"] for p in safe_clash_proxies}
+        working_nodes = [n for n in nodes if n["name"] in safe_names]
+
+        # 【阶段一：全并发连通性初筛】
+        print(f"[*] Phase 1: Rapid concurrent ping for {len(working_nodes)} nodes...")
+        alive_map = asyncio.run(run_delay_ping([n["name"] for n in working_nodes], timeout_ms=3000))
+        print(f"[+] Phase 1 survivors: {len(alive_map)}")
         if not alive_map:
-            print("[-] No nodes survived Phase 1 health check.")
+            print("[-] No nodes survived Phase 1.")
             return
 
-        alive_nodes = [n for n in nodes if n["name"] in alive_map]
+        # 【抗断流缓冲：静置 3 秒防虚假握手】
+        print("[*] Waiting 3 seconds for connection stability check...")
+        time.sleep(3)
+
+        # 【阶段 1.5：二次复测剔除闪断/断流节点】
+        print("[*] Phase 1.5: Re-testing survivors to eliminate flapping/disconnecting nodes...")
+        stable_alive_map = asyncio.run(run_delay_ping(list(alive_map.keys()), timeout_ms=3000))
+        stable_nodes = [n for n in working_nodes if n["name"] in stable_alive_map]
+        print(f"[+] Stable non-flapping nodes verified: {len(stable_nodes)} (Filtered {len(alive_map) - len(stable_nodes)} dropping nodes)")
 
         country_db = maxminddb.open_database("GeoLite2-Country.mmdb") if os.path.exists("GeoLite2-Country.mmdb") else None
         asn_db = maxminddb.open_database("GeoLite2-ASN.mmdb") if os.path.exists("GeoLite2-ASN.mmdb") else None
 
-        print(f"[*] Phase 2: Inspecting stability, anti-interception & residential attributes for {len(alive_nodes)} nodes...")
+        # 【阶段二：穿透中转落地识别、防劫持验证与家宽甄别】
+        print(f"[*] Phase 2: Inspecting egress, anti-interception & residential attributes for {len(stable_nodes)} nodes...")
         final_nodes = []
-        for idx, node in enumerate(alive_nodes, 1):
+        for idx, node in enumerate(stable_nodes, 1):
             meta = inspect_egress_and_stability(node["name"], country_db, asn_db)
             if meta:
                 node["country"] = meta["country"]
                 node["egress_ip"] = meta["egress_ip"]
                 node["is_residential"] = meta["is_residential"]
                 final_nodes.append(node)
-            if idx % 20 == 0 or idx == len(alive_nodes):
-                print(f"[*] Processed {idx}/{len(alive_nodes)} nodes (Kept: {len(final_nodes)})...")
+            if idx % 15 == 0 or idx == len(stable_nodes):
+                print(f"[*] Processed {idx}/{len(stable_nodes)} nodes (Kept: {len(final_nodes)})...")
 
         export_files(final_nodes)
 
