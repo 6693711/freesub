@@ -48,14 +48,12 @@ VALID_SS_CIPHERS = {
     "rc4-md5", "chacha20-ietf"
 }
 
-# 广告、引流高风险词
 RISK_KEYWORDS = [
     "官网", "通知", "返利", "备用", "地址", "购买", "广告", "群", "频道",
     "tg:", "t.me", "traffic", "expire", "reset", "bandwidth", "left", "gb",
     "剩余", "到期", "续费", "测速", "aff", "vip", "free"
 ]
 
-# 纯中文地区名称
 COUNTRY_NAMES = {
     "TW": "台湾", "HK": "香港", "MO": "澳门", "CN": "大陆",
     "JP": "日本", "KR": "韩国", "SG": "新加坡", "US": "美国",
@@ -66,8 +64,7 @@ COUNTRY_NAMES = {
     "ZA": "南非", "OTHER": "其他"
 }
 
-# ==================== 家宽与机房高精度识别库 ====================
-# 正宗民用家庭宽带白名单（命中则直接判定为家宽，不再受第三方 hosting 标签误导）
+# 正宗家庭宽带白名单
 RESIDENTIAL_ISPS = {
     "TW": [
         "chunghwa", "hinet", "data communication business group", "taiwan mobile",
@@ -97,7 +94,7 @@ RESIDENTIAL_ISPS = {
     "MY": ["telekom malaysia", "unifi", "maxis", "time dotcom"]
 }
 
-# 伪装家宽的机房、廉价 VPS 一票否决黑名单
+# 机房黑名单
 DATACENTER_BLACKLIST = [
     "colocrossing", "psychz", "quadranet", "zenlayer", "sharktech", "dedipath",
     "buyvm", "frantech", "racknerd", "hivelocity", "datapacket", "m247",
@@ -140,7 +137,6 @@ def clean_name(name: str, used_names: set) -> str:
 
 
 def clean_reality_sid(sid: str) -> str:
-    """严格校验 Reality short-id，不截断、不修补"""
     if sid is None:
         return ""
     sid = str(sid).strip().lower()
@@ -708,25 +704,22 @@ async def run_delay_ping(proxy_names: list, timeout_ms: int = 3500) -> dict:
 
 
 def check_is_residential(country_code: str, as_info: str) -> bool:
-    """双重正反向严审机制：拦截伪美国家宽，找回台湾中华电信等真实家宽"""
     info = as_info.lower()
 
     # 1. 严格一票否决机房黑名单
     for dc in DATACENTER_BLACKLIST:
-      if dc in info:
-        return False
+        if dc in info:
+            return False
 
     # 2. 正向白名单匹配国家级家庭宽带
     whitelisted = RESIDENTIAL_ISPS.get(country_code, [])
     for isp in whitelisted:
-      if isp in info:
-        return True
+        if isp in info:
+            return True
 
     # 3. 通用家宽特征
-    if any(
-        kw in info for kw in ["home broadband", "residential", "consumer fiber"]
-    ):
-      return True
+    if any(kw in info for kw in ["home broadband", "residential", "consumer fiber"]):
+        return True
 
     return False
 
@@ -816,7 +809,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     }
 
 
-# ==================== 6. 首页 README 生成（保留全部内容 + 防折行） ====================
+# ==================== 6. 首页 README 保护式更新（锚点替换，绝不丢失原教程与热度图） ====================
 def render_flag(code: str) -> str:
     code = code.upper()
     if code == "OTHER":
@@ -824,8 +817,16 @@ def render_flag(code: str) -> str:
     return f'<img src="https://flagcdn.com/20x15/{code.lower()}.png" width="20" height="15" alt="{code}">'
 
 
-def generate_full_readme(classified_nodes: list):
-    """生成完整首页：包含订阅表、家宽表、国家表、Cloudflare Worker 脚本与教程、项目热度 Star 图"""
+def update_readme_safely(classified_nodes: list):
+    """
+    通过正则精确定位替换表格，100% 保持你原来的 Cloudflare Worker 说明与热度趋势图
+    """
+    if not os.path.exists("README.md"):
+        return
+
+    with open("README.md", "r", encoding="utf-8") as f:
+        content = f.read()
+
     total_nodes = len(classified_nodes)
     res_nodes = [n for n in classified_nodes if n["is_residential"]]
     total_res = len(res_nodes)
@@ -841,9 +842,7 @@ def generate_full_readme(classified_nodes: list):
     sorted_countries = sorted(country_stats.items(), key=lambda x: x[1], reverse=True)
     sorted_res = sorted(res_country_stats.items(), key=lambda x: x[1], reverse=True)
 
-    update_time = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-
-    # 构建家宽表格
+    # 1. 紧凑排版家宽表格（纯中文、防折行 <nobr>）
     res_rows = []
     if sorted_res:
         for c, count in sorted_res:
@@ -865,7 +864,7 @@ def generate_full_readme(classified_nodes: list):
     else:
         res_rows.append("| <nobr>暂无家宽</nobr> | 0 | - | - | - |")
 
-    # 构建国家分类表格
+    # 2. 紧凑排版国家分类表格
     country_rows = []
     for c, count in sorted_countries:
         c_name = COUNTRY_NAMES.get(c, c)
@@ -884,95 +883,166 @@ def generate_full_readme(classified_nodes: list):
 
         country_rows.append(f"| {loc} | {count} | {v2_links} | {cl_links} | {sb_links} |")
 
-    res_table_str = "\n".join(res_rows)
-    country_table_str = "\n".join(country_rows)
+    new_res_table = "| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(res_rows)
+    new_country_table = "| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(country_rows)
 
-    readme_content = f"""# 🚀 FreeSub - 免费多协议节点自动聚合与测活池
+    # 3. 动态更新总节点数
+    content = re.sub(r'(<td>|\*\*)(1211|\d+)(</td>|\*\*)', rf'\g<1>{total_nodes}\g<3>', content)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status">
-  <img src="https://img.shields.io/badge/Total_Nodes-{total_nodes}-blue.svg" alt="Total Nodes">
-  <img src="https://img.shields.io/badge/Residential-{total_res}-orange.svg" alt="Residential Nodes">
-  <img src="https://img.shields.io/badge/Update_Cycle-6_Hours-purple.svg" alt="Update Cycle">
-</p>
+    # 4. 精准替换家宽表格
+    res_section_pattern = re.compile(
+        r'(###?\s*🏠?\s*按照家宽分类节点订阅.*?\n+).*?(\n+---|###?\s*🌍?|###?\s*🗺️?\s*按照国家)',
+        re.DOTALL
+    )
+    if res_section_pattern.search(content):
+        content = res_section_pattern.sub(
+            rf'\g<1>> 经 MaxMind ASN 离线库与核心运营商白名单严格甄别，剔除数据中心及云厂商，保留民用住宅宽带。当前可用家宽节点：**{total_res}** 个。\n\n{new_res_table}\n\n\g<2>',
+            content,
+            count=1
+        )
 
-> 🤖 **自动更新时间**：`{update_time}`  
-> 🛡️ **节点经过双重防断流探测、抗欺诈拦截、真实落地 Egress IP 归类与家庭宽带严审**。
+    # 5. 精准替换国家分类表格
+    country_section_pattern = re.compile(
+        r'(###?\s*🌍?|###?\s*🗺️?\s*按照国家.*?分类节点订阅.*?\n+).*?(\n+---|###?\s*⚡|###?\s*📌|\Z)',
+        re.DOTALL
+    )
+    if country_section_pattern.search(content):
+        content = country_section_pattern.sub(
+            rf'\g<1>{new_country_table}\n\n\g<2>',
+            content,
+            count=1
+        )
 
----
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"[+] README.md safely updated! Alive nodes: {total_nodes}, Residential: {total_res}")
 
-### 🌟 全量测活节点订阅（全协议合并）
 
-| 客户端类型 | 有效节点数 | ⚡ 免翻 CDN 直链 | 🌐 官方 Raw 直链 |
-| :--- | :---: | :--- | :--- |
-| **🐱 Clash / Mihomo (YAML)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/clash.yaml) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/clash.yaml) |
-| **⚡ V2RayN (Base64 格式)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/v2ray.txt) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/v2ray.txt) |
-| **📦 sing-box (JSON 格式)** | **{total_nodes}** | [⚡ CDN 订阅](https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/singbox.json) | [🌐 Raw 订阅](https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/singbox.json) |
+# ==================== 7. 文件分发与导出 ====================
+def export_files(classified_nodes: list):
+    print("[*] Exporting result files...")
+    shutil.rmtree(OUTPUT_DIR, ignore_errors=True)
+    os.makedirs(f"{OUTPUT_DIR}/by-country", exist_ok=True)
+    os.makedirs(f"{OUTPUT_DIR}/residential-by-country", exist_ok=True)
 
----
+    def write_clash(path: str, proxies: list):
+        cfg = {
+            "port": 7890,
+            "socks-port": 7891,
+            "allow-lan": False,
+            "mode": "rule",
+            "log-level": "info",
+            "proxies": proxies,
+            "proxy-groups": [{"name": "PROXY", "type": "select", "proxies": [p["name"] for p in proxies]}],
+            "rules": ["MATCH,PROXY"],
+        }
+        with open(path, "w", encoding="utf-8") as f:
+            yaml.dump(cfg, f, allow_unicode=True)
 
-### 🏠 按照家宽分类节点订阅（住宅 IP 专区）
+    def write_singbox(path: str, outbounds: list):
+        cfg = {
+            "version": 1,
+            "outbounds": outbounds + [{"type": "direct", "tag": "direct"}, {"type": "dns", "tag": "dns-out"}],
+        }
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(cfg, f, indent=2, ensure_ascii=False)
 
-> 经 MaxMind ASN 数据库与核心运营商白名单严格甄别，剔除所有机房与云厂商，保留正宗民用宽带。当前可用家宽节点：**{total_res}** 个。
+    def write_v2ray(path: str, raw_links: list):
+        encoded = base64.b64encode("\n".join(raw_links).encode("utf-8")).decode("utf-8")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(encoded)
 
-| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |
-| :--- | :---: | :--- | :--- | :--- |
-{res_table_str}
+    all_clash = [n["clash"] for n in classified_nodes]
+    all_singbox = [n["singbox"] for n in classified_nodes]
+    all_raw = [n["raw"] for n in classified_nodes]
 
----
+    write_clash(f"{OUTPUT_DIR}/clash.yaml", all_clash)
+    write_singbox(f"{OUTPUT_DIR}/singbox.json", all_singbox)
+    write_v2ray(f"{OUTPUT_DIR}/v2ray.txt", all_raw)
 
-### 🗺️ 按照国家/地区分类节点订阅（非家宽/机房节点）
+    res_nodes = [n for n in classified_nodes if n["is_residential"]]
+    write_clash(f"{OUTPUT_DIR}/residential-clash.yaml", [n["clash"] for n in res_nodes])
+    write_singbox(f"{OUTPUT_DIR}/residential-singbox.json", [n["singbox"] for n in res_nodes])
+    write_v2ray(f"{OUTPUT_DIR}/residential.txt", [n["raw"] for n in res_nodes])
 
-| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |
-| :--- | :---: | :--- | :--- | :--- |
-{country_table_str}
+    country_map = {}
+    res_country_map = {}
+    for n in classified_nodes:
+        c = n["country"]
+        country_map.setdefault(c, []).append(n)
+        if n["is_residential"]:
+            res_country_map.setdefault(c, []).append(n)
 
----
+    for c, nodes in country_map.items():
+        write_clash(f"{OUTPUT_DIR}/by-country/clash-{c}.yaml", [n["clash"] for n in nodes])
+        write_singbox(f"{OUTPUT_DIR}/by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
+        write_v2ray(f"{OUTPUT_DIR}/by-country/{c}.txt", [n["raw"] for n in nodes])
 
-### ⚡ Cloudflare Worker 专属反代与订阅加速
+    for c, nodes in res_country_map.items():
+        write_clash(f"{OUTPUT_DIR}/residential-by-country/clash-{c}.yaml", [n["clash"] for n in nodes])
+        write_singbox(f"{OUTPUT_DIR}/residential-by-country/singbox-{c}.json", [n["singbox"] for n in nodes])
+        write_v2ray(f"{OUTPUT_DIR}/residential-by-country/{c}.txt", [n["raw"] for n in nodes])
 
-如果你在国内网络直连 GitHub 受到干扰，可免费部署以下 Cloudflare Worker 代码，实现多协议订阅的全球 CDN 毫秒级加速。
+    # 导出文件后，安全局部更新 README.md
+    update_readme_safely(classified_nodes)
+    print(f"[SUCCESS] Export complete! Verified stable: {len(classified_nodes)}, Quality Residential: {len(res_nodes)}")
 
-#### 1. Worker 部署代码 (`worker.js`)
-```javascript
-export default {{
-  async fetch(request, env) {{
-    const url = new URL(request.url);
-    const path = url.pathname;
 
-    // 默认 GitHub Raw 订阅上游仓库
-    const UPSTREAM = "[https://raw.githubusercontent.com/](https://raw.githubusercontent.com/){REPO_USER}/{REPO_NAME}/main/output";
+# ==================== 8. 主控流程 ====================
+def main():
+    nodes = fetch_all_nodes()
+    if not nodes:
+        print("[-] No valid nodes parsed. Exiting.")
+        return
 
-    let targetUrl = "";
-    if (path === "/" || path === "/sub" || path === "/v2ray") {{
-      targetUrl = `${{UPSTREAM}}/v2ray.txt`;
-    }} else if (path === "/clash") {{
-      targetUrl = `${{UPSTREAM}}/clash.yaml`;
-    }} else if (path === "/singbox") {{
-      targetUrl = `${{UPSTREAM}}/singbox.json`;
-    }} else if (path.startsWith("/residential")) {{
-      targetUrl = `${{UPSTREAM}}${{path}}`;
-    }} else {{
-      targetUrl = `${{UPSTREAM}}${{path}}`;
-    }}
+    clash_proxies = [n["clash"] for n in nodes]
+    mihomo_proc, safe_clash_proxies = start_mihomo(clash_proxies)
 
-    // 发起请求并缓存加速
-    const response = await fetch(targetUrl, {{
-      headers: {{ "User-Agent": request.headers.get("User-Agent") || "v2rayN/6.23" }},
-      cf: {{ cacheTtl: 300, cacheEverything: true }}
-    }});
+    try:
+        safe_names = {p["name"] for p in safe_clash_proxies}
+        working_nodes = [n for n in nodes if n["name"] in safe_names]
 
-    if (!response.ok) {{
-      return new Response("Subscription not found", {{ status: 404 }});
-    }}
+        # 【阶段一：全并发快速初筛】
+        print(f"[*] Phase 1: Rapid concurrent ping for {len(working_nodes)} nodes...")
+        alive_map = asyncio.run(run_delay_ping([n["name"] for n in working_nodes], timeout_ms=3500))
+        print(f"[+] Phase 1 survivors: {len(alive_map)}")
+        if not alive_map:
+            print("[-] No nodes survived Phase 1.")
+            return
 
-    const newHeaders = new Headers(response.headers);
-    newHeaders.set("Access-Control-Allow-Origin", "*");
-    newHeaders.set("Cache-Control", "public, max-age=300");
+        # 【静置 3 秒防虚假握手】
+        print("[*] Waiting 3 seconds for connection stability check...")
+        time.sleep(3)
 
-    return new Response(response.body, {{
-      status: response.status,
-      headers: newHeaders
-    }});
-  }}
-}};
+        # 【阶段 1.5：二次复测剔除闪断/断流节点】
+        print("[*] Phase 1.5: Re-testing survivors to eliminate flapping/disconnecting nodes...")
+        stable_alive_map = asyncio.run(run_delay_ping(list(alive_map.keys()), timeout_ms=3500))
+        stable_nodes = [n for n in working_nodes if n["name"] in stable_alive_map]
+        print(f"[+] Stable non-flapping nodes verified: {len(stable_nodes)} (Filtered {len(alive_map) - len(stable_nodes)} dropping nodes)")
+
+        country_db = maxminddb.open_database("GeoLite2-Country.mmdb") if os.path.exists("GeoLite2-Country.mmdb") else None
+        asn_db = maxminddb.open_database("GeoLite2-ASN.mmdb") if os.path.exists("GeoLite2-ASN.mmdb") else None
+
+        # 【阶段二：穿透中转落地识别、防劫持验证与家宽甄别】
+        print(f"[*] Phase 2: Inspecting egress, anti-interception & residential attributes for {len(stable_nodes)} nodes...")
+        final_nodes = []
+        for idx, node in enumerate(stable_nodes, 1):
+            meta = inspect_egress_and_stability(node["name"], country_db, asn_db)
+            if meta:
+                node["country"] = meta["country"]
+                node["egress_ip"] = meta["egress_ip"]
+                node["is_residential"] = meta["is_residential"]
+                final_nodes.append(node)
+            if idx % 15 == 0 or idx == len(stable_nodes):
+                print(f"[*] Processed {idx}/{len(stable_nodes)} nodes (Kept: {len(final_nodes)})...")
+
+        export_files(final_nodes)
+
+    finally:
+        mihomo_proc.terminate()
+        mihomo_proc.wait()
+        shutil.rmtree(MIHOMO_TEMP_DIR, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    main()
