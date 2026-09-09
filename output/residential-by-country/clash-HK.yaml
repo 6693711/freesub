@@ -4,7 +4,18 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: vless-1197775769
+  name: vless-1202800800
+  port: 443
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  server: 26a9920c-tla000-tyt0e8-1mh67.hk3.hyhuawei.com
+  servername: updates.cdn-apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e1c7fbbc-96b6-11ef-8563-f23c913c8d2b
+- client-fingerprint: firefox
+  name: vless-1212481643
   port: 443
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
@@ -13,35 +24,12 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-- client-fingerprint: chrome
-  name: vless-1186755717
-  port: 443
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: 6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com
-  servername: updates.cdn-apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6d4abac0-86e6-11ef-83cc-f23c913c8d2b
-- client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 485003
-  port: 443
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: 58.153.148.126
-  servername: updates.cdn-apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  uuid: de629d50-1711-11ed-bd7c-f23c913c8d2b
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1197775769
-  - vless-1186755717
-  - 🏳️ ShatakVPN 485003
+  - vless-1202800800
+  - vless-1212481643
   type: select
 rules:
 - MATCH,PROXY

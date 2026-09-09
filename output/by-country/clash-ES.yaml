@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 837357
+  name: 🏳️ ShatakVPN 241475
   port: 443
   reality-opts:
     public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
@@ -19,7 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 837357
+  - 🏳️ ShatakVPN 241475
   type: select
 rules:
 - MATCH,PROXY

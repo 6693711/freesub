@@ -1,0 +1,34 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: 🏳️ ShatakVPN 284609
+  network: ws
+  port: 443
+  server: 94.183.170.135
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    headers: {}
+    path: /
+- name: 🏳️ ShatakVPN 563056
+  network: ws
+  port: 443
+  server: 94.183.170.135
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    headers: {}
+    path: /
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 284609
+  - 🏳️ ShatakVPN 563056
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

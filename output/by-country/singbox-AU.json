@@ -2,27 +2,18 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "vmess-704660105",
-      "server": "134.195.196.211",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
       "type": "vless",
-      "tag": "vless-1109323686",
+      "tag": "vless-1109323630",
       "server": "51.161.199.124",
       "server_port": 443,
-      "uuid": "da222922-fbd5-4a7f-9c8a-9ba0cc49b527",
+      "uuid": "3622f803-8a8e-407d-9fff-249a2e84b06e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "suetinklerartglass.co.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -33,7 +24,28 @@
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 783807",
+      "tag": "vless-1131524310",
+      "server": "51.161.199.124",
+      "server_port": 443,
+      "uuid": "cba066ac-45d9-4bbc-bcbe-672a9faed36b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "suetinklerartglass.co.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0",
+          "short_id": "0f4d3210977f51a5"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 498339",
       "server": "51.161.199.124",
       "server_port": 443,
       "uuid": "a014310a-96ad-4b54-8acb-a835a3850552",
@@ -51,6 +63,36 @@
           "short_id": "0f4d3210977f51a5"
         }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 786908",
+      "server": "51.161.199.124",
+      "server_port": 443,
+      "uuid": "643cdd4d-8731-440b-9e46-9496f593aa27",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "suetinklerartglass.co.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0",
+          "short_id": "0f4d3210977f51a5"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-16903",
+      "server": "84.17.41.2",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

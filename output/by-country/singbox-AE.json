@@ -3,23 +3,40 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "[openproxylist.com] ID 15533892",
-      "server": "31.56.189.27",
-      "server_port": 8765,
+      "tag": "vless-1115899893",
+      "server": "srv-21bac9.vless.monster",
+      "server_port": 2087,
       "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "srv-21bac9.vless.monster",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "M08l5tDmJUYELykZCNYQyFgtR9Zc-A4ZGlUSLcUeS2c",
-          "short_id": "1bcc9177f3124b25"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "freegrpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1122091246",
+      "server": "31.56.189.27",
+      "server_port": 2087,
+      "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-21bac9.vless.monster",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "freegrpc"
       }
     },
     {

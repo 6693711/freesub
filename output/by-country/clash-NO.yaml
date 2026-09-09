@@ -3,9 +3,48 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 311638
+  port: 390
+  reality-opts:
+    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
+    short-id: b545fe8c5e22f92d
+  server: 151.242.168.125
+  servername: bowandbead.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b02ff150-ee30-46e0-9ea1-adbfd7762a06
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 305523
+  port: 443
+  reality-opts:
+    public-key: oXYB-DXrI08UVBRFq8MERP36betSSd7Yb6MLN88F2R4
+    short-id: f6b5862c1f73ab80
+  server: 194.110.207.89
+  servername: frantax.my3cx.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4c6e1341-f9b2-4d34-bb0c-6baba0688e87
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 276625
+  name: 🆔vpnbaz 🔒 VL-TCP- ❔ XX 104ms
+  port: 443
+  reality-opts:
+    public-key: wHf1nSF3byWgtI0aprUDgbEBrgtE6Y8bpqnNxl9lhhg
+    short-id: 763a06472e66efff
+  server: 194.110.207.75
+  servername: fernandfoxgloveinteriors.co.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3aaf6f5a-bebe-42c9-a2da-0c5500146451
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 579500
   port: 443
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
@@ -15,11 +54,28 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: 57fd5441-dfbc-463c-8479-7b89ee1ad472
+  uuid: a02196d0-d1ae-4b48-8f5e-6eb98c89b693
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 996361
+  port: 443
+  reality-opts:
+    public-key: mWzXDVWUhjGcuizZHA-rEnRpxv2wgeSZUIuHmQdteiA
+    short-id: f576da5e05a1d4d2
+  server: 151.242.168.155
+  servername: kibi-institut.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: 43ca296b-321f-4b61-a12c-ddf8370b9761
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 276625
+  - 🏳️ ShatakVPN 311638
+  - 🏳️ ShatakVPN 305523
+  - 🆔vpnbaz 🔒 VL-TCP- ❔ XX 104ms
+  - 🏳️ ShatakVPN 579500
+  - 🏳️ ShatakVPN 996361
   type: select
 rules:
 - MATCH,PROXY

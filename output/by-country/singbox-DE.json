@@ -2,37 +2,15 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Frankfurt am Main  HE  Germany",
-      "server": "8.209.74.72",
-      "server_port": 20001,
-      "method": "chacha20-ietf-poly1305",
-      "password": "PWpjPo3tqhPN4yRZ"
-    },
-    {
       "type": "hysteria2",
-      "tag": "hysteria2-1188291348",
-      "server": "deu0003ntrhy01.tcp-reset-club.net",
+      "tag": "🏳️ ShatakVPN 986237",
+      "server": "144.31.221.57",
       "server_port": 443,
-      "password": "8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3",
+      "password": "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
+        "server_name": "player.wwwinternetvideo.click",
         "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "[openproxylist.com] DE 15562961",
-      "server": "163.8.195.241",
-      "server_port": 2087,
-      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
-      "transport": {
-        "type": "ws",
-        "path": "/29c8fed7ca22",
-        "headers": {
-          "Host": "/?--v2rayNplus--v2rayNplus--v2rayNplus--"
-        }
       }
     },
     {

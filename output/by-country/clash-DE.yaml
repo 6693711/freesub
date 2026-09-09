@@ -3,37 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 Frankfurt am Main  HE  Germany
-  password: PWpjPo3tqhPN4yRZ
-  port: 20001
-  server: 8.209.74.72
-  type: ss
-  udp: true
-- name: hysteria2-1188291348
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+- name: 🏳️ ShatakVPN 986237
+  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
   port: 443
-  server: deu0003ntrhy01.tcp-reset-club.net
+  server: 144.31.221.57
   skip-cert-verify: true
-  sni: 127.0.0.1
+  sni: player.wwwinternetvideo.click
   type: hysteria2
-- name: '[openproxylist.com] DE 15562961'
-  network: ws
-  port: 2087
-  server: 163.8.195.241
-  type: vless
-  udp: true
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
-  ws-opts:
-    headers:
-      Host: /?--v2rayNplus--v2rayNplus--v2rayNplus--
-    path: /29c8fed7ca22
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪 Frankfurt am Main  HE  Germany
-  - hysteria2-1188291348
-  - '[openproxylist.com] DE 15562961'
+  - 🏳️ ShatakVPN 986237
   type: select
 rules:
 - MATCH,PROXY
