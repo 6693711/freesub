@@ -1,0 +1,36 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: hysteria2-1090323312
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  port: 8443
+  server: 162.249.126.6
+  skip-cert-verify: false
+  sni: hopp-germany-new.ddnsguru.com
+  type: hysteria2
+- name: 📀49@oneclickvpnkeys
+  password: 4fb82973-a7f1-4fc2-9958-cb21f5162f06
+  port: 443
+  server: rou0001ntrhy01.tcp-reset-club.net
+  skip-cert-verify: false
+  sni: rou0001ntrhy01.tcp-reset-club.net
+  type: hysteria2
+- name: 🏳️ ShatakVPN 803526
+  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
+  port: 8443
+  server: 205.237.109.163
+  skip-cert-verify: true
+  sni: hopp-netherland-new.dynuddns.net
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - hysteria2-1090323312
+  - 📀49@oneclickvpnkeys
+  - 🏳️ ShatakVPN 803526
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

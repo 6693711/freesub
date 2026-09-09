@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 276625
+  port: 443
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  server: 151.242.168.238
+  servername: frantax.my3cx.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57fd5441-dfbc-463c-8479-7b89ee1ad472
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 276625
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

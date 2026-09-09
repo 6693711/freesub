@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "[openproxylist.com] JP 5141029",
+      "server": "149.22.87.204",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-293233438",
+      "server": "freedom.chenlan.top",
+      "server_port": 12765,
+      "password": "STYyftThFn",
+      "tls": {
+        "enabled": true,
+        "server_name": "freedom.chenlan.top",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1051520042",
+      "server": "13.230.222.139",
+      "server_port": 18384,
+      "uuid": "50641912-a16b-4ac3-aa2f-312c88b617e1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cRwzK1c65HdBluJqM3GS8YN4N-TqTCmI6X_3eEgAVms",
+          "short_id": "3f316a236d64c1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1014382059",
+      "server": "13.231.19.51",
+      "server_port": 11690,
+      "uuid": "e2b8b217-cffb-4d66-9b8b-eca6e4334032",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg",
+          "short_id": "034885e346fd30"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-419356360",
+      "server": "freedom.chenlan.top",
+      "server_port": 12765,
+      "password": "STYyftThFn",
+      "tls": {
+        "enabled": true,
+        "server_name": "css.rbxcdn.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-722298528",
+      "server": "freedom.chenlan.top",
+      "server_port": 12765,
+      "password": "STYyftThFn",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 184084",
+      "server": "13.231.7.104",
+      "server_port": 24620,
+      "uuid": "b969ef8f-7bdb-474f-9481-d8f3c5686fb8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI",
+          "short_id": "db2cb3b3c2dbb711"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 322636",
+      "server": "43.207.162.145",
+      "server_port": 32913,
+      "uuid": "15836880-212b-4690-b29c-1889a749bf72",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iJhoNzfiPiua04PL88iAAyZz2u39su4ChSCiGVoekRQ",
+          "short_id": "a8f0a95931a52732"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

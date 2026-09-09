@@ -1,0 +1,56 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: vless-1197775769
+  port: 443
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  server: 58.153.148.126
+  servername: updates.cdn-apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+- name: hysteria2-705682024
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2рҹү
+  type: hysteria2
+- client-fingerprint: chrome
+  name: vless-1186755717
+  port: 443
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  server: 6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com
+  servername: updates.cdn-apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6d4abac0-86e6-11ef-83cc-f23c913c8d2b
+- client-fingerprint: chrome
+  name: 🏳️ ShatakVPN 485003
+  port: 443
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  server: 58.153.148.126
+  servername: updates.cdn-apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1197775769
+  - hysteria2-705682024
+  - vless-1186755717
+  - 🏳️ ShatakVPN 485003
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

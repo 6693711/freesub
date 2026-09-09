@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 930049",
+      "server": "94.183.209.58",
+      "server_port": 443,
+      "uuid": "78791f9e-fe09-4d4f-88ec-895764bae0d6",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "pl2.lckdwn.ru"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

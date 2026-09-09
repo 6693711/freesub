@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 837357
+  port: 443
+  reality-opts:
+    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
+    short-id: 76132b3b39704c44
+  server: 193.238.154.18
+  servername: es1.hat.onl
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2297ea1f-2415-4a2c-be20-4a3a978283a2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 837357
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
