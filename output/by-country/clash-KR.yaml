@@ -1,0 +1,31 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: hysteria2-573042057
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  port: 50160
+  server: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: true
+  sni: 150-230-252-217.liao.kdns.fr
+  type: hysteria2
+- name: 🏳️ ShatakVPN 773709
+  network: ws
+  port: 2087
+  server: 130.94.29.111
+  type: vless
+  udp: true
+  uuid: 84da6391-1539-4583-a3d9-d6efd796b4d6
+  ws-opts:
+    headers: {}
+    path: /e17586a75123
+proxy-groups:
+- name: PROXY
+  proxies:
+  - hysteria2-573042057
+  - 🏳️ ShatakVPN 773709
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -1,0 +1,23 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: 🏳️ ShatakVPN 411594
+  network: ws
+  port: 2087
+  server: 189.74.97.47
+  type: vless
+  udp: true
+  uuid: 894fe9f0-b998-49c0-8003-a5007de921e1
+  ws-opts:
+    headers: {}
+    path: /755276b33b6f
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 411594
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

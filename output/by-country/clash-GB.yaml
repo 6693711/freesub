@@ -3,33 +3,8 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-1182531137
-  port: 2053
-  reality-opts:
-    public-key: T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo
-    short-id: 949023ece91caa7c
-  server: 51.89.194.151
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a8444f42-8aa2-4ef2-8755-2b0d82415fc6
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 794325
-  port: 443
-  reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 9409f73c2fd7
-  server: 107.181.151.241
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2ba7f500-017b-4891-87a0-e4e62a4ad52d
 - client-fingerprint: random
-  name: vless-1193015731
+  name: vless-1157522806
   port: 2053
   reality-opts:
     public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
@@ -43,9 +18,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1182531137
-  - 🏳️ ShatakVPN 794325
-  - vless-1193015731
+  - vless-1157522806
   type: select
 rules:
 - MATCH,PROXY

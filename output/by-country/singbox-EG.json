@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 830827",
+      "server": "38.54.59.209",
+      "server_port": 2087,
+      "uuid": "cd842ef8-9577-47f3-83ca-627147ed291b",
+      "transport": {
+        "type": "ws",
+        "path": "/d1000b16fe76",
+        "headers": {}
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

@@ -2,41 +2,55 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1221773903",
-      "server": "ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com",
+      "type": "vmess",
+      "tag": "🇺🇸 美国 | USA",
+      "server": "www.shopify.com",
       "server_port": 443,
-      "uuid": "fbf91120-50ba-11ef-a203-f23c91cfbbc9",
+      "uuid": "d187a23a-76a9-4d55-84e3-ea3b8b222cbf",
+      "security": "auto",
+      "alter_id": 0,
       "tls": {
         "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        "server_name": "dimensional-regularly-buildings-keys.trycloudflare.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/d187a23a-76a9-4d55-84e3-ea3b8b222cbf-vm",
+        "headers": {
+          "Host": "dimensional-regularly-buildings-keys.trycloudflare.com"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 974745",
-      "server": "203.218.231.156",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 753867",
+      "server": "202.146.222.29",
       "server_port": 443,
-      "uuid": "5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-        }
+        "server_name": "202.146.222.29",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1224489883",
+      "server": "212.192.15.86",
+      "server_port": 20111,
+      "method": "aes-256-gcm",
+      "password": "72553320ae6bcc8f"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1066924724",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "off",
+        "insecure": true
       }
     },
     {

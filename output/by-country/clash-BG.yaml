@@ -3,17 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
-  name: shadowsocks-819466430
-  password: PRBf4BS2HvJqtWxY
-  port: 9049
-  server: 213.183.63.60
-  type: ss
+- client-fingerprint: randomized
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 839367
+  port: 443
+  reality-opts:
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+  server: 144.31.50.236
+  servername: yandex.ru
+  tls: true
+  type: vless
   udp: true
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-819466430
+  - 🏳️ ShatakVPN 839367
   type: select
 rules:
 - MATCH,PROXY

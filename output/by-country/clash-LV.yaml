@@ -1,0 +1,39 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 241780
+  port: 443
+  reality-opts:
+    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
+    short-id: 5c256336e3b673fa
+  server: 195.123.213.28
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: vless-650667509
+  network: grpc
+  port: 2083
+  server: laoye.in-gect.fun
+  servername: laoye.in-gect.fun
+  tls: true
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 241780
+  - vless-650667509
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

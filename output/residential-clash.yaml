@@ -2,42 +2,10 @@ allow-lan: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼 New Taipei City  NWT  Taiwan
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  port: 50099
-  server: r3mrcg001287h3p.cybervena.com
-  type: ss
-  udp: true
-- client-fingerprint: qq
-  name: vless-1221773903
-  port: 443
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com
-  servername: updates.cdn-apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: fbf91120-50ba-11ef-a203-f23c91cfbbc9
-- client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 974745
-  port: 443
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: 203.218.231.156
-  servername: updates.cdn-apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+proxies: []
 proxy-groups:
 - name: PROXY
-  proxies:
-  - 🇹🇼 New Taipei City  NWT  Taiwan
-  - vless-1221773903
-  - 🏳️ ShatakVPN 974745
+  proxies: []
   type: select
 rules:
 - MATCH,PROXY
