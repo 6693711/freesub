@@ -3,23 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼 Nantou City  NAN  Taiwan
-  password: a9a0d092-6f0e-4701-81ee-454643d6d506
-  port: 50099
-  server: namrcg001640lrm.cybervena.com
-  type: ss
-  udp: true
-- name: hysteria2-468892442
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- client-fingerprint: random
+- client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: vless-1159791247
+  name: vless-1028233054
   port: 34376
   reality-opts:
     public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
@@ -30,20 +16,22 @@ proxies:
   type: vless
   udp: true
   uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
-- client-fingerprint: qq
-  name: vless-1175369236
-  port: 24215
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 395278
+  port: 21776
   reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  server: 118.167.200.67
-  servername: addons.mozilla.org
+    public-key: nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA
+    short-id: 79b6f82800c68925
+  server: 34.80.164.239
+  servername: www.tesla.com
   tls: true
   type: vless
   udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-- client-fingerprint: firefox
+  uuid: b0399730-1618-4727-8ddd-2baf94ab90d6
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1014145882
+  name: vless-1071893222
   port: 30837
   reality-opts:
     public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
@@ -54,14 +42,34 @@ proxies:
   type: vless
   udp: true
   uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1063798468
+  port: 21776
+  reality-opts:
+    public-key: nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA
+    short-id: 79b6f82800c68925
+  server: 34.80.164.239
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b0399730-1618-4727-8ddd-2baf94ab90d6
+- name: 🏳️ ShatakVPN 303206
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇹🇼 Nantou City  NAN  Taiwan
-  - hysteria2-468892442
-  - vless-1159791247
-  - vless-1175369236
-  - vless-1014145882
+  - vless-1028233054
+  - 🏳️ ShatakVPN 395278
+  - vless-1071893222
+  - vless-1063798468
+  - 🏳️ ShatakVPN 303206
   type: select
 rules:
 - MATCH,PROXY

@@ -3,33 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🇱🇻 ShatakVPN 469796
-  network: ws
-  port: 2096
-  server: 89.36.161.222
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  ws-opts:
-    headers: {}
-    path: /
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc
-  name: vless-583609879
-  network: grpc
-  port: 2083
-  server: 89.36.161.222
-  servername: laoye.in-gect.fun
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 918789
+  port: 443
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  server: 138.124.180.137
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇱🇻 ShatakVPN 469796
-  - vless-583609879
+  - 🏳️ ShatakVPN 918789
   type: select
 rules:
 - MATCH,PROXY

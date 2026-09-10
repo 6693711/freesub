@@ -3,25 +3,13 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 835814
+  name: 🏳️ ShatakVPN 557508
   port: 443
   reality-opts:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.77
-  servername: localhost
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 524686
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.70
+  server: 194.34.175.98
   servername: localhost
   tls: true
   type: vless
@@ -30,8 +18,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 835814
-  - 🏳️ ShatakVPN 524686
+  - 🏳️ ShatakVPN 557508
   type: select
 rules:
 - MATCH,PROXY

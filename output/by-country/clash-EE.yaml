@@ -3,7 +3,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 707765
+- name: 🎡61@oneclickvpnkeys
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: 31.76.71.63
+  skip-cert-verify: true
+  sni: cabinet.wwwinternetvideo.click
+  type: hysteria2
+- name: 🏳️ ShatakVPN 351695
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: 217.60.182.79
+  skip-cert-verify: true
+  sni: cabinet.wwwinternetvideo.click
+  type: hysteria2
+- name: 🏳️ ShatakVPN 198101
   network: ws
   port: 443
   server: 94.183.170.135
@@ -16,7 +30,9 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 707765
+  - 🎡61@oneclickvpnkeys
+  - 🏳️ ShatakVPN 351695
+  - 🏳️ ShatakVPN 198101
   type: select
 rules:
 - MATCH,PROXY

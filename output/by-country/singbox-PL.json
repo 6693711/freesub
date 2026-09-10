@@ -3,14 +3,14 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 512745",
-      "server": "144.31.5.64",
+      "tag": "vless-1152187450",
+      "server": "50.7.249.170",
       "server_port": 443,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl6.moritech.net",
+        "server_name": "pl1-ded.moritech.net",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -18,43 +18,31 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 690948",
+      "server": "144.31.2.33",
+      "server_port": 443,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl3.moritech.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 826765",
-      "server": "144.31.93.126",
+      "tag": "🏳️ ShatakVPN 159847",
+      "server": "144.31.49.47",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
         "server_name": "admin.wwwinternetvideo.click",
         "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-768953025",
-      "server": "streambox.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01",
-      "tls": {
-        "enabled": true,
-        "server_name": "streambox.wwwinternetvideo.click",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443",
-      "server": "144.31.5.64",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl6.moritech.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
       }
     },
     {

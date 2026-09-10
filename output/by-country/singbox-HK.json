@@ -2,27 +2,20 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1211278471",
-      "server": "19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com",
+      "type": "hysteria2",
+      "tag": "hysteria2-705682240",
+      "server": "202.146.222.29",
       "server_port": 443,
-      "uuid": "2ec58858-976b-11ea-82ef-f23c9164ca5d",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-        }
+        "server_name": "www.bing.com",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 715562",
+      "tag": "🏳️ ShatakVPN 919173",
       "server": "162.128.157.164",
       "server_port": 443,
       "uuid": "5e8e81ac-a1c4-4543-b81e-651bf9872b54",
@@ -32,13 +25,44 @@
         "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
           "public_key": "TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0",
           "short_id": "14156e3ac23212cc"
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1167245194",
+      "server": "186b6f53-tla000-tvb36r-1qwom.hk3.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "8d0ec7cc-eefa-11ee-9b59-f23c91cfbbc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-692912199",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "css.rbxcdn.com",
+        "insecure": true
       }
     },
     {

@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  port: 443
+  server: gta.internet-card.sbs
+  skip-cert-verify: true
+  sni: gta.internet-card.sbs
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

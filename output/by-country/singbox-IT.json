@@ -3,22 +3,15 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 623807",
-      "server": "172.238.232.239",
-      "server_port": 32833,
-      "uuid": "167ed405-7de9-4bff-b1ea-6e3d49c76b0b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20",
-          "short_id": "a0a305ccc8e94aa8"
+      "tag": "🏳️ ShatakVPN 719268",
+      "server": "57.131.32.191",
+      "server_port": 80,
+      "uuid": "1e280316-0408-47c4-b058-05b8f1f17f02",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-italy1.09vpn.com"
         }
       }
     },

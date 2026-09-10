@@ -3,21 +3,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
-  name: vless-1211278471
+- client-fingerprint: chrome
+  name: vless-1167245194
   port: 443
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
+  server: 186b6f53-tla000-tvb36r-1qwom.hk3.hyhuawei.com
   servername: updates.cdn-apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+  uuid: 8d0ec7cc-eefa-11ee-9b59-f23c91cfbbc9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1211278471
+  - vless-1167245194
   type: select
 rules:
 - MATCH,PROXY

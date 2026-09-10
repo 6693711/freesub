@@ -2,12 +2,43 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇦🇪 United Arab Emirates",
-      "server": "188.208.110.58",
-      "server_port": 8444,
-      "method": "chacha20-ietf-poly1305",
-      "password": "tunnel-astrovpn_official"
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 183230",
+      "server": "31.58.181.88",
+      "server_port": 8443,
+      "uuid": "0817a3bb-c8fb-4ddf-a05e-321565b39cd8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1107712078",
+      "server": "srv-21bac9.vless.monster",
+      "server_port": 2087,
+      "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-21bac9.vless.monster",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "freegrpc"
+      }
     },
     {
       "type": "direct",

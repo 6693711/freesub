@@ -3,8 +3,8 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 835814",
-      "server": "194.34.175.77",
+      "tag": "🏳️ ShatakVPN 557508",
+      "server": "194.34.175.98",
       "server_port": 443,
       "uuid": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
       "flow": "xtls-rprx-vision",
@@ -13,27 +13,7 @@
         "server_name": "localhost",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 524686",
-      "server": "194.34.175.70",
-      "server_port": 443,
-      "uuid": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "localhost",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

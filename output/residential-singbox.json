@@ -2,48 +2,21 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇹🇼 Nantou City  NAN  Taiwan",
-      "server": "namrcg001640lrm.cybervena.com",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "a9a0d092-6f0e-4701-81ee-454643d6d506"
-    },
-    {
       "type": "vless",
-      "tag": "vless-1211278471",
-      "server": "19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com",
+      "tag": "vless-1167245194",
+      "server": "186b6f53-tla000-tvb36r-1qwom.hk3.hyhuawei.com",
       "server_port": 443,
-      "uuid": "2ec58858-976b-11ea-82ef-f23c9164ca5d",
+      "uuid": "8d0ec7cc-eefa-11ee-9b59-f23c91cfbbc9",
       "tls": {
         "enabled": true,
         "server_name": "updates.cdn-apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
           "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1175369236",
-      "server": "118.167.200.67",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE"
         }
       }
     },
