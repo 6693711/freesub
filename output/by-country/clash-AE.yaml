@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: '英国 #2'
-  password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
+- name: hysteria2-1033569060
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8080
-  server: 138.124.0.168
+  server: 85.204.107.181
   skip-cert-verify: true
-  sni: hopp-legend-se.roxa.org
+  sni: hopp-romania-new.roxa.org
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - '英国 #2'
+  - hysteria2-1033569060
   type: select
 rules:
 - MATCH,PROXY

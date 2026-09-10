@@ -4,64 +4,34 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 125956
-  port: 443
-  server: 162.19.10.99
-  servername: nasnet-162191099-direct.mbghalibaf.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-- name: '[openproxylist.com] FR 12723523'
-  network: ws
-  port: 80
-  server: 152.228.162.19
-  type: vless
-  udp: true
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  ws-opts:
-    headers: {}
-    path: /vless/
-- cipher: aes-256-gcm
-  name: 🇫🇷 France
-  password: itzvpn@321
-  port: 8388
-  server: 51.83.192.80
-  type: ss
-  udp: true
-- name: 🏳️ ShatakVPN 205023
-  network: ws
-  port: 2096
-  server: 45.144.28.39
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  ws-opts:
-    headers:
-      Host: usejh2.neobo-tooth.ru
-    path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 978722
-  port: 23576
+  name: vless-1235362830
+  port: 50715
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
+    public-key: YyF_0swCrKvtCDKmnGhz9UshtvQxUbpemVO8d_Bj6Ro
+    short-id: '75'
+  server: shop.theawesomenpl.ru
+  servername: www.nvidia.com
   tls: true
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: b761689d-592e-46b2-b704-af7a9110b0ac
+- client-fingerprint: firefox
+  name: vless-856066407
+  port: 443
+  reality-opts:
+    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
+    short-id: 98fa0b00d09419f7
+  server: gr068.techinyab.ir
+  servername: play.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 125956
-  - '[openproxylist.com] FR 12723523'
-  - 🇫🇷 France
-  - 🏳️ ShatakVPN 205023
-  - 🏳️ ShatakVPN 978722
+  - vless-1235362830
+  - vless-856066407
   type: select
 rules:
 - MATCH,PROXY

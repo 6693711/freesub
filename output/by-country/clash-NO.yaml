@@ -4,22 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔anty_filter 🔒 VL-TCP- ❔ XX 248ms
+  name: vless-962527017
   port: 40443
   reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
-  server: 5.253.30.99
+    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
+    short-id: f7b2
+  server: 46.29.238.88
   servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  uuid: db320947-adfb-400d-b60b-383b8324bffe
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔anty_filter 🔒 VL-TCP- ❔ XX 248ms
+  - vless-962527017
   type: select
 rules:
 - MATCH,PROXY

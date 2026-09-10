@@ -1,0 +1,54 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1225234746
+  port: 53271
+  reality-opts:
+    public-key: 1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc
+    short-id: 0a9bd9db19578964
+  server: 56.69.159.191
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8358eb5-7210-4cf8-982f-68af141b7694
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1076876228
+  port: 53271
+  reality-opts:
+    public-key: 1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc
+    short-id: 0a9bd9db19578964
+  server: 56.69.159.191
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8358eb5-7210-4cf8-982f-68af141b7694
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1108744337
+  port: 53271
+  reality-opts:
+    public-key: 1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc
+    short-id: 0a9bd9db19578964
+  server: 56.69.159.191
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8358eb5-7210-4cf8-982f-68af141b7694
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1225234746
+  - vless-1076876228
+  - vless-1108744337
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -3,21 +3,43 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1157522806",
-      "server": "46.250.250.149",
-      "server_port": 2053,
-      "uuid": "59bf58d9-ddaf-42cd-a0ca-db3559ad8714",
+      "tag": "vless-1058385597",
+      "server": "3.9.135.156",
+      "server_port": 51847,
+      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
+          "short_id": "0eec442e7b34d2f2"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1223729863",
+      "server": "78.129.208.44",
+      "server_port": 421,
+      "uuid": "a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "chistomat.dry.care",
         "utls": {
           "enabled": true,
           "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8",
-          "short_id": "cf081ff86b298c48"
+          "public_key": "zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg",
+          "short_id": "a1facbc8575701ae"
         }
       }
     },

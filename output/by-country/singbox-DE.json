@@ -2,98 +2,52 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 Karlsruhe  BW  Germany",
+      "server": "2.58.81.221",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "kKEd0rBrd56Furjz"
+    },
+    {
       "type": "vless",
-      "tag": "vless-1212533313",
-      "server": "207.241.172.98",
+      "tag": "[openproxylist.com] DE 15632733",
+      "server": "eu-north-sw-1.hanvpn.biz",
+      "server_port": 443,
+      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu-north-sw-1.hanvpn.biz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ELFdNdI6NYwuEq5OqCkYwnUInHvIpsUhd4z2ud7pOCM",
+          "short_id": "0172b7681806bc97"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1230571366",
+      "server": "www.g.mobilesari.ir",
       "server_port": 4777,
-      "uuid": "ad554ef2-a860-41da-8ecf-7b2dfbb1df32",
+      "uuid": "010bf7ad-b6ec-482b-8392-ae038f466a0a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "amp-api-edge.apps.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
           "public_key": "8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo",
           "short_id": "01115788253bc845"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-696780676",
-      "server": "2.58.81.221",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "kKEd0rBrd56Furjz"
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 127028",
-      "server": "94.156.232.254",
-      "server_port": 443,
-      "uuid": "03c48eca-e0aa-4e18-998c-1f53f1de293c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cf6.rumedia-cdn.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn/v3/live",
-        "headers": {
-          "Host": "cf6.rumedia-cdn.com"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Frankfurt am Main  HE  Germany",
-      "server": "185.226.172.8",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Frankfurt am Main  HE  Germany_1",
-      "server": "51.195.126.38",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "2YdE4lFOid5a"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "[openproxylist.com] DE 13135746",
-      "server": "209.46.102.22",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "1hhrqrokj3ag"
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1220302707",
-      "server": "144.31.215.48",
-      "server_port": 443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eu-central-de2.hanvpn.biz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U",
-          "short_id": "12a3b7681806bc97"
         }
       }
     },

@@ -3,23 +3,55 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-553326964
-  port: 50159
+  name: vless-1027296951
+  port: 34376
   reality-opts:
-    public-key: E9gCs_C_mSDcHmlCZSMk1kSXpmua48DhgsT_aDpZ1WE
-    short-id: 4c3f80051030ba1b
-  server: 45.121.50.241
-  servername: www.cloudflare.com
+    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
+    short-id: 8dbafb690450d8a9
+  server: 34.81.129.171
+  servername: www.sony.com
   tls: true
   type: vless
   udp: true
-  uuid: 47a97b7f-044d-43d6-86b0-8b256873d1b5
+  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
+- client-fingerprint: chrome
+  name: vless-1227680370
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  server: 118.167.200.67
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+- name: hysteria2-16610
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https://t.me/oneclickvpnkeys
+  type: hysteria2
+- client-fingerprint: firefox
+  name: vless-1173976370
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  server: 118.167.200.67
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-553326964
+  - vless-1027296951
+  - vless-1227680370
+  - hysteria2-16610
+  - vless-1173976370
   type: select
 rules:
 - MATCH,PROXY

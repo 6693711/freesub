@@ -3,22 +3,72 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-553326964",
-      "server": "45.121.50.241",
-      "server_port": 50159,
-      "uuid": "47a97b7f-044d-43d6-86b0-8b256873d1b5",
+      "tag": "vless-1027296951",
+      "server": "34.81.129.171",
+      "server_port": 34376,
+      "uuid": "bf8cc771-51a0-4395-810f-1f135325cfc1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "www.sony.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU",
+          "short_id": "8dbafb690450d8a9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1227680370",
+      "server": "118.167.200.67",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "E9gCs_C_mSDcHmlCZSMk1kSXpmua48DhgsT_aDpZ1WE",
-          "short_id": "4c3f80051030ba1b"
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-16610",
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/oneclickvpnkeys",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1173976370",
+      "server": "118.167.200.67",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE"
         }
       }
     },

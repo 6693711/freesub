@@ -2,15 +2,27 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1151376484",
-      "server": "103.75.119.126",
-      "server_port": 2087,
-      "uuid": "731f177e-00aa-480c-b935-661456139a32",
-      "transport": {
-        "type": "ws",
-        "path": "/7586c69d3dc9",
-        "headers": {}
+      "type": "hysteria2",
+      "tag": "hysteria2-658428922",
+      "server": "vpn-au-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-au-002.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1060573987",
+      "server": "vpn-au-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "whatsapp.com",
+        "insecure": true
       }
     },
     {

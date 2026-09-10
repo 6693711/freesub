@@ -3,23 +3,19 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: randomized
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 839367
-  port: 443
-  reality-opts:
-    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
-    short-id: bbe46bd8f6b96839
-  server: 144.31.50.236
-  servername: yandex.ru
+- client-fingerprint: chrome
+  name: 🔒 VL-TCP-TLS 🇧🇬 BG-192.145.31.5 8443
+  port: 8443
+  server: 192.145.31.5
+  servername: neth9.lunariai.ru
   tls: true
   type: vless
   udp: true
-  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 839367
+  - 🔒 VL-TCP-TLS 🇧🇬 BG-192.145.31.5 8443
   type: select
 rules:
 - MATCH,PROXY

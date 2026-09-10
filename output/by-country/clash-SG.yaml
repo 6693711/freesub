@@ -3,15 +3,29 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: vless-1204622269
+- name: hysteria2-856461969
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 134.122.154.210
-  type: vless
-  udp: true
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+  server: 13.212.76.106
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1091571476
+  name: vless-1089138467
+  port: 58335
+  reality-opts:
+    public-key: 5uFce3cR8rT889d0IDLpENoFf9OnFXaOoO9B8mI8cWQ
+    short-id: 6ce3397cbd5ada
+  server: 47.129.204.35
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0f4ce6d4-b4b4-41b9-b1e7-c109ad32b274
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1014987714
   port: 49805
   reality-opts:
     public-key: KhyeJbZtFAik5Mx1K_AQMIEK_MPwQnwUwSe-jTjq8yU
@@ -22,32 +36,19 @@ proxies:
   type: vless
   udp: true
   uuid: 0803fc94-25f9-42db-9e6b-dd1418ae50ec
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1009380186
-  port: 20221
+  name: vless-189834220
+  port: 12972
   reality-opts:
-    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
-    short-id: 85ae3d83d037b7
-  server: 13.212.211.73
-  servername: www.intel.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-950648544
-  port: 443
-  reality-opts:
-    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
-    short-id: 133a3f10a1581047
-  server: 206.206.78.36
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - name: 🎡65@oneclickvpnkeys
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
@@ -55,78 +56,14 @@ proxies:
   skip-cert-verify: true
   sni: 13.250.120.9
   type: hysteria2
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: vless-522223670
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 894166
-  port: 24146
-  reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
-  server: 54.251.9.130
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 268042
-  port: 26017
-  reality-opts:
-    public-key: cy4ePzAdSz4pqRmAXXchMIgSoSKo8qjq2qLk5805LRA
-    short-id: af1c2e33b0c7dad7
-  server: 54.251.224.5
-  servername: www.amd.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d318cdac-0033-4b6e-98bf-35116e79c93f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-81049727
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-918220982
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.250.120.9
-  skip-cert-verify: true
-  sni: google.com
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1204622269
-  - vless-1091571476
-  - vless-1009380186
-  - vless-950648544
+  - hysteria2-856461969
+  - vless-1089138467
+  - vless-1014987714
+  - vless-189834220
   - 🎡65@oneclickvpnkeys
-  - vless-522223670
-  - 🏳️ ShatakVPN 894166
-  - 🏳️ ShatakVPN 268042
-  - vless-81049727
-  - hysteria2-918220982
   type: select
 rules:
 - MATCH,PROXY

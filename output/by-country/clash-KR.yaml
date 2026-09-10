@@ -3,28 +3,31 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-573042057
-  password: 9cfc9458e48c028ec03ff86ebc71c744
-  port: 50160
-  server: 150-230-252-217.liao.kdns.fr
-  skip-cert-verify: true
-  sni: 150-230-252-217.liao.kdns.fr
-  type: hysteria2
-- name: 🏳️ ShatakVPN 773709
-  network: ws
-  port: 2087
-  server: 130.94.29.111
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-12945900
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
   type: vless
   udp: true
-  uuid: 84da6391-1539-4583-a3d9-d6efd796b4d6
-  ws-opts:
-    headers: {}
-    path: /e17586a75123
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-956723733
+  password: 1671a252e2a97dc2bda4e515475931da
+  port: 50160
+  server: 132.226.226.189
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-573042057
-  - 🏳️ ShatakVPN 773709
+  - vless-12945900
+  - hysteria2-956723733
   type: select
 rules:
 - MATCH,PROXY
