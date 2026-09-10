@@ -3,22 +3,81 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 557508",
-      "server": "194.34.175.98",
-      "server_port": 443,
-      "uuid": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
-      "flow": "xtls-rprx-vision",
+      "tag": "🏳️ ShatakVPN 407886",
+      "server": "185.79.138.71",
+      "server_port": 448,
+      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
       "tls": {
         "enabled": true,
-        "server_name": "localhost",
+        "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
+          "short_id": "cd21e552537c7c0b"
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1211402633",
+      "server": "65.109.185.234",
+      "server_port": 2087,
+      "uuid": "83fd52e3-c8d4-4ba6-abf4-445b99fec0f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "italic.dearhossein-taktaz.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1205358055",
+      "server": "31.77.199.182",
+      "server_port": 443,
+      "uuid": "c09cfd91-b234-4998-9bed-a0211b7f5c3c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi2.yservice.help",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04",
+          "short_id": "abcd1234"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1204109587",
+      "server": "italic.dearhossein-taktaz.ir",
+      "server_port": 2087,
+      "uuid": "83fd52e3-c8d4-4ba6-abf4-445b99fec0f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "italic.dearhossein-taktaz.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {

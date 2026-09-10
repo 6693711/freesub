@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 852423
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 144.31.93.126
+- name: hysteria2-858183556
+  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
+  port: 8443
+  server: 104.165.205.40
   skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
+  sni: speedtestmark.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 852423
+  - hysteria2-858183556
   type: select
 rules:
 - MATCH,PROXY

@@ -2,46 +2,45 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 736ms",
-      "server": "usejh2.neobo-tooth.ru",
-      "server_port": 2096,
-      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 France",
-      "server": "51.255.13.232",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "BqnqToih0PbU"
-    },
-    {
       "type": "hysteria2",
-      "tag": "hysteria2-862083240",
-      "server": "151.247.197.253",
-      "server_port": 36723,
-      "password": "Krab9Hyst2_Rk7pQ2xL",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 129290",
+      "tag": "hysteria2-1004725118",
       "server": "35.181.166.40",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-fr-002.fastervpn.world",
+        "server_name": "35.181.166.40",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-816611169",
+      "server": "45.144.28.39",
+      "server_port": 2083,
+      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "usejh2.neobo-tooth.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 182568",
+      "server": "62.210.124.146",
+      "server_port": 22000,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
         "insecure": true
       }
     },

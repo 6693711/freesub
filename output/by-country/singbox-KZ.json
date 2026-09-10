@@ -2,15 +2,24 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1219061973",
-      "server": "46.247.41.120",
-      "server_port": 443,
-      "password": "8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3",
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 138137",
+      "server": "111.88.143.139",
+      "server_port": 8443,
+      "uuid": "2b8c0574-ff6f-4975-8a06-e24ebefa1d1c",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "kz03hy01.tcp-reset-club.net",
-        "insecure": true
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Ao_imnCEIGAaL1DZnjOK1SSPpjQOw_XJcgMpNLEZwg0",
+          "short_id": "ac4b582e"
+        }
       }
     },
     {

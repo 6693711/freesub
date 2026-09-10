@@ -4,21 +4,61 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 557508
-  port: 443
+  name: 🏳️ ShatakVPN 407886
+  port: 448
   reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.98
-  servername: localhost
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+    short-id: cd21e552537c7c0b
+  server: 185.79.138.71
+  servername: www.samsung.com
   tls: true
   type: vless
   udp: true
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc
+  name: vless-1211402633
+  network: grpc
+  port: 2087
+  server: 65.109.185.234
+  servername: italic.dearhossein-taktaz.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 83fd52e3-c8d4-4ba6-abf4-445b99fec0f0
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-1205358055
+  port: 443
+  reality-opts:
+    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
+    short-id: abcd1234
+  server: 31.77.199.182
+  servername: fi2.yservice.help
+  tls: true
+  type: vless
+  udp: true
+  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: vless-1204109587
+  network: grpc
+  port: 2087
+  server: italic.dearhossein-taktaz.ir
+  servername: italic.dearhossein-taktaz.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 83fd52e3-c8d4-4ba6-abf4-445b99fec0f0
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 557508
+  - 🏳️ ShatakVPN 407886
+  - vless-1211402633
+  - vless-1205358055
+  - vless-1204109587
   type: select
 rules:
 - MATCH,PROXY

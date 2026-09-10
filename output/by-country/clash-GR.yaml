@@ -1,0 +1,22 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- grpc-opts:
+    grpc-service-name: security.debian.org
+  name: '[openproxylist.com] GR 15557032'
+  network: grpc
+  port: 2083
+  server: 185.126.238.87
+  type: vless
+  udp: true
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+proxy-groups:
+- name: PROXY
+  proxies:
+  - '[openproxylist.com] GR 15557032'
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

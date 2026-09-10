@@ -2,29 +2,8 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1115117290",
-      "server": "51.161.199.124",
-      "server_port": 443,
-      "uuid": "8c06ed32-28f1-4480-8a40-a2549d960138",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "suetinklerartglass.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0",
-          "short_id": "0f4d3210977f51a5"
-        }
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "vmess-2386845",
+      "tag": "vmess-48649242",
       "server": "134.195.196.211",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -32,54 +11,9 @@
       "alter_id": 0
     },
     {
-      "type": "hysteria2",
-      "tag": "澳大利亚 #1",
-      "server": "vpn-au-002.fastervpn.world",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "css.rbxcdn.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-982637009",
-      "server": "51.161.199.124",
-      "server_port": 443,
-      "uuid": "61e7c286-6b7d-4667-955c-430d89979c4d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "suetinklerartglass.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qM0uZ1Gp_Ve59S_iKPyFqQXjfjkUqf6iSHH_fxFt7w0",
-          "short_id": "0f4d3210977f51a5"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1122309336",
-      "server": "103.75.119.126",
-      "server_port": 2087,
-      "uuid": "731f177e-00aa-480c-b935-661456139a32",
-      "transport": {
-        "type": "ws",
-        "path": "/7586c69d3dc9",
-        "headers": {}
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "vmess-468166886",
-      "server": "134.195.196.211",
+      "tag": "vmess-685048480",
+      "server": "149.88.23.202",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",

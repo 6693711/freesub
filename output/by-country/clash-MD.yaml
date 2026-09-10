@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 943457
+  name: 🇳🇱 荷兰 | NLD
   port: 9443
   reality-opts:
     public-key: RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI
@@ -19,7 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 943457
+  - 🇳🇱 荷兰 | NLD
   type: select
 rules:
 - MATCH,PROXY

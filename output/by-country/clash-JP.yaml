@@ -3,62 +3,77 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-950750905
-  port: 50159
+  name: vless-698153465
+  port: 10583
   reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- cipher: aes-256-gcm
-  name: 🇯🇵 Tokyo  13  Japan
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-162.159.254.3 443
+  network: ws
+  port: 443
+  server: 162.159.254.3
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- cipher: chacha20-ietf-poly1305
+  name: 🇯🇵 Minamishinagawa  13  Japan
+  password: uTBjZhDmOMwBVAJI
+  port: 8388
+  server: 45.32.16.53
   type: ss
   udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1221242407
-  port: 24620
+  name: vless-10287041
+  port: 18007
   reality-opts:
-    public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
-    short-id: db2cb3b3c2dbb711
-  server: 13.231.7.104
-  servername: www.amd.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
-- name: 🏳️ ShatakVPN 510534
-  network: ws
-  port: 80
-  server: 172.111.146.64
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1016793062
+  port: 30203
+  reality-opts:
+    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
+    short-id: 40150721499a92
+  server: 18.177.61.231
+  servername: www.sony.com
+  tls: true
   type: vless
   udp: true
-  uuid: 904f8ffa-4652-4076-8f2f-e586807840ec
-  ws-opts:
-    headers: {}
-    path: /vless/
+  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
 - client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 570850
+  name: 🏳️ ShatakVPN 436229
   port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 130.12.102.133
-  servername: localhost
+  server: 38.175.203.11
+  servername: oulucloud.706666.xyz
   tls: true
   type: vless
   udp: true
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  uuid: 1b8ec962-6e6f-4fc3-a9a4-c8a6fc907796
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.156.147 443
+  name: vless-975999344
   network: ws
   port: 443
   server: 172.67.156.147
@@ -71,9 +86,35 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- client-fingerprint: random
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1051696558
+  name: vless-1011139750
+  port: 28573
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  server: 18.183.215.124
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 302098
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1063785271
   port: 32913
   reality-opts:
     public-key: iJhoNzfiPiua04PL88iAAyZz2u39su4ChSCiGVoekRQ
@@ -86,60 +127,7 @@ proxies:
   uuid: 15836880-212b-4690-b29c-1889a749bf72
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1030744733
-  port: 24620
-  reality-opts:
-    public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
-    short-id: db2cb3b3c2dbb711
-  server: 13.231.7.104
-  servername: www.amd.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🇯🇵 JP-210.152.85.154 19364
-  network: ws
-  port: 19364
-  server: 210.152.85.154
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2ba0576c-6c80-426d-8b74-ae435633a32b
-  ws-opts:
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 367172
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 947252
-  port: 48086
-  reality-opts:
-    public-key: qq9vUmReS92PojPLpSyUY_c6CydUUtut7ffxc3V0LTo
-    short-id: 7083d685446ce576
-  server: 3.112.131.211
-  servername: www.nvidia.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 620ca966-d78b-4c88-a5c9-acf13c7d252f
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-725810821
+  name: 🏳️ ShatakVPN 748660
   port: 18007
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -151,109 +139,52 @@ proxies:
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 846419
-  port: 24620
-  reality-opts:
-    public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
-    short-id: db2cb3b3c2dbb711
-  server: 13.231.7.104
-  servername: www.amd.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-12945896
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 190258
+  name: vless-1197830019
   port: 443
-  server: 38.175.203.11
-  servername: oulucloud.706666.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1b8ec962-6e6f-4fc3-a9a4-c8a6fc907796
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-701259234
-  port: 18007
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+  server: freshjuniper.download
+  servername: localhost
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+- client-fingerprint: chrome
+  name: vless-1186766704
+  port: 443
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+  server: 130.12.102.62
+  servername: localhost
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
 - alterId: 0
   cipher: auto
-  name: vmess-962490409
-  port: 55216
-  server: 155.248.176.44
+  name: vmess-1227921067
+  port: 4433
+  server: 45.32.57.118
   type: vmess
   udp: true
-  uuid: 154dbc39-0921-cf11-29bd-156c5000d763
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1020947655
-  port: 11690
-  reality-opts:
-    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
-    short-id: 034885e346fd30
-  server: 13.231.19.51
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-732295696
-  port: 19645
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-950750905
-  - 🇯🇵 Tokyo  13  Japan
-  - vless-1221242407
-  - 🏳️ ShatakVPN 510534
-  - 🏳️ ShatakVPN 570850
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.156.147 443
-  - vless-1051696558
-  - vless-1030744733
-  - 🔒 VL-WS-TLS 🇯🇵 JP-210.152.85.154 19364
-  - 🏳️ ShatakVPN 367172
-  - 🏳️ ShatakVPN 947252
-  - vless-725810821
-  - 🏳️ ShatakVPN 846419
-  - vless-12945896
-  - 🏳️ ShatakVPN 190258
-  - vless-701259234
-  - vmess-962490409
-  - vless-1020947655
-  - vless-732295696
+  - vless-698153465
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-162.159.254.3 443
+  - 🇯🇵 Minamishinagawa  13  Japan
+  - vless-10287041
+  - vless-1016793062
+  - 🏳️ ShatakVPN 436229
+  - vless-975999344
+  - vless-1011139750
+  - 🏳️ ShatakVPN 302098
+  - vless-1063785271
+  - 🏳️ ShatakVPN 748660
+  - vless-1197830019
+  - vless-1186766704
+  - vmess-1227921067
   type: select
 rules:
 - MATCH,PROXY
