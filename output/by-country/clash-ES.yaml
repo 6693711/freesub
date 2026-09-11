@@ -3,17 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇪🇸 Barcelona  CT  Spain
-  password: qItG8SueYQcP
-  port: 8388
-  server: 140.174.184.5
-  type: ss
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1010845438
+  port: 19842
+  reality-opts:
+    public-key: sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM
+    short-id: 25ebc9e0a912
+  server: 185.254.205.79
+  servername: www.tesla.com
+  tls: true
+  type: vless
   udp: true
+  uuid: 43c23116-1115-4af4-a0f0-56f02841a605
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇪🇸 Barcelona  CT  Spain
+  - vless-1010845438
   type: select
 rules:
 - MATCH,PROXY

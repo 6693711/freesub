@@ -5,6 +5,44 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
+  name: vless-1238193994
+  port: 11763
+  reality-opts:
+    public-key: V3mjjvp5OFn8TNw7WK0RR2p7l9sVX2v7Zr56ag3QkiQ
+  server: 45.152.64.9
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: fe564b09-1fd8-4053-934b-3106350e4272
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[openproxylist.com] FI 12815236'
+  port: 443
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: 5a018643df03
+  server: staging.lastilhame.monster
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 594d466e-8ac3-4fda-b1d1-eeb817853518
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1048867173
+  port: 51847
+  reality-opts:
+    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
+    short-id: 0eec442e7b34d2f2
+  server: 3.9.135.156
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 391a01e9-b664-407b-9158-610fab3f5920
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
   name: vless-1058385597
   port: 51847
   reality-opts:
@@ -16,24 +54,29 @@ proxies:
   type: vless
   udp: true
   uuid: 391a01e9-b664-407b-9158-610fab3f5920
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1223729863
-  port: 421
-  reality-opts:
-    public-key: zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg
-    short-id: a1facbc8575701ae
-  server: 78.129.208.44
-  servername: chistomat.dry.care
-  tls: true
-  type: vless
+- cipher: aes-256-gcm
+  name: 🇬🇧 Portsmouth  ENG  United Kingdom
+  password: LXchLsIwtCeUAUgu
+  port: 80
+  server: 149.102.149.207
+  type: ss
   udp: true
-  uuid: a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18
+- name: hysteria2-1005580180
+  password: 3b8c82ed-fe66-472d-915e-034ccb57103f
+  port: 443
+  server: labs.frkn.org
+  skip-cert-verify: true
+  sni: labs.frkn.org
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
+  - vless-1238193994
+  - '[openproxylist.com] FI 12815236'
+  - vless-1048867173
   - vless-1058385597
-  - vless-1223729863
+  - 🇬🇧 Portsmouth  ENG  United Kingdom
+  - hysteria2-1005580180
   type: select
 rules:
 - MATCH,PROXY

@@ -3,9 +3,57 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1028233066
+  port: 34376
+  reality-opts:
+    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
+    short-id: 8dbafb690450d8a9
+  server: 34.81.129.171
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 New Taipei City  NWT  Taiwan_1
+  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
+  port: 50099
+  server: 36.224.152.189
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: vmess-656231634
+  port: 35034
+  server: 165.154.195.38
+  type: vmess
+  udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1027296951
+  name: vless-1054459318
+  port: 34376
+  reality-opts:
+    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
+    short-id: 8dbafb690450d8a9
+  server: 34.81.129.171
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
+- name: hysteria2-468892444
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1159791247
   port: 34376
   reality-opts:
     public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
@@ -17,17 +65,19 @@ proxies:
   udp: true
   uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
 - client-fingerprint: chrome
-  name: vless-1227680370
-  port: 24215
+  flow: xtls-rprx-vision
+  name: vless-1108736891
+  port: 30837
   reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  server: 118.167.200.67
-  servername: addons.mozilla.org
+    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
+    short-id: 97101ba788915e5a
+  server: 35.201.163.218
+  servername: www.sony.com
   tls: true
   type: vless
   udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-- name: hysteria2-16610
+  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
+- name: hysteria2-656706489
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
@@ -35,23 +85,30 @@ proxies:
   sni: https://t.me/oneclickvpnkeys
   type: hysteria2
 - client-fingerprint: firefox
-  name: vless-1173976370
-  port: 24215
+  flow: xtls-rprx-vision
+  name: vless-1215229403
+  port: 30837
   reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  server: 118.167.200.67
-  servername: addons.mozilla.org
+    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
+    short-id: 97101ba788915e5a
+  server: 35.201.163.218
+  servername: www.sony.com
   tls: true
   type: vless
   udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1027296951
-  - vless-1227680370
-  - hysteria2-16610
-  - vless-1173976370
+  - vless-1028233066
+  - 🇹🇼 New Taipei City  NWT  Taiwan_1
+  - vmess-656231634
+  - vless-1054459318
+  - hysteria2-468892444
+  - vless-1159791247
+  - vless-1108736891
+  - hysteria2-656706489
+  - vless-1215229403
   type: select
 rules:
 - MATCH,PROXY

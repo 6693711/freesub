@@ -3,6 +3,68 @@
   "outbounds": [
     {
       "type": "vless",
+      "tag": "vless-1238193994",
+      "server": "45.152.64.9",
+      "server_port": 11763,
+      "uuid": "fe564b09-1fd8-4053-934b-3106350e4272",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "V3mjjvp5OFn8TNw7WK0RR2p7l9sVX2v7Zr56ag3QkiQ"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[openproxylist.com] FI 12815236",
+      "server": "staging.lastilhame.monster",
+      "server_port": 443,
+      "uuid": "594d466e-8ac3-4fda-b1d1-eeb817853518",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
+          "short_id": "5a018643df03"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1048867173",
+      "server": "3.9.135.156",
+      "server_port": 51847,
+      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
+          "short_id": "0eec442e7b34d2f2"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "vless-1058385597",
       "server": "3.9.135.156",
       "server_port": 51847,
@@ -23,24 +85,23 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1223729863",
-      "server": "78.129.208.44",
-      "server_port": 421,
-      "uuid": "a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18",
-      "flow": "xtls-rprx-vision",
+      "type": "shadowsocks",
+      "tag": "🇬🇧 Portsmouth  ENG  United Kingdom",
+      "server": "149.102.149.207",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "LXchLsIwtCeUAUgu"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1005580180",
+      "server": "labs.frkn.org",
+      "server_port": 443,
+      "password": "3b8c82ed-fe66-472d-915e-034ccb57103f",
       "tls": {
         "enabled": true,
-        "server_name": "chistomat.dry.care",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg",
-          "short_id": "a1facbc8575701ae"
-        }
+        "server_name": "labs.frkn.org",
+        "insecure": true
       }
     },
     {

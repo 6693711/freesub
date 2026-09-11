@@ -3,45 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-589844071
+- name: hysteria2-107825281
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.89
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: https://t.me/clashv8
+  sni: 202.146.222.29
   type: hysteria2
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-734962303
-  port: 443
-  reality-opts:
-    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
-    short-id: 14156e3ac23212cc
-  server: vj37-1936vtw.fincore.top
-  servername: www.bing.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-717627367
-  port: 443
-  reality-opts:
-    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
-    short-id: 14156e3ac23212cc
-  server: vj37-1936vtw.fincore.top
-  servername: www.bing.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-589844071
-  - vless-734962303
-  - vless-717627367
+  - hysteria2-107825281
   type: select
 rules:
 - MATCH,PROXY

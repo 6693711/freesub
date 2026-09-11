@@ -3,17 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1219899542
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  port: 443
-  server: 46.247.41.120
-  skip-cert-verify: false
-  sni: kz03hy01.tcp-reset-club.net
-  type: hysteria2
+- client-fingerprint: chrome
+  name: '[openproxylist.com] KZ 11854847'
+  port: 35728
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
+  server: 178.236.16.98
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1219899542
+  - '[openproxylist.com] KZ 11854847'
   type: select
 rules:
 - MATCH,PROXY

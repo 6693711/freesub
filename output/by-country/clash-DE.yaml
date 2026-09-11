@@ -3,28 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🇩🇪 Karlsruhe  BW  Germany
-  password: kKEd0rBrd56Furjz
-  port: 80
-  server: 2.58.81.221
-  type: ss
-  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '[openproxylist.com] DE 15632733'
-  port: 443
-  reality-opts:
-    public-key: ELFdNdI6NYwuEq5OqCkYwnUInHvIpsUhd4z2ud7pOCM
-    short-id: 0172b7681806bc97
-  server: eu-north-sw-1.hanvpn.biz
-  tls: true
-  type: vless
-  udp: true
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1230571366
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 139ms
   port: 4777
   reality-opts:
     public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
@@ -35,12 +16,48 @@ proxies:
   type: vless
   udp: true
   uuid: 010bf7ad-b6ec-482b-8392-ae038f466a0a
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: '[openproxylist.com] DE 15458893'
+  port: 443
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: MediaService
+  name: vless-1230196606
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: 998RpVD5c_cwZC3GOK_JCQqICnDfI-5d9anOlT7Wf0w
+    short-id: 033a8331
+  server: 188.137.234.211
+  servername: google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6072ca43-2715-49a4-a9a2-a56be73ecfb0
+- cipher: chacha20-ietf-poly1305
+  name: '[openproxylist.com] DE 13729099'
+  password: PWpjPo3tqhPN4yRZ
+  port: 20001
+  server: 8.209.74.72
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪 Karlsruhe  BW  Germany
-  - '[openproxylist.com] DE 15632733'
-  - vless-1230571366
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 139ms
+  - '[openproxylist.com] DE 15458893'
+  - vless-1230196606
+  - '[openproxylist.com] DE 13729099'
   type: select
 rules:
 - MATCH,PROXY

@@ -2,15 +2,23 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1219899542",
-      "server": "46.247.41.120",
-      "server_port": 443,
-      "password": "8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3",
+      "type": "vless",
+      "tag": "[openproxylist.com] KZ 11854847",
+      "server": "178.236.16.98",
+      "server_port": 35728,
+      "uuid": "a00d89f6-ab7e-4e30-a5e5-54c701d62c93",
       "tls": {
         "enabled": true,
-        "server_name": "kz03hy01.tcp-reset-club.net",
-        "insecure": false
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng",
+          "short_id": "69a2"
+        }
       }
     },
     {

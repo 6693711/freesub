@@ -2,57 +2,43 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "vless-1014481796",
+      "server": "54.255.121.205",
+      "server_port": 43840,
+      "uuid": "f053b140-9673-4ac5-bc8b-587bfd2c8fd8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.sony.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA",
+          "short_id": "ac4b9f02123aa50b"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 759420",
+      "server": "134.122.154.210",
+      "server_port": 443,
+      "uuid": "7f549a50-4655-46b6-962d-183cfc532fc9"
+    },
+    {
       "type": "hysteria2",
-      "tag": "hysteria2-856461969",
-      "server": "13.212.76.106",
+      "tag": "hysteria2-892012246",
+      "server": "13.250.120.9",
       "server_port": 443,
       "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-sg-001.fastervpn.world",
+        "server_name": "css.rbxcdn.com",
         "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1089138467",
-      "server": "47.129.204.35",
-      "server_port": 58335,
-      "uuid": "0f4ce6d4-b4b4-41b9-b1e7-c109ad32b274",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "5uFce3cR8rT889d0IDLpENoFf9OnFXaOoO9B8mI8cWQ",
-          "short_id": "6ce3397cbd5ada"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1014987714",
-      "server": "47.129.185.35",
-      "server_port": 49805,
-      "uuid": "0803fc94-25f9-42db-9e6b-dd1418ae50ec",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "KhyeJbZtFAik5Mx1K_AQMIEK_MPwQnwUwSe-jTjq8yU",
-          "short_id": "4a753538b6a9eee9"
-        }
       }
     },
     {
@@ -77,14 +63,104 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "vless-1019443010",
+      "server": "54.169.200.246",
+      "server_port": 41688,
+      "uuid": "49c0aac1-5e05-4f04-b624-248fc59e03c4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk",
+          "short_id": "7f342137c20387"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-688016893",
+      "server": "134.122.154.210",
+      "server_port": 443,
+      "uuid": "7f549a50-4655-46b6-962d-183cfc532fc9"
+    },
+    {
       "type": "hysteria2",
-      "tag": "🎡65@oneclickvpnkeys",
-      "server": "13.250.120.9",
+      "tag": "hysteria2-1060573989",
+      "server": "54.151.142.26",
       "server_port": 443,
       "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
       "tls": {
         "enabled": true,
-        "server_name": "13.250.120.9",
+        "server_name": "whatsapp.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1221091440",
+      "server": "54.255.121.205",
+      "server_port": 43840,
+      "uuid": "f053b140-9673-4ac5-bc8b-587bfd2c8fd8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.sony.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA",
+          "short_id": "ac4b9f02123aa50b"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 609825",
+      "server": "176.97.64.144",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "TFElG2FVqyqG"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1027296886",
+      "server": "54.251.224.5",
+      "server_port": 26017,
+      "uuid": "d318cdac-0033-4b6e-98bf-35116e79c93f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cy4ePzAdSz4pqRmAXXchMIgSoSKo8qjq2qLk5805LRA",
+          "short_id": "af1c2e33b0c7dad7"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎡64@oneclickvpnkeys",
+      "server": "54.151.142.26",
+      "server_port": 443,
+      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
+      "tls": {
+        "enabled": true,
+        "server_name": "whatsapp.com",
         "insecure": true
       }
     },

@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: aes-256-gcm
+  name: 🇮🇹 Italy
+  password: itzvpn@321
+  port: 8388
+  server: 57.131.48.45
+  type: ss
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇮🇹 Italy
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

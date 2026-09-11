@@ -2,12 +2,25 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 Barcelona  CT  Spain",
-      "server": "140.174.184.5",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "qItG8SueYQcP"
+      "type": "vless",
+      "tag": "vless-1010845438",
+      "server": "185.254.205.79",
+      "server_port": 19842,
+      "uuid": "43c23116-1115-4af4-a0f0-56f02841a605",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM",
+          "short_id": "25ebc9e0a912"
+        }
+      }
     },
     {
       "type": "direct",

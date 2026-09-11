@@ -4,10 +4,9 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🔒 VL-TCP-TLS 🇧🇬 BG-192.145.31.5 8443
+  name: '[openproxylist.com] NL 15569201'
   port: 8443
-  server: 192.145.31.5
-  servername: neth9.lunariai.ru
+  server: neth9.lunariai.ru
   tls: true
   type: vless
   udp: true
@@ -15,7 +14,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-TCP-TLS 🇧🇬 BG-192.145.31.5 8443
+  - '[openproxylist.com] NL 15569201'
   type: select
 rules:
 - MATCH,PROXY

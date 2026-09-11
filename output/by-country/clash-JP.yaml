@@ -3,44 +3,58 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-479013117
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: 45.88.43.116
-  type: hysteria2
-- client-fingerprint: random
+- client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: vless-1016793062
-  port: 30203
+  name: vless-479071125
+  port: 18007
   reality-opts:
-    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
-    short-id: 40150721499a92
-  server: 18.177.61.231
-  servername: www.sony.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- cipher: aes-128-gcm
+  name: 🇯🇵 Tokyo  13  Japan
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
+  udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1013983970
-  port: 28573
+  name: vless-961883341
+  port: 50159
   reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.70.21 443
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- name: vless-663902649
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- alterId: 0
+  cipher: auto
+  name: vmess-1130434817
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- client-fingerprint: firefox
+  name: vless-1123334871
   network: ws
   port: 443
-  server: 104.21.70.21
+  server: 188.114.97.6
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -52,25 +66,84 @@ proxies:
     path: /tyxyws
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1010707961
-  port: 24620
+  name: vless-650632896
+  port: 18007
   reality-opts:
-    public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
-    short-id: db2cb3b3c2dbb711
-  server: 13.231.7.104
-  servername: www.amd.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1020947680
+  port: 48086
+  reality-opts:
+    public-key: qq9vUmReS92PojPLpSyUY_c6CydUUtut7ffxc3V0LTo
+    short-id: 7083d685446ce576
+  server: 3.112.131.211
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 620ca966-d78b-4c88-a5c9-acf13c7d252f
+- client-fingerprint: chrome
+  name: vless-1084850686
+  network: ws
+  port: 443
+  server: 172.67.217.240
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1010693009
+  port: 48086
+  reality-opts:
+    public-key: qq9vUmReS92PojPLpSyUY_c6CydUUtut7ffxc3V0LTo
+    short-id: 7083d685446ce576
+  server: 3.112.131.211
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 620ca966-d78b-4c88-a5c9-acf13c7d252f
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1019463451
+  port: 11690
+  reality-opts:
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  server: 13.231.19.51
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-479013117
-  - vless-1016793062
-  - vless-1013983970
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.70.21 443
-  - vless-1010707961
+  - vless-479071125
+  - 🇯🇵 Tokyo  13  Japan
+  - vless-961883341
+  - vless-663902649
+  - vmess-1130434817
+  - vless-1123334871
+  - vless-650632896
+  - vless-1020947680
+  - vless-1084850686
+  - vless-1010693009
+  - vless-1019463451
   type: select
 rules:
 - MATCH,PROXY

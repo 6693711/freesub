@@ -2,37 +2,8 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Karlsruhe  BW  Germany",
-      "server": "2.58.81.221",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "kKEd0rBrd56Furjz"
-    },
-    {
       "type": "vless",
-      "tag": "[openproxylist.com] DE 15632733",
-      "server": "eu-north-sw-1.hanvpn.biz",
-      "server_port": 443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eu-north-sw-1.hanvpn.biz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ELFdNdI6NYwuEq5OqCkYwnUInHvIpsUhd4z2ud7pOCM",
-          "short_id": "0172b7681806bc97"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1230571366",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 139ms",
       "server": "www.g.mobilesari.ir",
       "server_port": 4777,
       "uuid": "010bf7ad-b6ec-482b-8392-ae038f466a0a",
@@ -50,6 +21,59 @@
           "short_id": "01115788253bc845"
         }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "[openproxylist.com] DE 15458893",
+      "server": "144.31.168.95",
+      "server_port": 443,
+      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu-central.cendora.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI",
+          "short_id": "00bca5982f82d083"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1230196606",
+      "server": "188.137.234.211",
+      "server_port": 443,
+      "uuid": "6072ca43-2715-49a4-a9a2-a56be73ecfb0",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "998RpVD5c_cwZC3GOK_JCQqICnDfI-5d9anOlT7Wf0w",
+          "short_id": "033a8331"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "MediaService"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "[openproxylist.com] DE 13729099",
+      "server": "8.209.74.72",
+      "server_port": 20001,
+      "method": "chacha20-ietf-poly1305",
+      "password": "PWpjPo3tqhPN4yRZ"
     },
     {
       "type": "direct",

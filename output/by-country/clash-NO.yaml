@@ -3,22 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-962527017
-  port: 40443
-  reality-opts:
-    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
-    short-id: f7b2
-  server: 46.29.238.88
-  servername: deepl.com
-  tls: true
-  type: vless
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇴 Oslo  03  Norway
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  port: 990
+  server: 185.213.23.63
+  type: ss
   udp: true
-  uuid: db320947-adfb-400d-b60b-383b8324bffe
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-962527017
+  - 🇳🇴 Oslo  03  Norway
   type: select
 rules:
 - MATCH,PROXY

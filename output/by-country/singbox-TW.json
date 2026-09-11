@@ -3,7 +3,45 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1027296951",
+      "tag": "vless-1028233066",
+      "server": "34.81.129.171",
+      "server_port": 34376,
+      "uuid": "bf8cc771-51a0-4395-810f-1f135325cfc1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.sony.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU",
+          "short_id": "8dbafb690450d8a9"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇹🇼 New Taipei City  NWT  Taiwan_1",
+      "server": "36.224.152.189",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-656231634",
+      "server": "165.154.195.38",
+      "server_port": 35034,
+      "uuid": "959a8caf-4cea-43d0-a548-3628e7ddfafc",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1054459318",
       "server": "34.81.129.171",
       "server_port": 34376,
       "uuid": "bf8cc771-51a0-4395-810f-1f135325cfc1",
@@ -23,27 +61,62 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1227680370",
-      "server": "118.167.200.67",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "type": "hysteria2",
+      "tag": "hysteria2-468892444",
+      "server": "vpn-tw-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
+        "server_name": "t.me",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1159791247",
+      "server": "34.81.129.171",
+      "server_port": 34376,
+      "uuid": "bf8cc771-51a0-4395-810f-1f135325cfc1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.sony.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU",
+          "short_id": "8dbafb690450d8a9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1108736891",
+      "server": "35.201.163.218",
+      "server_port": 30837,
+      "uuid": "85a6bd94-83a9-4e80-849f-c06d7011d1a4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.sony.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE"
+          "public_key": "LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo",
+          "short_id": "97101ba788915e5a"
         }
       }
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-16610",
+      "tag": "hysteria2-656706489",
       "server": "103.115.109.49",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
@@ -55,20 +128,22 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1173976370",
-      "server": "118.167.200.67",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tag": "vless-1215229403",
+      "server": "35.201.163.218",
+      "server_port": 30837,
+      "uuid": "85a6bd94-83a9-4e80-849f-c06d7011d1a4",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
+        "server_name": "www.sony.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE"
+          "public_key": "LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo",
+          "short_id": "97101ba788915e5a"
         }
       }
     },
