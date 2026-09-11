@@ -3,23 +3,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1048866238",
-      "server": "56.69.159.191",
-      "server_port": 53271,
-      "uuid": "e8358eb5-7210-4cf8-982f-68af141b7694",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc",
-          "short_id": "0a9bd9db19578964"
-        }
+      "tag": "vless-1111890339",
+      "server": "38.60.168.98",
+      "server_port": 2087,
+      "uuid": "8a346b7c-5b95-4845-affa-0e5d9929e9ae",
+      "transport": {
+        "type": "ws",
+        "path": "/db55c40bbc75",
+        "headers": {}
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "[openproxylist.com] MY 11398419",
+      "server": "47.250.45.234",
+      "server_port": 8613,
+      "uuid": "80039b4d-bac0-4f89-82c7-54fad3b0a1ea",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/arki?ed=2048",
+        "headers": {}
       }
     },
     {

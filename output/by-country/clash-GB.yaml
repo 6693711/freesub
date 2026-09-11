@@ -10,23 +10,26 @@ proxies:
   server: 51.77.225.200
   type: ss
   udp: true
-- client-fingerprint: firefox
-  name: vless-1095634780
-  port: 2053
-  reality-opts:
-    public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
-    short-id: cf081ff86b298c48
-  server: 46.250.250.149
-  servername: www.apple.com
-  tls: true
-  type: vless
+- cipher: aes-256-gcm
+  name: 🇬🇧 Portsmouth  ENG  United Kingdom
+  password: LXchLsIwtCeUAUgu
+  port: 80
+  server: 149.102.149.207
+  type: ss
   udp: true
-  uuid: 59bf58d9-ddaf-42cd-a0ca-db3559ad8714
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '[openproxylist.com]  15663868'
+  password: wzbgRLlSeDwxHX6xLVVxKk93K5k5N8k+7rncQXn80XA=
+  port: 61312
+  server: 134.65.57.209
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
   - 🇬🇧 United Kingdom
-  - vless-1095634780
+  - 🇬🇧 Portsmouth  ENG  United Kingdom
+  - '[openproxylist.com]  15663868'
   type: select
 rules:
 - MATCH,PROXY

@@ -3,30 +3,57 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-985469468
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.89
-  skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1232696188
-  port: 23974
+  name: vless-1233310352
+  port: 10766
   reality-opts:
-    public-key: hFaO787_gkKJuZYllnq-L0ZMiEqiCY80q2_xbP2CNRA
-  server: 45.136.14.251
-  servername: www.amazon.com
+    public-key: U9z66G173U5ROhQvuyRf7SmkViqn1juXjvsy88dWtEk
+  server: 45.144.137.55
+  servername: www.paypal.com
   tls: true
   type: vless
   udp: true
-  uuid: 8aea14f7-5a77-4fa7-9924-f3921abc4cc2
+  uuid: 2b61c167-5563-43ab-94a0-7d02c0a27ca5
+- name: hysteria2-722298610
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: whatsapp.com
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1232696174
+  port: 10766
+  reality-opts:
+    public-key: U9z66G173U5ROhQvuyRf7SmkViqn1juXjvsy88dWtEk
+  server: 45.144.137.55
+  servername: www.paypal.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b61c167-5563-43ab-94a0-7d02c0a27ca5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 182ms
+  port: 443
+  reality-opts:
+    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
+    short-id: 14156e3ac23212cc
+  server: 162.128.157.164
+  servername: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-985469468
-  - vless-1232696188
+  - vless-1233310352
+  - hysteria2-722298610
+  - vless-1232696174
+  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 182ms
   type: select
 rules:
 - MATCH,PROXY

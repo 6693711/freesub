@@ -10,24 +10,20 @@
       "password": "zRZNBszYyWo5"
     },
     {
-      "type": "vless",
-      "tag": "vless-1095634780",
-      "server": "46.250.250.149",
-      "server_port": 2053,
-      "uuid": "59bf58d9-ddaf-42cd-a0ca-db3559ad8714",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8",
-          "short_id": "cf081ff86b298c48"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇬🇧 Portsmouth  ENG  United Kingdom",
+      "server": "149.102.149.207",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "LXchLsIwtCeUAUgu"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "[openproxylist.com]  15663868",
+      "server": "134.65.57.209",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "wzbgRLlSeDwxHX6xLVVxKk93K5k5N8k+7rncQXn80XA="
     },
     {
       "type": "direct",

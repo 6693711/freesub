@@ -3,31 +3,49 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
+- name: 🏳️ ShatakVPN 446394
+  network: ws
+  port: 2096
+  server: 45.144.28.39
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: usejh2.neobo-tooth.ru
+    path: /
+- cipher: chacha20-ietf-poly1305
   name: 🇫🇷 France
-  password: itzvpn@321
+  password: BqnqToih0PbU
   port: 8388
-  server: 51.83.192.80
+  server: 51.255.13.232
   type: ss
   udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 261380
-  port: 23576
+- name: '[openproxylist.com]  15663848'
+  port: 22223
+  server: 13.39.117.250
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- client-fingerprint: random
+  name: vless-1184826132
+  port: 2053
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.10
-  servername: fuck.rkn
+    public-key: 3nFTPdoFnfcwN1xnLwegJmBycLqRH6TRsrbD2XnQbjM
+    short-id: bfc5464d84de3b3b
+  server: 54.37.136.194
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: 2211972b-a45a-4951-a640-6173d573e637
 proxy-groups:
 - name: PROXY
   proxies:
+  - 🏳️ ShatakVPN 446394
   - 🇫🇷 France
-  - 🏳️ ShatakVPN 261380
+  - '[openproxylist.com]  15663848'
+  - vless-1184826132
   type: select
 rules:
 - MATCH,PROXY
