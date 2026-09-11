@@ -3,59 +3,39 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1233310352",
-      "server": "45.144.137.55",
-      "server_port": 10766,
-      "uuid": "2b61c167-5563-43ab-94a0-7d02c0a27ca5",
+      "tag": "vless-1250111372",
+      "server": "193.134.211.201",
+      "server_port": 64136,
+      "uuid": "cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.paypal.com",
+        "server_name": "dash.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
-          "public_key": "U9z66G173U5ROhQvuyRf7SmkViqn1juXjvsy88dWtEk"
+          "public_key": "yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE"
         }
       }
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-722298610",
+      "tag": "🏳️ ShatakVPN 827477",
       "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "whatsapp.com",
+        "server_name": "202.146.222.29",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1232696174",
-      "server": "45.144.137.55",
-      "server_port": 10766,
-      "uuid": "2b61c167-5563-43ab-94a0-7d02c0a27ca5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.paypal.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "U9z66G173U5ROhQvuyRf7SmkViqn1juXjvsy88dWtEk"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 182ms",
+      "tag": "vless-760606797",
       "server": "162.128.157.164",
       "server_port": 443,
       "uuid": "5e8e81ac-a1c4-4543-b81e-651bf9872b54",
@@ -65,7 +45,7 @@
         "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,

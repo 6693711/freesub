@@ -1,0 +1,27 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 386ms
+  network: ws
+  port: 443
+  server: sinavm.soft10.ir
+  servername: sinavm.soft10.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 69768555-bf07-4127-8ce5-eed7a0d0baba
+  ws-opts:
+    headers:
+      Host: sinavm.soft10.ir
+    path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 386ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

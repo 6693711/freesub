@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-534776087
-  password: Krab9Hyst2_Rk7pQ2xL
-  port: 36723
-  server: 151.247.197.253
+- name: hysteria2-1196471676
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-in-001.fastervpn.world
   skip-cert-verify: true
-  sni: www.cloudflare.com
+  sni: vpn-in-001.fastervpn.world
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-534776087
+  - hysteria2-1196471676
   type: select
 rules:
 - MATCH,PROXY

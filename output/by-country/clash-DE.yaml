@@ -3,31 +3,71 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: vless-1179457216
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
+  udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  ws-opts:
+    headers:
+      Host: 163.8.195.241
+    path: /29c8fed7ca22
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1235448659
+  name: vless-1141292819
+  port: 3443
+  reality-opts:
+    public-key: -6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo
+    short-id: a1b2c3d4
+  server: 31.56.189.224
+  servername: special.aeternavpn.space
+  tls: true
+  type: vless
+  udp: true
+  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
+- name: 🏳️ ShatakVPN 576744
+  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
+  port: 443
+  server: 144.31.148.87
+  skip-cert-verify: true
+  sni: replay.wwwinternetvideo.click
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1236880268
+  port: 443
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '[openproxylist.com] DE 15632716'
   port: 4777
   reality-opts:
     public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
     short-id: 01115788253bc845
-  server: 207.241.172.98
+  server: 207.241.172.254
   servername: amp-api-edge.apps.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 008678b8-5e27-49fa-b95a-1fff4c61a849
-- name: hysteria2-757486810
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: replay.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
+  uuid: 4548e107-e274-48cd-894b-5168767e67be
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1235448659
-  - hysteria2-757486810
+  - vless-1179457216
+  - vless-1141292819
+  - 🏳️ ShatakVPN 576744
+  - vless-1236880268
+  - '[openproxylist.com] DE 15632716'
   type: select
 rules:
 - MATCH,PROXY

@@ -3,17 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
-  name: shadowsocks-1223448949
-  password: amazonskr05
+- cipher: chacha20-ietf-poly1305
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 110ms
+  password: kYhF4RWqohTpbVau
   port: 443
-  server: 108.129.176.139
+  server: 20.234.82.250
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 108ms
+  password: R2QvJ9exeq61wfSV
+  port: 443
+  server: 20.234.82.250
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1223448949
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 110ms
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 108ms
   type: select
 rules:
 - MATCH,PROXY

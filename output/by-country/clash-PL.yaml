@@ -3,10 +3,10 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 巴西
+- name: '@V2ray_confiig #3'
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: go.wwwinternetvideo.click
+  server: 144.31.93.126
   skip-cert-verify: true
   sni: admin.wwwinternetvideo.click
   type: hysteria2
@@ -20,7 +20,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 巴西
+  - '@V2ray_confiig #3'
   - hysteria2-589844075
   type: select
 rules:

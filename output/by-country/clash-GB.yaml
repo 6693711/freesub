@@ -3,33 +3,45 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 United Kingdom
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 264908
+  port: 51847
+  reality-opts:
+    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
+    short-id: 0eec442e7b34d2f2
+  server: 3.9.135.156
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 391a01e9-b664-407b-9158-610fab3f5920
+- cipher: aes-128-gcm
+  name: 🇬🇧 Manchester  ENG  United Kingdom
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧 Portsmouth  ENG  United Kingdom
-  password: LXchLsIwtCeUAUgu
-  port: 80
-  server: 149.102.149.207
-  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1059635959
+  port: 51847
+  reality-opts:
+    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
+    short-id: 0eec442e7b34d2f2
+  server: 3.9.135.156
+  servername: www.tesla.com
+  tls: true
+  type: vless
   udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: '[openproxylist.com]  15663868'
-  password: wzbgRLlSeDwxHX6xLVVxKk93K5k5N8k+7rncQXn80XA=
-  port: 61312
-  server: 134.65.57.209
-  type: ss
-  udp: true
+  uuid: 391a01e9-b664-407b-9158-610fab3f5920
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇬🇧 United Kingdom
-  - 🇬🇧 Portsmouth  ENG  United Kingdom
-  - '[openproxylist.com]  15663868'
+  - 🏳️ ShatakVPN 264908
+  - 🇬🇧 Manchester  ENG  United Kingdom
+  - vless-1059635959
   type: select
 rules:
 - MATCH,PROXY

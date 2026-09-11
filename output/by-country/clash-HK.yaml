@@ -3,40 +3,28 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-1233310352
-  port: 10766
+  name: vless-1250111372
+  port: 64136
   reality-opts:
-    public-key: U9z66G173U5ROhQvuyRf7SmkViqn1juXjvsy88dWtEk
-  server: 45.144.137.55
-  servername: www.paypal.com
+    public-key: yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE
+  server: 193.134.211.201
+  servername: dash.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 2b61c167-5563-43ab-94a0-7d02c0a27ca5
-- name: hysteria2-722298610
+  uuid: cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c
+- name: 🏳️ ShatakVPN 827477
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: whatsapp.com
+  sni: 202.146.222.29
   type: hysteria2
-- client-fingerprint: chrome
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-1232696174
-  port: 10766
-  reality-opts:
-    public-key: U9z66G173U5ROhQvuyRf7SmkViqn1juXjvsy88dWtEk
-  server: 45.144.137.55
-  servername: www.paypal.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2b61c167-5563-43ab-94a0-7d02c0a27ca5
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 182ms
+  name: vless-760606797
   port: 443
   reality-opts:
     public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
@@ -50,10 +38,9 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1233310352
-  - hysteria2-722298610
-  - vless-1232696174
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 182ms
+  - vless-1250111372
+  - 🏳️ ShatakVPN 827477
+  - vless-760606797
   type: select
 rules:
 - MATCH,PROXY
