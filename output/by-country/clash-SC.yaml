@@ -3,23 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1211278475
-  port: 35193
-  reality-opts:
-    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
-    short-id: e8daed2d
-  server: 156.226.168.221
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+- name: '英国 #2'
+  password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
+  port: 8080
+  server: 138.124.0.168
+  skip-cert-verify: true
+  sni: hopp-legend-se.roxa.org
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1211278475
+  - '英国 #2'
   type: select
 rules:
 - MATCH,PROXY

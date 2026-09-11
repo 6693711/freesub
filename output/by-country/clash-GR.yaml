@@ -5,21 +5,20 @@ port: 7890
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1019921582
-  port: 48296
+  name: vless-1239178996
+  port: 443
   reality-opts:
-    public-key: ga1wUMMknP4pwJfUNOOvD9I35XV4q3c73byXPYbRxBE
-    short-id: 109657bb2dbe99
-  server: 93.189.94.67
-  servername: www.sony.com
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: uk-tube-01.stre4m.net
+  servername: jobinvest.ru
   tls: true
   type: vless
   udp: true
-  uuid: 898537d9-ce3a-4937-bbef-c0fa61c07791
+  uuid: f85ba8bb-a3da-4389-a67a-2b0afde7bbc1
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1019921582
+  - vless-1239178996
   type: select
 rules:
 - MATCH,PROXY

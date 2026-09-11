@@ -3,29 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-656230724
-  port: 13672
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-722298606
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- alterId: 0
+  cipher: auto
+  name: vmess-96535
   port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: whatsapp.com
-  type: hysteria2
-- client-fingerprint: random
+  server: 140.238.2.250
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-721523038
+  name: vless-667136237
   port: 18967
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -36,12 +24,20 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- alterId: 0
+  cipher: auto
+  name: vmess-650629582
+  port: 443
+  server: 140.238.2.250
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-656230724
-  - hysteria2-722298606
-  - vless-721523038
+  - vmess-96535
+  - vless-667136237
+  - vmess-650629582
   type: select
 rules:
 - MATCH,PROXY

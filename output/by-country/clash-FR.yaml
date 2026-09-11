@@ -3,74 +3,31 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: aes-256-gcm
+  name: 🇫🇷 France
+  password: itzvpn@321
+  port: 8388
+  server: 51.83.192.80
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 353993
+  name: 🏳️ ShatakVPN 261380
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  server: 62.210.91.2
+  server: 62.210.91.10
   servername: fuck.rkn
   tls: true
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
-  port: 443
-  server: 162.19.10.99
-  servername: nasnet-162191099-direct.mbghalibaf.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: MediaService
-  name: vless-1239163062
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: JgAozyY8uYe10LDFxsY5KL6C54nPrFezT6lK5Rfvrjk
-    short-id: 3faf2070
-  server: 195.216.168.158
-  servername: google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6072ca43-2715-49a4-a9a2-a56be73ecfb0
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🏳️ ShatakVPN 379494
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 653910
-  port: 443
-  server: 162.19.10.99
-  servername: nasnet-162191099-direct.mbghalibaf.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 353993
-  - 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
-  - vless-1239163062
-  - 🏳️ ShatakVPN 379494
-  - 🏳️ ShatakVPN 653910
+  - 🇫🇷 France
+  - 🏳️ ShatakVPN 261380
   type: select
 rules:
 - MATCH,PROXY

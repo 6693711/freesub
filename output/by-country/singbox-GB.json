@@ -2,106 +2,31 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1238193994",
-      "server": "45.152.64.9",
-      "server_port": 11763,
-      "uuid": "fe564b09-1fd8-4053-934b-3106350e4272",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "V3mjjvp5OFn8TNw7WK0RR2p7l9sVX2v7Zr56ag3QkiQ"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "[openproxylist.com] FI 12815236",
-      "server": "staging.lastilhame.monster",
-      "server_port": 443,
-      "uuid": "594d466e-8ac3-4fda-b1d1-eeb817853518",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.microsoft.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
-          "short_id": "5a018643df03"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1048867173",
-      "server": "3.9.135.156",
-      "server_port": 51847,
-      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
-          "short_id": "0eec442e7b34d2f2"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1058385597",
-      "server": "3.9.135.156",
-      "server_port": 51847,
-      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
-          "short_id": "0eec442e7b34d2f2"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇬🇧 Portsmouth  ENG  United Kingdom",
-      "server": "149.102.149.207",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "LXchLsIwtCeUAUgu"
+      "tag": "🇬🇧 United Kingdom",
+      "server": "51.77.225.200",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "zRZNBszYyWo5"
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1005580180",
-      "server": "labs.frkn.org",
-      "server_port": 443,
-      "password": "3b8c82ed-fe66-472d-915e-034ccb57103f",
+      "type": "vless",
+      "tag": "vless-1095634780",
+      "server": "46.250.250.149",
+      "server_port": 2053,
+      "uuid": "59bf58d9-ddaf-42cd-a0ca-db3559ad8714",
       "tls": {
         "enabled": true,
-        "server_name": "labs.frkn.org",
-        "insecure": true
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8",
+          "short_id": "cf081ff86b298c48"
+        }
       }
     },
     {

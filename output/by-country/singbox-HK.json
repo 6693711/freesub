@@ -3,14 +3,34 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "hysteria2-107825281",
-      "server": "202.146.222.29",
+      "tag": "hysteria2-985469468",
+      "server": "202.146.222.89",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "202.146.222.29",
+        "server_name": "vk.com",
         "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1232696188",
+      "server": "45.136.14.251",
+      "server_port": 23974,
+      "uuid": "8aea14f7-5a77-4fa7-9924-f3921abc4cc2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hFaO787_gkKJuZYllnq-L0ZMiEqiCY80q2_xbP2CNRA"
+        }
       }
     },
     {

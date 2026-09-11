@@ -3,38 +3,14 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "🔥45@oneclickvpnkeys",
-      "server": "45.192.12.93",
+      "tag": "🏳️ ShatakVPN 942078",
+      "server": "144.31.49.47",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
         "server_name": "admin.wwwinternetvideo.click",
-        "insecure": false
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "[openproxylist.com] PL 15348266",
-      "server": "64.176.73.160",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "VJtsgllDDJfNmaTe"
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 686438",
-      "server": "144.31.5.64",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl6.moritech.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": true
       }
     },
     {

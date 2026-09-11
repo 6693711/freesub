@@ -3,17 +3,30 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-107825281
+- name: hysteria2-985469468
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.29
+  server: 202.146.222.89
   skip-cert-verify: true
-  sni: 202.146.222.29
+  sni: vk.com
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1232696188
+  port: 23974
+  reality-opts:
+    public-key: hFaO787_gkKJuZYllnq-L0ZMiEqiCY80q2_xbP2CNRA
+  server: 45.136.14.251
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8aea14f7-5a77-4fa7-9924-f3921abc4cc2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-107825281
+  - hysteria2-985469468
+  - vless-1232696188
   type: select
 rules:
 - MATCH,PROXY

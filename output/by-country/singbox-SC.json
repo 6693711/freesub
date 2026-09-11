@@ -2,24 +2,15 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1211278475",
-      "server": "156.226.168.221",
-      "server_port": 35193,
-      "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "英国 #2",
+      "server": "138.124.0.168",
+      "server_port": 8080,
+      "password": "h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE",
-          "short_id": "e8daed2d"
-        }
+        "server_name": "hopp-legend-se.roxa.org",
+        "insecure": true
       }
     },
     {

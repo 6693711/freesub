@@ -5,20 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1047296933
-  port: 443
-  reality-opts:
-    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
-    short-id: a3a578ab
-  server: 185.95.231.156
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-918226874
+  name: vless-1123354643
   port: 443
   reality-opts:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
@@ -32,8 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1047296933
-  - vless-918226874
+  - vless-1123354643
   type: select
 rules:
 - MATCH,PROXY

@@ -2,29 +2,20 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 139ms",
-      "server": "www.g.mobilesari.ir",
-      "server_port": 4777,
-      "uuid": "010bf7ad-b6ec-482b-8392-ae038f466a0a",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-757486810",
+      "server": "replay.wwwinternetvideo.click",
+      "server_port": 443,
+      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
       "tls": {
         "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo",
-          "short_id": "01115788253bc845"
-        }
+        "server_name": "replay.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "[openproxylist.com] DE 15458893",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 119ms",
       "server": "144.31.168.95",
       "server_port": 443,
       "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
@@ -34,7 +25,7 @@
         "server_name": "eu-central.cendora.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -42,38 +33,6 @@
           "short_id": "00bca5982f82d083"
         }
       }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1230196606",
-      "server": "188.137.234.211",
-      "server_port": 443,
-      "uuid": "6072ca43-2715-49a4-a9a2-a56be73ecfb0",
-      "tls": {
-        "enabled": true,
-        "server_name": "google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "998RpVD5c_cwZC3GOK_JCQqICnDfI-5d9anOlT7Wf0w",
-          "short_id": "033a8331"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "MediaService"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "[openproxylist.com] DE 13729099",
-      "server": "8.209.74.72",
-      "server_port": 20001,
-      "method": "chacha20-ietf-poly1305",
-      "password": "PWpjPo3tqhPN4yRZ"
     },
     {
       "type": "direct",

@@ -4,16 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 608559
-  password: itzvpn@321
+  name: 🇨🇱 Santiago  RM  Chile
+  password: xBStBEVqvGwHPocc
   port: 8388
-  server: 57.131.48.45
+  server: 64.176.2.21
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 608559
+  - 🇨🇱 Santiago  RM  Chile
   type: select
 rules:
 - MATCH,PROXY
