@@ -4,37 +4,40 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1242548391
-  port: 50159
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 153ms
+  network: grpc
+  port: 2087
   reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    short-id: c226283c4de5b1ad
+  server: 31.76.91.72
+  servername: ads.x5.ru
   tls: true
   type: vless
   udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.156.147 443
-  network: ws
-  port: 443
-  server: 172.67.156.147
-  servername: jp3.yohototo.top
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
+  network: grpc
+  port: 2087
+  reality-opts:
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    short-id: c226283c4de5b1ad
+  server: 31.76.91.72
+  servername: ads.x5.ru
   tls: true
   type: vless
   udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1242548391
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.156.147 443
+  - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 153ms
+  - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
   type: select
 rules:
 - MATCH,PROXY

@@ -3,22 +3,44 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  name: 🆔vpnbaz 🔒 VL-TCP- ❔ XX 92ms
-  port: 443
+- cipher: chacha20-ietf-poly1305
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 97ms
+  password: c58d16e593d44f42
+  port: 11001
+  server: 158.173.221.214
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1209548109
+  port: 421
   reality-opts:
-    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
-    short-id: 98fa0b00d09419f7
-  server: 51.38.70.192
-  servername: play.google.com
+    public-key: zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg
+    short-id: a1facbc8575701ae
+  server: 78.129.208.44
+  servername: chistomat.dry.care
   tls: true
   type: vless
   udp: true
-  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
+  uuid: a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-1235362822
+  port: 30521
+  reality-opts:
+    public-key: TsiUxIyOUQqEhPYWJ2HAlM-ecuOiHbH5ZTnaFdGdNU8
+  server: 45.152.65.157
+  servername: aws.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e6752712-f10c-4c8c-8308-d80b70a2b87a
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔vpnbaz 🔒 VL-TCP- ❔ XX 92ms
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 97ms
+  - vless-1209548109
+  - vless-1235362822
   type: select
 rules:
 - MATCH,PROXY

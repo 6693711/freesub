@@ -2,22 +2,51 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 97ms",
+      "server": "158.173.221.214",
+      "server_port": 11001,
+      "method": "chacha20-ietf-poly1305",
+      "password": "c58d16e593d44f42"
+    },
+    {
       "type": "vless",
-      "tag": "🆔vpnbaz 🔒 VL-TCP- ❔ XX 92ms",
-      "server": "51.38.70.192",
-      "server_port": 443,
-      "uuid": "9343f183-7a16-4bdd-9c65-b0c21feca40b",
+      "tag": "vless-1209548109",
+      "server": "78.129.208.44",
+      "server_port": 421,
+      "uuid": "a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "play.google.com",
+        "server_name": "chistomat.dry.care",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M",
-          "short_id": "98fa0b00d09419f7"
+          "public_key": "zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg",
+          "short_id": "a1facbc8575701ae"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1235362822",
+      "server": "45.152.65.157",
+      "server_port": 30521,
+      "uuid": "e6752712-f10c-4c8c-8308-d80b70a2b87a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "aws.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TsiUxIyOUQqEhPYWJ2HAlM-ecuOiHbH5ZTnaFdGdNU8"
         }
       }
     },

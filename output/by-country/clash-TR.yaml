@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1237786033
-  port: 53271
+  name: vless-1104470805
+  port: 443
   reality-opts:
-    public-key: 1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc
-    short-id: 0a9bd9db19578964
-  server: 56.69.159.191
-  servername: www.tesla.com
+    public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
+    short-id: 5606d4a25c99e7af
+  server: 156.67.63.231
+  servername: sync-bridge.org
   tls: true
   type: vless
   udp: true
-  uuid: e8358eb5-7210-4cf8-982f-68af141b7694
+  uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1237786033
+  - vless-1104470805
   type: select
 rules:
 - MATCH,PROXY

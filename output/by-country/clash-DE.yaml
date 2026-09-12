@@ -3,50 +3,47 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-757486810
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: replay.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
-- client-fingerprint: firefox
+- cipher: 2022-blake3-aes-256-gcm
+  name: 🏳️ ShatakVPN 485745
+  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=
+  port: 2083
+  server: 141.95.29.163
+  type: ss
+  udp: true
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1154636489
-  port: 3443
+  name: vless-1239163064
+  port: 4777
   reality-opts:
-    public-key: -6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo
-    short-id: a1b2c3d4
-  server: 31.56.189.224
-  servername: special.aeternavpn.space
+    public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
+    short-id: 01115788253bc845
+  server: www.g.mobilesari.ir
+  servername: amp-api-edge.apps.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
-- name: hysteria2-916370843
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
+  uuid: 3d168677-10a1-43c1-90f3-18eaac90baff
+- name: 🏳️ ShatakVPN 776224
+  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
   port: 443
-  server: 144.31.148.87
-  skip-cert-verify: false
-  sni: replay.wwwinternetvideo.click
+  server: 144.31.221.57
+  skip-cert-verify: true
+  sni: player.wwwinternetvideo.click
   type: hysteria2
-- name: 🏳️ ShatakVPN 336782
-  network: ws
-  port: 2087
-  server: 163.8.195.241
-  type: vless
+- cipher: aes-256-gcm
+  name: shadowsocks-696780676
+  password: kKEd0rBrd56Furjz
+  port: 443
+  server: 2.58.81.221
+  type: ss
   udp: true
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
-  ws-opts:
-    headers: {}
-    path: /29c8fed7ca22
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-757486810
-  - vless-1154636489
-  - hysteria2-916370843
-  - 🏳️ ShatakVPN 336782
+  - 🏳️ ShatakVPN 485745
+  - vless-1239163064
+  - 🏳️ ShatakVPN 776224
+  - shadowsocks-696780676
   type: select
 rules:
 - MATCH,PROXY
