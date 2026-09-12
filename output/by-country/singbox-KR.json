@@ -3,28 +3,40 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇰🇷 Seoul  11  South Korea",
-      "server": "141.164.45.187",
-      "server_port": 2376,
-      "method": "aes-256-gcm",
-      "password": "faBAoD54k87UJG7"
-    },
-    {
-      "type": "vmess",
-      "tag": "vmess-145107",
-      "server": "140.238.2.250",
-      "server_port": 443,
-      "uuid": "41a7089a-040b-4538-8b8d-010902405bde",
-      "security": "auto",
-      "alter_id": 0
+      "tag": "shadowsocks-817206649",
+      "server": "49.254.204.133",
+      "server_port": 1774,
+      "method": "aes-256-cfb",
+      "password": "1234!@#$"
     },
     {
       "type": "shadowsocks",
       "tag": "🇰🇷 Seoul  11  South Korea_1",
       "server": "141.164.45.187",
-      "server_port": 7002,
+      "server_port": 6697,
       "method": "aes-256-gcm",
-      "password": "RexnBgU7EV5ADxG"
+      "password": "TEzjfAYq2IjtuoS"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-656230724",
+      "server": "3.39.4.109",
+      "server_port": 13672,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
     },
     {
       "type": "direct",

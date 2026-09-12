@@ -5,79 +5,29 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1233310355
-  port: 41923
-  reality-opts:
-    public-key: 7YfjX8TsT3HL0ZzvovjEDOLCM142j3bFcorv-Gs-m2Y
-  server: 45.144.137.129
-  servername: dash.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b28936a7-c11a-4147-8806-b66efd1658a8
-- name: 🏳️ ShatakVPN 831455
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: 202.146.222.29
-  type: hysteria2
-- name: hysteria2-705682202
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87"
-  type: hysteria2
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: vless-1235362885
-  port: 64136
-  reality-opts:
-    public-key: yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE
-  server: 193.134.211.201
-  servername: dash.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c
-- name: hysteria2-655838404
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2🇨🇳
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-760606796
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 178ms
   port: 443
   reality-opts:
     public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
     short-id: 14156e3ac23212cc
-  server: vj37-1936vtw.fincore.top
+  server: 162.128.157.164
   servername: www.bing.com
   tls: true
   type: vless
   udp: true
   uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
-- name: hysteria2-1066924724
+- name: hysteria2-892566711
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.29
+  server: 202.146.222.174
   skip-cert-verify: true
-  sni: 'off'
+  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1233310355
-  - 🏳️ ShatakVPN 831455
-  - hysteria2-705682202
-  - vless-1235362885
-  - hysteria2-655838404
-  - vless-760606796
-  - hysteria2-1066924724
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 178ms
+  - hysteria2-892566711
   type: select
 rules:
 - MATCH,PROXY

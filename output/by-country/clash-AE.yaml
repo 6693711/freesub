@@ -3,44 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 122ms
-  port: 8765
-  reality-opts:
-    public-key: M08l5tDmJUYELykZCNYQyFgtR9Zc-A4ZGlUSLcUeS2c
-    short-id: 1bcc9177f3124b25
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: 🔒 VL-GRPC-TLS 🇦🇪 AE-31.56.189.27 2087
+  network: grpc
+  port: 2087
   server: 31.56.189.27
   servername: srv-21bac9.vless.monster
   tls: true
   type: vless
   udp: true
   uuid: df9f5aca-eda0-428f-a752-e53866153d12
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-731764375
-  port: 8443
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  server: 31.58.181.88
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: c0c5a312-f9d3-4eb4-ad6a-0aa2738ac7ab
-- name: '德国 #1'
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  port: 8080
-  server: 85.204.107.181
-  skip-cert-verify: false
-  sni: hopp-romania-new.roxa.org
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 122ms
-  - vless-731764375
-  - '德国 #1'
+  - 🔒 VL-GRPC-TLS 🇦🇪 AE-31.56.189.27 2087
   type: select
 rules:
 - MATCH,PROXY

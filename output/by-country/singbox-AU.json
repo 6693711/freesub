@@ -2,9 +2,30 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-1060573975",
+      "server": "vpn-au-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "vmess-1063859721",
+      "tag": "vmess-1221185995",
       "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-143571",
+      "server": "67.220.95.3",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",

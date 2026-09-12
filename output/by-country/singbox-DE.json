@@ -3,7 +3,35 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 340514",
+      "tag": "[openproxylist.com] DE 13729099",
+      "server": "8.209.74.72",
+      "server_port": 20001,
+      "method": "chacha20-ietf-poly1305",
+      "password": "PWpjPo3tqhPN4yRZ"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 406054",
+      "server": "144.31.221.57",
+      "server_port": 443,
+      "password": "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8",
+      "tls": {
+        "enabled": true,
+        "server_name": "player.wwwinternetvideo.click",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 Karlsruhe  BW  Germany",
+      "server": "2.58.81.221",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "kKEd0rBrd56Furjz"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 768269",
       "server": "185.226.172.8",
       "server_port": 8008,
       "method": "aes-256-gcm",

@@ -2,25 +2,28 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 211761",
-      "server": "45.144.28.39",
-      "server_port": 2096,
-      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "usejh2.neobo-tooth.ru"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 623121",
+      "server": "51.83.192.80",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "itzvpn@321"
     },
     {
       "type": "vless",
-      "tag": "🇫🇷FR_1|4.7MB/s",
-      "server": "15.237.145.224",
-      "server_port": 22222,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "tag": "🏳️ ShatakVPN 949611",
+      "server": "162.19.10.99",
+      "server_port": 443,
+      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nasnet-162191099-direct.mbghalibaf.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "type": "direct",

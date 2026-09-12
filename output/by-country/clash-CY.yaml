@@ -3,22 +3,65 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: qq
-  name: vless-650631528
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-703656405
   port: 40443
   reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-    short-id: a8ae
-  server: 194.76.154.31
+    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
+    short-id: 84fc
+  server: preview.netraidly.ru
   servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-682259479
+  port: 40443
+  reality-opts:
+    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
+    short-id: 84fc
+  server: preview.netraidly.ru
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-694353446
+  port: 40443
+  reality-opts:
+    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
+    short-id: 84fc
+  server: 5.253.42.163
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔anty_filter 🔒 VL-TCP- ❔ XX down
+  port: 40443
+  reality-opts:
+    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+    short-id: 88b6
+  server: 5.253.30.99
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-650631528
+  - vless-703656405
+  - vless-682259479
+  - vless-694353446
+  - 🆔anty_filter 🔒 VL-TCP- ❔ XX down
   type: select
 rules:
 - MATCH,PROXY

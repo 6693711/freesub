@@ -3,28 +3,28 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 211761
-  network: ws
-  port: 2096
-  server: 45.144.28.39
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 623121
+  password: itzvpn@321
+  port: 8388
+  server: 51.83.192.80
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 949611
+  port: 443
+  server: 162.19.10.99
+  servername: nasnet-162191099-direct.mbghalibaf.com
+  tls: true
   type: vless
   udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  ws-opts:
-    headers:
-      Host: usejh2.neobo-tooth.ru
-    path: /
-- name: 🇫🇷FR_1|4.7MB/s
-  port: 22222
-  server: 15.237.145.224
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 211761
-  - 🇫🇷FR_1|4.7MB/s
+  - 🏳️ ShatakVPN 623121
+  - 🏳️ ShatakVPN 949611
   type: select
 rules:
 - MATCH,PROXY
