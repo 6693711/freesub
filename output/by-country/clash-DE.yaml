@@ -3,41 +3,50 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: '[openproxylist.com] DE 13729099'
-  password: PWpjPo3tqhPN4yRZ
-  port: 20001
-  server: 8.209.74.72
-  type: ss
-  udp: true
-- name: 🏳️ ShatakVPN 406054
-  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
+- name: hysteria2-757486810
+  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
   port: 443
-  server: 144.31.221.57
+  server: replay.wwwinternetvideo.click
   skip-cert-verify: true
-  sni: player.wwwinternetvideo.click
+  sni: replay.wwwinternetvideo.click
   type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇩🇪 Karlsruhe  BW  Germany
-  password: kKEd0rBrd56Furjz
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1154636489
+  port: 3443
+  reality-opts:
+    public-key: -6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo
+    short-id: a1b2c3d4
+  server: 31.56.189.224
+  servername: special.aeternavpn.space
+  tls: true
+  type: vless
+  udp: true
+  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
+- name: hysteria2-916370843
+  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
   port: 443
-  server: 2.58.81.221
-  type: ss
+  server: 144.31.148.87
+  skip-cert-verify: false
+  sni: replay.wwwinternetvideo.click
+  type: hysteria2
+- name: 🏳️ ShatakVPN 336782
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 768269
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
-  type: ss
-  udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  ws-opts:
+    headers: {}
+    path: /29c8fed7ca22
 proxy-groups:
 - name: PROXY
   proxies:
-  - '[openproxylist.com] DE 13729099'
-  - 🏳️ ShatakVPN 406054
-  - 🇩🇪 Karlsruhe  BW  Germany
-  - 🏳️ ShatakVPN 768269
+  - hysteria2-757486810
+  - vless-1154636489
+  - hysteria2-916370843
+  - 🏳️ ShatakVPN 336782
   type: select
 rules:
 - MATCH,PROXY

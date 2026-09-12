@@ -3,17 +3,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇦🇹 AT-50.7.184.187 443",
-      "server": "50.7.184.187",
+      "tag": "[openproxylist.com] LT 15528564",
+      "server": "88.119.176.24",
       "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "uuid": "ae8e0f7d-b661-41ca-b55d-d8c383adb2f8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "at-new-ded5.moritech.net",
+        "server_name": "lit9.helper-internet.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
+          "short_id": "ff776ff77be48b88"
         }
       }
     },

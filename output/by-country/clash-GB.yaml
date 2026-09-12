@@ -1,0 +1,25 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: random
+  name: 🆔vpnbaz 🔒 VL-TCP- ❔ XX 92ms
+  port: 443
+  reality-opts:
+    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
+    short-id: 98fa0b00d09419f7
+  server: 51.38.70.192
+  servername: play.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔vpnbaz 🔒 VL-TCP- ❔ XX 92ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
