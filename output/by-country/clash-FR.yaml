@@ -3,17 +3,28 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-534776087
-  password: Krab9Hyst2_Rk7pQ2xL
-  port: 36723
-  server: 151.247.197.253
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: hysteria2
+- name: 🏳️ ShatakVPN 211761
+  network: ws
+  port: 2096
+  server: 45.144.28.39
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: usejh2.neobo-tooth.ru
+    path: /
+- name: 🇫🇷FR_1|4.7MB/s
+  port: 22222
+  server: 15.237.145.224
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-534776087
+  - 🏳️ ShatakVPN 211761
+  - 🇫🇷FR_1|4.7MB/s
   type: select
 rules:
 - MATCH,PROXY

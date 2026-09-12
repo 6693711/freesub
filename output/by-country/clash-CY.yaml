@@ -4,7 +4,7 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: qq
-  name: vless-809969132
+  name: vless-650631528
   port: 40443
   reality-opts:
     public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
@@ -18,7 +18,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-809969132
+  - vless-650631528
   type: select
 rules:
 - MATCH,PROXY

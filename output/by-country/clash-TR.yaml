@@ -4,23 +4,23 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 386ms
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.134.170 443
   network: ws
   port: 443
-  server: sinavm.soft10.ir
-  servername: sinavm.soft10.ir
+  server: 172.67.134.170
+  servername: jdzit4e4urks.xwzohsebujps.workers.dev
   tls: true
   type: vless
   udp: true
-  uuid: 69768555-bf07-4127-8ce5-eed7a0d0baba
+  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
   ws-opts:
     headers:
-      Host: sinavm.soft10.ir
-    path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM
+      Host: jdzit4e4urks.xwzohsebujps.workers.dev
+    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 386ms
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.134.170 443
   type: select
 rules:
 - MATCH,PROXY

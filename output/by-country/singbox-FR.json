@@ -2,16 +2,25 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-534776087",
-      "server": "151.247.197.253",
-      "server_port": 36723,
-      "password": "Krab9Hyst2_Rk7pQ2xL",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "insecure": true
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 211761",
+      "server": "45.144.28.39",
+      "server_port": 2096,
+      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "usejh2.neobo-tooth.ru"
+        }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷FR_1|4.7MB/s",
+      "server": "15.237.145.224",
+      "server_port": 22222,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
       "type": "direct",
