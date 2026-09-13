@@ -3,6 +3,30 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1238811301
+  port: 64136
+  reality-opts:
+    public-key: yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE
+  server: 193.134.211.201
+  servername: dash.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1235362827
+  port: 23974
+  reality-opts:
+    public-key: hFaO787_gkKJuZYllnq-L0ZMiEqiCY80q2_xbP2CNRA
+  server: 45.136.14.251
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8aea14f7-5a77-4fa7-9924-f3921abc4cc2
 - name: hysteria2-296929603
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -10,48 +34,12 @@ proxies:
   skip-cert-verify: true
   sni: 202.146.222.29
   type: hysteria2
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-734962303
-  port: 443
-  reality-opts:
-    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
-    short-id: 14156e3ac23212cc
-  server: vj37-1936vtw.fincore.top
-  servername: www.bing.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
-- name: hysteria2-705682202
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87"
-  type: hysteria2
-- name: hysteria2-540983040
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.89
-  skip-cert-verify: true
-  sni: 202.146.222.89
-  type: hysteria2
-- name: hysteria2-483633863
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
+  - vless-1238811301
+  - vless-1235362827
   - hysteria2-296929603
-  - vless-734962303
-  - hysteria2-705682202
-  - hysteria2-540983040
-  - hysteria2-483633863
   type: select
 rules:
 - MATCH,PROXY

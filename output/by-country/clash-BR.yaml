@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇪🇸 Barcelona  CT  Spain
-  password: WSyL4XTwNsdv
+- cipher: aes-256-gcm
+  name: 🇧🇷 Osasco  SP  Brazil
+  password: owVdNnQcdPgthSyX
   port: 8388
-  server: 108.181.121.226
+  server: 216.128.168.190
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇪🇸 Barcelona  CT  Spain
+  - 🇧🇷 Osasco  SP  Brazil
   type: select
 rules:
 - MATCH,PROXY

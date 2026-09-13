@@ -3,37 +3,40 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-823997543
-  port: 443
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1230280245
+  network: grpc
+  port: 2083
+  server: 66.90.104.42
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- client-fingerprint: firefox
+  name: vless-1279636589
+  port: 2053
   reality-opts:
-    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
-    short-id: 72cceb78
-  server: 138.124.125.211
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: 9922313fffed1c63
+  server: 46.250.250.149
   servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-813687306
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+- name: hysteria2-658428968
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  reality-opts:
-    public-key: IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs
-    short-id: 1aa9f3c9021280c0
-  server: 5.152.223.97
-  servername: strapi.io
-  tls: true
-  type: vless
-  udp: true
-  uuid: be5b6ad6-8184-4b63-82ac-3bc00c09c98c
+  server: vpn-uk-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-uk-002.fastervpn.world
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-823997543
-  - vless-813687306
+  - vless-1230280245
+  - vless-1279636589
+  - hysteria2-658428968
   type: select
 rules:
 - MATCH,PROXY

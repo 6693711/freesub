@@ -3,36 +3,7 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: vless-602178043
-  network: grpc
-  port: 2083
-  server: usejh2.neobo-tooth.ru
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷 Paris  IDF  France
-  password: DdhrBvEX2dHRjaakWHBZUa
-  port: 59380
-  server: 20.111.9.76
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 329645
-  port: 443
-  server: 162.19.10.99
-  servername: nasnet-162191099-direct.mbghalibaf.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-- name: 🏳️ ShatakVPN 441282
+- name: 🏳️ ShatakVPN 708819
   network: ws
   port: 2096
   server: 45.144.28.39
@@ -46,10 +17,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-602178043
-  - 🇫🇷 Paris  IDF  France
-  - 🏳️ ShatakVPN 329645
-  - 🏳️ ShatakVPN 441282
+  - 🏳️ ShatakVPN 708819
   type: select
 rules:
 - MATCH,PROXY
