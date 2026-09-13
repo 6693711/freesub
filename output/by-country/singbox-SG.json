@@ -2,16 +2,17 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 236225",
-      "server": "176.97.64.144",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "TFElG2FVqyqG"
+      "type": "vmess",
+      "tag": "vmess-1075322096",
+      "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "vless",
-      "tag": "vless-703656379",
+      "tag": "🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 180ms",
       "server": "91.192.81.214",
       "server_port": 443,
       "uuid": "607801ac-dbdd-4938-a167-129015d9978e",
@@ -21,7 +22,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -31,10 +32,22 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-1060573964",
+      "server": "54.151.142.26",
+      "server_port": 443,
+      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "vless-838598334",
+      "tag": "vless-522223672",
       "server": "3.0.111.82",
-      "server_port": 12972,
+      "server_port": 17623,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -42,7 +55,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,

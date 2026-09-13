@@ -3,52 +3,87 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 687405
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: 144.31.148.87
-  skip-cert-verify: true
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 Frankfurt am Main  HE  Germany
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 708339
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
   type: ss
   udp: true
-- name: vless-1044822794
-  network: ws
-  port: 2087
-  server: 82.24.203.20
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1238811298
+  port: 443
+  reality-opts:
+    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
+    short-id: c6dc8abb0235dc05
+  server: 162.248.166.35
+  servername: www.caradisiac.com
+  tls: true
   type: vless
   udp: true
-  uuid: 5fcdc9b7-e70f-4a5c-85c3-e018ad818326
+  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪 Frankfurt am Main  HE  Germany
+  password: PWpjPo3tqhPN4yRZ
+  port: 20001
+  server: 8.209.74.72
+  type: ss
+  udp: true
+- name: 🏳️ ShatakVPN 231566
+  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
+  port: 443
+  server: 144.31.221.57
+  skip-cert-verify: true
+  sni: player.wwwinternetvideo.click
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1267371431
+  port: 40443
+  reality-opts:
+    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
+    short-id: db46e2946fc466fd
+  server: arcturus.yokkastars.com
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
+- name: vless-1156743175
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
+  udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
   ws-opts:
-    headers: {}
-    path: /fd5ba98a3970
-- name: hysteria2-1064225972
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: 144.31.148.87
-  skip-cert-verify: true
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
-- name: 🏳️ ShatakVPN 824089
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: 144.31.148.87
-  skip-cert-verify: true
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
+    headers:
+      Host: 163.8.195.241
+    path: /29c8fed7ca22
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1275300281
+  port: 40443
+  reality-opts:
+    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
+    short-id: db46e2946fc466fd
+  server: 93.94.52.23
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 687405
+  - 🏳️ ShatakVPN 708339
+  - vless-1238811298
   - 🇩🇪 Frankfurt am Main  HE  Germany
-  - vless-1044822794
-  - hysteria2-1064225972
-  - 🏳️ ShatakVPN 824089
+  - 🏳️ ShatakVPN 231566
+  - vless-1267371431
+  - vless-1156743175
+  - vless-1275300281
   type: select
 rules:
 - MATCH,PROXY

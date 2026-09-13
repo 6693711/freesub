@@ -2,28 +2,20 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1236880255",
-      "server": "193.134.211.201",
-      "server_port": 64136,
-      "uuid": "cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-296929603",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "dash.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE"
-        }
+        "server_name": "202.146.222.29",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "vless-757466724",
+      "tag": "vless-734962303",
       "server": "vj37-1936vtw.fincore.top",
       "server_port": 443,
       "uuid": "5e8e81ac-a1c4-4543-b81e-651bf9872b54",
@@ -33,7 +25,7 @@
         "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -43,63 +35,39 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1272779556",
-      "server": "45.136.14.251",
-      "server_port": 23974,
-      "uuid": "8aea14f7-5a77-4fa7-9924-f3921abc4cc2",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-705682202",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "www.amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "hFaO787_gkKJuZYllnq-L0ZMiEqiCY80q2_xbP2CNRA"
-        }
+        "server_name": "https://t.me/wangcai2ð",
+        "insecure": true
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1235755646",
-      "server": "193.134.211.201",
-      "server_port": 64136,
-      "uuid": "cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-540983040",
+      "server": "202.146.222.89",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "dash.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE"
-        }
+        "server_name": "202.146.222.89",
+        "insecure": true
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1235362845",
-      "server": "193.134.211.201",
-      "server_port": 64136,
-      "uuid": "cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-483633863",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "dash.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE"
-        }
+        "server_name": "vk.com",
+        "insecure": true
       }
     },
     {

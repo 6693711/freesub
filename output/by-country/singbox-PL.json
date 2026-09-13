@@ -2,41 +2,35 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-620179978",
-      "server": "admin.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": true
-      }
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 651626",
+      "server": "194.61.121.93",
+      "server_port": 7538,
+      "method": "chacha20-ietf-poly1305",
+      "password": "U9YAoqBgg5VyGBc6vQv1sN"
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 915858",
-      "server": "94.183.209.58",
+      "tag": "🏳️ ShatakVPN 410626",
+      "server": "94.183.209.59",
       "server_port": 443,
-      "uuid": "78791f9e-fe09-4d4f-88ec-895764bae0d6",
+      "uuid": "d23cb516-40db-4aa4-8142-6b45ff882f90",
       "transport": {
         "type": "ws",
         "path": "/",
-        "headers": {
-          "Host": "pl2.lckdwn.ru"
-        }
+        "headers": {}
       }
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 509408",
-      "server": "144.31.5.64",
+      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443",
+      "server": "144.31.5.3",
       "server_port": 443,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl6.moritech.net",
+        "server_name": "pl4.moritech.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"

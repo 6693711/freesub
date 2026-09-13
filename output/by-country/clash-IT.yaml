@@ -4,16 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  name: 🇦🇹 Vienna  9  Austria
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 82.110.60.9
+  name: 🏳️ ShatakVPN 733494
+  password: itzvpn@321
+  port: 8388
+  server: 57.131.48.45
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇦🇹 Vienna  9  Austria
+  - 🏳️ ShatakVPN 733494
   type: select
 rules:
 - MATCH,PROXY

@@ -3,19 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-293233479
-  port: 41373
-  reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: 0e
-  server: 130.107.73.148
-  servername: google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
 - cipher: aes-256-gcm
   name: 🇨🇦 Canada
   password: cdBIDV42DCwnfIN
@@ -23,11 +10,18 @@ proxies:
   server: 51.79.85.185
   type: ss
   udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦 Canada_1
+  password: 3ssumf2
+  port: 443
+  server: 142.4.216.225
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-293233479
   - 🇨🇦 Canada
+  - 🇨🇦 Canada_1
   type: select
 rules:
 - MATCH,PROXY

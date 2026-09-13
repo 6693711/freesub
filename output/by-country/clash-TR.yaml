@@ -4,7 +4,7 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX down
+  name: 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 850ms
   port: 8444
   server: connect3.nyxserver.ir
   tls: true
@@ -14,7 +14,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX down
+  - 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 850ms
   type: select
 rules:
 - MATCH,PROXY
