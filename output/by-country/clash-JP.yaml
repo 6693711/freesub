@@ -3,83 +3,39 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
-  network: grpc
-  port: 2087
-  reality-opts:
-    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
-    short-id: c226283c4de5b1ad
-  server: 31.76.91.72
-  servername: ads.x5.ru
-  tls: true
-  type: vless
+- alterId: 0
+  cipher: auto
+  name: vmess-1122515635
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
   udp: true
-  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
-- client-fingerprint: chrome
-  name: vless-1130262811
-  network: ws
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- name: '[openproxylist.com] JP 15485893'
   port: 443
-  server: 104.21.33.59
-  servername: jp3.yohototo.top
-  tls: true
+  server: 137.220.221.179
   type: vless
   udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: chrome
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: vless-656230605
-  port: 10583
+  name: vless-1275190658
+  port: 11690
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  server: 13.231.19.51
+  servername: www.tesla.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-479071124
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: vless-1239076238
-  network: ws
-  port: 443
-  server: 104.16.10.185
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
-  - vless-1130262811
-  - vless-656230605
-  - vless-479071124
-  - vless-1239076238
+  - vmess-1122515635
+  - '[openproxylist.com] JP 15485893'
+  - vless-1275190658
   type: select
 rules:
 - MATCH,PROXY
