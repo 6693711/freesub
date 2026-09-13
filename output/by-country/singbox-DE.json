@@ -3,52 +3,26 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 485745",
-      "server": "141.95.29.163",
-      "server_port": 2083,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc="
+      "tag": "🇩🇪 Frankfurt am Main  HE  Germany",
+      "server": "185.226.172.8",
+      "server_port": 8008,
+      "method": "aes-256-gcm",
+      "password": "XKFKl2rULjIp74"
     },
     {
       "type": "vless",
-      "tag": "vless-1239163064",
-      "server": "www.g.mobilesari.ir",
-      "server_port": 4777,
-      "uuid": "3d168677-10a1-43c1-90f3-18eaac90baff",
-      "flow": "xtls-rprx-vision",
+      "tag": "🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 522ms",
+      "server": "connect6.nyxserver.ir",
+      "server_port": 8446,
+      "uuid": "0b39a009-2a2a-4035-ba87-cc82894f8e21",
       "tls": {
         "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
+        "server_name": "connect6.nyxserver.ir",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo",
-          "short_id": "01115788253bc845"
         }
       }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 776224",
-      "server": "144.31.221.57",
-      "server_port": 443,
-      "password": "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8",
-      "tls": {
-        "enabled": true,
-        "server_name": "player.wwwinternetvideo.click",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-696780676",
-      "server": "2.58.81.221",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "kKEd0rBrd56Furjz"
     },
     {
       "type": "direct",

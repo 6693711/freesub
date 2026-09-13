@@ -3,9 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1236880255
+  name: vless-1238811301
   port: 64136
   reality-opts:
     public-key: yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE
@@ -15,18 +15,18 @@ proxies:
   type: vless
   udp: true
   uuid: cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c
-- name: hysteria2-863226972
-  password: b0917015b656b3dd2286b5633af0c5c1
-  port: 50160
-  server: 31.57.248.176
+- name: hysteria2-589844071
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: https://t.me/clashv8
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1236880255
-  - hysteria2-863226972
+  - vless-1238811301
+  - hysteria2-589844071
   type: select
 rules:
 - MATCH,PROXY

@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1230998998
+  name: vless-868400801
   port: 443
   reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: 19253fae84102271
-  server: 45.90.59.15
-  servername: www.cloudflare.com
+    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
+    short-id: a3a578ab
+  server: 185.95.231.156
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1230998998
+  - vless-868400801
   type: select
 rules:
 - MATCH,PROXY

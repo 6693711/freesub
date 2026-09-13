@@ -3,25 +3,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🆔v2ray1_ng 🔒 VL-GRPC- ❔ XX 27ms",
-      "server": "147.78.182.3",
-      "server_port": 8443,
-      "uuid": "8bf3e040-8ac9-5d0e-304f-9b735e145de8",
+      "tag": "🔒 VL-WS-TLS 🇷🇺 RU-46.8.200.91 443",
+      "server": "46.8.200.91",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
       "tls": {
         "enabled": true,
-        "server_name": "www.epson.com",
+        "server_name": "cf3.rumedia-cdn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
+        "type": "ws",
+        "path": "/casc",
+        "headers": {
+          "Host": "cf3.rumedia-cdn.com"
+        }
       }
     },
     {

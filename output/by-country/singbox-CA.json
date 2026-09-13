@@ -3,50 +3,96 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-200282613",
-      "server": "216.152.147.28",
-      "server_port": 443,
-      "uuid": "d9e4721d-cdac-44c7-bc91-117367eac194",
-      "flow": "xtls-rprx-vision",
+      "tag": "vless-1275300277",
+      "server": "66.70.179.198",
+      "server_port": 2053,
+      "uuid": "dc620cd6-a9d8-4a0f-8f18-006b895db77e",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU",
+          "short_id": "83f8317a948bb769"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "[openproxylist.com] CA 3255188",
+      "server": "149.22.95.183",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1270653457",
+      "server": "158.69.112.254",
+      "server_port": 443,
+      "uuid": "661f395d-b153-4199-a04b-693f5fe7f261",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.speedtest.net",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss",
-          "short_id": "b9f8d3f8"
+          "public_key": "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y",
+          "short_id": "3d3c1e645f763ee3"
         }
       }
     },
     {
-      "type": "vmess",
-      "tag": "vmess-485686936",
-      "server": "134.195.196.211",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
+      "type": "hysteria2",
+      "tag": "hysteria2-1016364146",
+      "server": "15.223.122.197",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "t.me",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 664217",
+      "server": "51.79.85.185",
+      "server_port": 8118,
+      "method": "aes-256-gcm",
+      "password": "cdBIDV42DCwnfIN"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 Canada",
+      "server": "ca225.vpnbook.com",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "3ssumf2"
     },
     {
       "type": "shadowsocks",
       "tag": "🇨🇦 QC  Canada",
-      "server": "51.222.12.127",
-      "server_port": 445,
+      "server": "51.222.155.113",
+      "server_port": 5601,
       "method": "aes-256-gcm",
-      "password": "zDNVedRFPQexG9v"
+      "password": "Y6R9pAtvxxzmGC"
     },
     {
-      "type": "vmess",
-      "tag": "vmess-704660105",
-      "server": "134.195.196.211",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1249801518",
+      "server": "142.4.216.225",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "3ssumf2"
     },
     {
       "type": "direct",

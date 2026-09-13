@@ -3,49 +3,27 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-652726817
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1260285713
+  port: 443
+  server: poland.failspace.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- name: 🏳️ ShatakVPN 949244
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: admin.wwwinternetvideo.click
+  server: 45.192.12.93
   skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- cipher: aes-256-cfb
-  name: shadowsocks-738053629
-  password: N7j3pdTYkKmsy8CR
-  port: 9095
-  server: 217.30.10.44
-  type: ss
-  udp: true
-- name: hysteria2-855833185
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: go.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- cipher: aes-256-cfb
-  name: shadowsocks-743178447
-  password: tkhHVxxfM2QErBWe
-  port: 9062
-  server: 217.30.10.44
-  type: ss
-  udp: true
-- name: 🏳️ ShatakVPN 451583
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 144.31.93.126
-  skip-cert-verify: true
   sni: admin.wwwinternetvideo.click
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-652726817
-  - shadowsocks-738053629
-  - hysteria2-855833185
-  - shadowsocks-743178447
-  - 🏳️ ShatakVPN 451583
+  - vless-1260285713
+  - 🏳️ ShatakVPN 949244
   type: select
 rules:
 - MATCH,PROXY

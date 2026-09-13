@@ -3,49 +3,30 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 412466
-  port: 23576
+- name: 🏳️ ShatakVPN 677748
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
+- client-fingerprint: firefox
+  name: vless-1260285707
+  port: 2053
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+  server: 54.37.136.194
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: vless-742974932
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083
-  - 🏳️ ShatakVPN 412466
-  - vless-742974932
+  - 🏳️ ShatakVPN 677748
+  - vless-1260285707
   type: select
 rules:
 - MATCH,PROXY

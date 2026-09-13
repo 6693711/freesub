@@ -6,21 +6,6 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc
-  name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 153ms
-  network: grpc
-  port: 2087
-  reality-opts:
-    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
-    short-id: c226283c4de5b1ad
-  server: 31.76.91.72
-  servername: ads.x5.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
   name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
   network: grpc
   port: 2087
@@ -33,11 +18,68 @@ proxies:
   type: vless
   udp: true
   uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
+- client-fingerprint: chrome
+  name: vless-1130262811
+  network: ws
+  port: 443
+  server: 104.21.33.59
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-656230605
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-479071124
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: vless-1239076238
+  network: ws
+  port: 443
+  server: 104.16.10.185
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 153ms
   - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
+  - vless-1130262811
+  - vless-656230605
+  - vless-479071124
+  - vless-1239076238
   type: select
 rules:
 - MATCH,PROXY

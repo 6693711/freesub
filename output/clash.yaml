@@ -4,1061 +4,6 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1003549217
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.202
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- alterId: 0
-  cipher: auto
-  name: vmess-655843771
-  port: 180
-  server: 82.198.246.233
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: vmess-704660106
-  port: 18000
-  server: 38.110.1.246
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- client-fingerprint: chrome
-  name: 🔒 VL-TCP-TLS 🇳🇱 NL-193.23.194.167 8443
-  port: 8443
-  server: 193.23.194.167
-  servername: neth.lckdwn.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 32349ee8-8551-45fa-a265-8704cec72936
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1254305204
-  port: 32073
-  reality-opts:
-    public-key: G7_z4XOqJImMhL0H8rBzN-VSR739_RsUGokfNuyadQc
-  server: 38.147.173.43
-  servername: www.paypal.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b145ee79-42dd-4399-adcc-044660ad306f
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇬 Singapore  Singapore
-  password: TFElG2FVqyqG
-  port: 8388
-  server: 176.97.64.144
-  type: ss
-  udp: true
-- name: 🏳️ ShatakVPN 412507
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  port: 8443
-  server: 205.237.109.163
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-656246245
-  port: 8443
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 880e605a-082b-47d5-8a37-cac00309ec7c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-986757772
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.35
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- alterId: 0
-  cipher: auto
-  name: vmess-653956134
-  port: 180
-  server: 82.198.246.97
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-696135692
-  port: 40443
-  reality-opts:
-    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
-    short-id: 84fc
-  server: preview.netraidly.ru
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-200282613
-  port: 443
-  reality-opts:
-    public-key: kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss
-    short-id: b9f8d3f8
-  server: 216.152.147.28
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d9e4721d-cdac-44c7-bc91-117367eac194
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: vless-1272779559
-  port: 31895
-  reality-opts:
-    public-key: ezDjdoPtdw4-2mZFCLgdlIHD9RoQ7P1MMMVV-pBPuHc
-  server: 207.57.135.125
-  servername: aws.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e483359-08a3-46d9-904b-8f1f469577ac
-- alterId: 0
-  cipher: auto
-  name: vmess-655843941
-  port: 18000
-  server: 134.195.196.211
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: vmess-1263029861
-  port: 180
-  server: 82.198.246.97
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1254401593
-  port: 40514
-  reality-opts:
-    public-key: Tu3JZDib7rpQqzzRbr-8RnG2JoncA2y4g30GT8PBnx8
-  server: 193.134.209.62
-  servername: www.paypal.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 35360464-29ac-4c06-93aa-f9af6d4964f4
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1230998999
-  port: 18582
-  reality-opts:
-    public-key: zDedAztDEYmYmjEOnYW8JZIaKG3MFZKov9i9k2BcbDA
-  server: 207.57.133.54
-  servername: dash.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 37b1e31e-0288-49d3-aa93-fe6a848501a3
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1223729842
-  port: 443
-  reality-opts:
-    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
-    short-id: 5c256336e3b673fa
-  server: 195.123.213.28
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.26
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1186755710
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.163
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1058822113
-  port: 36925
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  server: ww9.levikogjgfdd.ir
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1193015748
-  port: 30837
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  server: 35.201.163.218
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
-- client-fingerprint: safari
-  name: vless-1259301919
-  network: ws
-  port: 8443
-  server: news.zoom.us
-  servername: u.srilankangrill.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-  ws-opts:
-    headers:
-      Host: u.srilankangrill.online
-    path: /
-- alterId: 0
-  cipher: auto
-  name: vmess-704661117
-  port: 180
-  server: 82.198.246.97
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: random
-  name: vless-1274186385
-  port: 2053
-  reality-opts:
-    public-key: Uk5b-Wh_uxeCc7R8NS9iWE40xc0h9wWC04rSB9yhgAw
-    short-id: b5d625695ec82c7e
-  server: 198.251.78.29
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: c423cc1b-f88e-421c-9a16-c480d84da20f
-- client-fingerprint: chrome
-  name: '[openproxylist.com] US 8505414'
-  network: ws
-  port: 443
-  server: 104.21.91.76
-  servername: 7-M19.South-aFRIca-onliNE.CCwu.cC
-  tls: true
-  type: vless
-  udp: true
-  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
-  ws-opts:
-    headers:
-      Host: 7-M19.sOuTH-afRiCa-OnlIne.ccwU.cC
-    path: /CjBjB9sn5pCvaSwScc
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-737947075
-  port: 40443
-  reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-  server: private.netraidly.ru
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-- alterId: 0
-  cipher: auto
-  name: vmess-485686936
-  port: 18000
-  server: 134.195.196.211
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- client-fingerprint: firefox
-  name: vless-1259301947
-  network: ws
-  port: 8443
-  server: news.zoom.us
-  servername: u.srilankangrill.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-  ws-opts:
-    headers:
-      Host: u.srilankangrill.online
-    path: /
-- name: 🏳️ ShatakVPN 246317
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 46.229.243.142
-  skip-cert-verify: true
-  sni: grape-turbo-fr.roxa.org
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇨🇦 QC  Canada
-  password: zDNVedRFPQexG9v
-  port: 445
-  server: 51.222.12.127
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.153.78 443
-  network: ws
-  port: 443
-  server: 172.67.153.78
-  servername: 3-M19.soUTh-AfRica-LInK.CcWu.Cc
-  tls: true
-  type: vless
-  udp: true
-  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
-  ws-opts:
-    headers:
-      Host: 3-M19.sOuth-AfRiCa-liNk.CcWu.cc
-    path: /CjBjB9sn5pCvaSwScc
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands_1
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.212
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: vless-1274663365
-  port: 8686
-  reality-opts:
-    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-    short-id: 628b3c90c98ead4f
-  server: 18.141.153.118
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-656245214
-  port: 8443
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 813a5411-08ac-4346-888a-992f35acbf89
-- alterId: 0
-  cipher: auto
-  name: vmess-658493589
-  port: 180
-  server: 82.198.246.37
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1266360296
-  port: 443
-  reality-opts:
-    public-key: vFnG0SzHIv43o3L8bw4reKp3EIFuSS-BCyBqbWUsYCo
-    short-id: 6591f200
-  server: cdn12usa.goonars.com
-  servername: cdn12usa.goonars.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 02722550-1915-4629-a653-cbe95e594f70
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-700287132
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.232
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1233347409
-  port: 45140
-  reality-opts:
-    public-key: LV22cTxk34mYg42GDbCo1qW1laGh8LX_9mtpZ3P2U3Y
-  server: 207.57.131.115
-  servername: dash.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 55e38df8-d960-44c2-9fe2-537765304eae
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-661025477
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.35
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- name: hysteria2-857369683
-  password: 099830134df5ac3a04a4b21d39b8c395
-  port: 50160
-  server: 163.192.14.135
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- name: hysteria2-652726817
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: admin.wwwinternetvideo.click
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-468882932
-  port: 8443
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d685c66b-0c11-4989-95da-a28134a776e3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 376058
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 15.204.97.197
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: 🏳️ ShatakVPN 879545
-  password: CnVfXXvMzh
-  port: 443
-  server: 72.56.92.120
-  skip-cert-verify: true
-  sni: hys13.wba-pn.ru
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1258487957
-  port: 443
-  server: nl-new-ded.failspace.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- cipher: aes-256-gcm
-  name: '[openproxylist.com] US 15546248'
-  password: pKEW8JPByTVTLtM
-  port: 4444
-  server: 15.204.247.244
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 897277
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.87
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- alterId: 0
-  cipher: auto
-  name: vmess-145167
-  port: 180
-  server: 82.198.246.37
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- cipher: aes-256-cfb
-  name: shadowsocks-738053629
-  password: N7j3pdTYkKmsy8CR
-  port: 9095
-  server: 217.30.10.44
-  type: ss
-  udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-803542505
-  port: 8443
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 77d4bb66-82c8-4511-98e0-44edb2da8978
-- cipher: chacha20-ietf-poly1305
-  name: 🇿🇦 Isando  GP  South Africa
-  password: tfAcRikawhNoZAhu
-  port: 8388
-  server: 139.84.247.164
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-786380054
-  port: 180
-  server: 82.198.246.97
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.85.121 443
-  network: ws
-  port: 443
-  server: 104.21.85.121
-  servername: 5-m20.c98a10b6-5ab2-4974-8750-c24cffb2c622.kdns.fr
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
-  ws-opts:
-    headers:
-      Host: 5-m20.c98a10b6-5ab2-4974-8750-c24cffb2c622.kdns.fr
-    path: /8qMLgNapWf6SBxo8fhQlVPYO
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1078157109
-  port: 40443
-  reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-  server: 186.246.19.79
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-- client-fingerprint: firefox
-  name: vless-1260285702
-  port: 2053
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.92.49 443
-  network: ws
-  port: 443
-  server: 104.21.92.49
-  servername: 7-m19.omAn-linK.KdNS.FR
-  tls: true
-  type: vless
-  udp: true
-  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
-  ws-opts:
-    headers:
-      Host: 7-m19.OmAn-link.kdnS.FR
-    path: /CjBjB9sn5pCvaSwScc
-- cipher: aes-128-gcm
-  name: 🇺🇸 New York  NY  United States
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.160
-  type: ss
-  udp: true
-- name: hysteria2-1254788941
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 20562
-  server: msjp1.mangshe.xyz
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-- cipher: 2022-blake3-aes-256-gcm
-  name: 🏳️ ShatakVPN 485745
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=
-  port: 2083
-  server: 141.95.29.163
-  type: ss
-  udp: true
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-661025515
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.104
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- alterId: 0
-  cipher: auto
-  name: vmess-676886735
-  port: 180
-  server: 82.198.246.37
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1239163064
-  port: 4777
-  reality-opts:
-    public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
-    short-id: 01115788253bc845
-  server: www.g.mobilesari.ir
-  servername: amp-api-edge.apps.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3d168677-10a1-43c1-90f3-18eaac90baff
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-801842684
-  port: 10574
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- alterId: 0
-  cipher: auto
-  name: vmess-704660105
-  port: 18000
-  server: 134.195.196.211
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-721523033
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.182
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-83842750
-  port: 443
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1232696166
-  port: 48256
-  reality-opts:
-    public-key: PLMKW3tCxUXZArpQZ6tuaECgNaSNUP-6NNxg7aRqIR8
-  server: 207.57.128.241
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: c9858759-70bc-4d9d-b43b-b9ce233c0353
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1256813817
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.212
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1009372186
-  port: 12512
-  reality-opts:
-    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
-    short-id: e692a8250d2e2fd0
-  server: 46.137.202.178
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
-- cipher: chacha20-ietf-poly1305
-  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 97ms
-  password: c58d16e593d44f42
-  port: 11001
-  server: 158.173.221.214
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 153ms
-  network: grpc
-  port: 2087
-  reality-opts:
-    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
-    short-id: c226283c4de5b1ad
-  server: 31.76.91.72
-  servername: ads.x5.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
-- name: hysteria2-200242609
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  type: hysteria2
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: 🆔v2ray1_ng 🔒 VL-GRPC- ❔ XX 27ms
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
-  server: 147.78.182.3
-  servername: www.epson.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8bf3e040-8ac9-5d0e-304f-9b735e145de8
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-468882946
-  port: 8443
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 60ed7378-3d79-45af-a13f-2983dd2b524d
-- name: hysteria2-855833185
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: go.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇦🇹 Vienna  9  Austria
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 82.110.60.9
-  type: ss
-  udp: true
-- name: hysteria2-1101789988
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1257307404
-  port: 5585
-  reality-opts:
-    public-key: TUZZH3TKQjuwZc20BCT5SHvKbbeSUzAwB75ZDf_Vy3M
-  server: 38.207.178.88
-  servername: www.ebay.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 356d377d-2cdf-4a3f-8bc3-44452f9718b7
-- name: 🏳️ ShatakVPN 624396
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  port: 8080
-  server: 85.204.107.178
-  skip-cert-verify: false
-  sni: hopp-romania-new.roxa.org
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-655843195
-  port: 180
-  server: 82.198.246.37
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- name: vless-1209548108
-  network: ws
-  port: 443
-  server: 31.76.76.28
-  type: vless
-  udp: true
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  ws-opts:
-    headers:
-      Host: 31.76.76.28
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 363058
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.218
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇺🇸 Ashburn  VA  United States
-  password: RSo52SbxW40r
-  port: 8388
-  server: 108.181.57.93
-  type: ss
-  udp: true
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1040387510
-  port: 44848
-  reality-opts:
-    public-key: w9vWLOHjl46krA8IEpGoPI9scTL0rFdjCtjdukJDciU
-    short-id: 2338740580a5de
-  server: 34.80.184.198
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b0342e8a-a25e-4e30-b598-d9391b0df4c9
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 855609
-  password: faBAoD54k87UJG7
-  port: 2375
-  server: 15.204.247.124
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands_3
-  password: 4a2rfixophdjffa8KVA4Aa
-  port: 8080
-  server: 193.29.139.234
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands_4
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.211
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.90.161 443
-  network: ws
-  port: 443
-  server: 104.21.90.161
-  servername: 3-M19.pERu-line.CCWu.cC
-  tls: true
-  type: vless
-  udp: true
-  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
-  ws-opts:
-    headers:
-      Host: 3-M19.peRu-LinE.cCwU.CC
-    path: /CjBjB9sn5pCvaSwScc
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-694353446
-  port: 40443
-  reality-opts:
-    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
-    short-id: 84fc
-  server: 5.253.42.163
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1209548109
-  port: 421
-  reality-opts:
-    public-key: zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg
-    short-id: a1facbc8575701ae
-  server: 78.129.208.44
-  servername: chistomat.dry.care
-  tls: true
-  type: vless
-  udp: true
-  uuid: a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18
-- name: hysteria2-650429104
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: 103.115.109.49
-  type: hysteria2
-- name: 🏳️ ShatakVPN 776224
-  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
-  port: 443
-  server: 144.31.221.57
-  skip-cert-verify: true
-  sni: player.wwwinternetvideo.click
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-717847162
-  port: 180
-  server: 82.198.246.233
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- cipher: chacha20-ietf-poly1305
-  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 171ms
-  password: wwzVn2ZnHfqYa6l8EWh3eY
-  port: 443
-  server: switcher-nick-croquet.freesocks.work
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-814613041
-  port: 180
-  server: 82.198.246.250
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-656230848
-  port: 40443
-  reality-opts:
-    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
-    short-id: 84fc
-  server: 5.253.42.163
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands_5
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.192
-  type: ss
-  udp: true
-- name: vless-1183893158
-  network: ws
-  port: 443
-  server: 31.76.76.28
-  type: vless
-  udp: true
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  ws-opts:
-    headers: {}
-    path: /
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1236880255
-  port: 64136
-  reality-opts:
-    public-key: yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE
-  server: 193.134.211.201
-  servername: dash.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c
-- name: 🏳️ ShatakVPN 134234
-  password: CnVfXXvMzh
-  port: 443
-  server: 72.56.92.120
-  skip-cert-verify: true
-  sni: hys13.wba-pn.ru
-  type: hysteria2
-- name: hysteria2-957956103
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 46.229.243.145
-  skip-cert-verify: false
-  sni: grape-turbo-fr.roxa.org
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-650451633
-  port: 180
-  server: 82.198.246.233
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: vmess-676886728
-  port: 180
-  server: 82.198.246.233
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc
   name: 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
@@ -1073,193 +18,102 @@ proxies:
   type: vless
   udp: true
   uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
-- name: hysteria2-863226972
-  password: b0917015b656b3dd2286b5633af0c5c1
-  port: 50160
-  server: 31.57.248.176
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- name: 🏳️ ShatakVPN 432496
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 The Netherlands
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.200
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 920088
+  password: 9tqhMdIrTkgQ46PvhyAtMH
   port: 443
-  server: 64.188.98.171
-  skip-cert-verify: true
-  sni: germany3.h2corp.local
-  type: hysteria2
+  server: 92.112.126.90
+  type: ss
+  udp: true
+- client-fingerprint: random
+  name: vless-1275300277
+  port: 2053
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  server: 66.70.179.198
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
 - alterId: 0
   cipher: auto
-  name: vmess-717847098
+  name: vmess-1204622306
   port: 180
-  server: 82.198.246.250
+  server: 82.198.246.97
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- cipher: aes-256-cfb
-  name: shadowsocks-743178447
-  password: tkhHVxxfM2QErBWe
-  port: 9062
-  server: 217.30.10.44
-  type: ss
-  udp: true
-- client-fingerprint: firefox
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-683902792
-  port: 8443
+  name: vless-1224864360
+  port: 30837
   reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
+    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
+    short-id: 97101ba788915e5a
+  server: 35.201.163.218
+  servername: www.sony.com
   tls: true
   type: vless
   udp: true
-  uuid: d5f1aa27-43d0-4f2e-bca2-140f3ec2aa62
-- name: 🏳️ ShatakVPN 451583
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1169105019
+  port: 40443
+  reality-opts:
+    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
+    short-id: c84f
+  server: 72.56.81.165
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
+- client-fingerprint: chrome
+  name: vless-1130262811
+  network: ws
   port: 443
-  server: 144.31.93.126
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-923366360
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
+  server: 104.21.33.59
+  servername: jp3.yohototo.top
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-537790444
-  port: 8443
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  server: 31.58.50.200
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1837e910-ebd6-4e64-a9ae-7c9779e4d60d
-- cipher: aes-256-gcm
-  name: shadowsocks-696780676
-  password: kKEd0rBrd56Furjz
-  port: 443
-  server: 2.58.81.221
-  type: ss
-  udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1015954660
-  port: 12512
-  reality-opts:
-    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
-    short-id: e692a8250d2e2fd0
-  server: 46.137.202.178
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands_6
+  name: 🇳🇱 The Netherlands_1
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 82.38.31.62
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-256-gcm
-  name: '[openproxylist.com] SG 11818509'
-  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
-  port: 27755
-  server: 167.150.100.115
+  server: 193.29.139.151
   type: ss
   udp: true
 - client-fingerprint: chrome
-  name: vless-151165820
-  port: 40443
+  flow: xtls-rprx-vision
+  name: vless-1108742512
+  port: 36925
   reality-opts:
-    public-key: KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo
-    short-id: aae8
-  server: 194.55.189.249
-  servername: deepl.com
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  server: ww9.levikogjgfdd.ir
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 8212a50b-25bf-4739-bba1-aaffb5ffc84c
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
 - alterId: 0
   cipher: auto
-  name: vmess-485686546
-  port: 180
-  server: 82.198.246.233
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 412466
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1104470805
-  port: 443
-  reality-opts:
-    public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
-    short-id: 5606d4a25c99e7af
-  server: 156.67.63.231
-  servername: sync-bridge.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
-- client-fingerprint: qq
-  name: vless-809969132
-  port: 40443
-  reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-    short-id: a8ae
-  server: 194.76.154.31
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-- name: 🏳️ ShatakVPN 148455
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 46.229.243.147
-  skip-cert-verify: true
-  sni: grape-turbo-fr.roxa.org
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-650451673
+  name: vmess-655843973
   port: 180
   server: 82.198.246.97
   type: vmess
@@ -1267,143 +121,422 @@ proxies:
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-682971327
-  port: 40443
-  reality-opts:
-    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
-    short-id: 84fc
-  server: preview.netraidly.ru
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-659142341
+  name: vless-1267691154
   port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.229
-  servername: yahoo.com
+  server: nl-new-ded.failspace.top
+  servername: nl-new-ded.failspace.top
   tls: true
   type: vless
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: vless-742974932
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- alterId: 0
+  cipher: auto
+  name: vmess-2387882
+  port: 180
+  server: 82.198.246.37
+  type: vmess
   udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-734912294
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 169.40.42.212
-  servername: yahoo.com
-  tls: true
-  type: vless
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: vmess-650451657
+  port: 180
+  server: 82.198.246.97
+  type: vmess
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1235362822
-  port: 30521
-  reality-opts:
-    public-key: TsiUxIyOUQqEhPYWJ2HAlM-ecuOiHbH5ZTnaFdGdNU8
-  server: 45.152.65.157
-  servername: aws.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e6752712-f10c-4c8c-8308-d80b70a2b87a
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: hysteria2-1045025788
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 46.229.243.152
+  skip-cert-verify: true
+  sni: grape-turbo-fr.roxa.org
+  type: hysteria2
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-157
-  password: G5p6ww4o67HB
-  port: 8388
-  server: 108.181.0.177
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1211880885
-  password: pKEW8JPByTVTLtM
-  port: 4444
-  server: 15.204.247.206
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 The Netherlands_7
+  name: 🇳🇱 The Netherlands_2
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.186
   type: ss
   udp: true
-- client-fingerprint: safari
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-479071123
-  port: 12972
+  name: vless-656230605
+  port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
-  server: 3.0.111.82
+  server: 3.114.220.22
   servername: www.apple.com
   tls: true
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: TunService
-  name: vless-1274373866
-  network: grpc
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-479071124
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- cipher: aes-256-gcm
+  name: 🇩🇪 Frankfurt am Main  HE  Germany
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-231
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  port: 990
+  server: 185.213.23.63
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-959609783
+  port: 443
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 169.40.42.74
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- alterId: 0
+  cipher: auto
+  name: vmess-1204622309
+  port: 18000
+  server: 149.88.23.202
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 977334
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.225
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1260285713
+  port: 443
+  server: poland.failspace.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- cipher: aes-128-gcm
+  name: '[openproxylist.com] CA 3255188'
+  password: shadowsocks
+  port: 443
+  server: 149.22.95.183
+  type: ss
+  udp: true
+- name: hysteria2-1059437573
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  port: 8443
+  server: 162.249.126.2
+  skip-cert-verify: true
+  sni: hopp-germany-new.ddnsguru.com
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1270653457
+  port: 443
+  reality-opts:
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    short-id: 3d3c1e645f763ee3
+  server: 158.69.112.254
+  servername: www.speedtest.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
+- alterId: 0
+  cipher: auto
+  name: vmess-717847100
+  port: 180
+  server: 82.198.246.250
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: '[openproxylist.com] NL 10998264'
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.187
+  type: ss
+  udp: true
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-742982202
+  port: 443
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 169.40.42.223
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- alterId: 0
+  cipher: auto
+  name: vmess-656230691
+  port: 443
+  server: 140.238.2.250
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- name: hysteria2-667703181
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸 Los Angeles  CA  United States
+  password: G5p6ww4o67HB
+  port: 8388
+  server: 108.181.0.177
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 415841
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.87
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: 🏳️ ShatakVPN 401506
+  password: BWAFlp8g53
+  port: 443
+  server: 72.56.102.31
+  skip-cert-verify: true
+  sni: 72.56.102.31
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 630413
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.96
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: hysteria2-892566577
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-650451256
+  port: 22324
+  server: 216.106.185.141
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.151.109 443
+  network: ws
+  port: 443
+  server: 172.67.151.109
+  servername: jdzit4e4urks.xwzohsebujps.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
+  ws-opts:
+    headers:
+      Host: jdzit4e4urks.xwzohsebujps.workers.dev
+    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
+- client-fingerprint: firefox
+  name: 🔒 VL-WS-TLS 🇷🇺 RU-46.8.200.91 443
+  network: ws
+  port: 443
+  server: 46.8.200.91
+  servername: cf3.rumedia-cdn.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  ws-opts:
+    headers:
+      Host: cf3.rumedia-cdn.com
+    path: /casc
+- name: hysteria2-1016364146
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 15.223.122.197
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-855938879
   port: 8443
   reality-opts:
-    public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
-  server: 147.78.182.3
-  servername: download.nvidia.com
+    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
+  server: 31.58.50.200
+  servername: tradingview.com
   tls: true
   type: vless
   udp: true
-  uuid: 8bf3e040-8ac9-5d0e-304f-9b735e145de8
+  uuid: 431acd7d-ef6c-4d2b-b471-bcdddca8050c
+- client-fingerprint: chrome
+  name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+  network: ws
+  port: 8443
+  server: news.zoom.us
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: '[openproxylist.com] US 12539258'
+  password: hCCWOcIsK5wrFz4OX70rWf
+  port: 443
+  server: 216.105.168.18
+  type: ss
+  udp: true
+- client-fingerprint: edge
+  grpc-opts:
+    grpc-service-name: TunService
+  name: vless-1136945983
+  network: grpc
+  port: 9458
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 91.193.17.156
+  servername: www.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.215.39 443
+  network: ws
+  port: 443
+  server: 172.67.215.39
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  ws-opts:
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1143287474
+  port: 443
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 169.40.42.168
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-693664583
-  port: 40443
-  reality-opts:
-    public-key: mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ
-    short-id: beb4
-  server: edge.netraidly.ru
-  servername: deepl.com
+  name: vless-1262329628
+  port: 443
+  server: roma2.moritech.net
   tls: true
   type: vless
   udp: true
-  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: freegrpc
-  name: vless-1107712078
-  network: grpc
-  port: 2087
-  server: srv-21bac9.vless.monster
-  servername: srv-21bac9.vless.monster
-  tls: true
-  type: vless
-  udp: true
-  uuid: df9f5aca-eda0-428f-a752-e53866153d12
-- client-fingerprint: ios
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-763204355
+  name: vless-1048993122
+  port: 43840
+  reality-opts:
+    public-key: tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA
+    short-id: ac4b9f02123aa50b
+  server: 54.255.121.205
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f053b140-9673-4ac5-bc8b-587bfd2c8fd8
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11044
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.164
+  type: ss
+  udp: true
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-693844328
+  port: 443
+  reality-opts:
+    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
+    short-id: 133a3f10a1581047
+  server: 206.206.78.36
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
+- alterId: 0
+  cipher: auto
+  name: vmess-1204622311
+  port: 180
+  server: 82.198.246.97
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 The Netherlands_3
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.13
+  type: ss
+  udp: true
+- name: hysteria2-896855661
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8443
+  server: 85.204.107.174
+  skip-cert-verify: true
+  sni: hopp-romania-new.roxa.org
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1048736445
   port: 443
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
@@ -1414,81 +547,205 @@ proxies:
   type: vless
   udp: true
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-700283255
+  port: 40443
+  reality-opts:
+    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
+    short-id: c84f
+  server: 72.56.81.165
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
 - alterId: 0
   cipher: auto
-  name: vmess-704661113
+  name: vmess-658493589
   port: 180
-  server: 82.198.246.97
+  server: 82.198.246.37
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1173311749
+  port: 32981
+  reality-opts:
+    public-key: JSn0GPz1WOSTUDBxN_XYnhgb2Jpjc2LpfBTzX1j3V2E
+    short-id: 70f4b7a4c40636
+  server: 35.221.158.209
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41b96ee9-ee5e-455f-9753-187a9dead97a
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-809840194
+  name: 🏳️ ShatakVPN 177432
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 15.204.97.206
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.150.230 443
+  network: ws
+  port: 443
+  server: 172.67.150.230
+  servername: 8-M19.MEXICo-pOrt.Ccwu.Cc
+  tls: true
+  type: vless
+  udp: true
+  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
+  ws-opts:
+    headers:
+      Host: 8-M19.mexIco-PoRT.CcWU.Cc
+    path: /CjBjB9sn5pCvaSwScc
+- alterId: 0
+  cipher: auto
+  name: vmess-655843098
+  port: 180
+  server: 82.198.246.250
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-608526271
   port: 443
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-  server: 169.40.42.184
+  server: 169.40.42.104
   servername: yahoo.com
   tls: true
   type: vless
   udp: true
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: chrome
-  name: vless-335163332
-  port: 40443
+- alterId: 0
+  cipher: auto
+  name: vmess-667695940
+  port: 180
+  server: 82.198.246.233
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-734912301
+  port: 443
   reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-    short-id: a8ae
-  server: 194.76.154.31
-  servername: deepl.com
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 169.40.42.173
+  servername: yahoo.com
   tls: true
   type: vless
   udp: true
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: TunService
-  name: vless-1162311194
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- alterId: 0
+  cipher: auto
+  name: vmess-145116
+  port: 180
+  server: 82.198.246.233
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: hysteria2-896855669
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 46.229.243.142
+  skip-cert-verify: true
+  sni: grape-turbo-fr.roxa.org
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1238811301
+  port: 64136
+  reality-opts:
+    public-key: yi2t6WsgV_77ANrZf2xcfrSaJihtFVDQ5O_Ddt0n9SE
+  server: 193.134.211.201
+  servername: dash.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: cb0d51da-de26-4e29-b3db-a7fbbf9a4b8c
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-91981760
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.174
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: 🏳️ ShatakVPN 148461
+  port: 8443
+  server: 193.23.194.167
+  servername: neth.lckdwn.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 32349ee8-8551-45fa-a265-8704cec72936
+- name: 🏳️ ShatakVPN 839565
+  password: suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g
+  port: 8443
+  server: 159.223.157.129
+  skip-cert-verify: true
+  sni: 159.223.157.129
+  type: hysteria2
+- name: 🏳️ ShatakVPN 949244
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 45.192.12.93
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 The Netherlands_4
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.201
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-814140526
+  port: 35193
+  reality-opts:
+    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    short-id: e8daed2d
+  server: hk3n.wxgqlfx.vip
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+- grpc-opts:
+    grpc-service-name: security.debian.org
+  name: 🆔surfboardv2ray 🔓 VL-GRPC-N/A ❔ XX 201ms
   network: grpc
-  port: 9460
-  reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-  server: 91.193.17.234
-  servername: www.google.com
-  tls: true
+  port: 2083
+  server: 185.126.238.87
   type: vless
   udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+- name: hysteria2-918221107
+  password: 099830134df5ac3a04a4b21d39b8c395
+  port: 50160
+  server: 163.192.14.135
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1230998998
-  port: 443
-  reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: 19253fae84102271
-  server: 45.90.59.15
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 953592
-  port: 443
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-  server: 47.253.226.114
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-656245959
+  name: vless-239202035
   port: 8443
   reality-opts:
     public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
@@ -1497,178 +754,748 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: d85ce6b7-8b41-495a-9ae3-9b85368d2988
+  uuid: e27dce75-b33b-49b6-afb7-17e29ce67bb1
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 653495
+  password: QCXDxuDlTTMD7jtgHUjIoj
+  port: 8080
+  server: 193.29.139.168
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 304514
-  port: 23576
+  name: vless-1254903200
+  port: 443
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.103
-  servername: fuck.rkn
+    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
+    short-id: 6c059ecfddf9b179
+  server: 185.47.254.251
+  servername: gateway.icloud.com
   tls: true
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 587589
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.176
+  type: ss
+  udp: true
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-1272943357
+  port: 41688
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: 7f342137c20387
+  server: 54.169.200.246
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 The Netherlands_5
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.179
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.8.136 443
+  network: ws
+  port: 443
+  server: 104.21.8.136
+  servername: 4-m20.c79324d6-7c42-4d44-be57-c3e1debe6c59.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+  ws-opts:
+    headers:
+      Host: 4-m20.c79324d6-7c42-4d44-be57-c3e1debe6c59.kdns.fr
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 317099
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.218
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: vmess-650451669
+  name: vmess-32200888
+  port: 180
+  server: 82.198.246.250
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸 United States
+  password: J1InuU6QRT5JOh1mQfkjU2
+  port: 16015
+  server: 144.31.243.2
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: vmess-717847048
   port: 180
   server: 82.198.246.97
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: aes-128-gcm
+  name: shadowsocks-194
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.169
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: vless-1260160928
+  network: ws
+  port: 2096
+  server: 91.193.58.61
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11030
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.212
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 664217
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 51.79.85.185
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 522ms
+  port: 8446
+  server: connect6.nyxserver.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0b39a009-2a2a-4035-ba87-cc82894f8e21
+- name: hysteria2-1046909563
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.151.142.26
+  skip-cert-verify: true
+  sni: css.rbxcdn.com
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-244981235
+  port: 180
+  server: 82.198.246.37
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: 🇰🇷_KR_韩国
+  password: maintell
+  port: 2053
+  server: 152.70.237.123
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: 🆔surfboardv2ray 🔓 VM-TCP-N/A ❔ XX 187ms
+  port: 35034
+  server: 165.154.195.38
+  type: vmess
+  udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸 Ashburn  VA  United States
+  password: RSo52SbxW40r
+  port: 8388
+  server: 108.181.57.93
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 577720
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.80
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1272779567
+  port: 23156
+  reality-opts:
+    public-key: NjDiEVSSYysWC7yheN_cy4YkCXHtP91yB4vbpgQc2Q8
+  server: 207.57.133.49
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 46554735-415f-4be5-9390-a19dc430a15c
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦 Canada
+  password: 3ssumf2
+  port: 443
+  server: ca225.vpnbook.com
+  type: ss
+  udp: true
+- name: 🏳️ ShatakVPN 677748
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.179.82 443
+  network: ws
+  port: 443
+  server: 172.67.179.82
+  servername: 1-m20.be434a1f-0c04-40c9-a43a-87cc7d7da502.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+  ws-opts:
+    headers:
+      Host: 1-m20.be434a1f-0c04-40c9-a43a-87cc7d7da502.kdns.fr
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
+- name: hysteria2-589844071
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: https://t.me/clashv8
+  type: hysteria2
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-757488778
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  server: 15.204.97.209
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1260285697
+  port: 443
+  server: at-new-ded.failspace.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-868400801
+  port: 443
+  reality-opts:
+    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
+    short-id: a3a578ab
+  server: 185.95.231.156
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.200.222 443
+  network: ws
+  port: 443
+  server: 172.67.200.222
+  servername: 2-m13.4b49F101-6328-41c6-953d-00CeB79b58ac.KDnS.Fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7700ff6d-cefb-4768-a806-ec4f63fe3b38
+  ws-opts:
+    headers:
+      Host: 2-M13.4B49f101-6328-41C6-953d-00Ceb79B58aC.KDnS.FR
+    path: /ED3ZQPu7lqyeDGD58KabZ
+- grpc-opts:
+    grpc-service-name: security.debian.org
+  name: 🆔surfboardv2ray 🔓 VL-GRPC-N/A ❔ XX 191ms
+  network: grpc
+  port: 2083
+  server: 185.126.238.87
+  type: vless
+  udp: true
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-845458230
+  port: 35193
+  reality-opts:
+    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    short-id: e8daed2d
+  server: 156.226.168.221
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-332701811
+  port: 8443
+  reality-opts:
+    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
+  server: 31.58.50.200
+  servername: tradingview.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 72109745-9dbe-42a6-93c7-8b6eeb7aaed3
+- name: 🏳️ ShatakVPN 108910
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 46.229.243.133
+  skip-cert-verify: false
+  sni: grape-turbo-fr.roxa.org
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-145160
+  port: 180
+  server: 82.198.246.233
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: hysteria2-1060573964
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.151.142.26
+  skip-cert-verify: true
+  sni: vk.com
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-197954839
+  port: 35034
+  server: 165.154.195.38
+  type: vmess
+  udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- name: vless-1104257579
+  network: ws
+  port: 443
+  server: 193.23.194.167
+  type: vless
+  udp: true
+  uuid: 32349ee8-8551-45fa-a265-8704cec72936
+  ws-opts:
+    headers: {}
+    path: /
+- name: vless-1048975370
+  network: ws
+  port: 443
+  server: 31.76.76.28
+  type: vless
+  udp: true
+  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
+  ws-opts:
+    headers: {}
+    path: /
+- alterId: 0
+  cipher: auto
+  name: vmess-2382994
+  port: 180
+  server: 82.198.246.97
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-734912290
+  port: 443
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 169.40.42.223
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 659586
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.186
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-48399240
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.39
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: vless-1239076238
+  network: ws
+  port: 443
+  server: 104.16.10.185
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- alterId: 0
+  cipher: auto
+  name: vmess-717847009
+  port: 180
+  server: 82.198.246.250
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 664939
+  password: eDfN7SODQceIOmIAbtJJtK
+  port: 443
+  server: 198.98.53.130
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 101953
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.98
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.27.66.130 443
+  network: ws
+  port: 443
+  server: 104.27.66.130
+  servername: xoz60debusrs.lezuwaeiunjs.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 50414e45-4c5f-5a45-5553-e0dfede8abc0
+  ws-opts:
+    headers:
+      Host: xoz60debusrs.lezuwaeiunjs.workers.dev
+    path: /stream/PANEL_ZEUS/e0dfede8abc0
+- alterId: 0
+  cipher: auto
+  name: vmess-667697938
+  port: 180
+  server: 82.198.246.250
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: aes-256-gcm
+  name: 🇨🇦 QC  Canada
+  password: Y6R9pAtvxxzmGC
+  port: 5601
+  server: 51.222.155.113
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-685581310
+  port: 40443
+  reality-opts:
+    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
+    short-id: 2bc0
+  server: 186.246.19.79
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 The Netherlands_6
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.181
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 860640
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.9
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 738508
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.19
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1249801518
+  password: 3ssumf2
+  port: 443
+  server: 142.4.216.225
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 730125
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 15.204.97.206
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- cipher: aes-128-gcm
+  name: 🏳️ ShatakVPN 459036
+  password: shadowsocks
+  port: 443
+  server: 158.173.20.208
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: vmess-99661
+  port: 180
+  server: 82.198.246.250
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: vmess-655843185
+  port: 180
+  server: 82.198.246.97
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.51.202 443
+  network: ws
+  port: 443
+  server: 104.21.51.202
+  servername: 1-m20.20260721-a5c2-48bd-bb63-efdae93240e3.ccwu.cc
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+  ws-opts:
+    headers:
+      Host: 1-m20.20260721-a5c2-48bd-bb63-efdae93240e3.ccwu.cc
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
+- client-fingerprint: firefox
+  name: vless-1260285707
+  port: 2053
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+  server: 54.37.136.194
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+- alterId: 0
+  cipher: auto
+  name: vmess-1204622277
+  port: 180
+  server: 82.198.246.97
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1200745442
+  port: 13779
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: af1bdd293097b664
+  server: 38.180.242.205
+  servername: tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1003549217
-  - vmess-655843771
-  - vmess-704660106
-  - 🔒 VL-TCP-TLS 🇳🇱 NL-193.23.194.167 8443
-  - vless-1254305204
-  - 🇸🇬 Singapore  Singapore
-  - 🏳️ ShatakVPN 412507
-  - vless-656246245
-  - vless-986757772
-  - vmess-653956134
-  - vless-696135692
-  - vless-200282613
-  - vless-1272779559
-  - vmess-655843941
-  - vmess-1263029861
-  - vless-1254401593
-  - vless-1230998999
-  - vless-1223729842
-  - 🇳🇱 The Netherlands
-  - vless-1186755710
-  - vless-1058822113
-  - vless-1193015748
-  - vless-1259301919
-  - vmess-704661117
-  - vless-1274186385
-  - '[openproxylist.com] US 8505414'
-  - vless-737947075
-  - vmess-485686936
-  - vless-1259301947
-  - 🏳️ ShatakVPN 246317
-  - 🇨🇦 QC  Canada
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.153.78 443
-  - 🇳🇱 The Netherlands_1
-  - vless-1274663365
-  - vless-656245214
-  - vmess-658493589
-  - vless-1266360296
-  - vless-700287132
-  - vless-1233347409
-  - vless-661025477
-  - hysteria2-857369683
-  - hysteria2-652726817
-  - vless-468882932
-  - 🏳️ ShatakVPN 376058
-  - 🏳️ ShatakVPN 879545
-  - vless-1258487957
-  - '[openproxylist.com] US 15546248'
-  - 🏳️ ShatakVPN 897277
-  - vmess-145167
-  - shadowsocks-738053629
-  - vless-803542505
-  - 🇿🇦 Isando  GP  South Africa
-  - vmess-786380054
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.85.121 443
-  - vless-1078157109
-  - vless-1260285702
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.92.49 443
-  - 🇺🇸 New York  NY  United States
-  - hysteria2-1254788941
-  - 🏳️ ShatakVPN 485745
-  - vless-661025515
-  - vmess-676886735
-  - vless-1239163064
-  - vless-801842684
-  - vmess-704660105
-  - vless-721523033
-  - vless-83842750
-  - vless-1232696166
-  - vless-1256813817
-  - vless-1009372186
-  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 97ms
-  - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 153ms
-  - hysteria2-200242609
-  - 🆔v2ray1_ng 🔒 VL-GRPC- ❔ XX 27ms
-  - vless-468882946
-  - hysteria2-855833185
-  - 🇦🇹 Vienna  9  Austria
-  - hysteria2-1101789988
-  - vless-1257307404
-  - 🏳️ ShatakVPN 624396
-  - vmess-655843195
-  - vless-1209548108
-  - 🏳️ ShatakVPN 363058
-  - 🇺🇸 Ashburn  VA  United States
-  - vless-1040387510
-  - 🏳️ ShatakVPN 855609
-  - 🇳🇱 The Netherlands_3
-  - 🇳🇱 The Netherlands_4
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.90.161 443
-  - vless-694353446
-  - vless-1209548109
-  - hysteria2-650429104
-  - 🏳️ ShatakVPN 776224
-  - vmess-717847162
-  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 171ms
-  - vmess-814613041
-  - vless-656230848
-  - 🇳🇱 The Netherlands_5
-  - vless-1183893158
-  - vless-1236880255
-  - 🏳️ ShatakVPN 134234
-  - hysteria2-957956103
-  - vmess-650451633
-  - vmess-676886728
   - 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 142ms
-  - hysteria2-863226972
-  - 🏳️ ShatakVPN 432496
-  - vmess-717847098
-  - shadowsocks-743178447
-  - vless-683902792
-  - 🏳️ ShatakVPN 451583
-  - vless-923366360
-  - vless-537790444
-  - shadowsocks-696780676
-  - vless-1015954660
+  - 🇳🇱 The Netherlands
+  - 🏳️ ShatakVPN 920088
+  - vless-1275300277
+  - vmess-1204622306
+  - vless-1224864360
+  - vless-1169105019
+  - vless-1130262811
+  - 🇳🇱 The Netherlands_1
+  - vless-1108742512
+  - vmess-655843973
+  - vless-1267691154
+  - vmess-2387882
+  - vmess-650451657
+  - hysteria2-1045025788
+  - 🇳🇱 The Netherlands_2
+  - vless-656230605
+  - vless-479071124
+  - 🇩🇪 Frankfurt am Main  HE  Germany
+  - shadowsocks-231
+  - vless-959609783
+  - vmess-1204622309
+  - 🏳️ ShatakVPN 977334
+  - vless-1260285713
+  - '[openproxylist.com] CA 3255188'
+  - hysteria2-1059437573
+  - vless-1270653457
+  - vmess-717847100
+  - '[openproxylist.com] NL 10998264'
+  - vless-742982202
+  - vmess-656230691
+  - hysteria2-667703181
+  - 🇺🇸 Los Angeles  CA  United States
+  - 🏳️ ShatakVPN 415841
+  - 🏳️ ShatakVPN 401506
+  - 🏳️ ShatakVPN 630413
+  - hysteria2-892566577
+  - vmess-650451256
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.151.109 443
+  - 🔒 VL-WS-TLS 🇷🇺 RU-46.8.200.91 443
+  - hysteria2-1016364146
+  - vless-855938879
+  - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+  - '[openproxylist.com] US 12539258'
+  - vless-1136945983
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.215.39 443
+  - vless-1143287474
+  - vless-1262329628
+  - vless-1048993122
+  - shadowsocks-11044
+  - vless-693844328
+  - vmess-1204622311
+  - 🇳🇱 The Netherlands_3
+  - hysteria2-896855661
+  - vless-1048736445
+  - vless-700283255
+  - vmess-658493589
+  - vless-1173311749
+  - 🏳️ ShatakVPN 177432
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.150.230 443
+  - vmess-655843098
+  - vless-608526271
+  - vmess-667695940
+  - vless-734912301
+  - vmess-145116
+  - hysteria2-896855669
+  - vless-1238811301
+  - shadowsocks-91981760
+  - 🏳️ ShatakVPN 148461
+  - 🏳️ ShatakVPN 839565
+  - 🏳️ ShatakVPN 949244
+  - 🇳🇱 The Netherlands_4
+  - vless-814140526
+  - 🆔surfboardv2ray 🔓 VL-GRPC-N/A ❔ XX 201ms
+  - hysteria2-918221107
+  - vless-239202035
+  - 🏳️ ShatakVPN 653495
+  - vless-1254903200
+  - 🏳️ ShatakVPN 587589
+  - vless-1272943357
+  - 🇳🇱 The Netherlands_5
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.8.136 443
+  - 🏳️ ShatakVPN 317099
+  - vmess-32200888
+  - 🇺🇸 United States
+  - vmess-717847048
+  - shadowsocks-194
+  - vless-1260160928
+  - shadowsocks-11030
+  - 🏳️ ShatakVPN 664217
+  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 522ms
+  - hysteria2-1046909563
+  - vmess-244981235
+  - 🇰🇷_KR_韩国
+  - 🆔surfboardv2ray 🔓 VM-TCP-N/A ❔ XX 187ms
+  - 🇺🇸 Ashburn  VA  United States
+  - 🏳️ ShatakVPN 577720
+  - vless-1272779567
+  - 🇨🇦 Canada
+  - 🏳️ ShatakVPN 677748
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.179.82 443
+  - hysteria2-589844071
+  - vless-757488778
+  - vless-1260285697
+  - vless-868400801
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.200.222 443
+  - 🆔surfboardv2ray 🔓 VL-GRPC-N/A ❔ XX 191ms
+  - vless-845458230
+  - vless-332701811
+  - 🏳️ ShatakVPN 108910
+  - vmess-145160
+  - hysteria2-1060573964
+  - vmess-197954839
+  - vless-1104257579
+  - vless-1048975370
+  - vmess-2382994
+  - vless-734912290
+  - 🏳️ ShatakVPN 659586
+  - shadowsocks-48399240
+  - vless-1239076238
+  - vmess-717847009
+  - 🏳️ ShatakVPN 664939
+  - 🏳️ ShatakVPN 101953
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.27.66.130 443
+  - vmess-667697938
+  - 🇨🇦 QC  Canada
+  - vless-685581310
   - 🇳🇱 The Netherlands_6
-  - '[openproxylist.com] SG 11818509'
-  - vless-151165820
-  - vmess-485686546
-  - 🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083
-  - 🏳️ ShatakVPN 412466
-  - vless-1104470805
-  - vless-809969132
-  - 🏳️ ShatakVPN 148455
-  - vmess-650451673
-  - vless-682971327
-  - vless-659142341
-  - vless-742974932
-  - vless-734912294
-  - vless-1235362822
-  - shadowsocks-157
-  - shadowsocks-1211880885
-  - 🇳🇱 The Netherlands_7
-  - vless-479071123
-  - vless-1274373866
-  - vless-693664583
-  - vless-1107712078
-  - vless-763204355
-  - vmess-704661113
-  - vless-809840194
-  - vless-335163332
-  - vless-1162311194
-  - vless-1230998998
-  - 🏳️ ShatakVPN 953592
-  - vless-656245959
-  - 🏳️ ShatakVPN 304514
-  - vmess-650451669
+  - 🏳️ ShatakVPN 860640
+  - 🏳️ ShatakVPN 738508
+  - shadowsocks-1249801518
+  - 🏳️ ShatakVPN 730125
+  - 🏳️ ShatakVPN 459036
+  - vmess-99661
+  - vmess-655843185
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.51.202 443
+  - vless-1260285707
+  - vmess-1204622277
+  - vless-1200745442
   type: select
 rules:
 - MATCH,PROXY

@@ -3,47 +3,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: 2022-blake3-aes-256-gcm
-  name: 🏳️ ShatakVPN 485745
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=
-  port: 2083
-  server: 141.95.29.163
+- cipher: aes-256-gcm
+  name: 🇩🇪 Frankfurt am Main  HE  Germany
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
   type: ss
   udp: true
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1239163064
-  port: 4777
-  reality-opts:
-    public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
-    short-id: 01115788253bc845
-  server: www.g.mobilesari.ir
-  servername: amp-api-edge.apps.apple.com
+  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 522ms
+  port: 8446
+  server: connect6.nyxserver.ir
   tls: true
   type: vless
   udp: true
-  uuid: 3d168677-10a1-43c1-90f3-18eaac90baff
-- name: 🏳️ ShatakVPN 776224
-  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
-  port: 443
-  server: 144.31.221.57
-  skip-cert-verify: true
-  sni: player.wwwinternetvideo.click
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: shadowsocks-696780676
-  password: kKEd0rBrd56Furjz
-  port: 443
-  server: 2.58.81.221
-  type: ss
-  udp: true
+  uuid: 0b39a009-2a2a-4035-ba87-cc82894f8e21
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 485745
-  - vless-1239163064
-  - 🏳️ ShatakVPN 776224
-  - shadowsocks-696780676
+  - 🇩🇪 Frankfurt am Main  HE  Germany
+  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 522ms
   type: select
 rules:
 - MATCH,PROXY
