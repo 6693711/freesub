@@ -4,33 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 722564
-  port: 443
-  server: 162.19.10.99
-  servername: nasnet-162191099-direct.mbghalibaf.com
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083
+  network: grpc
+  port: 2083
+  server: 45.144.28.39
+  servername: usejh2.neobo-tooth.ru
   tls: true
   type: vless
   udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 921845
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 722564
-  - 🏳️ ShatakVPN 921845
+  - 🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083
   type: select
 rules:
 - MATCH,PROXY

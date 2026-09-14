@@ -1,0 +1,36 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: 3⛽@oneclickvpnkeys
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 65.2.178.161
+  skip-cert-verify: true
+  sni: vpn-in-001.fastervpn.world
+  type: hysteria2
+- name: hysteria2-1111846157
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-in-001.fastervpn.world
+  skip-cert-verify: true
+  sni: google.com
+  type: hysteria2
+- name: hysteria2-1281961368
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 65.2.178.161
+  skip-cert-verify: true
+  sni: vpn-in-001.fastervpn.world
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 3⛽@oneclickvpnkeys
+  - hysteria2-1111846157
+  - hysteria2-1281961368
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
