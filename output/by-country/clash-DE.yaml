@@ -3,11 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: shadowsocks-696780676
-  password: kKEd0rBrd56Furjz
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1258042859
+  port: 7443
+  reality-opts:
+    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+    short-id: d2061bb1
+  server: 31.76.7.154
+  servername: ya.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1240382595
   port: 443
-  server: 2.58.81.221
+  reality-opts:
+    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
+    short-id: c6dc8abb0235dc05
+  server: 162.248.166.35
+  servername: www.caradisiac.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪 Frankfurt am Main  HE  Germany
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -17,11 +43,54 @@ proxies:
   server: 2.58.81.221
   type: ss
   udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1244347192
+  port: 443
+  reality-opts:
+    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
+    short-id: c6dc8abb0235dc05
+  server: 162.248.166.35
+  servername: www.caradisiac.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1240382576
+  port: 443
+  reality-opts:
+    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
+    short-id: c6dc8abb0235dc05
+  server: 162.248.166.35
+  servername: www.caradisiac.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
+- client-fingerprint: chrome
+  name: vless-685581276
+  port: 40443
+  reality-opts:
+    public-key: VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA
+    short-id: 5b97
+  server: 93.152.217.41
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-696780676
+  - vless-1258042859
+  - vless-1240382595
+  - 🇩🇪 Frankfurt am Main  HE  Germany
   - 🇩🇪 Karlsruhe  BW  Germany
+  - vless-1244347192
+  - vless-1240382576
+  - vless-685581276
   type: select
 rules:
 - MATCH,PROXY

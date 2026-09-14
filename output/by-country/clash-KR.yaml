@@ -3,14 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: vmess-657042667
-  port: 443
-  server: 140.238.2.250
-  type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
 - name: hysteria2-547757560
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -18,51 +10,46 @@ proxies:
   skip-cert-verify: true
   sni: t.me
   type: hysteria2
-- name: hysteria2-650671509
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: 3.36.93.74
-  type: hysteria2
 - cipher: aes-256-gcm
-  name: 🇰🇷 Seoul  11  South Korea_1
+  name: 🇰🇷 Seoul  11  South Korea
   password: cdBIDV42DCwnfIN
   port: 8119
   server: 141.164.45.187
   type: ss
   udp: true
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: update
-  name: vless-1290388122
-  network: grpc
-  port: 10048
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-721523038
+  port: 18967
   reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  server: kr3-r.link-t7.com
-  servername: s0.awsstatic.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 7134DB35-F254-4468-BA00-D9C099CF5AF7
-- name: hysteria2-722298606
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: whatsapp.com
-  type: hysteria2
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-803630116
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-657042667
   - hysteria2-547757560
-  - hysteria2-650671509
-  - 🇰🇷 Seoul  11  South Korea_1
-  - vless-1290388122
-  - hysteria2-722298606
+  - 🇰🇷 Seoul  11  South Korea
+  - vless-721523038
+  - vless-803630116
   type: select
 rules:
 - MATCH,PROXY

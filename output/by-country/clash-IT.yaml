@@ -3,15 +3,8 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🇮🇹 Milan  25  Italy
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.164.175.81
-  type: ss
-  udp: true
-- client-fingerprint: firefox
-  name: vless-483686868
+- client-fingerprint: chrome
+  name: vless-650644312
   port: 2053
   reality-opts:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
@@ -25,8 +18,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇮🇹 Milan  25  Italy
-  - vless-483686868
+  - vless-650644312
   type: select
 rules:
 - MATCH,PROXY

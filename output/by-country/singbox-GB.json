@@ -3,32 +3,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-838598249",
-      "server": "138.124.125.211",
+      "tag": "[openproxylist.com] FI 12815236",
+      "server": "staging.lastilhame.monster",
       "server_port": 443,
-      "uuid": "1996007c-e7bc-464b-999b-cac28cec6c3e",
+      "uuid": "594d466e-8ac3-4fda-b1d1-eeb817853518",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo",
-          "short_id": "72cceb78"
+          "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
+          "short_id": "5a018643df03"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-27285",
-      "server": "146.70.61.18",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "direct",

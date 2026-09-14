@@ -3,8 +3,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-GRPC-TLS 🇫🇷 FR-45.144.28.39 2083",
+      "tag": "🏳️ ShatakVPN 421892",
       "server": "45.144.28.39",
+      "server_port": 2083,
+      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "usejh2.neobo-tooth.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-976057672",
+      "server": "usejh2.neobo-tooth.ru",
       "server_port": 2083,
       "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
       "tls": {
