@@ -2,34 +2,46 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-779606815",
-      "server": "217.30.10.44",
-      "server_port": 9041,
-      "method": "aes-256-cfb",
-      "password": "U6qnYRhfyDmn8sgn"
+      "type": "hysteria2",
+      "tag": "hysteria2-648949653",
+      "server": "45.192.12.93",
+      "server_port": 443,
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
+      }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-717969033",
-      "server": "217.30.10.44",
-      "server_port": 9052,
-      "method": "aes-256-cfb",
-      "password": "jt2ekBNc9HuVtm2a"
+      "type": "hysteria2",
+      "tag": "hysteria2-652726817",
+      "server": "admin.wwwinternetvideo.click",
+      "server_port": 443,
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": false
+      }
     },
     {
       "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443",
-      "server": "144.31.5.64",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "tag": "🇵🇱 波兰 | POL",
+      "server": "pl-waw.dontblockmepls.com",
+      "server_port": 2063,
+      "uuid": "b18d5990-96eb-4587-a386-7f8ef7591e6a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl6.moritech.net",
+        "server_name": "rusbid.de",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
         }
       }
     },

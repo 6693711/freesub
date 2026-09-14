@@ -3,16 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 548257
-  port: 10086
-  server: 204.216.216.23
-  type: vless
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 275780
+  password: itzvpn@321
+  port: 8388
+  server: 57.131.48.45
+  type: ss
   udp: true
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 548257
+  - 🏳️ ShatakVPN 275780
   type: select
 rules:
 - MATCH,PROXY

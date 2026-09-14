@@ -3,17 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🇦🇹 Vienna  9  Austria
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 82.110.60.9
-  type: ss
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-984954074
+  port: 443
+  reality-opts:
+    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
+    short-id: 43dcff53849b81e6
+  server: 152.53.1.40
+  servername: at.quattro-tech.ru
+  tls: true
+  type: vless
   udp: true
+  uuid: edde565e-41f5-400e-84ea-7b87a3e84488
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇦🇹 Vienna  9  Austria
+  - vless-984954074
   type: select
 rules:
 - MATCH,PROXY
