@@ -3,88 +3,35 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "[openproxylist.com] DE 15562961",
-      "server": "163.8.195.241",
-      "server_port": 2087,
-      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
-      "transport": {
-        "type": "ws",
-        "path": "/29c8fed7ca22",
-        "headers": {
-          "Host": "/?--v2rayNplus--v2rayNplus--v2rayNplus--"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🏴‍☠️ NA-104.17.154.178 443",
-      "server": "104.17.154.178",
-      "server_port": 443,
-      "uuid": "50414e45-4c5f-5a45-5553-9568000eed47",
-      "tls": {
-        "enabled": true,
-        "server_name": "urzpn8e9ub5s.shoameni2.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/stream/PANEL_ZEUS/9568000eed47/loc-1",
-        "headers": {
-          "Host": "urzpn8e9ub5s.shoameni2.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🆔anty_filter 🔒 VL-TCP- ❔ XX 146ms",
-      "server": "93.94.52.23",
-      "server_port": 40443,
-      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
+      "tag": "[openproxylist.com] DE 15648132",
+      "server": "178.105.61.61",
+      "server_port": 2083,
+      "uuid": "cb077bf2-70b7-457b-af42-27cdc3e0e544",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
+        "server_name": "178.105.61.61",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
-          "short_id": "db46e2946fc466fd"
+          "public_key": "H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk",
+          "short_id": "af04ff8094115e93"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1290442558",
-      "server": "130.61.144.173",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "MSBulFIL/2cQ1Jg+HZEfrPrfk/2Ev2nlSei+wSvdOLY="
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1289576390",
-      "server": "82.118.19.153",
+      "type": "hysteria2",
+      "tag": "hysteria2-757486810",
+      "server": "replay.wwwinternetvideo.click",
       "server_port": 443,
-      "uuid": "adcaa148-7c66-4282-a81a-99ec8afa029d",
-      "flow": "xtls-rprx-vision",
+      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE",
-          "short_id": "670ed9f350bd8ee0"
-        }
+        "server_name": "replay.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {

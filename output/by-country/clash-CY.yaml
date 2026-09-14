@@ -5,12 +5,12 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1168812404
+  name: vless-1205235772
   port: 40443
   reality-opts:
     public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
     short-id: 84fc
-  server: 5.253.42.163
+  server: preview.netraidly.ru
   servername: deepl.com
   tls: true
   type: vless
@@ -18,7 +18,7 @@ proxies:
   uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-234984371
+  name: '[openproxylist.com] SG 15218356'
   port: 40443
   reality-opts:
     public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
@@ -32,8 +32,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1168812404
-  - vless-234984371
+  - vless-1205235772
+  - '[openproxylist.com] SG 15218356'
   type: select
 rules:
 - MATCH,PROXY
