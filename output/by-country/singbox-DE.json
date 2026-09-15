@@ -2,65 +2,74 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-827975777",
-      "server": "170.101.109.37",
-      "server_port": 443,
-      "uuid": "bf645ffe-a3cc-4480-8e4c-9bcd1af41052",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A",
-          "short_id": "ab88d256"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "[openproxylist.com] DE 14693570",
+      "server": "185.226.172.8",
+      "server_port": 8008,
+      "method": "aes-256-gcm",
+      "password": "XKFKl2rULjIp74"
     },
     {
       "type": "vless",
-      "tag": "vless-1226359761",
-      "server": "178.105.61.61",
-      "server_port": 2083,
-      "uuid": "cb077bf2-70b7-457b-af42-27cdc3e0e544",
+      "tag": "vless-1298905371",
+      "server": "arcturus.yokkastars.com",
+      "server_port": 40443,
+      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "178.105.61.61",
+        "server_name": "deepl.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk",
-          "short_id": "af04ff8094115e93"
+          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
+          "short_id": "db46e2946fc466fd"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "[openproxylist.com] DE 15204395",
-      "server": "rubifen.adaspoloandco.com",
+      "tag": "vless-1250111352",
+      "server": "162.248.166.35",
       "server_port": 443,
-      "uuid": "cf39fab0-bb85-42cb-9945-2ad69d78e575",
+      "uuid": "d92b6509-8b63-4505-b3a2-1dc5b1c014ac",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "rubifen.adaspoloandco.com",
+        "server_name": "www.caradisiac.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk",
+          "short_id": "c6dc8abb0235dc05"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/GOrbEh",
-        "headers": {}
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[openproxylist.com] DE 15662633",
+      "server": "82.39.171.12",
+      "server_port": 443,
+      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "short_id": "c39cc7310a"
+        }
       }
     },
     {

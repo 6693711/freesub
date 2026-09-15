@@ -1,0 +1,38 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  name: vless-1259728048
+  port: 40443
+  reality-opts:
+    public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4
+    short-id: '7606'
+  server: 89.185.81.65
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b
+- client-fingerprint: chrome
+  name: vless-1304659846
+  port: 40443
+  reality-opts:
+    public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4
+    short-id: '7606'
+  server: 89.185.81.65
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1259728048
+  - vless-1304659846
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

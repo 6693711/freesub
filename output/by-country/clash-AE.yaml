@@ -3,17 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: vless-81052
-  network: ws
-  port: 22573
-  server: 84.235.244.108
-  type: vless
-  udp: true
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  ws-opts:
-    headers:
-      Host: uae.unixzone.us
-    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 92ms
@@ -30,7 +19,6 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-81052
   - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 92ms
   type: select
 rules:

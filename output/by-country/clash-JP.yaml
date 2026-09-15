@@ -3,66 +3,16 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-479071124
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: vless-1243279000
-  network: ws
+- name: vless-702719096
   port: 443
-  server: 104.16.10.185
-  servername: jp3.yohototo.top
-  tls: true
+  server: 137.220.221.179
   type: vless
   udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-246499915
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: vless-1307744174
-  port: 443
-  reality-opts:
-    public-key: zPB0R1XcjjUCEWWXVrt4UAKXPFtFDVsrEQueuBRmKwA
-    short-id: aa76df495eafba20
-  server: 103.137.215.189
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d17a1e53-09c7-4174-aed8-033c01d39038
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-479071124
-  - vless-1243279000
-  - vless-246499915
-  - vless-1307744174
+  - vless-702719096
   type: select
 rules:
 - MATCH,PROXY

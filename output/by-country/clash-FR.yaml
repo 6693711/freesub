@@ -3,58 +3,51 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: vless-1309813017
-  port: 22223
-  server: 13.39.182.161
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- client-fingerprint: ios
+- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc
-  name: vless-561641520
+  name: 🏳️ ShatakVPN 314063
   network: grpc
   port: 2083
-  server: usejh2.neobo-tooth.ru
+  server: 45.144.28.39
+  servername: usejh2.neobo-tooth.ru
   tls: true
   type: vless
   udp: true
   uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: unsafe
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.50.143 443
-  network: ws
+- name: 🏳️ ShatakVPN 453821
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 104.21.50.143
-  servername: 4qzsz6e8u00s.tlzw8le6ubhs.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 50414e45-4c5f-5a45-5553-5a26a30b00dc
-  ws-opts:
-    headers:
-      Host: 4qzsz6e8u00s.tlzw8le6ubhs.workers.dev
-    path: /stream/PANEL_ZEUS/5a26a30b00dc
+  server: 35.181.166.40
+  skip-cert-verify: true
+  sni: vpn-fr-002.fastervpn.world
+  type: hysteria2
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.175.23 443
-  network: ws
+  name: vless-1051397816
   port: 443
-  server: 172.67.175.23
-  servername: trex-panel-nubj0s.samifakor.workers.dev
+  reality-opts:
+    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
+    short-id: 98fa0b00d09419f7
+  server: 51.38.82.1
+  servername: play.google.com
   tls: true
   type: vless
   udp: true
-  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
-  ws-opts:
-    headers:
-      Host: trex-panel-nubj0s.samifakor.workers.dev
-    path: /stream/TrexBridge/ef859652a80e
+  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
+- name: hysteria2-24391
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1309813017
-  - vless-561641520
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.50.143 443
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.175.23 443
+  - 🏳️ ShatakVPN 314063
+  - 🏳️ ShatakVPN 453821
+  - vless-1051397816
+  - hysteria2-24391
   type: select
 rules:
 - MATCH,PROXY
