@@ -3,35 +3,8 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 868026
-  password: zhangyang
-  port: 6443
-  server: 130.61.50.75
-  skip-cert-verify: true
-  sni: 130.61.50.75
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1240382595
-  port: 443
-  reality-opts:
-    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
-    short-id: c6dc8abb0235dc05
-  server: 162.248.166.35
-  servername: www.caradisiac.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
-- name: 🏳️ ShatakVPN 359592
-  password: zhangyang
-  port: 6443
-  server: 130.61.50.75
-  skip-cert-verify: true
-  sni: 130.61.50.75
-  type: hysteria2
 - cipher: aes-256-gcm
-  name: 🇩🇪 Frankfurt am Main  HE  Germany
+  name: 🇩🇪 ShatakVPN 201540
   password: XKFKl2rULjIp74
   port: 8008
   server: 185.226.172.8
@@ -40,10 +13,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 868026
-  - vless-1240382595
-  - 🏳️ ShatakVPN 359592
-  - 🇩🇪 Frankfurt am Main  HE  Germany
+  - 🇩🇪 ShatakVPN 201540
   type: select
 rules:
 - MATCH,PROXY

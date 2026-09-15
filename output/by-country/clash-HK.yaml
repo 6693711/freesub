@@ -3,25 +3,54 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-483633862
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1328599964
+  port: 20270
+  reality-opts:
+    public-key: 0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8
+    short-id: d5b538acf8a93540
+  server: hk-1.gsafevpnapi.com
+  servername: www.yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8da6f662-e36b-4eff-99f9-43a842911707
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港
+  port: 30807
+  server: v10.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-1328599874
+  port: 20270
+  reality-opts:
+    public-key: 0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8
+    short-id: d5b538acf8a93540
+  server: hk-1.gsafevpnapi.com
+  servername: www.yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 257b0378-01c9-4ded-836d-f94df60bd19c
+- name: hysteria2-4524389
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: speedtest.tinkoff.ru
-  type: hysteria2
-- name: hysteria2-892566711
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
+  sni: https://t.me/wangcai2🇨🇳
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-483633862
-  - hysteria2-892566711
+  - vless-1328599964
+  - 🇭🇰_HK_中国香港
+  - vless-1328599874
+  - hysteria2-4524389
   type: select
 rules:
 - MATCH,PROXY

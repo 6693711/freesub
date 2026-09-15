@@ -4,21 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: freegrpc
-  name: vless-1115899893
-  network: grpc
-  port: 2087
-  server: srv-21bac9.vless.monster
-  servername: srv-21bac9.vless.monster
+  flow: xtls-rprx-vision
+  name: vless-1317298737
+  port: 8443
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  server: 31.58.181.88
+  servername: tradingview.com
   tls: true
   type: vless
   udp: true
-  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+  uuid: a85d3eb0-c71e-4086-8139-6ac7c9120389
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1115899893
+  - vless-1317298737
   type: select
 rules:
 - MATCH,PROXY
