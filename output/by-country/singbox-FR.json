@@ -3,8 +3,15 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 421892",
-      "server": "45.144.28.39",
+      "tag": "vless-1309813017",
+      "server": "13.39.182.161",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-561641520",
+      "server": "usejh2.neobo-tooth.ru",
       "server_port": 2083,
       "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
       "tls": {
@@ -12,7 +19,7 @@
         "server_name": "usejh2.neobo-tooth.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -22,21 +29,46 @@
     },
     {
       "type": "vless",
-      "tag": "vless-976057672",
-      "server": "usejh2.neobo-tooth.ru",
-      "server_port": 2083,
-      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "tag": "🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.50.143 443",
+      "server": "104.21.50.143",
+      "server_port": 443,
+      "uuid": "50414e45-4c5f-5a45-5553-5a26a30b00dc",
       "tls": {
         "enabled": true,
-        "server_name": "usejh2.neobo-tooth.ru",
+        "server_name": "4qzsz6e8u00s.tlzw8le6ubhs.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/PANEL_ZEUS/5a26a30b00dc",
+        "headers": {
+          "Host": "4qzsz6e8u00s.tlzw8le6ubhs.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.175.23 443",
+      "server": "172.67.175.23",
+      "server_port": 443,
+      "uuid": "50414e45-4c5f-5a45-5553-ef859652a80e",
+      "tls": {
+        "enabled": true,
+        "server_name": "trex-panel-nubj0s.samifakor.workers.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "path": "/stream/TrexBridge/ef859652a80e",
+        "headers": {
+          "Host": "trex-panel-nubj0s.samifakor.workers.dev"
+        }
       }
     },
     {

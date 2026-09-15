@@ -3,21 +3,36 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1281034084",
-      "server": "89.125.147.199",
-      "server_port": 443,
-      "uuid": "cabd9303-ae32-4d25-86b9-26b312d0f044",
+      "tag": "vless-81052",
+      "server": "84.235.244.108",
+      "server_port": 22573,
+      "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "uae.unixzone.us"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 92ms",
+      "server": "31.56.189.27",
+      "server_port": 8765,
+      "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "maps.apple.com",
+        "server_name": "srv-21bac9.vless.monster",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg",
-          "short_id": "f6c7c139b9c938db"
+          "public_key": "M08l5tDmJUYELykZCNYQyFgtR9Zc-A4ZGlUSLcUeS2c",
+          "short_id": "1bcc9177f3124b25"
         }
       }
     },

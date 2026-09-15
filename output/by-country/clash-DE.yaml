@@ -3,94 +3,51 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-1258042859
-  port: 7443
-  reality-opts:
-    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
-    short-id: d2061bb1
-  server: 31.76.7.154
-  servername: ya.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1240382595
+  name: vless-827975777
   port: 443
   reality-opts:
-    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
-    short-id: c6dc8abb0235dc05
-  server: 162.248.166.35
-  servername: www.caradisiac.com
+    public-key: rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A
+    short-id: ab88d256
+  server: 170.101.109.37
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 Frankfurt am Main  HE  Germany
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇩🇪 Karlsruhe  BW  Germany
-  password: kKEd0rBrd56Furjz
-  port: 80
-  server: 2.58.81.221
-  type: ss
-  udp: true
+  uuid: bf645ffe-a3cc-4480-8e4c-9bcd1af41052
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1244347192
-  port: 443
+  name: vless-1226359761
+  port: 2083
   reality-opts:
-    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
-    short-id: c6dc8abb0235dc05
-  server: 162.248.166.35
-  servername: www.caradisiac.com
+    public-key: H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk
+    short-id: af04ff8094115e93
+  server: 178.105.61.61
+  servername: 178.105.61.61
   tls: true
   type: vless
   udp: true
-  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1240382576
-  port: 443
-  reality-opts:
-    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
-    short-id: c6dc8abb0235dc05
-  server: 162.248.166.35
-  servername: www.caradisiac.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
+  uuid: cb077bf2-70b7-457b-af42-27cdc3e0e544
 - client-fingerprint: chrome
-  name: vless-685581276
-  port: 40443
-  reality-opts:
-    public-key: VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA
-    short-id: 5b97
-  server: 93.152.217.41
-  servername: deepl.com
+  name: '[openproxylist.com] DE 15204395'
+  network: ws
+  port: 443
+  server: rubifen.adaspoloandco.com
+  servername: rubifen.adaspoloandco.com
   tls: true
   type: vless
   udp: true
-  uuid: 969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  ws-opts:
+    headers: {}
+    path: /GOrbEh
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1258042859
-  - vless-1240382595
-  - 🇩🇪 Frankfurt am Main  HE  Germany
-  - 🇩🇪 Karlsruhe  BW  Germany
-  - vless-1244347192
-  - vless-1240382576
-  - vless-685581276
+  - vless-827975777
+  - vless-1226359761
+  - '[openproxylist.com] DE 15204395'
   type: select
 rules:
 - MATCH,PROXY

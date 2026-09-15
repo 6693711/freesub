@@ -3,49 +3,33 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1005907717
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+- name: hysteria2-1209964823
+  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
   port: 8443
-  server: 85.204.107.176
+  server: 205.237.109.176
+  skip-cert-verify: true
+  sni: hopp-netherland-new.dynuddns.net
+  type: hysteria2
+- name: hysteria2-1090323312
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  port: 8443
+  server: 162.249.126.6
   skip-cert-verify: false
-  sni: hopp-romania-new.roxa.org
+  sni: hopp-germany-new.ddnsguru.com
   type: hysteria2
-- name: hysteria2-923321834
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
+- name: 咕咕
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
   port: 8443
-  server: 205.237.109.164
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
-  type: hysteria2
-- name: hysteria2-1045026815
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  port: 8443
-  server: 205.237.109.173
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
-  type: hysteria2
-- name: hysteria2-1045025816
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  port: 8443
-  server: 85.204.107.183
-  skip-cert-verify: true
-  sni: hopp-romania-new.roxa.org
-  type: hysteria2
-- name: 🏳️ ShatakVPN 920951
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  port: 8443
-  server: 205.237.109.162
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
+  server: 162.249.126.7
+  skip-cert-verify: false
+  sni: hopp-germany-new.ddnsguru.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1005907717
-  - hysteria2-923321834
-  - hysteria2-1045026815
-  - hysteria2-1045025816
-  - 🏳️ ShatakVPN 920951
+  - hysteria2-1209964823
+  - hysteria2-1090323312
+  - 咕咕
   type: select
 rules:
 - MATCH,PROXY
