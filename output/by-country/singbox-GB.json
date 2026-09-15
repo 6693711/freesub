@@ -3,7 +3,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-860815991",
+      "tag": "vless-855707869",
       "server": "95.154.196.61",
       "server_port": 443,
       "uuid": "e5d917f5-fc78-455e-bbb5-81d08715f3d6",
@@ -13,7 +13,7 @@
         "server_name": "strapi.io",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -21,14 +21,6 @@
           "short_id": "e4a1b53b03eff60d"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 Manchester  ENG  United Kingdom",
-      "server": "141.98.101.181",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
     },
     {
       "type": "direct",

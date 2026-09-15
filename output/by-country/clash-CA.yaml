@@ -3,30 +3,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: '@V2ray_confiig #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 15.223.122.197
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇨🇦 QC  Canada
-  password: zDNVedRFPQexG9v
-  port: 445
-  server: 51.222.141.125
-  type: ss
+- client-fingerprint: chrome
+  name: vless-1307824741
+  port: 2053
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  server: 66.70.179.198
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1118951746
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 51.222.200.165
-  type: ss
-  udp: true
-- client-fingerprint: edge
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-734969288
+  name: vless-2314770
   port: 443
   reality-opts:
     public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
@@ -37,13 +28,19 @@ proxies:
   type: vless
   udp: true
   uuid: 661f395d-b153-4199-a04b-693f5fe7f261
+- cipher: aes-128-gcm
+  name: '[openproxylist.com] CA 3255188'
+  password: shadowsocks
+  port: 443
+  server: 149.22.95.183
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - '@V2ray_confiig #1'
-  - 🇨🇦 QC  Canada
-  - shadowsocks-1118951746
-  - vless-734969288
+  - vless-1307824741
+  - vless-2314770
+  - '[openproxylist.com] CA 3255188'
   type: select
 rules:
 - MATCH,PROXY

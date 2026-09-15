@@ -3,17 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1093669534
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-145107
+  port: 443
+  server: 140.238.2.250
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: vmess-959706048
+  port: 443
+  server: 140.238.2.250
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-803630116
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1093669534
+  - vmess-145107
+  - vmess-959706048
+  - vless-803630116
   type: select
 rules:
 - MATCH,PROXY

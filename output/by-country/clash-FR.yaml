@@ -3,51 +3,48 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🏳️ ShatakVPN 314063
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- name: 🏳️ ShatakVPN 453821
+- name: 🏳️ ShatakVPN 264332
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 35.181.166.40
   skip-cert-verify: true
   sni: vpn-fr-002.fastervpn.world
   type: hysteria2
-- client-fingerprint: chrome
-  name: vless-1051397816
-  port: 443
-  reality-opts:
-    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
-    short-id: 98fa0b00d09419f7
-  server: 51.38.82.1
-  servername: play.google.com
-  tls: true
+- name: hysteria2-550001735
+  password: Krab9Hyst2_Rk7pQ2xL
+  port: 36723
+  server: 151.247.197.253
+  skip-cert-verify: true
+  sni: 151.247.197.253
+  type: hysteria2
+- name: 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down_1
+  port: 22224
+  server: 51.44.29.85
   type: vless
   udp: true
-  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
-- name: hysteria2-24391
-  password: dongtaiwang.com
-  port: 22000
-  server: 62.210.124.146
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: hysteria2-534776087
+  password: Krab9Hyst2_Rk7pQ2xL
+  port: 36723
+  server: 151.247.197.253
   skip-cert-verify: true
-  sni: www.microsoft.com
+  sni: www.cloudflare.com
   type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 935032
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 314063
-  - 🏳️ ShatakVPN 453821
-  - vless-1051397816
-  - hysteria2-24391
+  - 🏳️ ShatakVPN 264332
+  - hysteria2-550001735
+  - 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down_1
+  - hysteria2-534776087
+  - 🏳️ ShatakVPN 935032
   type: select
 rules:
 - MATCH,PROXY

@@ -2,27 +2,8 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 314063",
-      "server": "45.144.28.39",
-      "server_port": 2083,
-      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "usejh2.neobo-tooth.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 453821",
+      "tag": "🏳️ ShatakVPN 264332",
       "server": "35.181.166.40",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
@@ -33,36 +14,43 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1051397816",
-      "server": "51.38.82.1",
-      "server_port": 443,
-      "uuid": "9343f183-7a16-4bdd-9c65-b0c21feca40b",
+      "type": "hysteria2",
+      "tag": "hysteria2-550001735",
+      "server": "151.247.197.253",
+      "server_port": 36723,
+      "password": "Krab9Hyst2_Rk7pQ2xL",
       "tls": {
         "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M",
-          "short_id": "98fa0b00d09419f7"
-        }
+        "server_name": "151.247.197.253",
+        "insecure": true
       }
     },
     {
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down_1",
+      "server": "51.44.29.85",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
       "type": "hysteria2",
-      "tag": "hysteria2-24391",
-      "server": "62.210.124.146",
-      "server_port": 22000,
-      "password": "dongtaiwang.com",
+      "tag": "hysteria2-534776087",
+      "server": "151.247.197.253",
+      "server_port": 36723,
+      "password": "Krab9Hyst2_Rk7pQ2xL",
       "tls": {
         "enabled": true,
-        "server_name": "www.microsoft.com",
+        "server_name": "www.cloudflare.com",
         "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 935032",
+      "server": "51.255.13.232",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "BqnqToih0PbU"
     },
     {
       "type": "direct",

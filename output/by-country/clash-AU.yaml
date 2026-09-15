@@ -3,18 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-1323867184
+  port: 20270
+  reality-opts:
+    public-key: RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE
+    short-id: e6a5a4a9115456de
+  server: au1.gsafevpnapi.com
+  servername: www.yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5416ef6f-b8e5-48e9-87e4-3d5649b2e3e0
 - alterId: 0
   cipher: auto
-  name: vmess-650629579
+  name: vmess-485686936
   port: 18000
-  server: 38.91.107.49
+  server: 134.195.196.211
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: vmess-143561
+  port: 18000
+  server: 149.88.23.202
   type: vmess
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-650629579
+  - vless-1323867184
+  - vmess-485686936
+  - vmess-143561
   type: select
 rules:
 - MATCH,PROXY

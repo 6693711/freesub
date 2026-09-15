@@ -2,37 +2,20 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "[openproxylist.com] DE 14693570",
-      "server": "185.226.172.8",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74"
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1298905371",
-      "server": "arcturus.yokkastars.com",
-      "server_port": 40443,
-      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 868026",
+      "server": "130.61.50.75",
+      "server_port": 6443,
+      "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
-          "short_id": "db46e2946fc466fd"
-        }
+        "server_name": "130.61.50.75",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1250111352",
+      "tag": "vless-1240382595",
       "server": "162.248.166.35",
       "server_port": 443,
       "uuid": "d92b6509-8b63-4505-b3a2-1dc5b1c014ac",
@@ -42,7 +25,7 @@
         "server_name": "www.caradisiac.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -52,25 +35,24 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "[openproxylist.com] DE 15662633",
-      "server": "82.39.171.12",
-      "server_port": 443,
-      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 359592",
+      "server": "130.61.50.75",
+      "server_port": 6443,
+      "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "short_id": "c39cc7310a"
-        }
+        "server_name": "130.61.50.75",
+        "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 Frankfurt am Main  HE  Germany",
+      "server": "185.226.172.8",
+      "server_port": 8008,
+      "method": "aes-256-gcm",
+      "password": "XKFKl2rULjIp74"
     },
     {
       "type": "direct",

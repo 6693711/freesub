@@ -2,87 +2,17 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1319045211",
-      "server": "194.87.10.110",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "VlXlucSsQwOeLoIq"
-    },
-    {
       "type": "vless",
-      "tag": "vless-1027296886",
-      "server": "54.251.224.5",
-      "server_port": 26017,
-      "uuid": "d318cdac-0033-4b6e-98bf-35116e79c93f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amd.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "cy4ePzAdSz4pqRmAXXchMIgSoSKo8qjq2qLk5805LRA",
-          "short_id": "af1c2e33b0c7dad7"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🏳️ ShatakVPN 191091",
-      "server": "149.88.23.207",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1313262207",
-      "server": "217.217.254.126",
-      "server_port": 2053,
-      "uuid": "cb15cce9-73ed-4928-b38c-462f0732cbe9",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw",
-          "short_id": "87829de0e2bb82cb"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-651117976",
-      "server": "13.212.32.171",
+      "tag": "vless-1314045191",
+      "server": "104.16.156.227",
       "server_port": 443,
-      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-sg-001.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1310943040",
-      "server": "141.193.213.21",
-      "server_port": 8443,
-      "uuid": "29c3dd6b-b164-40ca-a0d5-f06aca52a8b2",
+      "uuid": "b8d8a5b0-867f-4491-b4e4-30edc04bb10e",
       "tls": {
         "enabled": true,
         "server_name": "u.srilankangrill.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -94,25 +24,94 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇯🇵_JP_日本->🇸🇬_SG_新加坡",
+      "server": "mszz.mangshe.xyz",
+      "server_port": 20562,
+      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1224865296",
+      "server": "149.88.23.207",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
       "type": "vless",
-      "tag": "vless-1027296860",
-      "server": "46.137.202.178",
-      "server_port": 12512,
-      "uuid": "2a6c617d-98e4-49c3-95ab-76f02fcf0150",
+      "tag": "vless-1319833039",
+      "server": "sg-1.gsafevpnapi.com",
+      "server_port": 20270,
+      "uuid": "e016d072-ed97-40d4-a83f-04c00f8df2a5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.intel.com",
+        "server_name": "www.yahoo.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA",
-          "short_id": "e692a8250d2e2fd0"
+          "public_key": "q78tZmuaXQTsrrjZtjjRDtoni6tzN-HhXcAY-iT5zF0",
+          "short_id": "fc13d6208ebbae16"
         }
       }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-145263",
+      "server": "149.88.23.202",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1015169542",
+      "server": "54.169.200.246",
+      "server_port": 41688,
+      "uuid": "49c0aac1-5e05-4f04-b624-248fc59e03c4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk",
+          "short_id": "7f342137c20387"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1058394824",
+      "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-485686544",
+      "server": "149.88.23.207",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

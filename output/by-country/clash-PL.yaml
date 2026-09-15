@@ -3,33 +3,32 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 巴西
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: go.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- name: 🏳️ ShatakVPN 250507
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 144.31.49.47
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- name: 🏳️ ShatakVPN 171612
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
+- cipher: aes-256-cfb
+  name: shadowsocks-812343744
+  password: S2zDyyPcmZN2h8EC
+  port: 9076
+  server: 217.30.10.44
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: TunService
+  name: 🏳️ ShatakVPN 868340
+  network: grpc
+  port: 33743
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 185.223.57.10
+  servername: www.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
 proxy-groups:
 - name: PROXY
   proxies:
-  - 巴西
-  - 🏳️ ShatakVPN 250507
-  - 🏳️ ShatakVPN 171612
+  - shadowsocks-812343744
+  - 🏳️ ShatakVPN 868340
   type: select
 rules:
 - MATCH,PROXY

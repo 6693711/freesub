@@ -2,11 +2,32 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-702719096",
-      "server": "137.220.221.179",
+      "type": "shadowsocks",
+      "tag": "🇯🇵 Tokyo  13  Japan",
+      "server": "149.22.87.241",
       "server_port": 443,
-      "uuid": "a16a3336-c9ab-489f-9b85-c973f5e2cfa4"
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1323828459",
+      "server": "jp-1.gsafevpnapi.com",
+      "server_port": 20270,
+      "uuid": "5416ef6f-b8e5-48e9-87e4-3d5649b2e3e0",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE",
+          "short_id": "28500ae15838f905"
+        }
+      }
     },
     {
       "type": "direct",
