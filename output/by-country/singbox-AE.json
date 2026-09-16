@@ -2,23 +2,15 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1317298737",
-      "server": "31.58.181.88",
-      "server_port": 8443,
-      "uuid": "a85d3eb0-c71e-4086-8139-6ac7c9120389",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-860759685",
+      "server": "85.204.107.172",
+      "server_port": 8080,
+      "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
       "tls": {
         "enabled": true,
-        "server_name": "tradingview.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
-        }
+        "server_name": "hopp-romania-new.roxa.org",
+        "insecure": true
       }
     },
     {

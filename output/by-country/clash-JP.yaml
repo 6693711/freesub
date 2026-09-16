@@ -5,82 +5,44 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1205876725
-  port: 10583
+  name: vless-951129347
+  port: 50159
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: vless-1319143163
-  port: 20270
-  reality-opts:
-    public-key: l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE
-    short-id: 28500ae15838f905
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- client-fingerprint: android
+  name: vless-1159409800
+  network: ws
+  port: 443
+  server: 104.21.70.21
+  servername: jp3.yohototo.top
   tls: true
   type: vless
   udp: true
-  uuid: e016d072-ed97-40d4-a83f-04c00f8df2a5
-- client-fingerprint: chrome
-  name: vless-1326488214
-  port: 20270
-  reality-opts:
-    public-key: l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE
-    short-id: 28500ae15838f905
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
-  tls: true
-  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- cipher: aes-256-gcm
+  name: 🇯🇵 Tokyo  13  Japan
+  password: 5f82dcfd-cab5-4b71-91c6-8b6fb4f76c55
+  port: 31870
+  server: jp-2.gsafevpnapi.com
+  type: ss
   udp: true
-  uuid: fee2c73a-d527-4b3f-9d48-0631168d83e8
-- client-fingerprint: chrome
-  name: vless-1328599988
-  port: 20270
-  reality-opts:
-    public-key: l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE
-    short-id: 28500ae15838f905
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e9e24ed8-b007-4e29-b54f-1ece641e60fb
-- name: hysteria2-13527647
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1149851385
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1205876725
-  - vless-1319143163
-  - vless-1326488214
-  - vless-1328599988
-  - hysteria2-13527647
-  - vless-1149851385
+  - vless-951129347
+  - vless-1159409800
+  - 🇯🇵 Tokyo  13  Japan
   type: select
 rules:
 - MATCH,PROXY

@@ -2,6 +2,18 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-620179978",
+      "server": "admin.wwwinternetvideo.click",
+      "server_port": 443,
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
       "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443",
       "server": "144.31.5.3",
@@ -19,26 +31,30 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 657174",
-      "server": "45.192.12.93",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 131213",
-      "server": "144.31.49.47",
+      "tag": "巴西",
+      "server": "go.wwwinternetvideo.click",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
         "server_name": "admin.wwwinternetvideo.click",
         "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔vpnbaz 🔒 VL-TCP-N/A ❔ XX 107ms",
+      "server": "144.31.5.64",
+      "server_port": 443,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl6.moritech.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
