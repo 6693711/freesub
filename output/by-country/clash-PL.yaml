@@ -3,48 +3,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 979542
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: 🏳️ ShatakVPN 511817
-  network: grpc
-  port: 33743
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.10
-  servername: www.google.com
+  flow: xtls-rprx-vision
+  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443
+  port: 443
+  server: 144.31.5.3
+  servername: pl4.moritech.net
   tls: true
   type: vless
   udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 891937
-  password: U9YAoqBgg5VyGBc6vQv1sN
-  port: 7538
-  server: 194.61.121.93
-  type: ss
-  udp: true
-- name: hysteria2-768953025
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- name: 🏳️ ShatakVPN 657174
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: streambox.wwwinternetvideo.click
+  server: 45.192.12.93
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
+- name: 🏳️ ShatakVPN 131213
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 144.31.49.47
   skip-cert-verify: true
-  sni: streambox.wwwinternetvideo.click
+  sni: admin.wwwinternetvideo.click
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 979542
-  - 🏳️ ShatakVPN 511817
-  - 🏳️ ShatakVPN 891937
-  - hysteria2-768953025
+  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443
+  - 🏳️ ShatakVPN 657174
+  - 🏳️ ShatakVPN 131213
   type: select
 rules:
 - MATCH,PROXY

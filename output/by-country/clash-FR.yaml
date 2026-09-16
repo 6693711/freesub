@@ -1,0 +1,38 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷 France
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
+  udp: true
+- name: 🇫🇷 法国 | FRA_1
+  port: 22223
+  server: 13.36.35.121
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
+  port: 443
+  server: 162.19.10.99
+  servername: nasnet-162191099-direct.mbghalibaf.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇫🇷 France
+  - 🇫🇷 法国 | FRA_1
+  - 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

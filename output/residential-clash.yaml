@@ -2,19 +2,10 @@ allow-lan: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰_HK_中国香港
-  port: 30807
-  server: v10.hdacd.com
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+proxies: []
 proxy-groups:
 - name: PROXY
-  proxies:
-  - 🇭🇰_HK_中国香港
+  proxies: []
   type: select
 rules:
 - MATCH,PROXY
