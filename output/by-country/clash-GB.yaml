@@ -1,0 +1,30 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: aes-256-gcm
+  name: 🇬🇧 City of London  ENG  United Kingdom
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 94.156.250.148
+  type: ss
+  udp: true
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1230573705
+  network: grpc
+  port: 2083
+  server: 66.90.104.42
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇬🇧 City of London  ENG  United Kingdom
+  - vless-1230573705
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

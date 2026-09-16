@@ -3,45 +3,33 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-951129347
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
+- alterId: 0
+  cipher: auto
+  name: vmess-1121839535
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
   udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: android
-  name: vless-1159409800
-  network: ws
-  port: 443
-  server: 104.21.70.21
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
 - cipher: aes-256-gcm
-  name: 🇯🇵 Tokyo  13  Japan
-  password: 5f82dcfd-cab5-4b71-91c6-8b6fb4f76c55
+  name: shadowsocks-1335471417
+  password: 2bf192f1-7d86-43a3-88b3-8f72b7eb5ad9
   port: 31870
   server: jp-2.gsafevpnapi.com
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇯🇵 Tokyo  13  Japan
+  password: 3eOFeNssde7PYYMv
+  port: 443
+  server: 84.247.155.196
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-951129347
-  - vless-1159409800
+  - vmess-1121839535
+  - shadowsocks-1335471417
   - 🇯🇵 Tokyo  13  Japan
   type: select
 rules:
