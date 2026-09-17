@@ -3,31 +3,62 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: vless-1350113772
+  port: 53224
+  server: 95.179.169.44
+  type: vless
+  udp: true
+  uuid: e4887910-bcfc-48f8-8cd4-abb592e181af
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms
-  port: 443
-  reality-opts:
-    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-    short-id: 00bca5982f82d083
-  server: 144.31.168.95
-  servername: eu-central.cendora.ru
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: vless-1113474488
+  network: grpc
+  port: 2087
+  server: srv-21bac9.vless.monster
+  servername: srv-21bac9.vless.monster
   tls: true
   type: vless
   udp: true
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-- name: 🏳️ ShatakVPN 121258
-  password: zhangyang
-  port: 6443
-  server: 130.61.50.75
-  skip-cert-verify: true
-  sni: 130.61.50.75
-  type: hysteria2
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-827975777
+  port: 443
+  reality-opts:
+    public-key: rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A
+    short-id: ab88d256
+  server: 170.101.109.37
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bf645ffe-a3cc-4480-8e4c-9bcd1af41052
+- name: 🏳️ ShatakVPN 939260
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
+  udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  ws-opts:
+    headers: {}
+    path: /29c8fed7ca22
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-229
+  password: PWpjPo3tqhPN4yRZ
+  port: 20001
+  server: 8.209.74.72
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms
-  - 🏳️ ShatakVPN 121258
+  - vless-1350113772
+  - vless-1113474488
+  - vless-827975777
+  - 🏳️ ShatakVPN 939260
+  - shadowsocks-229
   type: select
 rules:
 - MATCH,PROXY
