@@ -3,19 +3,40 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: qq
+- name: hysteria2-1361249047
+  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
+  port: 27102
+  server: jp1.xiaoliyu.us
+  skip-cert-verify: false
+  sni: jp1.xiaoliyu.us
+  type: hysteria2
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-725810821
-  port: 18007
+  name: vless-950750905
+  port: 50159
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- name: hysteria2-1087758493
+  password: 184cdec28da5a09450803c8debcd2cc9
+  port: 50160
+  server: 138.3.208.26
+  skip-cert-verify: true
+  sni: 138.3.208.26
+  type: hysteria2
+- name: '日本 #1'
+  password: 184cdec28da5a09450803c8debcd2cc9
+  port: 50160
+  server: 138.3.208.26
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-962693501
@@ -32,7 +53,10 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-725810821
+  - hysteria2-1361249047
+  - vless-950750905
+  - hysteria2-1087758493
+  - '日本 #1'
   - vless-962693501
   type: select
 rules:

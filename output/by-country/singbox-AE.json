@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "vless-1333105419",
+      "server": "cdn.snobvpn.online",
+      "server_port": 80,
+      "uuid": "cabd9303-ae32-4d25-86b9-26b312d0f044",
+      "transport": {
+        "type": "ws",
+        "path": "/snob-ws",
+        "headers": {
+          "Host": "cdn.snobvpn.online"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

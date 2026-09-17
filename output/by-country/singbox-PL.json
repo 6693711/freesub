@@ -2,24 +2,50 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 671298",
-      "server": "144.31.49.47",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "type": "vless",
+      "tag": "vless-1126122373",
+      "server": "185.223.57.16",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
         "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": true
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-717969033",
-      "server": "217.30.10.44",
-      "server_port": 9052,
-      "method": "aes-256-cfb",
-      "password": "jt2ekBNc9HuVtm2a"
+      "type": "vless",
+      "tag": "vless-1105975128",
+      "server": "185.223.57.10",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
     },
     {
       "type": "direct",

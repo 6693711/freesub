@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1210298803
+- name: hysteria2-1059437573
   password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
   port: 8443
-  server: 162.249.126.7
-  skip-cert-verify: false
+  server: 162.249.126.2
+  skip-cert-verify: true
   sni: hopp-germany-new.ddnsguru.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1210298803
+  - hysteria2-1059437573
   type: select
 rules:
 - MATCH,PROXY

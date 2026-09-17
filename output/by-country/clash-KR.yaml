@@ -3,31 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1162353391
+- cipher: aes-256-cfb
+  name: shadowsocks-817206649
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.133
+  type: ss
+  udp: true
+- name: hysteria2-650671509
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: 3.36.93.74
+  type: hysteria2
+- name: hysteria2-1111846076
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
   skip-cert-verify: true
-  sni: 152.67.200.82
+  sni: speedtest.tinkoff.ru
   type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-59621877
-  port: 18967
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-1111846126
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: whatsapp.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1162353391
-  - vless-59621877
+  - shadowsocks-817206649
+  - hysteria2-650671509
+  - hysteria2-1111846076
+  - hysteria2-1111846126
   type: select
 rules:
 - MATCH,PROXY
