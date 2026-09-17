@@ -1,0 +1,25 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: fi02-grpc-8e47a
+  name: vless-1338628846
+  network: grpc
+  port: 9443
+  server: 185.255.179.11
+  servername: hub-fi-02.hanvpn.cc
+  tls: true
+  type: vless
+  udp: true
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1338628846
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

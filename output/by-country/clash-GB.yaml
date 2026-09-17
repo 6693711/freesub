@@ -3,15 +3,19 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- grpc-opts:
-    grpc-service-name: vless
-  name: vless-1230573696
-  network: grpc
-  port: 2083
-  server: 66.90.105.210
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-810585323
+  port: 443
+  reality-opts:
+    public-key: IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs
+    short-id: 1aa9f3c9021280c0
+  server: 5.152.223.97
+  servername: strapi.io
+  tls: true
   type: vless
   udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  uuid: be5b6ad6-8184-4b63-82ac-3bc00c09c98c
 - cipher: aes-256-gcm
   name: 🇬🇧 Portsmouth  ENG  United Kingdom
   password: g5h5jleTRSyO3Rk4
@@ -19,11 +23,42 @@ proxies:
   server: 149.102.132.184
   type: ss
   udp: true
+- alterId: 0
+  cipher: auto
+  name: 🏳️ ShatakVPN 445638
+  network: ws
+  port: 80
+  server: 57.129.132.223
+  type: vmess
+  udp: true
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  ws-opts:
+    headers:
+      Host: google.com
+    path: /vmess/
+- alterId: 0
+  cipher: auto
+  name: 🏳️ ShatakVPN 744160
+  port: 22324
+  server: 66.163.117.58
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1251465971
+  password: c58d16e593d44f42
+  port: 11001
+  server: 158.173.221.214
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1230573696
+  - vless-810585323
   - 🇬🇧 Portsmouth  ENG  United Kingdom
+  - 🏳️ ShatakVPN 445638
+  - 🏳️ ShatakVPN 744160
+  - shadowsocks-1251465971
   type: select
 rules:
 - MATCH,PROXY

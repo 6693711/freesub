@@ -3,25 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1015696588
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
+- name: hysteria2-855762695
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8443
-  server: 205.237.109.168
-  skip-cert-verify: false
-  sni: hopp-netherland-new.dynuddns.net
+  server: 85.204.107.171
+  skip-cert-verify: true
+  sni: hopp-romania-new.roxa.org
   type: hysteria2
-- name: hysteria2-1090323312
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+- name: hysteria2-896855661
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8443
-  server: 162.249.126.6
-  skip-cert-verify: false
-  sni: hopp-germany-new.ddnsguru.com
+  server: 85.204.107.174
+  skip-cert-verify: true
+  sni: hopp-romania-new.roxa.org
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1015696588
-  - hysteria2-1090323312
+  - hysteria2-855762695
+  - hysteria2-896855661
   type: select
 rules:
 - MATCH,PROXY
