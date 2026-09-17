@@ -4,76 +4,30 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: vless-1343024308
-  network: grpc
-  port: 2053
-  reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 4881f8244d1b9021
-  server: new3.smart-cats.ru
-  servername: www.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
-- name: vless-1335071729
-  port: 53224
-  server: 95.179.169.44
-  type: vless
-  udp: true
-  uuid: e4887910-bcfc-48f8-8cd4-abb592e181af
-- cipher: aes-256-cfb
-  name: shadowsocks-1342739011
-  password: amazonskr05
-  port: 443
-  server: 52.28.158.0
-  type: ss
-  udp: true
-- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | DEU
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms
   port: 443
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 212.16.92.111
-  servername: jobinvest.ru
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
   tls: true
   type: vless
   udp: true
-  uuid: 32721515-985b-4773-9e70-5d2e1b88a060
-- cipher: aes-256-cfb
-  name: shadowsocks-1340916509
-  password: amazonskr05
-  port: 443
-  server: 63.180.252.123
-  type: ss
-  udp: true
-- name: hysteria2-1308175974
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- name: 🏳️ ShatakVPN 121258
   password: zhangyang
   port: 6443
   server: 130.61.50.75
   skip-cert-verify: true
-  sni: https%252525253a%252525252f%252525252fwww.calmloud.com
+  sni: 130.61.50.75
   type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇩🇪 Karlsruhe  BW  Germany
-  password: kKEd0rBrd56Furjz
-  port: 80
-  server: 2.58.81.221
-  type: ss
-  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1343024308
-  - vless-1335071729
-  - shadowsocks-1342739011
-  - 🇩🇪 德国 | DEU
-  - shadowsocks-1340916509
-  - hysteria2-1308175974
-  - 🇩🇪 Karlsruhe  BW  Germany
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms
+  - 🏳️ ShatakVPN 121258
   type: select
 rules:
 - MATCH,PROXY

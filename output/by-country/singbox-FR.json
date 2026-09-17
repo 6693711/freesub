@@ -2,8 +2,20 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-1005580211",
+      "server": "35.181.166.40",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "35.181.166.40",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "[openproxylist.com] FR 15392676",
+      "tag": "vless-1298542551",
       "server": "51.77.217.70",
       "server_port": 2053,
       "uuid": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
@@ -19,6 +31,18 @@
           "public_key": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w",
           "short_id": "bfe58beb41f1d09f"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 447860",
+      "server": "35.181.166.40",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-fr-002.fastervpn.world",
+        "insecure": true
       }
     },
     {

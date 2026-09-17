@@ -3,90 +3,36 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1343024308",
-      "server": "new3.smart-cats.ru",
-      "server_port": 2053,
-      "uuid": "60a361f9-3c45-4954-9e4c-92a85bda243d",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms",
+      "server": "144.31.168.95",
+      "server_port": 443,
+      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "eu-central.cendora.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY",
-          "short_id": "4881f8244d1b9021"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1335071729",
-      "server": "95.179.169.44",
-      "server_port": 53224,
-      "uuid": "e4887910-bcfc-48f8-8cd4-abb592e181af"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1342739011",
-      "server": "52.28.158.0",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 | DEU",
-      "server": "212.16.92.111",
-      "server_port": 443,
-      "uuid": "32721515-985b-4773-9e70-5d2e1b88a060",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "jobinvest.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+          "public_key": "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI",
+          "short_id": "00bca5982f82d083"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1340916509",
-      "server": "63.180.252.123",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1308175974",
+      "tag": "🏳️ ShatakVPN 121258",
       "server": "130.61.50.75",
       "server_port": 6443,
       "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "https%252525253a%252525252f%252525252fwww.calmloud.com",
+        "server_name": "130.61.50.75",
         "insecure": true
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Karlsruhe  BW  Germany",
-      "server": "2.58.81.221",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "kKEd0rBrd56Furjz"
     },
     {
       "type": "direct",

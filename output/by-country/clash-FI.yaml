@@ -3,22 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: fi02-grpc-8e47a
-  name: vless-1338628846
-  network: grpc
-  port: 9443
-  server: 185.255.179.11
-  servername: hub-fi-02.hanvpn.cc
+- client-fingerprint: chrome
+  name: vless-695938923
+  port: 448
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+    short-id: cd21e552537c7c0b
+  server: 185.79.138.71
+  servername: www.samsung.com
   tls: true
   type: vless
   udp: true
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1338628846
+  - vless-695938923
   type: select
 rules:
 - MATCH,PROXY
