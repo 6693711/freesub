@@ -1,0 +1,48 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-656230613
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-210050461
+  port: 13672
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-655819436
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  port: 443
+  server: vpn-kr-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-kr-002.fastervpn.world
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-656230613
+  - vless-210050461
+  - hysteria2-655819436
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

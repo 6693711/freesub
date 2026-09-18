@@ -2,16 +2,73 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1365378158",
-      "server": "files.fastline-labs.com",
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms",
+      "server": "82.118.19.153",
       "server_port": 443,
-      "password": "f89c89df-905c-4df3-ab07-4f1a37a81005",
+      "uuid": "adcaa148-7c66-4282-a81a-99ec8afa029d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "files.fastline-labs.com",
-        "insecure": true
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE",
+          "short_id": "670ed9f350bd8ee0"
+        }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1368540610",
+      "server": "130.61.34.19",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "w1Wt/Qp3zw/Aydr+xqNt0hSLXwjmNXcmut+QIGRSDUY="
+    },
+    {
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔒 VL-GRPC- ❔ XX 158ms",
+      "server": "31.184.244.219",
+      "server_port": 2053,
+      "uuid": "60a361f9-3c45-4954-9e4c-92a85bda243d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY",
+          "short_id": "4881f8244d1b9021"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1376462452",
+      "server": "130.61.80.134",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Yz7wERCXItjxg58QkWoUaXdAFoiDFoytVsSeRO0RojA="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1365418326",
+      "server": "130.61.119.117",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "QXDAqNvQJDUMd7I6mdmSnWxJHM09yjBC6Gf5xGFDkFg="
     },
     {
       "type": "direct",

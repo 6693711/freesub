@@ -10,26 +10,32 @@ proxies:
   skip-cert-verify: true
   sni: 202.146.222.89
   type: hysteria2
-- name: hysteria2-467980788
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-813407624
+  port: 443
+  reality-opts:
+    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
+    short-id: 14156e3ac23212cc
+  server: vj37-1936vtw.fincore.top
+  servername: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
+- name: hysteria2-650663575
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.89
+  server: 202.146.222.174
   skip-cert-verify: true
-  sni: https://t.me/clashv8🇨🇳
-  type: hysteria2
-- name: hysteria2-705682024
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2рҹү
+  sni: 202.146.222.174
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
   - hysteria2-540983040
-  - hysteria2-467980788
-  - hysteria2-705682024
+  - vless-813407624
+  - hysteria2-650663575
   type: select
 rules:
 - MATCH,PROXY

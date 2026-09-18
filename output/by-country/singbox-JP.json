@@ -3,7 +3,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-479071124",
+      "tag": "vless-714300185",
       "server": "3.114.220.22",
       "server_port": 10583,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -13,7 +13,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -23,32 +23,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1225789963",
-      "server": "137.220.221.179",
+      "type": "shadowsocks",
+      "tag": "shadowsocks-211",
+      "server": "149.22.87.241",
       "server_port": 443,
-      "uuid": "a16a3336-c9ab-489f-9b85-c973f5e2cfa4"
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-479013117",
-      "server": "45.88.43.116",
-      "server_port": 52454,
-      "password": "6c077487-06af-4fb1-9e46-d485d98f0a31",
-      "tls": {
-        "enabled": true,
-        "server_name": "45.88.43.116",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "vmess-1121649203",
-      "server": "45.32.57.118",
-      "server_port": 4433,
-      "uuid": "35b89832-0a7c-48dd-8d1c-a2891b522195",
-      "security": "auto",
-      "alter_id": 0
+      "type": "shadowsocks",
+      "tag": "shadowsocks-213",
+      "server": "149.22.87.240",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "direct",
