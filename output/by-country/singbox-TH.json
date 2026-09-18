@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "🆔surfboardv2ray 🔓 VM-WS-N/A ❔ XX down",
+      "server": "118.193.57.167",
+      "server_port": 49667,
+      "uuid": "d46bf492-45f4-4c33-82d1-ea2a1cb54eb6",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/d46bf492",
+        "headers": {}
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

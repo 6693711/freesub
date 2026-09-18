@@ -1,0 +1,41 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms
+  port: 443
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: 95.85.224.17
+  servername: est1313.ggisopi.su
+  tls: true
+  type: vless
+  udp: true
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 9d30d49278
+  name: vless-1297639936
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg
+    short-id: 72ccd4a7563c2953
+  server: 94.183.170.147
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5edbcb44-8d04-4fa7-a587-bc5d60c24ca1
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms
+  - vless-1297639936
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -3,11 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: hysteria2-650412204
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-fr-002.fastervpn.world
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
+- cipher: aes-256-cfb
+  name: 🇫🇷 法国 | FRA
+  password: amazonskr05
+  port: 443
+  server: 13.37.239.112
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 278351
+  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 215ms
   port: 443
-  server: 162.19.10.99
+  server: nasnet-162191099-direct.mbghalibaf.com
   servername: nasnet-162191099-direct.mbghalibaf.com
   tls: true
   type: vless
@@ -16,7 +30,9 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 278351
+  - hysteria2-650412204
+  - 🇫🇷 法国 | FRA
+  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 215ms
   type: select
 rules:
 - MATCH,PROXY

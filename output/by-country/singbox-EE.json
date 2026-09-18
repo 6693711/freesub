@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms",
+      "server": "95.85.224.17",
+      "server_port": 443,
+      "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "est1313.ggisopi.su",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1297639936",
+      "server": "94.183.170.147",
+      "server_port": 8443,
+      "uuid": "5edbcb44-8d04-4fa7-a587-bc5d60c24ca1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg",
+          "short_id": "72ccd4a7563c2953"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "9d30d49278"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

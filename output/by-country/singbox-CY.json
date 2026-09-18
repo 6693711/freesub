@@ -3,8 +3,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1168812404",
-      "server": "5.253.42.163",
+      "tag": "vless-113404806",
+      "server": "194.76.154.31",
+      "server_port": 40443,
+      "uuid": "9f0baff8-bdee-4de9-9515-bcc4932b41fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ",
+          "short_id": "a8ae"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-703656405",
+      "server": "preview.netraidly.ru",
       "server_port": 40443,
       "uuid": "15fd22d1-8931-4d41-af37-8ba6711e93fe",
       "flow": "xtls-rprx-vision",
@@ -13,7 +33,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -24,8 +44,8 @@
     },
     {
       "type": "vless",
-      "tag": "vless-656379052",
-      "server": "preview.netraidly.ru",
+      "tag": "vless-648967653",
+      "server": "5.253.42.163",
       "server_port": 40443,
       "uuid": "15fd22d1-8931-4d41-af37-8ba6711e93fe",
       "flow": "xtls-rprx-vision",
@@ -34,7 +54,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,

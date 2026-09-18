@@ -3,63 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms
-  port: 443
-  reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  server: 82.118.19.153
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
 - cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1368540610
-  password: w1Wt/Qp3zw/Aydr+xqNt0hSLXwjmNXcmut+QIGRSDUY=
+  name: 🇩🇪DE_5|1.2MB/s
+  password: rsZGSjFXUyi6kX8P6glg15+TdK0zdtKVBjkHYeZdJ58=
   port: 59924
-  server: 130.61.34.19
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 158ms
-  network: grpc
-  port: 2053
-  reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 4881f8244d1b9021
-  server: 31.184.244.219
-  servername: www.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1376462452
-  password: Yz7wERCXItjxg58QkWoUaXdAFoiDFoytVsSeRO0RojA=
-  port: 59924
-  server: 130.61.80.134
-  type: ss
-  udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1365418326
-  password: QXDAqNvQJDUMd7I6mdmSnWxJHM09yjBC6Gf5xGFDkFg=
-  port: 59924
-  server: 130.61.119.117
+  server: 130.61.82.183
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms
-  - shadowsocks-1368540610
-  - 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 158ms
-  - shadowsocks-1376462452
-  - shadowsocks-1365418326
+  - 🇩🇪DE_5|1.2MB/s
   type: select
 rules:
 - MATCH,PROXY
