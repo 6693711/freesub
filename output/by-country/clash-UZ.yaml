@@ -1,0 +1,23 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: 🆔surfboardv2ray 🔓 VL-WS-N/A ❔ XX 235ms
+  network: ws
+  port: 2087
+  server: 189.74.97.43
+  type: vless
+  udp: true
+  uuid: 10f7eb2d-d96d-4778-9d36-aff11e9d6629
+  ws-opts:
+    headers: {}
+    path: /73b6faea2d00
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔surfboardv2ray 🔓 VL-WS-N/A ❔ XX 235ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

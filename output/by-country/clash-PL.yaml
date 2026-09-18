@@ -3,20 +3,13 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: qq
-  grpc-opts:
-    grpc-service-name: TunService
-  name: vless-1126122373
-  network: grpc
-  port: 33743
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.16
-  servername: www.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- name: 🏳️ ShatakVPN 381487
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 45.192.12.93
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: TunService
@@ -34,7 +27,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1126122373
+  - 🏳️ ShatakVPN 381487
   - vless-1105975128
   type: select
 rules:

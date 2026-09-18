@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1059437573
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  port: 8443
-  server: 162.249.126.2
+- name: 🇸🇪_SE_瑞典
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  port: 4433
+  server: se.xiaoliyu.cyou
   skip-cert-verify: true
-  sni: hopp-germany-new.ddnsguru.com
+  sni: se.xiaoliyu.cyou
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1059437573
+  - 🇸🇪_SE_瑞典
   type: select
 rules:
 - MATCH,PROXY

@@ -3,21 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: vless-1333105419
-  network: ws
-  port: 80
-  server: cdn.snobvpn.online
+- client-fingerprint: random
+  name: vless-1285668166
+  port: 443
+  reality-opts:
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+    short-id: f6c7c139b9c938db
+  server: 89.125.147.199
+  servername: maps.apple.com
+  tls: true
   type: vless
   udp: true
   uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
-  ws-opts:
-    headers:
-      Host: cdn.snobvpn.online
-    path: /snob-ws
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1333105419
+  - vless-1285668166
   type: select
 rules:
 - MATCH,PROXY
