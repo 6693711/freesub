@@ -3,32 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 381487
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: vless-1105975128
-  network: grpc
-  port: 33743
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.10
-  servername: www.google.com
-  tls: true
-  type: vless
+- cipher: aes-256-cfb
+  name: shadowsocks-812343744
+  password: S2zDyyPcmZN2h8EC
+  port: 9076
+  server: 217.30.10.44
+  type: ss
   udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- cipher: aes-256-cfb
+  name: shadowsocks-819466521
+  password: aQqJbtwFGcCCaeL3
+  port: 9063
+  server: 217.30.10.44
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 381487
-  - vless-1105975128
+  - shadowsocks-812343744
+  - shadowsocks-819466521
   type: select
 rules:
 - MATCH,PROXY

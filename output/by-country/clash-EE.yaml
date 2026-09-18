@@ -3,19 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  name: 🔒 VL-TCP-TLS 🇪🇪 EE-94.183.170.135 8443
-  port: 8443
-  server: 94.183.170.135
-  servername: estproxy4.lockdwn.com
-  tls: true
-  type: vless
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1369364808
+  password: 6nQnSKAxCLJSZbg7KA94QA
+  port: 99
+  server: 212.87.190.124
+  type: ss
   udp: true
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-TCP-TLS 🇪🇪 EE-94.183.170.135 8443
+  - shadowsocks-1369364808
   type: select
 rules:
 - MATCH,PROXY

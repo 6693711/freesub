@@ -3,47 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 185ms
-  network: ws
+- name: hysteria2-1365378158
+  password: f89c89df-905c-4df3-ab07-4f1a37a81005
   port: 443
-  server: rubifen.adaspoloandco.com
-  servername: rubifen.adaspoloandco.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  ws-opts:
-    headers: {}
-    path: /GOrbEh
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1365418322
-  password: uuMbME5levfAj7yT6O3+6D+ufAlCTzK4KcgVq6AZAv8=
-  port: 59924
-  server: 130.61.119.122
-  type: ss
-  udp: true
-- name: 🇩🇪_DE_德国
-  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  port: 9443
-  server: 95.85.252.47
+  server: files.fastline-labs.com
   skip-cert-verify: true
-  sni: onecloudstream.com
+  sni: files.fastline-labs.com
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-209
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
-  type: ss
-  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 185ms
-  - shadowsocks-1365418322
-  - 🇩🇪_DE_德国
-  - shadowsocks-209
+  - hysteria2-1365378158
   type: select
 rules:
 - MATCH,PROXY

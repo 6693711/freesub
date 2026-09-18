@@ -3,7 +3,7 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🇸🇪_SE_瑞典
+- name: 嘎嘎
   password: 19f72087-4591-4d72-930b-2697078ec2be
   port: 4433
   server: se.xiaoliyu.cyou
@@ -13,7 +13,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇸🇪_SE_瑞典
+  - 嘎嘎
   type: select
 rules:
 - MATCH,PROXY

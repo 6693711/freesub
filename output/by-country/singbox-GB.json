@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1365418327",
+      "server": "144.24.226.249",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "axZ54YHizH8C2/85gqPV+VCC6r0h+nWWGemeypymi2I="
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

@@ -2,52 +2,16 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 185ms",
-      "server": "rubifen.adaspoloandco.com",
-      "server_port": 443,
-      "uuid": "cf39fab0-bb85-42cb-9945-2ad69d78e575",
-      "tls": {
-        "enabled": true,
-        "server_name": "rubifen.adaspoloandco.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/GOrbEh",
-        "headers": {}
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1365418322",
-      "server": "130.61.119.122",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "uuMbME5levfAj7yT6O3+6D+ufAlCTzK4KcgVq6AZAv8="
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇩🇪_DE_德国",
-      "server": "95.85.252.47",
-      "server_port": 9443,
-      "password": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
+      "tag": "hysteria2-1365378158",
+      "server": "files.fastline-labs.com",
+      "server_port": 443,
+      "password": "f89c89df-905c-4df3-ab07-4f1a37a81005",
       "tls": {
         "enabled": true,
-        "server_name": "onecloudstream.com",
+        "server_name": "files.fastline-labs.com",
         "insecure": true
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-209",
-      "server": "209.46.102.22",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "1hhrqrokj3ag"
     },
     {
       "type": "direct",

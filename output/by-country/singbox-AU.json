@@ -3,8 +3,8 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "vmess-655845743",
-      "server": "84.17.41.2",
+      "tag": "vmess-1161135286",
+      "server": "ww11.levikogjgfdd.ir",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",
@@ -12,12 +12,24 @@
     },
     {
       "type": "vmess",
-      "tag": "vmess-1075322096",
+      "tag": "vmess-1204622263",
       "server": "ww11.levikogjgfdd.ir",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",
       "alter_id": 0
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1163061815",
+      "server": "103.75.119.126",
+      "server_port": 2087,
+      "uuid": "731f177e-00aa-480c-b935-661456139a32",
+      "transport": {
+        "type": "ws",
+        "path": "/7586c69d3dc9",
+        "headers": {}
+      }
     },
     {
       "type": "direct",
