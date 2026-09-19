@@ -3,17 +3,45 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-128-gcm
-  name: 🏳️ ShatakVPN 456554
-  password: shadowsocks
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-838598258
   port: 443
-  server: 141.98.101.181
+  reality-opts:
+    public-key: IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs
+    short-id: 1aa9f3c9021280c0
+  server: 5.152.223.97
+  servername: strapi.io
+  tls: true
+  type: vless
+  udp: true
+  uuid: be5b6ad6-8184-4b63-82ac-3bc00c09c98c
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 747978
+  password: zRZNBszYyWo5
+  port: 8388
+  server: 51.77.225.200
   type: ss
   udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-817361595
+  port: 443
+  reality-opts:
+    public-key: 2ATxqiR22wlo3yXOHc43LFHM5NzWCdSGZLdBay_vJgM
+    short-id: e4a1b53b03eff60d
+  server: 95.154.196.61
+  servername: strapi.io
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5d917f5-fc78-455e-bbb5-81d08715f3d6
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 456554
+  - vless-838598258
+  - 🏳️ ShatakVPN 747978
+  - vless-817361595
   type: select
 rules:
 - MATCH,PROXY

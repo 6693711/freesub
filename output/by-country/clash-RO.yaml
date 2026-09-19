@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-859306105
+- name: hysteria2-860759612
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8443
   server: 85.204.107.172
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: hopp-romania-new.roxa.org
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-859306105
+  - hysteria2-860759612
   type: select
 rules:
 - MATCH,PROXY
