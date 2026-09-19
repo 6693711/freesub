@@ -1,0 +1,33 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: hysteria2-658428995
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-in-001.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-in-001.fastervpn.world
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-1382460030
+  network: ws
+  port: 80
+  server: 152.67.8.205
+  type: vmess
+  udp: true
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  ws-opts:
+    headers: {}
+    path: /
+proxy-groups:
+- name: PROXY
+  proxies:
+  - hysteria2-658428995
+  - vmess-1382460030
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -4,16 +4,34 @@ mode: rule
 port: 7890
 proxies:
 - cipher: 2022-blake3-chacha20-poly1305
-  name: 🇩🇪DE_5|1.2MB/s
-  password: rsZGSjFXUyi6kX8P6glg15+TdK0zdtKVBjkHYeZdJ58=
+  name: shadowsocks-1365418320
+  password: NiPxf0H2Yidm6y+KQxFBL9h6N0fIGwFOiUQPGC+3l+w=
   port: 59924
-  server: 130.61.82.183
+  server: 130.61.148.34
   type: ss
   udp: true
+- name: hysteria2-1328057127
+  password: zhangyang
+  port: 6443
+  server: 130.61.50.75
+  skip-cert-verify: true
+  sni: https%25252525253a%25252525252f%25252525252fwww.calmloud.com
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🔒 VL-TCP-TLS 🇩🇪 DE-5.230.135.136 8443
+  port: 8443
+  server: 5.230.135.136
+  servername: 1nf76rsu9r.stream-book.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 23af657b-e7f0-4f65-85da-dc96b7f30f37
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪DE_5|1.2MB/s
+  - shadowsocks-1365418320
+  - hysteria2-1328057127
+  - 🔒 VL-TCP-TLS 🇩🇪 DE-5.230.135.136 8443
   type: select
 rules:
 - MATCH,PROXY

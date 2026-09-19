@@ -4,18 +4,6 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms
-  port: 443
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  server: 95.85.224.17
-  servername: est1313.ggisopi.su
-  tls: true
-  type: vless
-  udp: true
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
-- client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 9d30d49278
   name: vless-1297639936
@@ -33,7 +21,6 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms
   - vless-1297639936
   type: select
 rules:

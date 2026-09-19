@@ -1,0 +1,21 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- alterId: 2
+  cipher: auto
+  name: 香港|@ripaojiedian
+  port: 30807
+  server: v10.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 香港|@ripaojiedian
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

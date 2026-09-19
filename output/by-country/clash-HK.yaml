@@ -3,14 +3,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1276640916
+- name: hysteria2-650663575
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.174
+  skip-cert-verify: true
+  sni: 202.146.222.174
+  type: hysteria2
+- name: hysteria2-705682024
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87ð\x9F\x87"
+  sni: https://t.me/wangcai2рҹү
   type: hysteria2
-- name: hysteria2-107825281
+- name: hysteria2-864234258
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: https%253a%252f%252ft.me%252fclashv8%25f0%259f%2587%25a8%25f0%259f%2587%25b3
+  type: hysteria2
+- alterId: 2
+  cipher: auto
+  name: 香港|@ripaojiedian
+  port: 30807
+  server: v10.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 🏳️ ShatakVPN 478820
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
@@ -20,8 +42,11 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1276640916
-  - hysteria2-107825281
+  - hysteria2-650663575
+  - hysteria2-705682024
+  - hysteria2-864234258
+  - 香港|@ripaojiedian
+  - 🏳️ ShatakVPN 478820
   type: select
 rules:
 - MATCH,PROXY

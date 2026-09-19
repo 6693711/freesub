@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: aes-256-cfb
+  name: shadowsocks-812343923
+  password: rpgbNnU9rDDU4aWZ
+  port: 9094
+  server: 185.135.86.175
+  type: ss
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - shadowsocks-812343923
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
