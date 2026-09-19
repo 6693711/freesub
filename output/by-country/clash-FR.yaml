@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 543449
+  name: 🏳️ ShatakVPN 572725
   port: 443
   server: 162.19.10.99
   servername: nasnet-162191099-direct.mbghalibaf.com
@@ -13,18 +13,32 @@ proxies:
   type: vless
   udp: true
   uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 407668
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
+- name: hysteria2-24391
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 424585
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.10
+  servername: fuck.rkn
+  tls: true
+  type: vless
   udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 543449
-  - 🏳️ ShatakVPN 407668
+  - 🏳️ ShatakVPN 572725
+  - hysteria2-24391
+  - 🏳️ ShatakVPN 424585
   type: select
 rules:
 - MATCH,PROXY

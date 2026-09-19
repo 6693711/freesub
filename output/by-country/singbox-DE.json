@@ -3,38 +3,49 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "shadowsocks-1365418320",
-      "server": "130.61.148.34",
+      "tag": "shadowsocks-1379162722",
+      "server": "130.61.147.64",
       "server_port": 59924,
       "method": "2022-blake3-chacha20-poly1305",
-      "password": "NiPxf0H2Yidm6y+KQxFBL9h6N0fIGwFOiUQPGC+3l+w="
+      "password": "JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q="
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1328057127",
-      "server": "130.61.50.75",
-      "server_port": 6443,
-      "password": "zhangyang",
-      "tls": {
-        "enabled": true,
-        "server_name": "https%25252525253a%25252525252f%25252525252fwww.calmloud.com",
-        "insecure": true
-      }
+      "type": "vmess",
+      "tag": "🇭🇰_HK_中国香港->🇩🇪_DE_德国",
+      "server": "v33.hdacd.com",
+      "server_port": 30833,
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "security": "auto",
+      "alter_id": 2
     },
     {
       "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇩🇪 DE-5.230.135.136 8443",
-      "server": "5.230.135.136",
-      "server_port": 8443,
-      "uuid": "23af657b-e7f0-4f65-85da-dc96b7f30f37",
+      "tag": "vless-1359868177",
+      "server": "api-4pda-k9x4m.xubi.org",
+      "server_port": 443,
+      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "1nf76rsu9r.stream-book.com",
+        "server_name": "4pda.to",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM",
+          "short_id": "d4f6a8c1b2e3f9aa"
         }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 | DEU",
+      "server": "130.61.147.64",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q="
     },
     {
       "type": "direct",

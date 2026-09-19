@@ -3,26 +3,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1297639936",
-      "server": "94.183.170.147",
+      "tag": "🏳️ ShatakVPN 448932",
+      "server": "62.233.39.9",
       "server_port": 8443,
-      "uuid": "5edbcb44-8d04-4fa7-a587-bc5d60c24ca1",
+      "uuid": "b2141c97-76af-ff6f-839b-70a53e23aad9",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "dl.dell.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,
-          "public_key": "s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg",
-          "short_id": "72ccd4a7563c2953"
+          "public_key": "oHaUPZiESTQQ89DMd4uIcPWgsyeFFy58iZYX_8mbvWk"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "9d30d49278"
+        "service_name": "TunService"
       }
     },
     {

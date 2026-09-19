@@ -3,9 +3,9 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-59621877",
+      "tag": "vless-12945899",
       "server": "3.39.4.109",
-      "server_port": 18967,
+      "server_port": 13672,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -24,23 +24,15 @@
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1111846076",
-      "server": "152.67.200.82",
-      "server_port": 50160,
-      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "tag": "hysteria2-722298531",
+      "server": "3.36.93.74",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "speedtest.tinkoff.ru",
+        "server_name": "google.com",
         "insecure": true
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-283",
-      "server": "221.139.79.57",
-      "server_port": 13979,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
     },
     {
       "type": "direct",

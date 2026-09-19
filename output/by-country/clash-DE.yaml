@@ -4,34 +4,47 @@ mode: rule
 port: 7890
 proxies:
 - cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1365418320
-  password: NiPxf0H2Yidm6y+KQxFBL9h6N0fIGwFOiUQPGC+3l+w=
+  name: shadowsocks-1379162722
+  password: JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q=
   port: 59924
-  server: 130.61.148.34
+  server: 130.61.147.64
   type: ss
   udp: true
-- name: hysteria2-1328057127
-  password: zhangyang
-  port: 6443
-  server: 130.61.50.75
-  skip-cert-verify: true
-  sni: https%25252525253a%25252525252f%25252525252fwww.calmloud.com
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🔒 VL-TCP-TLS 🇩🇪 DE-5.230.135.136 8443
-  port: 8443
-  server: 5.230.135.136
-  servername: 1nf76rsu9r.stream-book.com
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+  port: 30833
+  server: v33.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-1359868177
+  port: 443
+  reality-opts:
+    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
+    short-id: d4f6a8c1b2e3f9aa
+  server: api-4pda-k9x4m.xubi.org
+  servername: 4pda.to
   tls: true
   type: vless
   udp: true
-  uuid: 23af657b-e7f0-4f65-85da-dc96b7f30f37
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
+- cipher: 2022-blake3-chacha20-poly1305
+  name: 🇩🇪 德国 | DEU
+  password: JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q=
+  port: 59924
+  server: 130.61.147.64
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1365418320
-  - hysteria2-1328057127
-  - 🔒 VL-TCP-TLS 🇩🇪 DE-5.230.135.136 8443
+  - shadowsocks-1379162722
+  - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+  - vless-1359868177
+  - 🇩🇪 德国 | DEU
   type: select
 rules:
 - MATCH,PROXY

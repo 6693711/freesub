@@ -3,9 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🆔vpnbaz 🔒 VL-TCP-N/A ❔ XX down
+  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443
   port: 443
   server: 144.31.5.64
   servername: pl6.moritech.net
@@ -14,26 +14,9 @@ proxies:
   udp: true
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1320434991
-  port: 443
-  server: 50.7.248.237
-  servername: pl-new-dedic.failspace.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 715678
-  password: U9YAoqBgg5VyGBc6vQv1sN
-  port: 7538
-  server: 194.61.121.93
-  type: ss
-  udp: true
-- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: TunService
-  name: vless-1141367415
+  name: 🏳️ ShatakVPN 510275
   network: grpc
   port: 33743
   reality-opts:
@@ -44,32 +27,19 @@ proxies:
   type: vless
   udp: true
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- cipher: aes-256-cfb
-  name: shadowsocks-795694264
-  password: FAdUvMJUq5vDgKEq
-  port: 9006
-  server: 217.30.10.44
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 835390
+  password: U9YAoqBgg5VyGBc6vQv1sN
+  port: 7538
+  server: 194.61.121.93
   type: ss
   udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443
-  port: 443
-  server: 144.31.5.64
-  servername: pl6.moritech.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔vpnbaz 🔒 VL-TCP-N/A ❔ XX down
-  - vless-1320434991
-  - 🏳️ ShatakVPN 715678
-  - vless-1141367415
-  - shadowsocks-795694264
   - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443
+  - 🏳️ ShatakVPN 510275
+  - 🏳️ ShatakVPN 835390
   type: select
 rules:
 - MATCH,PROXY
