@@ -2,50 +2,37 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1379162722",
-      "server": "130.61.147.64",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q="
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰_HK_中国香港->🇩🇪_DE_德国",
-      "server": "v33.hdacd.com",
-      "server_port": 30833,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "security": "auto",
-      "alter_id": 2
-    },
-    {
       "type": "vless",
-      "tag": "vless-1359868177",
-      "server": "api-4pda-k9x4m.xubi.org",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 90ms",
+      "server": "144.31.168.95",
       "server_port": 443,
-      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
+      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "4pda.to",
+        "server_name": "eu-central.cendora.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM",
-          "short_id": "d4f6a8c1b2e3f9aa"
+          "public_key": "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI",
+          "short_id": "00bca5982f82d083"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 德国 | DEU",
-      "server": "130.61.147.64",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q="
+      "type": "vless",
+      "tag": "vless-1131643483",
+      "server": "163.8.195.241",
+      "server_port": 2087,
+      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
+      "transport": {
+        "type": "ws",
+        "path": "/29c8fed7ca22",
+        "headers": {}
+      }
     },
     {
       "type": "direct",

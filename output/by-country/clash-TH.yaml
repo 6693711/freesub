@@ -3,22 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: 🇪🇸 西班牙 | ESP
+- client-fingerprint: ios
+  name: vless-1387558979
   port: 443
   reality-opts:
-    public-key: iI9J--AfPKCXbVle3Om-WMn_g-3bO3SsVzUCNtwUkU0
-    short-id: fe85cb6a5c84e64c
-  server: 34.175.44.113
+    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
+    short-id: ca672c53fbbac555
+  server: 34.15.162.1
   servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 0b4b1548-c7ca-45a5-9096-6c3cc4b1c43b
+  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇪🇸 西班牙 | ESP
+  - vless-1387558979
   type: select
 rules:
 - MATCH,PROXY

@@ -3,48 +3,34 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1379162722
-  password: JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q=
-  port: 59924
-  server: 130.61.147.64
-  type: ss
-  udp: true
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-  port: 30833
-  server: v33.hdacd.com
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- client-fingerprint: ios
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-1359868177
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 90ms
   port: 443
   reality-opts:
-    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
-    short-id: d4f6a8c1b2e3f9aa
-  server: api-4pda-k9x4m.xubi.org
-  servername: 4pda.to
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
   tls: true
   type: vless
   udp: true
-  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
-- cipher: 2022-blake3-chacha20-poly1305
-  name: 🇩🇪 德国 | DEU
-  password: JgVnjf+IujBeHuKJ9dhXtdyGYRYY8x9LPeqbgYYQE0Q=
-  port: 59924
-  server: 130.61.147.64
-  type: ss
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- name: vless-1131643483
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
   udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  ws-opts:
+    headers: {}
+    path: /29c8fed7ca22
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1379162722
-  - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-  - vless-1359868177
-  - 🇩🇪 德国 | DEU
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 90ms
+  - vless-1131643483
   type: select
 rules:
 - MATCH,PROXY

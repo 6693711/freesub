@@ -4,7 +4,14 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 345628
+  name: 🏳️ ShatakVPN 832769
+  password: itzvpn@321
+  port: 8388
+  server: 57.131.48.45
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 203225
   password: itzvpn@321
   port: 8388
   server: 57.131.48.45
@@ -13,7 +20,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 345628
+  - 🏳️ ShatakVPN 832769
+  - 🏳️ ShatakVPN 203225
   type: select
 rules:
 - MATCH,PROXY

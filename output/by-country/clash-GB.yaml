@@ -3,49 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 392470
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
-  type: ss
-  udp: true
-- grpc-opts:
-    grpc-service-name: vless
-  name: vless-1230280245
-  network: grpc
-  port: 2083
-  server: 66.90.104.42
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- cipher: 2022-blake3-aes-256-gcm
-  name: shadowsocks-1203537773
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:2tFqykGqZ101XW11f6iRiERnPycFAjjYq0y2zUYhKho=
-  port: 2083
-  server: 51.38.71.51
-  type: ss
-  udp: true
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-860815991
+- cipher: aes-128-gcm
+  name: 🏳️ ShatakVPN 456554
+  password: shadowsocks
   port: 443
-  reality-opts:
-    public-key: 2ATxqiR22wlo3yXOHc43LFHM5NzWCdSGZLdBay_vJgM
-    short-id: e4a1b53b03eff60d
-  server: 95.154.196.61
-  servername: strapi.io
-  tls: true
-  type: vless
+  server: 141.98.101.181
+  type: ss
   udp: true
-  uuid: e5d917f5-fc78-455e-bbb5-81d08715f3d6
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 392470
-  - vless-1230280245
-  - shadowsocks-1203537773
-  - vless-860815991
+  - 🏳️ ShatakVPN 456554
   type: select
 rules:
 - MATCH,PROXY

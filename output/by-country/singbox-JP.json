@@ -3,7 +3,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-200271615",
+      "tag": "vless-222487013",
+      "server": "3.114.220.22",
+      "server_port": 18007,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-246499915",
       "server": "3.114.220.22",
       "server_port": 18007,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -24,46 +45,33 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1130262811",
-      "server": "104.21.33.59",
-      "server_port": 443,
-      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 168ms",
+      "server": "13.231.19.51",
+      "server_port": 11690,
+      "uuid": "e2b8b217-cffb-4d66-9b8b-eca6e4334032",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "jp3.yohototo.top",
+        "server_name": "www.tesla.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tyxyws",
-        "headers": {
-          "Host": "jp3.yohototo.top"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg",
+          "short_id": "034885e346fd30"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-721522923",
-      "server": "3.114.220.22",
-      "server_port": 19645,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
+      "type": "vmess",
+      "tag": "🏳️ ShatakVPN 873923",
+      "server": "168.110.60.104",
+      "server_port": 18112,
+      "uuid": "ad45f8f6-0f0a-4cc4-b907-c4582407dc94",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",
