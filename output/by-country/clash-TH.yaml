@@ -4,21 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1397144306
+  name: vless-1378473551
   port: 443
   reality-opts:
-    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
-  server: 138.124.60.146
-  servername: usa.oblaco.bet
+    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
+    short-id: ca672c53fbbac555
+  server: 34.15.162.1
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: bbfd1f68-ec64-452f-8404-9e2bcf1df951
+  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1397144306
+  - vless-1378473551
   type: select
 rules:
 - MATCH,PROXY

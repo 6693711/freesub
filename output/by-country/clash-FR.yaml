@@ -3,50 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 107ms
-  port: 22224
-  server: 15.237.17.206
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 101ms
-  port: 22222
-  server: 13.37.147.23
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 328849
-  port: 23576
+  name: vless-1387242610
+  port: 443
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.10
-  servername: fuck.rkn
+    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
+    short-id: ae682368818bd6c5
+  server: 34.155.10.226
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-700283246
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  server: 62.210.91.10
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 107ms
-  - 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 101ms
-  - 🏳️ ShatakVPN 328849
-  - vless-700283246
+  - vless-1387242610
   type: select
 rules:
 - MATCH,PROXY
