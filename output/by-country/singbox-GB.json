@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1402419061",
+      "server": "134.65.59.15",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "r5ic6K6vlgFjNKuR9W7uPVRtSuzCYAjM78oW3RYK0bA="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1402419059",
+      "server": "134.65.62.82",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw="
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1245422997",
+      "server": "66.90.104.42",
+      "server_port": 2083,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1402419044",
+      "server": "129.151.86.235",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Vy4lRpLwy1/ZUJF58f+SpzYRBJCwQpwztiwtHcOtReI="
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

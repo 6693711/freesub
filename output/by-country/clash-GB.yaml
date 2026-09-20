@@ -1,0 +1,46 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-1402419061
+  password: r5ic6K6vlgFjNKuR9W7uPVRtSuzCYAjM78oW3RYK0bA=
+  port: 61312
+  server: 134.65.59.15
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-1402419059
+  password: rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw=
+  port: 61312
+  server: 134.65.62.82
+  type: ss
+  udp: true
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1245422997
+  network: grpc
+  port: 2083
+  server: 66.90.104.42
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-1402419044
+  password: Vy4lRpLwy1/ZUJF58f+SpzYRBJCwQpwztiwtHcOtReI=
+  port: 61312
+  server: 129.151.86.235
+  type: ss
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - shadowsocks-1402419061
+  - shadowsocks-1402419059
+  - vless-1245422997
+  - shadowsocks-1402419044
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

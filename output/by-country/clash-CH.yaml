@@ -3,16 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1393931791
-  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
-  port: 8443
-  server: 82.38.64.229
-  skip-cert-verify: true
-  sni: hopp-swizland-new.mysynology.net
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 416476
+  name: vless-1397144306
   port: 443
   reality-opts:
     public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
@@ -25,8 +18,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1393931791
-  - 🏳️ ShatakVPN 416476
+  - vless-1397144306
   type: select
 rules:
 - MATCH,PROXY

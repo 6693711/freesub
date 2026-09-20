@@ -5,7 +5,19 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 175090
+  name: 🏳️ ShatakVPN 753277
+  port: 443
+  reality-opts:
+    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
+  server: 95.85.230.35
+  servername: de.oblaco.bet
+  tls: true
+  type: vless
+  udp: true
+  uuid: bbfd1f68-ec64-452f-8404-9e2bcf1df951
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 878670
   port: 443
   reality-opts:
     public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
@@ -18,7 +30,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 175090
+  - 🏳️ ShatakVPN 753277
+  - 🏳️ ShatakVPN 878670
   type: select
 rules:
 - MATCH,PROXY
