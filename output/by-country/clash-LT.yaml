@@ -3,23 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 115386
-  port: 443
-  reality-opts:
-    public-key: H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24
-    short-id: 711ad7f475c35e5e
-  server: 103.139.51.21
-  servername: auth.figmafound.org
-  tls: true
-  type: vless
+- cipher: aes-256-cfb
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 114ms
+  password: xaupMUvhptwxdDUg
+  port: 9012
+  server: 195.238.126.20
+  type: ss
   udp: true
-  uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 115386
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 114ms
   type: select
 rules:
 - MATCH,PROXY

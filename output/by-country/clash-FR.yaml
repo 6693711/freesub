@@ -3,17 +3,54 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1005580211
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- cipher: aes-256-cfb
+  name: 🇫🇷FR_5|4.1MB/s
+  password: amazonskr05
   port: 443
-  server: 35.181.166.40
+  server: 15.237.180.114
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 815787
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
+  udp: true
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-700283246
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  server: 62.210.91.10
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: 🏳️ ShatakVPN 704694
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
   skip-cert-verify: true
-  sni: 35.181.166.40
+  sni: www.microsoft.com
   type: hysteria2
+- cipher: aes-256-cfb
+  name: 🇫🇷FR_2|2.7MB/s
+  password: amazonskr05
+  port: 443
+  server: 13.36.169.164
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1005580211
+  - 🇫🇷FR_5|4.1MB/s
+  - 🏳️ ShatakVPN 815787
+  - vless-700283246
+  - 🏳️ ShatakVPN 704694
+  - 🇫🇷FR_2|2.7MB/s
   type: select
 rules:
 - MATCH,PROXY

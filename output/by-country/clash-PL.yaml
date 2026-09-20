@@ -6,7 +6,48 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: TunService
-  name: vless-1141367427
+  name: 🏳️ ShatakVPN 286166
+  network: grpc
+  port: 33743
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 185.223.57.10
+  servername: www.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔lrnbymaa 🔒 VL-TCP- ❔ XX 101ms
+  port: 443
+  reality-opts:
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+  server: 144.31.131.38
+  servername: prod.pl-node-01.security-sbrf.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: TunService
+  name: vless-1105975118
+  network: grpc
+  port: 33743
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 185.223.57.10
+  servername: www.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- client-fingerprint: qq
+  grpc-opts:
+    grpc-service-name: TunService
+  name: vless-1126122373
   network: grpc
   port: 33743
   reality-opts:
@@ -17,21 +58,13 @@ proxies:
   type: vless
   udp: true
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443
-  port: 443
-  server: 144.31.5.3
-  servername: pl4.moritech.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1141367427
-  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443
+  - 🏳️ ShatakVPN 286166
+  - 🆔lrnbymaa 🔒 VL-TCP- ❔ XX 101ms
+  - vless-1105975118
+  - vless-1126122373
   type: select
 rules:
 - MATCH,PROXY

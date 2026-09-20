@@ -3,42 +3,19 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1107712078",
-      "server": "srv-21bac9.vless.monster",
+      "tag": "vless-1062311589",
+      "server": "163.8.195.241",
       "server_port": 2087,
-      "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
-      "tls": {
-        "enabled": true,
-        "server_name": "srv-21bac9.vless.monster",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
+      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
       "transport": {
-        "type": "grpc",
-        "service_name": "freegrpc"
+        "type": "ws",
+        "path": "/29c8fed7ca22",
+        "headers": {}
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇩🇪DE_5|4.2MB/s",
-      "server": "63.181.79.8",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 890104",
-      "server": "185.226.172.8",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 522771",
+      "tag": "🏳️ ShatakVPN 477567",
       "server": "185.226.172.8",
       "server_port": 8008,
       "method": "aes-256-gcm",
