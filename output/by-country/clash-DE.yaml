@@ -3,10 +3,10 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: freegrpc
-  name: vless-1113474488
+  name: vless-1107712078
   network: grpc
   port: 2087
   server: srv-21bac9.vless.monster
@@ -15,10 +15,34 @@ proxies:
   type: vless
   udp: true
   uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_5|4.2MB/s
+  password: amazonskr05
+  port: 443
+  server: 63.181.79.8
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 890104
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 522771
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1113474488
+  - vless-1107712078
+  - 🇩🇪DE_5|4.2MB/s
+  - 🏳️ ShatakVPN 890104
+  - 🏳️ ShatakVPN 522771
   type: select
 rules:
 - MATCH,PROXY

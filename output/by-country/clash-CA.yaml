@@ -5,7 +5,20 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-692905137
+  name: vless-656230710
+  port: 41373
+  reality-opts:
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: 0e
+  server: 130.107.73.148
+  servername: google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-293233477
   port: 443
   reality-opts:
     public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
@@ -16,41 +29,29 @@ proxies:
   type: vless
   udp: true
   uuid: 661f395d-b153-4199-a04b-693f5fe7f261
-- name: hysteria2-1016364146
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 15.223.122.197
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
 - client-fingerprint: chrome
-  name: vless-1307824741
-  port: 2053
+  flow: xtls-rprx-vision
+  name: vless-814115441
+  port: 41373
   reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  server: 66.70.179.198
-  servername: www.cloudflare.com
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: 0e
+  server: 130.107.73.148
+  servername: google.com
   tls: true
   type: vless
   udp: true
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1254306205
-  port: 443
-  reality-opts:
-    public-key: feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY
-    short-id: af7e79b5
-  server: 66.70.179.124
-  servername: www.apple.com
-  tls: true
-  type: vless
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 284367
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 51.79.85.185
+  type: ss
   udp: true
-  uuid: c8f9e08d-7d07-4059-9f71-0b014b9e0ec7
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1019921577
+  name: vless-692622873
   port: 41373
   reality-opts:
     public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
@@ -64,11 +65,11 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-692905137
-  - hysteria2-1016364146
-  - vless-1307824741
-  - vless-1254306205
-  - vless-1019921577
+  - vless-656230710
+  - vless-293233477
+  - vless-814115441
+  - 🏳️ ShatakVPN 284367
+  - vless-692622873
   type: select
 rules:
 - MATCH,PROXY
