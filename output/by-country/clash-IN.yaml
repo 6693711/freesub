@@ -3,25 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1111846195
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- client-fingerprint: chrome
+  name: vless-1422276489
   port: 443
-  server: vpn-in-001.fastervpn.world
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- name: hysteria2-1111846157
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-in-001.fastervpn.world
-  skip-cert-verify: true
-  sni: google.com
-  type: hysteria2
+  reality-opts:
+    public-key: 97C6O3repofpoaJzvu1d4o7amhJGA8hF_yJls7SNIgU
+    short-id: b9299afa0dcac824
+  server: 34.93.188.70
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5004e3d7-a9bd-4a7c-a6d5-58aa5e1be9ed
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1111846195
-  - hysteria2-1111846157
+  - vless-1422276489
   type: select
 rules:
 - MATCH,PROXY

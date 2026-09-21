@@ -3,31 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-591454513
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
+- name: hysteria2-1111846211
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
   skip-cert-verify: true
-  sni: 3.36.93.74
+  sni: t.me
   type: hysteria2
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-667136237
-  port: 18967
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-827675485
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  port: 50160
+  server: 152-69-231-175.liao.kdns.fr
+  skip-cert-verify: false
+  sni: 152-69-231-175.liao.kdns.fr
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-591454513
-  - vless-667136237
+  - hysteria2-1111846211
+  - hysteria2-827675485
   type: select
 rules:
 - MATCH,PROXY

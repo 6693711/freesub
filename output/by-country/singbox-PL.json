@@ -2,8 +2,16 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-819466521",
+      "server": "217.30.10.44",
+      "server_port": 9063,
+      "method": "aes-256-cfb",
+      "password": "aQqJbtwFGcCCaeL3"
+    },
+    {
       "type": "hysteria2",
-      "tag": "hysteria2-1027317456",
+      "tag": "🏳️ ShatakVPN 365395",
       "server": "144.31.49.47",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
@@ -11,22 +19,6 @@
         "enabled": true,
         "server_name": "admin.wwwinternetvideo.click",
         "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443",
-      "server": "144.31.5.3",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl4.moritech.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
       }
     },
     {
