@@ -3,31 +3,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 120ms
-  port: 443
-  reality-opts:
-    public-key: IGIgHNW_hZRsP2DZqItH5wvFSr6H4rqpI9x-0IUCskU
-    short-id: ca3d
-  server: 108.165.32.16
-  servername: www.logitech.com
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: 🔒 VL-GRPC-TLS 🇩🇪 DE-31.56.189.27 2087
+  network: grpc
+  port: 2087
+  server: 31.56.189.27
+  servername: srv-21bac9.vless.monster
   tls: true
   type: vless
   udp: true
-  uuid: 6dff8e33-b201-4cbb-8f89-b9418702bff2
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 414346
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
-  type: ss
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 531ms
+  port: 443
+  reality-opts:
+    public-key: RpjjScd4SIWgDGPtR_FJPRENMyWaPzb_hyA2cY98CDs
+    short-id: e6240b9af8d53c17
+  server: ge-a.sarky.ru
+  servername: ge.sarky.ru
+  tls: true
+  type: vless
   udp: true
+  uuid: 9c64f1aa-da4d-4c3e-9617-9bfbf1657a75
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 120ms
-  - 🏳️ ShatakVPN 414346
+  - 🔒 VL-GRPC-TLS 🇩🇪 DE-31.56.189.27 2087
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 531ms
   type: select
 rules:
 - MATCH,PROXY

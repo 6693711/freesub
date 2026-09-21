@@ -3,21 +3,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1387242610",
-      "server": "34.155.10.226",
+      "tag": "🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.206.254 443",
+      "server": "172.67.206.254",
       "server_port": 443,
-      "uuid": "d619964d-26d6-452d-9860-6f058f03ba8e",
+      "uuid": "50414e45-4c5f-5a45-5553-5a26a30b00dc",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "4qzsz6e8u00s.tlzw8le6ubhs.workers.dev",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk",
-          "short_id": "ae682368818bd6c5"
+          "fingerprint": "unsafe"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/PANEL_ZEUS/5a26a30b00dc",
+        "headers": {
+          "Host": "4qzsz6e8u00s.tlzw8le6ubhs.workers.dev"
         }
       }
     },

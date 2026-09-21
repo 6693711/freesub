@@ -3,25 +3,49 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 174546
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: vmess-1421496423
+  port: 443
+  server: test-tun.armtech.ir
+  type: vmess
   udp: true
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 929839
-  password: LXchLsIwtCeUAUgu
-  port: 80
-  server: 149.102.149.207
+  uuid: c4e24fd0-2194-44f5-a058-69df3dc035a0
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-958796650
+  port: 443
+  reality-opts:
+    public-key: IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs
+    short-id: 1aa9f3c9021280c0
+  server: 5.152.223.97
+  servername: strapi.io
+  tls: true
+  type: vless
+  udp: true
+  uuid: be5b6ad6-8184-4b63-82ac-3bc00c09c98c
+- alterId: 0
+  cipher: auto
+  name: 🏳️ ShatakVPN 963217
+  port: 22324
+  server: 66.163.117.58
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- cipher: aes-128-gcm
+  name: 🏳️ ShatakVPN 751194
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 174546
-  - 🏳️ ShatakVPN 929839
+  - vmess-1421496423
+  - vless-958796650
+  - 🏳️ ShatakVPN 963217
+  - 🏳️ ShatakVPN 751194
   type: select
 rules:
 - MATCH,PROXY
