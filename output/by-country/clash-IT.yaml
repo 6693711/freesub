@@ -10,6 +10,19 @@ proxies:
   reality-opts:
     public-key: G2U8_BvRAgcOw0sX8u_0yYdVAlD8CWLSi-uYjvH07hw
     short-id: 4fa44664f6a566d3
+  server: 31.76.113.231
+  servername: italia.superbuba.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1425285704
+  port: 443
+  reality-opts:
+    public-key: G2U8_BvRAgcOw0sX8u_0yYdVAlD8CWLSi-uYjvH07hw
+    short-id: 4fa44664f6a566d3
   server: 31.76.113.212
   servername: italia.superbuba.top
   tls: true
@@ -20,6 +33,7 @@ proxy-groups:
 - name: PROXY
   proxies:
   - 🇮🇹 意大利 | ITA
+  - vless-1425285704
   type: select
 rules:
 - MATCH,PROXY

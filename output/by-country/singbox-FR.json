@@ -2,25 +2,27 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.206.254 443",
-      "server": "172.67.206.254",
-      "server_port": 443,
-      "uuid": "50414e45-4c5f-5a45-5553-5a26a30b00dc",
+      "type": "hysteria2",
+      "tag": "hysteria2-589844073",
+      "server": "151.247.197.253",
+      "server_port": 36723,
+      "password": "Krab9Hyst2_Rk7pQ2xL",
       "tls": {
         "enabled": true,
-        "server_name": "4qzsz6e8u00s.tlzw8le6ubhs.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "unsafe"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/stream/PANEL_ZEUS/5a26a30b00dc",
-        "headers": {
-          "Host": "4qzsz6e8u00s.tlzw8le6ubhs.workers.dev"
-        }
+        "server_name": "151.247.197.253",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 810433",
+      "server": "62.210.124.146",
+      "server_port": 22000,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "insecure": true
       }
     },
     {

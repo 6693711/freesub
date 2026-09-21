@@ -3,9 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1027296860
+  name: vless-1019502169
   port: 12512
   reality-opts:
     public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
@@ -16,18 +16,45 @@ proxies:
   type: vless
   udp: true
   uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
-- name: trojan-1423288732
-  password: skynet
-  port: 119
-  server: cloud.lakshan.us
-  sni: cloud.lakshan.us
-  type: trojan
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-522223668
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 242593
+  password: XV4bvaJIWoxl3IYEC1e6W7
+  port: 2342
+  server: 194.233.74.160
+  type: ss
+  udp: true
+- client-fingerprint: firefox
+  name: vless-1272779554
+  port: 2053
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  server: 217.217.254.126
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1027296860
-  - trojan-1423288732
+  - vless-1019502169
+  - vless-522223668
+  - 🏳️ ShatakVPN 242593
+  - vless-1272779554
   type: select
 rules:
 - MATCH,PROXY

@@ -10,34 +10,41 @@ proxies:
   skip-cert-verify: true
   sni: "https://t.me/wangcai2ð\x9F\x87"
   type: hysteria2
-- name: hysteria2-985469468
+- name: 🏳️ ShatakVPN 686900
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.29.202 443
+  network: ws
+  port: 443
+  server: 104.21.29.202
+  servername: px2.5ibtc.cn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
+  ws-opts:
+    headers:
+      Host: px2.5ibtc.cn
+    path: /326227e2-f2d1-4f43-8715-9da854f5f4c0
+- name: hysteria2-591633775
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.89
   skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
-- name: hysteria2-692912199
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- name: hysteria2-705682024
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2рҹү
+  sni: 202.146.222.89
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
   - hysteria2-705682202
-  - hysteria2-985469468
-  - hysteria2-692912199
-  - hysteria2-705682024
+  - 🏳️ ShatakVPN 686900
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.29.202 443
+  - hysteria2-591633775
   type: select
 rules:
 - MATCH,PROXY

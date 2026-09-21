@@ -3,9 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
+- alterId: 0
+  cipher: auto
+  name: vmess-1121649203
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-987610015
+  name: vless-961883341
   port: 50159
   reality-opts:
     public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
@@ -16,19 +24,25 @@ proxies:
   type: vless
   udp: true
   uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- alterId: 0
-  cipher: auto
-  name: vmess-1122508704
-  port: 4433
-  server: 45.32.57.118
-  type: vmess
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-665034487
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-987610015
-  - vmess-1122508704
+  - vmess-1121649203
+  - vless-961883341
+  - vless-665034487
   type: select
 rules:
 - MATCH,PROXY
