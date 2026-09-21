@@ -3,24 +3,31 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1385958165",
-      "server": "206.206.76.75",
-      "server_port": 443,
-      "uuid": "1e3d3634-36ac-43ac-a439-9665d885238f",
-      "flow": "xtls-rprx-vision",
+      "tag": "vless-1363486848",
+      "server": "217.217.254.126",
+      "server_port": 2053,
+      "uuid": "cb15cce9-73ed-4928-b38c-462f0732cbe9",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig",
-          "short_id": "9930177816ab09da"
+          "public_key": "VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw",
+          "short_id": "87829de0e2bb82cb"
         }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 576777",
+      "server": "194.233.74.160",
+      "server_port": 2342,
+      "method": "chacha20-ietf-poly1305",
+      "password": "XV4bvaJIWoxl3IYEC1e6W7"
     },
     {
       "type": "direct",

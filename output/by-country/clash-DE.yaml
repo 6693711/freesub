@@ -3,10 +3,29 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: 2022-blake3-aes-256-gcm
+  name: shadowsocks-1433983947
+  password: WAqeGA+dU+HZYSipCio+Jmt7SSVfHjwMH7j8xmsm7/s=:althddZ27iu261I+568pk7HZzBFDCyIx6pvG8H9oXow=
+  port: 2087
+  server: 172.104.129.6
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: vless-1212586784
+  network: grpc
+  port: 2087
+  server: srv-21bac9.vless.monster
+  servername: srv-21bac9.vless.monster
+  tls: true
+  type: vless
+  udp: true
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: cdn.v1.AssetService
-  name: vless-1430663536
+  name: vless-1431982564
   network: grpc
   port: 443
   server: assets-de.pleiades.codes
@@ -15,10 +34,25 @@ proxies:
   type: vless
   udp: true
   uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+- client-fingerprint: firefox
+  name: vless-1397144302
+  port: 2053
+  reality-opts:
+    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
+    short-id: 4d14da19b19cfc8c
+  server: 162.55.242.208
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1430663536
+  - shadowsocks-1433983947
+  - vless-1212586784
+  - vless-1431982564
+  - vless-1397144302
   type: select
 rules:
 - MATCH,PROXY

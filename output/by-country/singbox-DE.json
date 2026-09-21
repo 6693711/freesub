@@ -2,8 +2,35 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1433983947",
+      "server": "172.104.129.6",
+      "server_port": 2087,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "WAqeGA+dU+HZYSipCio+Jmt7SSVfHjwMH7j8xmsm7/s=:althddZ27iu261I+568pk7HZzBFDCyIx6pvG8H9oXow="
+    },
+    {
       "type": "vless",
-      "tag": "vless-1430663536",
+      "tag": "vless-1212586784",
+      "server": "srv-21bac9.vless.monster",
+      "server_port": 2087,
+      "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-21bac9.vless.monster",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "freegrpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1431982564",
       "server": "assets-de.pleiades.codes",
       "server_port": 443,
       "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
@@ -18,6 +45,26 @@
       "transport": {
         "type": "grpc",
         "service_name": "cdn.v1.AssetService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1397144302",
+      "server": "162.55.242.208",
+      "server_port": 2053,
+      "uuid": "659ffdfa-47d2-47d7-af40-5afe0907eead",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY",
+          "short_id": "4d14da19b19cfc8c"
+        }
       }
     },
     {

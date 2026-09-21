@@ -3,25 +3,28 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
-  name: shadowsocks-819466521
-  password: aQqJbtwFGcCCaeL3
-  port: 9063
-  server: 217.30.10.44
-  type: ss
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.2.33 443
+  port: 443
+  server: 144.31.2.33
+  servername: pl3.moritech.net
+  tls: true
+  type: vless
   udp: true
-- name: 🏳️ ShatakVPN 365395
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- name: hysteria2-652726817
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: 144.31.49.47
-  skip-cert-verify: true
+  server: admin.wwwinternetvideo.click
+  skip-cert-verify: false
   sni: admin.wwwinternetvideo.click
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-819466521
-  - 🏳️ ShatakVPN 365395
+  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.2.33 443
+  - hysteria2-652726817
   type: select
 rules:
 - MATCH,PROXY

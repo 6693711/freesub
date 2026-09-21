@@ -3,7 +3,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-470978003",
+      "tag": "vless-12945898",
       "server": "3.114.220.22",
       "server_port": 19645,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -13,7 +13,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -23,39 +23,9 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "vmess-1130434817",
-      "server": "45.32.57.118",
-      "server_port": 4433,
-      "uuid": "35b89832-0a7c-48dd-8d1c-a2891b522195",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
       "type": "vless",
-      "tag": "vless-1427079017",
-      "server": "xxxnodeakjp1.jumpernode.online",
-      "server_port": 19012,
-      "uuid": "05453546-201f-4e8d-97ae-fd70da0e951f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.sony.bg",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xSSSjzSFrsCyp3t5I39sgWFd6a2zKdsLt6vEwCWPKFk",
-          "short_id": "d09eb5a304f8a989"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1109827027",
-      "server": "172.67.217.240",
+      "tag": "vless-1003515436",
+      "server": "172.67.156.147",
       "server_port": 443,
       "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
       "tls": {

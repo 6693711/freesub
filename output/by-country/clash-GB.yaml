@@ -3,17 +3,33 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1005126986
-  password: 3b8c82ed-fe66-472d-915e-034ccb57103f
-  port: 443
-  server: labs.frkn.org
-  skip-cert-verify: true
-  sni: labs.frkn.org
-  type: hysteria2
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1429723997
+  network: grpc
+  port: 2083
+  server: 66.90.104.42
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 974815
+  port: 51847
+  reality-opts:
+    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
+    short-id: 0eec442e7b34d2f2
+  server: 3.9.135.156
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 391a01e9-b664-407b-9158-610fab3f5920
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1005126986
+  - vless-1429723997
+  - 🏳️ ShatakVPN 974815
   type: select
 rules:
 - MATCH,PROXY

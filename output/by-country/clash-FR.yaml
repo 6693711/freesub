@@ -3,21 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc_common1
-  name: vless-1403698674
-  network: grpc
-  port: 30963
-  reality-opts:
-    public-key: XxNAqnYJDizM_4_ycJxyaa9xbx29hpDfwAtCv1Wga1M
-    short-id: c776352067
-  server: 57.128.177.218
-  servername: us.vrzn.download.nvidia.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: aabcb69e-9f17-44bd-aaac-552dd23e9691
 - name: hysteria2-1004725118
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -25,25 +10,10 @@ proxies:
   skip-cert-verify: true
   sni: 35.181.166.40
   type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 233314
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1403698674
   - hysteria2-1004725118
-  - 🏳️ ShatakVPN 233314
   type: select
 rules:
 - MATCH,PROXY
