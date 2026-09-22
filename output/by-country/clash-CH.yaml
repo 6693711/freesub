@@ -5,21 +5,20 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1439249265
+  name: 🏳️ ShatakVPN 831253
   port: 443
   reality-opts:
-    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
-    short-id: a1b2c3d4
-  server: 185.95.231.233
-  servername: store.steampowered.com
+    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
+  server: 138.124.60.146
+  servername: usa.oblaco.bet
   tls: true
   type: vless
   udp: true
-  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
+  uuid: bbfd1f68-ec64-452f-8404-9e2bcf1df951
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1439249265
+  - 🏳️ ShatakVPN 831253
   type: select
 rules:
 - MATCH,PROXY

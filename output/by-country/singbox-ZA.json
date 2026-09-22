@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 213ms",
+      "server": "4.221.224.246",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "3aN9XUwhvq1ujlsO"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

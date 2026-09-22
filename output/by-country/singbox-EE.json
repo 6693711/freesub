@@ -2,18 +2,15 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-702041231",
-      "server": "94.183.170.135",
-      "server_port": 8443,
-      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 731904",
+      "server": "31.76.71.63",
+      "server_port": 443,
+      "password": "sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX",
       "tls": {
         "enabled": true,
-        "server_name": "estproxy4.lockdwn.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "cabinet.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {

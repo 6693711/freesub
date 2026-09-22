@@ -4,21 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: vless-1400224381
+  name: vless-1400625859
   port: 443
   reality-opts:
-    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
-    short-id: ae682368818bd6c5
-  server: 34.155.10.226
+    public-key: 97C6O3repofpoaJzvu1d4o7amhJGA8hF_yJls7SNIgU
+    short-id: b9299afa0dcac824
+  server: 34.93.188.70
   servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
+  uuid: 5004e3d7-a9bd-4a7c-a6d5-58aa5e1be9ed
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1400224381
+  - vless-1400625859
   type: select
 rules:
 - MATCH,PROXY

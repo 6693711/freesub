@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1412445133
+  port: 443
+  reality-opts:
+    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
+    short-id: 0ad08b47f498efd2
+  server: 51.161.204.244
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1412445133
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

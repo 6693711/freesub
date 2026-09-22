@@ -3,24 +3,10 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: ios
   grpc-opts:
     grpc-service-name: TunService
-  name: vless-1105975128
-  network: grpc
-  port: 33743
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.10
-  servername: www.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: vless-1110854035
+  name: vless-1105975124
   network: grpc
   port: 33743
   reality-opts:
@@ -34,8 +20,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1105975128
-  - vless-1110854035
+  - vless-1105975124
   type: select
 rules:
 - MATCH,PROXY

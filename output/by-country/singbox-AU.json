@@ -3,21 +3,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1400224381",
-      "server": "34.155.10.226",
+      "tag": "vless-1412445133",
+      "server": "51.161.204.244",
       "server_port": 443,
-      "uuid": "d619964d-26d6-452d-9860-6f058f03ba8e",
+      "uuid": "36e89875-9c53-482b-bc41-d3890e9da176",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk",
-          "short_id": "ae682368818bd6c5"
+          "public_key": "gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk",
+          "short_id": "0ad08b47f498efd2"
         }
       }
     },
