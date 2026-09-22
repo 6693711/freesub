@@ -3,22 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-1422276493
+- name: hysteria2-658428995
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  reality-opts:
-    public-key: dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY
-    short-id: 50440423703c945f
-  server: 34.47.245.203
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3fed34dc-2fe6-4fe0-86e7-a80213f9b7cc
+  server: vpn-in-001.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-in-001.fastervpn.world
+  type: hysteria2
+- name: hysteria2-1237100937
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-in-001.fastervpn.world
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1422276493
+  - hysteria2-658428995
+  - hysteria2-1237100937
   type: select
 rules:
 - MATCH,PROXY

@@ -2,33 +2,20 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1183916735",
-      "server": "78.129.208.44",
-      "server_port": 421,
-      "uuid": "a9900333-444b-4a36-a2f0-0567946c47cd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "chistomat.dry.care",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg",
-          "short_id": "a1facbc8575701ae"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "shadowsocks-271",
+      "server": "141.98.101.181",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "shadowsocks",
-      "tag": "shadowsocks-240",
-      "server": "94.156.250.148",
-      "server_port": 7001,
-      "method": "aes-256-gcm",
-      "password": "RexnBgU7EV5ADxG"
+      "tag": "🏳️ ShatakVPN 804817",
+      "server": "158.173.221.214",
+      "server_port": 11001,
+      "method": "chacha20-ietf-poly1305",
+      "password": "c58d16e593d44f42"
     },
     {
       "type": "direct",

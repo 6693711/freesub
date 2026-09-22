@@ -3,31 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1183916735
-  port: 421
-  reality-opts:
-    public-key: zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg
-    short-id: a1facbc8575701ae
-  server: 78.129.208.44
-  servername: chistomat.dry.care
-  tls: true
-  type: vless
+- cipher: aes-128-gcm
+  name: shadowsocks-271
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
+  type: ss
   udp: true
-  uuid: a9900333-444b-4a36-a2f0-0567946c47cd
-- cipher: aes-256-gcm
-  name: shadowsocks-240
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 804817
+  password: c58d16e593d44f42
+  port: 11001
+  server: 158.173.221.214
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1183916735
-  - shadowsocks-240
+  - shadowsocks-271
+  - 🏳️ ShatakVPN 804817
   type: select
 rules:
 - MATCH,PROXY

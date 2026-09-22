@@ -2,23 +2,27 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1422276493",
-      "server": "34.47.245.203",
+      "type": "hysteria2",
+      "tag": "hysteria2-658428995",
+      "server": "vpn-in-001.fastervpn.world",
       "server_port": 443,
-      "uuid": "3fed34dc-2fe6-4fe0-86e7-a80213f9b7cc",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY",
-          "short_id": "50440423703c945f"
-        }
+        "server_name": "vpn-in-001.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1237100937",
+      "server": "vpn-in-001.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
       }
     },
     {
