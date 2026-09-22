@@ -3,33 +3,31 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- grpc-opts:
-    grpc-service-name: vless
-  name: vless-1429723997
-  network: grpc
-  port: 2083
-  server: 66.90.104.42
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 974815
-  port: 51847
+  name: vless-1183916735
+  port: 421
   reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  server: 3.9.135.156
-  servername: www.tesla.com
+    public-key: zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg
+    short-id: a1facbc8575701ae
+  server: 78.129.208.44
+  servername: chistomat.dry.care
   tls: true
   type: vless
   udp: true
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
+  uuid: a9900333-444b-4a36-a2f0-0567946c47cd
+- cipher: aes-256-gcm
+  name: shadowsocks-240
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 94.156.250.148
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1429723997
-  - 🏳️ ShatakVPN 974815
+  - vless-1183916735
+  - shadowsocks-240
   type: select
 rules:
 - MATCH,PROXY

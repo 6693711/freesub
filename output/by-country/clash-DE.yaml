@@ -3,17 +3,24 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: 2022-blake3-aes-256-gcm
-  name: shadowsocks-1433983947
-  password: WAqeGA+dU+HZYSipCio+Jmt7SSVfHjwMH7j8xmsm7/s=:althddZ27iu261I+568pk7HZzBFDCyIx6pvG8H9oXow=
-  port: 2087
-  server: 172.104.129.6
-  type: ss
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.17.154.178 443
+  network: ws
+  port: 443
+  server: 104.17.154.178
+  servername: urzpn8e9ub5s.shoameni2.workers.dev
+  tls: true
+  type: vless
   udp: true
+  uuid: 50414e45-4c5f-5a45-5553-9568000eed47
+  ws-opts:
+    headers:
+      Host: urzpn8e9ub5s.shoameni2.workers.dev
+    path: /stream/PANEL_ZEUS/9568000eed47/loc-1
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: freegrpc
-  name: vless-1212586784
+  name: vless-1141368041
   network: grpc
   port: 2087
   server: srv-21bac9.vless.monster
@@ -22,37 +29,54 @@ proxies:
   type: vless
   udp: true
   uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1439899959
+  port: 443
+  reality-opts:
+    public-key: xcTXD3of3Yt5hHdIwYGZ1LjMBgiL6sqj5J33J4U4ozM
+    short-id: a7c31f92
+  server: 93.123.101.215
+  servername: emil.atlasparser.site
+  tls: true
+  type: vless
+  udp: true
+  uuid: dcf8e133-09a2-4884-abf9-80356bb334ac
+- name: hysteria2-862364762
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  port: 4433
+  server: de1.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
 - client-fingerprint: chrome
   grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-  name: vless-1431982564
+    grpc-service-name: freegrpc
+  name: vless-1109561737
   network: grpc
-  port: 443
-  server: assets-de.pleiades.codes
-  servername: assets-de.pleiades.codes
+  port: 2087
+  server: srv-21bac9.vless.monster
+  servername: srv-21bac9.vless.monster
   tls: true
   type: vless
   udp: true
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
-- client-fingerprint: firefox
-  name: vless-1397144302
-  port: 2053
-  reality-opts:
-    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
-    short-id: 4d14da19b19cfc8c
-  server: 162.55.242.208
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- cipher: aes-256-gcm
+  name: shadowsocks-11078
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
   udp: true
-  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1433983947
-  - vless-1212586784
-  - vless-1431982564
-  - vless-1397144302
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.17.154.178 443
+  - vless-1141368041
+  - vless-1439899959
+  - hysteria2-862364762
+  - vless-1109561737
+  - shadowsocks-11078
   type: select
 rules:
 - MATCH,PROXY

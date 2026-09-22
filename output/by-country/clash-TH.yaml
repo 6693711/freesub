@@ -3,8 +3,8 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
-  name: vless-1387558979
+- client-fingerprint: chrome
+  name: vless-1378473551
   port: 443
   reality-opts:
     public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
@@ -15,8 +15,8 @@ proxies:
   type: vless
   udp: true
   uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-- client-fingerprint: random
-  name: vless-1388432618
+- client-fingerprint: chrome
+  name: vless-1394257043
   port: 443
   reality-opts:
     public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
@@ -30,8 +30,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1387558979
-  - vless-1388432618
+  - vless-1378473551
+  - vless-1394257043
   type: select
 rules:
 - MATCH,PROXY

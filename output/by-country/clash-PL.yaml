@@ -3,28 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.2.33 443
-  port: 443
-  server: 144.31.2.33
-  servername: pl3.moritech.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- name: hysteria2-652726817
+- name: 🏳️ ShatakVPN 420416
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: admin.wwwinternetvideo.click
-  skip-cert-verify: false
+  server: 144.31.49.47
+  skip-cert-verify: true
   sni: admin.wwwinternetvideo.click
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.2.33 443
-  - hysteria2-652726817
+  - 🏳️ ShatakVPN 420416
   type: select
 rules:
 - MATCH,PROXY

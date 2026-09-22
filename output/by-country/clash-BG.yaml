@@ -3,20 +3,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: vless-1402365443
+- name: 🆔soskeynet 🔓 VL-WS-N/A 🇳🇱 NL down
   network: ws
-  port: 80
-  server: platform109.golnamakcert.top
+  port: 443
+  server: 192.145.31.5
   type: vless
   udp: true
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   ws-opts:
     headers: {}
-    path: /platform109
+    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1402365443
+  - 🆔soskeynet 🔓 VL-WS-N/A 🇳🇱 NL down
   type: select
 rules:
 - MATCH,PROXY
