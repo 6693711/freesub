@@ -1,0 +1,27 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 105ms
+  network: ws
+  port: 9443
+  server: 185.255.179.11
+  servername: hub-de-03.hanvpn.cc
+  tls: true
+  type: vless
+  udp: true
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  ws-opts:
+    headers:
+      Host: hub-de-03.hanvpn.cc
+    path: /de03-ws-8e47a
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 105ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

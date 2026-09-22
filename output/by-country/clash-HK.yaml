@@ -10,18 +10,59 @@ proxies:
   skip-cert-verify: true
   sni: 202.146.222.29
   type: hysteria2
-- name: hysteria2-892566713
+- name: hysteria2-467420662
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.174
   skip-cert-verify: true
-  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  sni: https://t.me/oneclickvpnkeys
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-1442008668
+  port: 22324
+  server: 89.223.95.77
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: hysteria2-700405721
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: https%3a%2f%2ft.me%2fclashv8%f0%9f%87%a8%f0%9f%87%b3
+  type: hysteria2
+- name: 🏳️ ShatakVPN 204053
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1413463183
+  password: r6tptrwvddxap6al
+  port: 1081
+  server: sth.free-outline.giize.com
+  type: ss
+  udp: true
+- name: 🏳️ ShatakVPN 162763
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
   - hysteria2-107825281
-  - hysteria2-892566713
+  - hysteria2-467420662
+  - vmess-1442008668
+  - hysteria2-700405721
+  - 🏳️ ShatakVPN 204053
+  - shadowsocks-1413463183
+  - 🏳️ ShatakVPN 162763
   type: select
 rules:
 - MATCH,PROXY

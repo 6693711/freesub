@@ -3,9 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- alterId: 0
+  cipher: auto
+  name: vmess-1442009676
+  port: 22324
+  server: 158.51.123.42
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-814115441
+  name: vless-24252274
   port: 41373
   reality-opts:
     public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
@@ -16,19 +24,26 @@ proxies:
   type: vless
   udp: true
   uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1254903197
-  port: 443
+- client-fingerprint: random
+  name: vless-1275300277
+  port: 2053
   reality-opts:
-    public-key: feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY
-    short-id: af7e79b5
-  server: 66.70.179.124
-  servername: www.apple.com
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  server: 66.70.179.198
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: c8f9e08d-7d07-4059-9f71-0b014b9e0ec7
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+- alterId: 0
+  cipher: auto
+  name: vmess-1440771916
+  port: 22324
+  server: 158.51.123.42
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-692905137
@@ -44,24 +59,26 @@ proxies:
   uuid: 661f395d-b153-4199-a04b-693f5fe7f261
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-656230710
-  port: 41373
+  name: vless-2314770
+  port: 443
   reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: 0e
-  server: 130.107.73.148
-  servername: google.com
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    short-id: 3d3c1e645f763ee3
+  server: 158.69.112.254
+  servername: www.speedtest.net
   tls: true
   type: vless
   udp: true
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-814115441
-  - vless-1254903197
+  - vmess-1442009676
+  - vless-24252274
+  - vless-1275300277
+  - vmess-1440771916
   - vless-692905137
-  - vless-656230710
+  - vless-2314770
   type: select
 rules:
 - MATCH,PROXY
