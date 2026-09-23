@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-553326952
+- name: hysteria2-1111846211
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
   skip-cert-verify: true
-  sni: 152-67-200-82.liao.kdns.fr
+  sni: t.me
   type: hysteria2
-- client-fingerprint: qq
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-933894308
-  port: 18967
+  name: vless-1104491030
+  port: 13672
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -26,8 +26,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-553326952
-  - vless-933894308
+  - hysteria2-1111846211
+  - vless-1104491030
   type: select
 rules:
 - MATCH,PROXY

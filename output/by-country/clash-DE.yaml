@@ -4,35 +4,66 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1259510459
-  port: 7443
-  reality-opts:
-    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
-    short-id: d2061bb1
-  server: 31.76.7.154
-  servername: ya.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
-- client-fingerprint: firefox
   grpc-opts:
-    grpc-service-name: freegrpc
-  name: 🔒 VL-GRPC-TLS 🇩🇪 DE-31.56.189.27 2087
+    grpc-service-name: de02-grpc-8e47a
+  name: vless-1454507573
   network: grpc
-  port: 2087
-  server: 31.56.189.27
-  servername: srv-21bac9.vless.monster
+  port: 9443
+  server: 138.124.183.18
+  servername: hub-de-02.hanvpn.cc
   tls: true
   type: vless
   udp: true
-  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+- alterId: 0
+  cipher: auto
+  name: vmess-1440771913
+  port: 22324
+  server: 216.106.187.60
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: hysteria2-862364762
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  port: 4433
+  server: de1.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-1398795493
+  port: 443
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1236880268
+  port: 443
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1259510459
-  - 🔒 VL-GRPC-TLS 🇩🇪 DE-31.56.189.27 2087
+  - vless-1454507573
+  - vmess-1440771913
+  - hysteria2-862364762
+  - vless-1398795493
+  - vless-1236880268
   type: select
 rules:
 - MATCH,PROXY

@@ -4,21 +4,22 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: vless-1400224381
-  port: 443
+  flow: xtls-rprx-vision
+  name: 🇫🇷 ShatakVPN 261211
+  port: 23576
   reality-opts:
-    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
-    short-id: ae682368818bd6c5
-  server: 34.155.10.226
-  servername: www.cloudflare.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.2
+  servername: fuck.rkn
   tls: true
   type: vless
   udp: true
-  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1400224381
+  - 🇫🇷 ShatakVPN 261211
   type: select
 rules:
 - MATCH,PROXY
