@@ -2,13 +2,37 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "vmess-1459593697",
-      "server": "89.223.95.77",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto",
-      "alter_id": 0
+      "type": "hysteria2",
+      "tag": "hysteria2-4524389",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/wangcai2🇨🇳",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1449562780",
+      "server": "hk-1.gsafevpnapi.com",
+      "server_port": 20270,
+      "uuid": "8f2774ba-73fe-404d-a01b-7c01812ff75b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8",
+          "short_id": "d5b538acf8a93540"
+        }
+      }
     },
     {
       "type": "hysteria2",
@@ -24,26 +48,34 @@
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-920243845",
-      "server": "202.146.222.174",
+      "tag": "hysteria2-107825281",
+      "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2",
+        "server_name": "202.146.222.29",
         "insecure": true
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-589844071",
-      "server": "202.146.222.89",
+      "type": "vless",
+      "tag": "vless-1459678984",
+      "server": "34.96.146.210",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "uuid": "90153538-ef08-4942-b8e1-41e7c523e659",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/clashv8",
-        "insecure": true
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM",
+          "short_id": "56d4e7ae4f86fa39"
+        }
       }
     },
     {
