@@ -3,32 +3,31 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1479678804",
-      "server": "23.81.34.204",
-      "server_port": 443,
-      "uuid": "99955907-9070-46f0-a200-9c7a0b9d74fe",
-      "flow": "xtls-rprx-vision",
+      "tag": "vless-1293658711",
+      "server": "46.250.250.149",
+      "server_port": 2053,
+      "uuid": "b4caaf57-ad77-4948-a6f5-51b3513799bf",
       "tls": {
         "enabled": true,
-        "server_name": "speed.cloudflare.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s",
-          "short_id": "b19b017d6f453873"
+          "public_key": "hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M",
+          "short_id": "9922313fffed1c63"
         }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 821512",
-      "server": "51.77.225.200",
-      "server_port": 8388,
+      "tag": "shadowsocks-1251465971",
+      "server": "158.173.221.214",
+      "server_port": 11001,
       "method": "chacha20-ietf-poly1305",
-      "password": "zRZNBszYyWo5"
+      "password": "c58d16e593d44f42"
     },
     {
       "type": "direct",

@@ -4,30 +4,29 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1479678804
-  port: 443
+  name: vless-1293658711
+  port: 2053
   reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  server: 23.81.34.204
-  servername: speed.cloudflare.com
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: 9922313fffed1c63
+  server: 46.250.250.149
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
 - cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 821512
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
+  name: shadowsocks-1251465971
+  password: c58d16e593d44f42
+  port: 11001
+  server: 158.173.221.214
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1479678804
-  - 🏳️ ShatakVPN 821512
+  - vless-1293658711
+  - shadowsocks-1251465971
   type: select
 rules:
 - MATCH,PROXY

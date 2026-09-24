@@ -5,15 +5,35 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: vmess-1444974392
+  name: vmess-1446350653
   port: 22324
   server: 158.51.123.42
   type: vmess
   udp: true
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- client-fingerprint: firefox
+- name: 🏳️ ShatakVPN 967871
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 15.223.122.197
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-24252274
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 47ms
+  port: 443
+  reality-opts:
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    short-id: 3d3c1e645f763ee3
+  server: 158.69.112.254
+  servername: www.speedtest.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1019921577
   port: 41373
   reality-opts:
     public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
@@ -24,41 +44,41 @@ proxies:
   type: vless
   udp: true
   uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 285403
-  password: FD3rCuOsxOay
-  port: 8388
-  server: 15.235.75.71
-  type: ss
-  udp: true
-- client-fingerprint: chrome
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1473968716
+  name: vless-913472676
   port: 443
   reality-opts:
-    public-key: xcTXD3of3Yt5hHdIwYGZ1LjMBgiL6sqj5J33J4U4ozM
-    short-id: a7c31f92
-  server: 23.132.28.51
-  servername: candy.atlasparser.site
+    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
+    short-id: f98843107912e782
+  server: 209.200.246.148
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: dcf8e133-09a2-4884-abf9-80356bb334ac
-- name: 🏳️ ShatakVPN 922075
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1466812133
   port: 443
-  server: 15.223.122.197
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
+  reality-opts:
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    short-id: 3d3c1e645f763ee3
+  server: 158.69.112.254
+  servername: www.speedtest.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-1444974392
-  - vless-24252274
-  - 🏳️ ShatakVPN 285403
-  - vless-1473968716
-  - 🏳️ ShatakVPN 922075
+  - vmess-1446350653
+  - 🏳️ ShatakVPN 967871
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 47ms
+  - vless-1019921577
+  - vless-913472676
+  - vless-1466812133
   type: select
 rules:
 - MATCH,PROXY
