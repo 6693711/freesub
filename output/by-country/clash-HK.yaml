@@ -3,19 +3,12 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-920243840
+- name: hysteria2-656706481
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: https://t.me/wangcai2üá
-  type: hysteria2
-- name: hysteria2-650663575
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: 202.146.222.174
+  sni: 202.146.222.29
   type: hysteria2
 - name: trojan-1444683910
   password: XuMweB2PWs
@@ -24,12 +17,19 @@ proxies:
   sni: 2.27.109.179.sslip.io
   type: trojan
   udp: true
+- name: hysteria2-4524389
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2🇨🇳
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-920243840
-  - hysteria2-650663575
+  - hysteria2-656706481
   - trojan-1444683910
+  - hysteria2-4524389
   type: select
 rules:
 - MATCH,PROXY

@@ -3,8 +3,8 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "vmess-1058913279",
-      "server": "ww11.levikogjgfdd.ir",
+      "tag": "vmess-982953618",
+      "server": "134.195.196.211",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",
@@ -12,7 +12,7 @@
     },
     {
       "type": "vmess",
-      "tag": "vmess-1231007886",
+      "tag": "🏳️ ShatakVPN 932516",
       "server": "149.88.23.207",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -21,8 +21,8 @@
     },
     {
       "type": "vmess",
-      "tag": "vmess-656230692",
-      "server": "38.110.1.246",
+      "tag": "vmess-2387893",
+      "server": "38.91.107.49",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",
@@ -30,10 +30,49 @@
     },
     {
       "type": "vmess",
-      "tag": "vmess-664934406",
-      "server": "38.91.107.49",
+      "tag": "vmess-485686931",
+      "server": "84.17.41.2",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-655843941",
+      "server": "134.195.196.211",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1427744079",
+      "server": "51.161.204.244",
+      "server_port": 443,
+      "uuid": "36e89875-9c53-482b-bc41-d3890e9da176",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk",
+          "short_id": "0ad08b47f498efd2"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-814613045",
+      "server": "82.198.246.250",
+      "server_port": 180,
+      "uuid": "d13fc2f5-3e05-4795-81eb-44143a09e552",
       "security": "auto",
       "alter_id": 0
     },

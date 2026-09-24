@@ -3,11 +3,68 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: android
-  name: vless-1159409800
+- cipher: aes-128-gcm
+  name: shadowsocks-218
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: vless-1087325754
   network: ws
   port: 443
   server: 104.21.70.21
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- name: vless-702719097
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- alterId: 0
+  cipher: auto
+  name: vmess-1122515635
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇯🇵 JP-45.76.207.88 443
+  network: ws
+  port: 443
+  server: 45.76.207.88
+  servername: mia0.pages.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
+  ws-opts:
+    headers:
+      Host: mia0.pages.dev
+    path: /TG:@MiaChatChannel
+- alterId: 0
+  cipher: auto
+  name: vmess-1121839535
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- client-fingerprint: chrome
+  name: vless-975967538
+  network: ws
+  port: 443
+  server: 162.159.254.3
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -19,7 +76,20 @@ proxies:
     path: /tyxyws
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-26652141
+  name: vless-656230600
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-836349884
   port: 18007
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -30,46 +100,19 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: qq
-  name: vless-1123054862
-  network: ws
-  port: 443
-  server: 104.21.70.21
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: safari
-  name: vless-1473431517
-  port: 443
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1014382059
+  port: 11690
   reality-opts:
-    public-key: Ti7zRkfweHdrQ5QHI9o_zEgHn39xRfMG2C2Gfp_AMHE
-    short-id: 8380ad05cd21a69f
-  server: 35.243.84.20
-  servername: www.cloudflare.com
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  server: 13.231.19.51
+  servername: www.tesla.com
   tls: true
   type: vless
   udp: true
-  uuid: 0c4c6ebb-603f-4429-8682-beef6b65b80d
-- client-fingerprint: ios
-  name: vless-1162311174
-  network: ws
-  port: 443
-  server: 172.67.217.240
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
 - name: hysteria2-650665463
   password: 6c077487-06af-4fb1-9e46-d485d98f0a31
   port: 52454
@@ -77,15 +120,42 @@ proxies:
   skip-cert-verify: true
   sni: 45.88.43.116
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-12945896
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-1470835089
+  password: my_super_password_123
+  port: 443
+  server: open.w2m.ink
+  skip-cert-verify: true
+  sni: open.w2m.ink
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1159409800
-  - vless-26652141
-  - vless-1123054862
-  - vless-1473431517
-  - vless-1162311174
+  - shadowsocks-218
+  - vless-1087325754
+  - vless-702719097
+  - vmess-1122515635
+  - 🔒 VL-WS-TLS 🇯🇵 JP-45.76.207.88 443
+  - vmess-1121839535
+  - vless-975967538
+  - vless-656230600
+  - vless-836349884
+  - vless-1014382059
   - hysteria2-650665463
+  - vless-12945896
+  - hysteria2-1470835089
   type: select
 rules:
 - MATCH,PROXY
