@@ -2,24 +2,12 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1421461450",
-      "server": "162.55.242.208",
-      "server_port": 2053,
-      "uuid": "659ffdfa-47d2-47d7-af40-5afe0907eead",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY",
-          "short_id": "4d14da19b19cfc8c"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇩🇪 ShatakVPN 929801",
+      "server": "51.195.126.38",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2YdE4lFOid5a"
     },
     {
       "type": "direct",

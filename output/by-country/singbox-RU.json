@@ -17,28 +17,6 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ws?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET",
-        "headers": {
-          "Host": "fbsv6.guardora.pro"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇷🇺 RU-217.19.122.65 443_1",
-      "server": "217.19.122.65",
-      "server_port": 443,
-      "uuid": "bc5ec86c-3e65-4272-994c-59a924c72a68",
-      "tls": {
-        "enabled": true,
-        "server_name": "fbsv6.guardora.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
         "path": "/ws",
         "headers": {
           "Host": "fbsv6.guardora.pro"

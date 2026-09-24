@@ -2,24 +2,10 @@ allow-lan: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1489771581
-  port: 10202
-  reality-opts:
-    public-key: E0R7f_nEkbcnc97Z82aDMo2bUVGgcIzChCVYwsQmXnc
-    short-id: 88bd7f
-  server: family.bucket.x1.kfc-520.com
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8cb0c4fb-03ee-35b8-a47b-cd1d7e76dfd3
+proxies: []
 proxy-groups:
 - name: PROXY
-  proxies:
-  - vless-1489771581
+  proxies: []
   type: select
 rules:
 - MATCH,PROXY

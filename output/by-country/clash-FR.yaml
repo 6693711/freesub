@@ -3,20 +3,34 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1394190236
-  password: mrs2e9a
-  port: 443
-  server: 54.36.174.134
-  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 547847
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.2
+  servername: fuck.rkn
+  tls: true
+  type: vless
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1394190228
-  password: mrs2e9a
-  port: 443
-  server: 54.36.174.140
-  type: ss
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc-common3
+  name: vless-1454529435
+  network: grpc
+  port: 35108
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  server: 152.228.139.33
+  servername: www.nvidia.com
+  tls: true
+  type: vless
   udp: true
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: grpc-common3
@@ -32,12 +46,34 @@ proxies:
   type: vless
   udp: true
   uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 117ms
+  port: 443
+  reality-opts:
+    public-key: x-oA2H8zwILFq4PCZvvJPzUlawE2ADkVUXG3h9m2-hg
+    short-id: 6337fd42719a0912
+  server: 51.68.215.88
+  servername: www.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0774160b-be44-4781-aad7-1a1745a36659
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1394190236
+  password: mrs2e9a
+  port: 443
+  server: 54.36.174.134
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1394190236
-  - shadowsocks-1394190228
+  - 🏳️ ShatakVPN 547847
+  - vless-1454529435
   - vless-1403698678
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 117ms
+  - shadowsocks-1394190236
   type: select
 rules:
 - MATCH,PROXY

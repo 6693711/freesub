@@ -2,27 +2,6 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1489771581",
-      "server": "family.bucket.x1.kfc-520.com",
-      "server_port": 10202,
-      "uuid": "8cb0c4fb-03ee-35b8-a47b-cd1d7e76dfd3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "E0R7f_nEkbcnc97Z82aDMo2bUVGgcIzChCVYwsQmXnc",
-          "short_id": "88bd7f"
-        }
-      }
-    },
-    {
       "type": "direct",
       "tag": "direct"
     },

@@ -2,41 +2,35 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-896857448",
-      "server": "85.204.107.174",
-      "server_port": 8080,
-      "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-romania-new.roxa.org",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🛞81@oneclickvpnkeys",
-      "server": "85.204.107.181",
-      "server_port": 8080,
-      "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-romania-new.roxa.org",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "vless-1440893981",
-      "server": "cdn.snobvpn.online",
-      "server_port": 80,
+      "tag": "vless-1345595579",
+      "server": "89.125.147.199",
+      "server_port": 443,
       "uuid": "246b101b-4e4a-451f-8e9c-5e8d3b64b4ef",
-      "transport": {
-        "type": "ws",
-        "path": "/snob-ws",
-        "headers": {
-          "Host": "cdn.snobvpn.online"
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg",
+          "short_id": "f6c7c139b9c938db"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 766976",
+      "server": "85.204.107.178",
+      "server_port": 8080,
+      "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
+      "tls": {
+        "enabled": true,
+        "server_name": "hopp-romania-new.roxa.org",
+        "insecure": true
       }
     },
     {

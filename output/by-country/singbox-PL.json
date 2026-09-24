@@ -2,17 +2,32 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-696781307",
-      "server": "217.30.10.44",
-      "server_port": 9071,
-      "method": "aes-256-cfb",
-      "password": "mENfxTFQpRKKh4As"
+      "type": "vless",
+      "tag": "vless-1464518690",
+      "server": "185.223.57.10",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-648949653",
-      "server": "45.192.12.93",
+      "tag": "hysteria2-619899526",
+      "server": "admin.wwwinternetvideo.click",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
@@ -22,15 +37,26 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 601435",
-      "server": "45.192.12.93",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "type": "vless",
+      "tag": "vless-1141367415",
+      "server": "185.223.57.10",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
         "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": false
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {
