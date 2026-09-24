@@ -3,8 +3,8 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1107712078",
-      "server": "srv-21bac9.vless.monster",
+      "tag": "vless-1122091246",
+      "server": "31.56.189.27",
       "server_port": 2087,
       "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
       "tls": {
@@ -22,13 +22,29 @@
     },
     {
       "type": "vless",
-      "tag": "🔒 VL-GRPC-TLS 🇩🇪 DE-212.80.7.129 6215",
-      "server": "212.80.7.129",
-      "server_port": 6215,
-      "uuid": "2f2ae482-5a3e-455e-aad6-4ac28a82f64f",
+      "tag": "🔒 VL-TCP-TLS 🇩🇪 DE-57.129.96.67 443",
+      "server": "57.129.96.67",
+      "server_port": 443,
+      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.astranet.ignorelist.com",
+        "server_name": "nasnet-571299667-direct.mbghalibaf.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1141368041",
+      "server": "srv-21bac9.vless.monster",
+      "server_port": 2087,
+      "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-21bac9.vless.monster",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -36,32 +52,37 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "api.v1.ApiService"
+        "service_name": "freegrpc"
       }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1451344574",
+      "server": "216.106.187.60",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "vless",
-      "tag": "🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 96ms",
-      "server": "144.31.159.86",
+      "tag": "🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 92ms",
+      "server": "34.185.172.52",
       "server_port": 443,
-      "uuid": "b5d6221d-e3ad-4453-b5c6-8bf7ccaa7aa5",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3255d065-119c-4103-a422-ea9d301b0707",
       "tls": {
         "enabled": true,
-        "server_name": "de3.duck-proxy.com",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-XH2d9x4wRi--KvR6XTcZW9HXbikI2_262zfYDr1uFw",
+          "short_id": "690ec9207866c84e"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 971635",
-      "server": "185.226.172.8",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74"
     },
     {
       "type": "direct",
