@@ -1,0 +1,28 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: hysteria2-655819436
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  port: 443
+  server: vpn-kr-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-kr-002.fastervpn.world
+  type: hysteria2
+- name: hysteria2-650671509
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: 3.36.93.74
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - hysteria2-655819436
+  - hysteria2-650671509
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

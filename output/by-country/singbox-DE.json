@@ -2,12 +2,32 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 ShatakVPN 929801",
-      "server": "51.195.126.38",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "2YdE4lFOid5a"
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS 🇩🇪 DE-144.31.159.86 443",
+      "server": "144.31.159.86",
+      "server_port": 443,
+      "uuid": "b5d6221d-e3ad-4453-b5c6-8bf7ccaa7aa5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "de3.duck-proxy.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 927796",
+      "server": "163.8.195.241",
+      "server_port": 2087,
+      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
+      "transport": {
+        "type": "ws",
+        "path": "/29c8fed7ca22",
+        "headers": {}
+      }
     },
     {
       "type": "direct",

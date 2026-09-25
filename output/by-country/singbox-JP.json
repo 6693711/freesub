@@ -2,21 +2,9 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1475048771",
-      "server": "open.w2m.ink",
-      "server_port": 443,
-      "password": "my_super_password_123",
-      "tls": {
-        "enabled": true,
-        "server_name": "open.w2m.ink",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "vless-1461230181",
-      "server": "jumpernode.online",
+      "tag": "vless-1466681099",
+      "server": "38.207.130.15",
       "server_port": 443,
       "uuid": "e4cd263b-c5c7-4410-bf61-8893179ec429",
       "flow": "xtls-rprx-vision",
@@ -36,59 +24,95 @@
     },
     {
       "type": "vless",
-      "tag": "vless-975967538",
-      "server": "162.159.254.3",
-      "server_port": 443,
-      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tag": "vless-1266369648",
+      "server": "13.231.19.51",
+      "server_port": 11690,
+      "uuid": "e2b8b217-cffb-4d66-9b8b-eca6e4334032",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "jp3.yohototo.top",
+        "server_name": "www.tesla.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tyxyws",
-        "headers": {
-          "Host": "jp3.yohototo.top"
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg",
+          "short_id": "034885e346fd30"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-663902649",
-      "server": "137.220.221.179",
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1473957302",
+      "server": "13.113.166.191",
       "server_port": 443,
-      "uuid": "a16a3336-c9ab-489f-9b85-c973f5e2cfa4"
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1121839535",
+      "server": "45.32.57.118",
+      "server_port": 4433,
+      "uuid": "35b89832-0a7c-48dd-8d1c-a2891b522195",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "vless",
-      "tag": "vless-12945896",
-      "server": "3.114.220.22",
-      "server_port": 10583,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "tag": "vless-1496043618",
+      "server": "103.137.215.122",
+      "server_port": 443,
+      "uuid": "ea1c1e20-7263-4b08-a01b-690b29af66b3",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
+          "public_key": "T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c",
+          "short_id": "2223411c2ad9c55f"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-803630126",
+      "tag": "🇯🇵 日本 | JPN",
+      "server": "34.84.126.188",
+      "server_port": 443,
+      "uuid": "51a43b75-c84b-46eb-885e-c24e7819cd0b",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "qMPnrSiXgWvw2ETefb46OfJKnYpfX6HfyGdWpWWxtVI",
+          "short_id": "780152c21e234b5a"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-732726857",
+      "server": "137.220.221.179",
+      "server_port": 443,
+      "uuid": "a16a3336-c9ab-489f-9b85-c973f5e2cfa4"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1016882879",
       "server": "3.114.220.22",
-      "server_port": 19645,
+      "server_port": 18007,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -112,6 +136,15 @@
       "server_port": 80,
       "method": "aes-256-gcm",
       "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1130434817",
+      "server": "45.32.57.118",
+      "server_port": 4433,
+      "uuid": "35b89832-0a7c-48dd-8d1c-a2891b522195",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

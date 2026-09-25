@@ -3,6 +3,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443
+  port: 443
+  server: 144.31.5.3
+  servername: pl4.moritech.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443
+  port: 443
+  server: 144.31.5.64
+  servername: pl6.moritech.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 - client-fingerprint: edge
   grpc-opts:
     grpc-service-name: TunService
@@ -17,33 +37,12 @@ proxies:
   type: vless
   udp: true
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- name: hysteria2-619899526
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: admin.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: vless-1141367415
-  network: grpc
-  port: 33743
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.10
-  servername: www.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
 proxy-groups:
 - name: PROXY
   proxies:
+  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.3 443
+  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.5.64 443
   - vless-1464518690
-  - hysteria2-619899526
-  - vless-1141367415
   type: select
 rules:
 - MATCH,PROXY

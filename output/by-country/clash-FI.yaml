@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | DEU
+  port: 443
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  server: 138.124.121.233
+  servername: amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8e826a69-63f6-0001-a67d-4a1958e8b2d2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇩🇪 德国 | DEU
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

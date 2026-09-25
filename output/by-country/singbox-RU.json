@@ -2,25 +2,15 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇷🇺 RU-217.19.122.65 443",
-      "server": "217.19.122.65",
-      "server_port": 443,
-      "uuid": "bc5ec86c-3e65-4272-994c-59a924c72a68",
+      "type": "hysteria2",
+      "tag": "hysteria2-1393931802",
+      "server": "91.240.86.70",
+      "server_port": 22443,
+      "password": "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5",
       "tls": {
         "enabled": true,
-        "server_name": "fbsv6.guardora.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "fbsv6.guardora.pro"
-        }
+        "server_name": "itsallproxy.quattro-tech.ru",
+        "insecure": true
       }
     },
     {
