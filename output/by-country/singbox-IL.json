@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇱 以色列 | ISR",
+      "server": "fserver-worker-001.mapleridgeway.top",
+      "server_port": 443,
+      "uuid": "83b4af70-376e-427c-8c11-a025bec6b085",
+      "tls": {
+        "enabled": true,
+        "server_name": "fserver-worker-001.mapleridgeway.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn/99294c014f2c7791?ed=2056",
+        "headers": {
+          "Host": "fserver-worker-001.mapleridgeway.top"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

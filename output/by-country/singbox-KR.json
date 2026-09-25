@@ -3,30 +3,9 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1495341649",
-      "server": "185.227.154.226",
-      "server_port": 443,
-      "uuid": "b0e3d7fe-0ff5-470d-9c69-4f624a35d683",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qxcpzDbypXaxsvsvzvebnyHxc0BTQdz7LvIkBXZ0TUc",
-          "short_id": "3246e72c"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-803630116",
+      "tag": "vless-1104491030",
       "server": "3.39.4.109",
-      "server_port": 18967,
+      "server_port": 13672,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -34,7 +13,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -45,13 +24,13 @@
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1111846076",
+      "tag": "hysteria2-1276641967",
       "server": "152.67.200.82",
       "server_port": 50160,
       "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
       "tls": {
         "enabled": true,
-        "server_name": "speedtest.tinkoff.ru",
+        "server_name": "www.bing.com",
         "insecure": true
       }
     },

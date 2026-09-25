@@ -3,23 +3,10 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1495341649
-  port: 443
-  reality-opts:
-    public-key: qxcpzDbypXaxsvsvzvebnyHxc0BTQdz7LvIkBXZ0TUc
-    short-id: 3246e72c
-  server: 185.227.154.226
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b0e3d7fe-0ff5-470d-9c69-4f624a35d683
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-803630116
-  port: 18967
+  name: vless-1104491030
+  port: 13672
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -29,19 +16,18 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-1111846076
+- name: hysteria2-1276641967
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
   skip-cert-verify: true
-  sni: speedtest.tinkoff.ru
+  sni: www.bing.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1495341649
-  - vless-803630116
-  - hysteria2-1111846076
+  - vless-1104491030
+  - hysteria2-1276641967
   type: select
 rules:
 - MATCH,PROXY

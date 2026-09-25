@@ -1,0 +1,27 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🇮🇱 以色列 | ISR
+  network: ws
+  port: 443
+  server: fserver-worker-001.mapleridgeway.top
+  servername: fserver-worker-001.mapleridgeway.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 83b4af70-376e-427c-8c11-a025bec6b085
+  ws-opts:
+    headers:
+      Host: fserver-worker-001.mapleridgeway.top
+    path: /cdn/99294c014f2c7791?ed=2056
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇮🇱 以色列 | ISR
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -3,9 +3,62 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-260719822
+  port: 10574
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-522223663
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-862912453
+  name: vless-1375518747
+  port: 443
+  reality-opts:
+    public-key: TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig
+    short-id: 9930177816ab09da
+  server: 206.206.76.75
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1e3d3634-36ac-43ac-a439-9665d885238f
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇸🇬 SG-47.131.189.221 443
+  network: ws
+  port: 443
+  server: 47.131.189.221
+  servername: mia7.pages.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
+  ws-opts:
+    headers:
+      Host: mia7.pages.dev
+    path: /TG:@MiaChatChannel
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1048484265
   port: 19825
   reality-opts:
     public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
@@ -16,31 +69,14 @@ proxies:
   type: vless
   udp: true
   uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- name: hysteria2-1063751359
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
-  skip-cert-verify: true
-  sni: 138.2.73.238
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-929334146
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: 6ba85179e30d4fc2
-  server: sg2-8sb.6121999.dpdns.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-862912453
-  - hysteria2-1063751359
-  - vless-929334146
+  - vless-260719822
+  - vless-522223663
+  - vless-1375518747
+  - 🔒 VL-WS-TLS 🇸🇬 SG-47.131.189.221 443
+  - vless-1048484265
   type: select
 rules:
 - MATCH,PROXY

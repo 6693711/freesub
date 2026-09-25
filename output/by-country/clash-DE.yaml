@@ -3,17 +3,67 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🪐32@oneclickvpnkeys
-  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  port: 9443
-  server: 95.85.252.47
-  skip-cert-verify: true
-  sni: onecloudstream.com
-  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1482807166
+  port: 443
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 5c6481cdd4
+  server: defrnode.jumpernode.online
+  servername: buckeye-retail-website.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+- name: 🏳️ ShatakVPN 378581
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
+  udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  ws-opts:
+    headers: {}
+    path: /29c8fed7ca22
+- client-fingerprint: firefox
+  name: vless-1381454746
+  port: 2053
+  reality-opts:
+    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
+    short-id: 4d14da19b19cfc8c
+  server: 162.55.242.208
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
+- name: vless-1156743175
+  network: ws
+  port: 2087
+  server: 163.8.195.241
+  type: vless
+  udp: true
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  ws-opts:
+    headers:
+      Host: 163.8.195.241
+    path: /29c8fed7ca22
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1493200859
+  password: IdU1jzHh7ZszbUC5v2mA9W
+  port: 5228
+  server: creativegermany.zanity.net
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🪐32@oneclickvpnkeys
+  - vless-1482807166
+  - 🏳️ ShatakVPN 378581
+  - vless-1381454746
+  - vless-1156743175
+  - shadowsocks-1493200859
   type: select
 rules:
 - MATCH,PROXY

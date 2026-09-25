@@ -2,16 +2,79 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🪐32@oneclickvpnkeys",
-      "server": "95.85.252.47",
-      "server_port": 9443,
-      "password": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
+      "type": "vless",
+      "tag": "vless-1482807166",
+      "server": "defrnode.jumpernode.online",
+      "server_port": 443,
+      "uuid": "8af93649-403b-46d8-9966-923d4c58402c",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "onecloudstream.com",
-        "insecure": true
+        "server_name": "buckeye-retail-website.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE",
+          "short_id": "5c6481cdd4"
+        }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 378581",
+      "server": "163.8.195.241",
+      "server_port": 2087,
+      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
+      "transport": {
+        "type": "ws",
+        "path": "/29c8fed7ca22",
+        "headers": {}
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1381454746",
+      "server": "162.55.242.208",
+      "server_port": 2053,
+      "uuid": "659ffdfa-47d2-47d7-af40-5afe0907eead",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY",
+          "short_id": "4d14da19b19cfc8c"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1156743175",
+      "server": "163.8.195.241",
+      "server_port": 2087,
+      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
+      "transport": {
+        "type": "ws",
+        "path": "/29c8fed7ca22",
+        "headers": {
+          "Host": "163.8.195.241"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1493200859",
+      "server": "creativegermany.zanity.net",
+      "server_port": 5228,
+      "method": "chacha20-ietf-poly1305",
+      "password": "IdU1jzHh7ZszbUC5v2mA9W"
     },
     {
       "type": "direct",
