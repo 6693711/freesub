@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1469451401
+  port: 18775
+  reality-opts:
+    public-key: oR75S6pg_RDAKIuzv_WrCiwaUqqFoek2iuo5N22llQQ
+    short-id: 6ba85179e30d4fc2
+  server: 136.175.82.85
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9ae5940b-0278-403d-a1e1-9dddc47bdcf6
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1469451401
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

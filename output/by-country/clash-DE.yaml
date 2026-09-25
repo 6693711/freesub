@@ -3,31 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇩🇪 DE-144.31.159.86 443
-  port: 443
-  server: 144.31.159.86
-  servername: de3.duck-proxy.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b5d6221d-e3ad-4453-b5c6-8bf7ccaa7aa5
-- name: 🏳️ ShatakVPN 927796
-  network: ws
-  port: 2087
-  server: 163.8.195.241
-  type: vless
-  udp: true
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
-  ws-opts:
-    headers: {}
-    path: /29c8fed7ca22
+- name: 🪐32@oneclickvpnkeys
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  port: 9443
+  server: 95.85.252.47
+  skip-cert-verify: true
+  sni: onecloudstream.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-TCP-TLS 🇩🇪 DE-144.31.159.86 443
-  - 🏳️ ShatakVPN 927796
+  - 🪐32@oneclickvpnkeys
   type: select
 rules:
 - MATCH,PROXY
