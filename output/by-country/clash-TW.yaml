@@ -3,6 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: edge
+  name: vless-1499309405
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  server: 118.167.230.191
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
 - client-fingerprint: random
   flow: xtls-rprx-vision
   name: vless-1173311749
@@ -16,74 +27,11 @@ proxies:
   type: vless
   udp: true
   uuid: 41b96ee9-ee5e-455f-9753-187a9dead97a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1036675892
-  port: 43450
-  reality-opts:
-    public-key: HNPJBiUbqYVC3ylvu1GA7fCHLTaHO7S13Bex1nm0O1o
-    short-id: e65d010354bdad73
-  server: 35.194.157.16
-  servername: www.amd.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 64d77a12-ad6b-4d85-a349-bd287535af1c
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1028233108
-  port: 30837
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  server: 35.201.163.218
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
-- name: 🏳️ ShatakVPN 994670
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1040123902
-  port: 43450
-  reality-opts:
-    public-key: HNPJBiUbqYVC3ylvu1GA7fCHLTaHO7S13Bex1nm0O1o
-    short-id: e65d010354bdad73
-  server: 35.194.157.16
-  servername: www.amd.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 64d77a12-ad6b-4d85-a349-bd287535af1c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1027296937
-  port: 30837
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  server: 35.201.163.218
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
 proxy-groups:
 - name: PROXY
   proxies:
+  - vless-1499309405
   - vless-1173311749
-  - vless-1036675892
-  - vless-1028233108
-  - 🏳️ ShatakVPN 994670
-  - vless-1040123902
-  - vless-1027296937
   type: select
 rules:
 - MATCH,PROXY

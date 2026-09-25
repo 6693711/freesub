@@ -4,23 +4,36 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🇮🇱 以色列 | ISR
-  network: ws
+  flow: xtls-rprx-vision
+  name: vless-1443573154
   port: 443
-  server: fserver-worker-001.mapleridgeway.top
-  servername: fserver-worker-001.mapleridgeway.top
+  reality-opts:
+    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
+    short-id: a1b2c3d4
+  server: 185.95.231.233
+  servername: store.steampowered.com
   tls: true
   type: vless
   udp: true
-  uuid: 83b4af70-376e-427c-8c11-a025bec6b085
-  ws-opts:
-    headers:
-      Host: fserver-worker-001.mapleridgeway.top
-    path: /cdn/99294c014f2c7791?ed=2056
+  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1443343234
+  port: 443
+  reality-opts:
+    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
+    short-id: a1b2c3d4
+  server: 185.95.231.233
+  servername: store.steampowered.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇮🇱 以色列 | ISR
+  - vless-1443573154
+  - vless-1443343234
   type: select
 rules:
 - MATCH,PROXY

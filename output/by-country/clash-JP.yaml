@@ -3,47 +3,85 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🇯🇵JP_1|2.2MB/s
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 20561
-  server: msjp1.mangshe.xyz
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-- name: hysteria2-1501696968
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 20561
-  server: msjp.mangshe.xyz
-  skip-cert-verify: false
-  sni: msjp.mangshe.xyz
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-1492846786
-  network: ws
-  port: 23462
-  server: 64.176.51.214
-  type: vmess
-  udp: true
-  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
-  ws-opts:
-    headers: {}
-    path: /a15206
-- name: hysteria2-1474773089
-  password: my_super_password_123
-  port: 5443
-  server: open.w2m.ink
-  skip-cert-verify: false
-  sni: open.w2m.ink
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1496043611
+  name: vless-1505708524
+  port: 20270
+  reality-opts:
+    public-key: gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI
+    short-id: 89fecfdaf45cd76d
+  server: jp-1.gsafevpnapi.com
+  servername: www.yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3e63ff6e-2017-439b-bdf3-caba1a7a5c56
+- name: vless-702719095
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- name: vless-1442724478
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- name: hysteria2-1503208276
+  password: my_super_password_123
+  port: 443
+  server: open.w2m.ink
+  skip-cert-verify: true
+  sni: open.w2m.ink
+  type: hysteria2
+- cipher: aes-128-gcm
+  name: shadowsocks-211
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.241
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-656230600
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- cipher: aes-256-gcm
+  name: shadowsocks-696780669
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
+  udp: true
+- client-fingerprint: edge
+  name: vless-1468787635
+  port: 443
+  reality-opts:
+    public-key: qMPnrSiXgWvw2ETefb46OfJKnYpfX6HfyGdWpWWxtVI
+    short-id: 780152c21e234b5a
+  server: 34.84.126.188
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 51a43b75-c84b-46eb-885e-c24e7819cd0b
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-1471283827
   port: 443
   reality-opts:
     public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
     short-id: 6d962e8d8a0dce
-  server: 38.207.130.15
+  server: jumpernode.online
   servername: amazon.com
   tls: true
   type: vless
@@ -52,11 +90,15 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇯🇵JP_1|2.2MB/s
-  - hysteria2-1501696968
-  - vmess-1492846786
-  - hysteria2-1474773089
-  - vless-1496043611
+  - vless-1505708524
+  - vless-702719095
+  - vless-1442724478
+  - hysteria2-1503208276
+  - shadowsocks-211
+  - vless-656230600
+  - shadowsocks-696780669
+  - vless-1468787635
+  - vless-1471283827
   type: select
 rules:
 - MATCH,PROXY
