@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: hysteria2-1493685281
+  password: 5413edfb-08d6-4fba-b51c-809c04feb127
+  port: 443
+  server: 77.110.104.238
+  skip-cert-verify: true
+  sni: ch2-hy2.veilvpn.life
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - hysteria2-1493685281
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -3,32 +3,43 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 158ms
+  port: 443
+  server: pl3.moritech.net
+  servername: pl3.moritech.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- cipher: aes-256-cfb
+  name: shadowsocks-795694264
+  password: FAdUvMJUq5vDgKEq
+  port: 9006
+  server: 217.30.10.44
+  type: ss
+  udp: true
 - client-fingerprint: qq
   grpc-opts:
     grpc-service-name: TunService
-  name: vless-1365265785
+  name: vless-1105975127
   network: grpc
   port: 33743
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.16
+  server: 185.223.57.10
   servername: www.google.com
   tls: true
   type: vless
   udp: true
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- name: 🏳️ ShatakVPN 146654
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1365265785
-  - 🏳️ ShatakVPN 146654
+  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 158ms
+  - shadowsocks-795694264
+  - vless-1105975127
   type: select
 rules:
 - MATCH,PROXY
