@@ -5,30 +5,64 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1503398052
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms
   port: 443
   reality-opts:
-    public-key: T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c
-    short-id: 2223411c2ad9c55f
-  server: 103.137.215.122
+    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
+    short-id: 21270a66
+  server: high-speed-test-01.linkpc.net
+  servername: aws.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
+- name: hysteria2-1499890367
+  password: RQBXe4kpsRant_2u1PzdneBOPuCSwUSI
+  port: 443
+  server: 43.167.208.94
+  skip-cert-verify: true
+  sni: 43.167.208.94
+  type: hysteria2
+- name: hysteria2-1475048771
+  password: my_super_password_123
+  port: 443
+  server: open.w2m.ink
+  skip-cert-verify: false
+  sni: open.w2m.ink
+  type: hysteria2
+- name: 🇯🇵 日本 | JPN
+  password: my_super_password_123
+  port: 443
+  server: open.2ml.bid
+  skip-cert-verify: true
+  sni: open.2ml.bid
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-26652141
+  port: 18007
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
   servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
-- client-fingerprint: firefox
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1519680274
-  port: 20270
+  name: vless-987610015
+  port: 50159
   reality-opts:
-    public-key: gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI
-    short-id: 89fecfdaf45cd76d
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 537f8b38-8015-4431-84bb-63ada2d0bf89
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-1007755579
@@ -42,68 +76,16 @@ proxies:
   type: vless
   udp: true
   uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1520455065
-  port: 20270
-  reality-opts:
-    public-key: gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI
-    short-id: 89fecfdaf45cd76d
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 537f8b38-8015-4431-84bb-63ada2d0bf89
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-950750905
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1513944820
-  port: 20270
-  reality-opts:
-    public-key: gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI
-    short-id: 89fecfdaf45cd76d
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 537f8b38-8015-4431-84bb-63ada2d0bf89
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1520239886
-  port: 443
-  reality-opts:
-    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
-    short-id: 21270a66
-  server: high-speed-test-01.linkpc.net
-  servername: aws.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1503398052
-  - vless-1519680274
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms
+  - hysteria2-1499890367
+  - hysteria2-1475048771
+  - 🇯🇵 日本 | JPN
+  - vless-26652141
+  - vless-987610015
   - vless-1007755579
-  - vless-1520455065
-  - vless-950750905
-  - vless-1513944820
-  - vless-1520239886
   type: select
 rules:
 - MATCH,PROXY

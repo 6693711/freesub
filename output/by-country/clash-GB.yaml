@@ -3,35 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- grpc-opts:
-    grpc-service-name: vless
-  name: vless-1245369769
-  network: grpc
-  port: 2083
-  server: 66.90.104.42
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1479678804
+  port: 443
+  reality-opts:
+    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+    short-id: b19b017d6f453873
+  server: 23.81.34.204
+  servername: speed.cloudflare.com
+  tls: true
   type: vless
   udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- alterId: 0
-  cipher: auto
-  name: vmess-1443522751
-  network: ws
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1472517988
   port: 443
-  server: aksai.org
-  servername: aksai.org
+  reality-opts:
+    public-key: s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk
+    short-id: 2e124af254a65e7c
+  server: 164.37.100.195
+  servername: tomaz1337shellbuy.vvzzkontaktezzvv.garden
   tls: true
-  type: vmess
+  type: vless
   udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aksai.org
-    path: /linkvws
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1245369769
-  - vmess-1443522751
+  - vless-1479678804
+  - vless-1472517988
   type: select
 rules:
 - MATCH,PROXY

@@ -3,10 +3,67 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1503398052",
-      "server": "103.137.215.122",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 202ms",
+      "server": "high-speed-test-01.linkpc.net",
       "server_port": 443,
-      "uuid": "ea1c1e20-7263-4b08-a01b-690b29af66b3",
+      "uuid": "37615d66-5467-44a3-bc23-f2c3bef7f761",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "aws.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM",
+          "short_id": "21270a66"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1499890367",
+      "server": "43.167.208.94",
+      "server_port": 443,
+      "password": "RQBXe4kpsRant_2u1PzdneBOPuCSwUSI",
+      "tls": {
+        "enabled": true,
+        "server_name": "43.167.208.94",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1475048771",
+      "server": "open.w2m.ink",
+      "server_port": 443,
+      "password": "my_super_password_123",
+      "tls": {
+        "enabled": true,
+        "server_name": "open.w2m.ink",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 | JPN",
+      "server": "open.2ml.bid",
+      "server_port": 443,
+      "password": "my_super_password_123",
+      "tls": {
+        "enabled": true,
+        "server_name": "open.2ml.bid",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-26652141",
+      "server": "3.114.220.22",
+      "server_port": 18007,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -17,29 +74,29 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c",
-          "short_id": "2223411c2ad9c55f"
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1519680274",
-      "server": "jp-1.gsafevpnapi.com",
-      "server_port": 20270,
-      "uuid": "537f8b38-8015-4431-84bb-63ada2d0bf89",
+      "tag": "vless-987610015",
+      "server": "154.31.114.248",
+      "server_port": 50159,
+      "uuid": "d56624b2-35bb-468c-9b2a-e0b0df7230c1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.yahoo.com",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI",
-          "short_id": "89fecfdaf45cd76d"
+          "public_key": "j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA",
+          "short_id": "091e1c5db8451757"
         }
       }
     },
@@ -61,90 +118,6 @@
           "enabled": true,
           "public_key": "j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA",
           "short_id": "091e1c5db8451757"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1520455065",
-      "server": "jp-1.gsafevpnapi.com",
-      "server_port": 20270,
-      "uuid": "537f8b38-8015-4431-84bb-63ada2d0bf89",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI",
-          "short_id": "89fecfdaf45cd76d"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-950750905",
-      "server": "154.31.114.248",
-      "server_port": 50159,
-      "uuid": "d56624b2-35bb-468c-9b2a-e0b0df7230c1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA",
-          "short_id": "091e1c5db8451757"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1513944820",
-      "server": "jp-1.gsafevpnapi.com",
-      "server_port": 20270,
-      "uuid": "537f8b38-8015-4431-84bb-63ada2d0bf89",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI",
-          "short_id": "89fecfdaf45cd76d"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1520239886",
-      "server": "high-speed-test-01.linkpc.net",
-      "server_port": 443,
-      "uuid": "37615d66-5467-44a3-bc23-f2c3bef7f761",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "aws.amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM",
-          "short_id": "21270a66"
         }
       }
     },

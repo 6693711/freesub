@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 350ms
+  port: 443
+  reality-opts:
+    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
+    short-id: d4f6a8c1b2e3f9aa
+  server: api-4pda-k9x4m.xubi.org
+  servername: 4pda.to
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 350ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

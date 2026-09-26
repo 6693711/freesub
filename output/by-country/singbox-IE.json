@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 67ms",
+      "server": "20.234.96.89",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C8QhmBLJzhKo2JHR"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

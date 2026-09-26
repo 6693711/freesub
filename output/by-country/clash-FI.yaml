@@ -5,11 +5,11 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1394180319
+  name: vless-1381769945
   port: 443
   reality-opts:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  server: 83.219.97.26
+  server: est1313.ggisopi.su
   servername: est1313.ggisopi.su
   tls: true
   type: vless
@@ -18,7 +18,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1394180319
+  - vless-1381769945
   type: select
 rules:
 - MATCH,PROXY

@@ -3,17 +3,53 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-669755179
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-803630116
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- cipher: aes-256-cfb
+  name: shadowsocks-287
+  password: qwerREWQ@@
+  port: 6123
+  server: 211.178.105.134
+  type: ss
+  udp: true
+- name: hysteria2-956723733
+  password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: false
-  sni: 152-67-200-82.liao.kdns.fr
+  server: 132.226.226.189
+  skip-cert-verify: true
+  sni: www.bing.com
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-803630145
+  port: 13672
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-669755179
+  - vless-803630116
+  - shadowsocks-287
+  - hysteria2-956723733
+  - vless-803630145
   type: select
 rules:
 - MATCH,PROXY

@@ -2,24 +2,25 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 486379",
-      "server": "45.192.12.93",
+      "type": "vless",
+      "tag": "vless-1394615931",
+      "server": "144.31.131.38",
       "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": false
+        "server_name": "prod.pl-node-01.security-sbrf.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-795694264",
-      "server": "217.30.10.44",
-      "server_port": 9006,
-      "method": "aes-256-cfb",
-      "password": "FAdUvMJUq5vDgKEq"
     },
     {
       "type": "direct",

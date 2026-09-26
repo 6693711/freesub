@@ -1,0 +1,39 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔vpnbaz 🔒 VL-TCP- ❔ XX 200ms
+  port: 40443
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
+  server: 5.253.42.164
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+- client-fingerprint: firefox
+  name: vless-693666638
+  port: 40443
+  reality-opts:
+    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+    short-id: a8ae
+  server: 194.76.154.31
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔vpnbaz 🔒 VL-TCP- ❔ XX 200ms
+  - vless-693666638
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
