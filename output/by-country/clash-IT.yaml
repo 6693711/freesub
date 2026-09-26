@@ -1,0 +1,33 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: aes-256-cfb
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 125ms
+  password: TyNkGmp9hs6eGpDK
+  port: 9092
+  server: 91.201.65.122
+  type: ss
+  udp: true
+- client-fingerprint: random
+  name: vless-703656408
+  port: 2053
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+    short-id: 5b8a942318178e7b
+  server: 57.131.38.163
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 125ms
+  - vless-703656408
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
