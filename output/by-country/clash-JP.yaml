@@ -3,17 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: vmess-1122515635
-  port: 4433
-  server: 45.32.57.118
-  type: vmess
-  udp: true
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-- client-fingerprint: random
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-700888653
+  name: vless-962693501
+  port: 50159
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-714300185
   port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -24,10 +29,37 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- alterId: 0
+  cipher: auto
+  name: vmess-1130434817
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-12945898
-  port: 19645
+  name: vless-1510330092
+  port: 50159
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- name: vless-663902649
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-698153465
+  port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -37,58 +69,15 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: firefox
-  name: vless-1123334871
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1503916027
-  port: 443
-  reality-opts:
-    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
-    short-id: 6d962e8d8a0dce
-  server: 38.207.130.15
-  servername: amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
-- alterId: 0
-  cipher: auto
-  name: vmess-1227921320
-  port: 4433
-  server: 45.32.57.118
-  type: vmess
-  udp: true
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-- name: hysteria2-1506059551
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 20561
-  server: msjp.mangshe.xyz
-  skip-cert-verify: true
-  sni: msjp.mangshe.xyz
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-1122515635
-  - vless-700888653
-  - vless-12945898
-  - vless-1123334871
-  - vless-1503916027
-  - vmess-1227921320
-  - hysteria2-1506059551
+  - vless-962693501
+  - vless-714300185
+  - vmess-1130434817
+  - vless-1510330092
+  - vless-663902649
+  - vless-698153465
   type: select
 rules:
 - MATCH,PROXY

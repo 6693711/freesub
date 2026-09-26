@@ -3,25 +3,35 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 646387
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  port: 8080
-  server: 85.204.107.181
-  skip-cert-verify: true
-  sni: hopp-romania-new.roxa.org
-  type: hysteria2
-- name: hysteria2-1048913655
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  port: 8080
-  server: 85.204.107.183
-  skip-cert-verify: false
-  sni: hopp-romania-new.roxa.org
-  type: hysteria2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1405869854
+  port: 443
+  reality-opts:
+    public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
+    short-id: a1b2c3d4e5f67890
+  server: 94.183.224.45
+  servername: dzen.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
+- name: vless-81052
+  network: ws
+  port: 22573
+  server: 84.235.244.108
+  type: vless
+  udp: true
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  ws-opts:
+    headers:
+      Host: uae.unixzone.us
+    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 646387
-  - hysteria2-1048913655
+  - vless-1405869854
+  - vless-81052
   type: select
 rules:
 - MATCH,PROXY
