@@ -3,16 +3,42 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-128-gcm
-  name: shadowsocks-208
-  password: shadowsocks
+- name: hysteria2-1122515613
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 149.22.95.183
-  type: ss
-  udp: true
-- client-fingerprint: random
+  server: 15.223.122.197
+  skip-cert-verify: true
+  sni: 15.223.122.197
+  type: hysteria2
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-700417546
+  name: vless-1522339464
+  port: 41373
+  reality-opts:
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: 0e
+  server: 130.107.73.148
+  servername: google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-661704684
+  port: 41373
+  reality-opts:
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: 0e
+  server: 130.107.73.148
+  servername: google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-828117773
   port: 41373
   reality-opts:
     public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
@@ -26,8 +52,10 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-208
-  - vless-700417546
+  - hysteria2-1122515613
+  - vless-1522339464
+  - vless-661704684
+  - vless-828117773
   type: select
 rules:
 - MATCH,PROXY

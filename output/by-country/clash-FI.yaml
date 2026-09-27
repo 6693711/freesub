@@ -3,22 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1381769945
-  port: 443
+- client-fingerprint: random
+  name: vless-1354534668
+  port: 2053
   reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  server: est1313.ggisopi.su
-  servername: est1313.ggisopi.su
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  server: 95.216.27.15
+  servername: www.google.com
   tls: true
   type: vless
   udp: true
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1381769945
+  - vless-1354534668
   type: select
 rules:
 - MATCH,PROXY

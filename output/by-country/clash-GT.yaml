@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1440428017
-  port: 4443
+  name: vless-1172523121
+  port: 443
   reality-opts:
-    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
-    short-id: df3aff719526dc5a
-  server: 89.169.53.176
-  servername: de.wvpn.one
+    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
+    short-id: 6c059ecfddf9b179
+  server: 185.47.254.251
+  servername: gateway.icloud.com
   tls: true
   type: vless
   udp: true
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1440428017
+  - vless-1172523121
   type: select
 rules:
 - MATCH,PROXY
