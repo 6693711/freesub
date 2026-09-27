@@ -3,26 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1509475552
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2üáüá
-  type: hysteria2
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1539406858
-  port: 443
-  reality-opts:
-    public-key: Y9TEgB_8YVWzv8-wblXBjeX2t7IAtQhtQ3pE08gfNWw
-    short-id: 862266ae05b7a62f
-  server: 47.83.143.75
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1658f804-41bf-4b7c-a0be-ba01097e0f41
 - name: hysteria2-483633861
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -30,20 +10,66 @@ proxies:
   skip-cert-verify: true
   sni: google.com
   type: hysteria2
-- name: hysteria2-1456970891
+- name: hysteria2-1255010039
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.174
+  skip-cert-verify: true
+  sni: https%3a%2f%2ft.me%2fwangcai2
+  type: hysteria2
+- name: hysteria2-1276640916
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: https%3a%2f%2ft.me%2fwangcai2%c3%b0%c2%9f%c2%87%c2%a8%c3%b0%c2%9f%c2%87%c2%b3
+  sni: "https://t.me/wangcai2ð\x9F\x87ð\x9F\x87"
+  type: hysteria2
+- name: hysteria2-1532454241
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2�
+  type: hysteria2
+- name: hysteria2-1527482523
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.174
+  skip-cert-verify: true
+  sni: 'off'
+  type: hysteria2
+- name: hysteria2-656706481
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
+  type: hysteria2
+- name: hysteria2-591633775
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: 202.146.222.89
+  type: hysteria2
+- name: 🏳️ ShatakVPN 506291
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1509475552
-  - vless-1539406858
   - hysteria2-483633861
-  - hysteria2-1456970891
+  - hysteria2-1255010039
+  - hysteria2-1276640916
+  - hysteria2-1532454241
+  - hysteria2-1527482523
+  - hysteria2-656706481
+  - hysteria2-591633775
+  - 🏳️ ShatakVPN 506291
   type: select
 rules:
 - MATCH,PROXY

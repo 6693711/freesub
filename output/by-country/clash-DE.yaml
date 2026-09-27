@@ -3,17 +3,70 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇷🇺 RU-95.163.232.171 14443
+  network: ws
+  port: 14443
+  server: 95.163.232.171
+  servername: media-se.compressor.work
+  tls: true
+  type: vless
+  udp: true
+  uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
+  ws-opts:
+    headers: {}
+    path: /ws
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1509507437
+  port: 443
+  reality-opts:
+    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
+    short-id: d4f6a8c1b2e3f9aa
+  server: api-4pda-k9x4m.xubi.org
+  servername: 4pda.to
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
+- name: vless-1537897020
+  network: ws
+  port: 80
+  server: 192.248.179.81
+  type: vless
+  udp: true
+  uuid: 2787849c-1a49-4457-9db7-efcdb2578268
+  ws-opts:
+    headers: {}
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 472939
-  password: PWpjPo3tqhPN4yRZ
-  port: 20001
-  server: 8.209.74.72
+  name: shadowsocks-1543608943
+  password: 9binmVT58Wnr6vNzxu_JmpzEW6i-FgAj
+  port: 116
+  server: 80.97.27.106
   type: ss
   udp: true
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1455404218
+  port: 4443
+  reality-opts:
+    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
+    short-id: df3aff719526dc5a
+  server: 89.169.53.176
+  servername: de.wvpn.one
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 472939
+  - 🔒 VL-WS-TLS 🇷🇺 RU-95.163.232.171 14443
+  - vless-1509507437
+  - vless-1537897020
+  - shadowsocks-1543608943
+  - vless-1455404218
   type: select
 rules:
 - MATCH,PROXY
