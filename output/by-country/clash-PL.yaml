@@ -4,23 +4,30 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: 🏳️ ShatakVPN 120445
-  network: grpc
-  port: 33743
+  flow: xtls-rprx-vision
+  name: vless-1519567449
+  port: 8444
   reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 185.223.57.10
-  servername: www.google.com
+    public-key: sQ9CcspZ6urWlzGNjjmtfp8EuuDll5RVtcsVoq_EfUE
+    short-id: a3f509aa7a4b41cc
+  server: 151.241.138.151
+  servername: pl1.gursub.com
   tls: true
   type: vless
   udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7
+- name: 🏳️ ShatakVPN 910133
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 45.192.12.93
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 120445
+  - vless-1519567449
+  - 🏳️ ShatakVPN 910133
   type: select
 rules:
 - MATCH,PROXY

@@ -2,6 +2,43 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1538774167",
+      "server": "144.24.227.214",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "ngEu2MRJXDGlSxpTvPyLdOG64A9jtECl4AR1uHXP2So="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-468218595",
+      "server": "146.70.23.32",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1484508210",
+      "server": "23.81.34.204",
+      "server_port": 443,
+      "uuid": "99955907-9070-46f0-a200-9c7a0b9d74fe",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "speed.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s",
+          "short_id": "b19b017d6f453873"
+        }
+      }
+    },
+    {
       "type": "vless",
       "tag": "vless-1345603902",
       "server": "46.250.240.80",

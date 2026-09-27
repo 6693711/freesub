@@ -3,23 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-206375738
-  port: 40443
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: rex-eb0bf76b710ce763
+  name: vless-1466572024
+  network: grpc
+  port: 2443
   reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
-  server: 5.253.30.99
+    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
+    short-id: 92c32de179e5d908
+  server: 5.253.28.240
   servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-206375738
+  - vless-1466572024
   type: select
 rules:
 - MATCH,PROXY

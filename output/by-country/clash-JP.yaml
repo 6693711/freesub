@@ -3,9 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
+- client-fingerprint: random
+  grpc-opts:
+    grpc-service-name: grpc
+  name: vless-1531258243
+  network: grpc
+  port: 8890
+  reality-opts:
+    public-key: DcHXqq0OOR8N-bd92fSrMjy2yrcAsG1Es7PesCOc7gc
+  server: 45.202.255.24
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 45d87ca1-d006-44ac-b62a-cb03d04c7130
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-1503562400
+  name: vless-1503562435
   port: 443
   reality-opts:
     public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
@@ -16,10 +30,10 @@ proxies:
   type: vless
   udp: true
   uuid: 4192524f-09f0-414f-88fd-7a14378491c7
-- client-fingerprint: chrome
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1497475929
-  port: 10583
+  name: vless-1016882879
+  port: 18007
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -29,9 +43,9 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: firefox
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-470978003
+  name: vless-742657273
   port: 19645
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -42,59 +56,48 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-479013117
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: 45.88.43.116
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-1122508704
-  port: 4433
-  server: 45.32.57.118
-  type: vmess
-  udp: true
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-- name: vless-663902649
+- name: vless-732726857
   port: 443
   server: 137.220.221.179
   type: vless
   udp: true
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- client-fingerprint: chrome
+- client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: vless-1518612543
-  port: 443
+  name: vless-479071125
+  port: 18007
   reality-opts:
-    public-key: cZ9MxrT-CYtdhBdbGeqzcQEvWvAuKw7fEfRbR8QrOlM
-    short-id: 37bb73b5
-  server: 108.160.128.46
-  servername: www.bing.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: de241e4e-226e-46d5-aa79-602e11ef94d8
-- alterId: 0
-  cipher: auto
-  name: vmess-1481350490
-  port: 4433
-  server: 45.32.57.118
-  type: vmess
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-714300185
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1503562400
-  - vless-1497475929
-  - vless-470978003
-  - hysteria2-479013117
-  - vmess-1122508704
-  - vless-663902649
-  - vless-1518612543
-  - vmess-1481350490
+  - vless-1531258243
+  - vless-1503562435
+  - vless-1016882879
+  - vless-742657273
+  - vless-732726857
+  - vless-479071125
+  - vless-714300185
   type: select
 rules:
 - MATCH,PROXY
