@@ -2,20 +2,8 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1122515613",
-      "server": "15.223.122.197",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "15.223.122.197",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "vless-1522339464",
+      "tag": "vless-175680235",
       "server": "130.107.73.148",
       "server_port": 41373,
       "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
@@ -36,7 +24,27 @@
     },
     {
       "type": "vless",
-      "tag": "vless-661704684",
+      "tag": "vless-1307824741",
+      "server": "66.70.179.198",
+      "server_port": 2053,
+      "uuid": "dc620cd6-a9d8-4a0f-8f18-006b895db77e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU",
+          "short_id": "83f8317a948bb769"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-293233479",
       "server": "130.107.73.148",
       "server_port": 41373,
       "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
@@ -46,7 +54,7 @@
         "server_name": "google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -56,23 +64,31 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-828117773",
-      "server": "130.107.73.148",
-      "server_port": 41373,
-      "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
-      "flow": "xtls-rprx-vision",
+      "type": "vmess",
+      "tag": "vmess-1443335432",
+      "server": "66.163.113.176",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1527436010",
+      "server": "158.51.121.123",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU",
-          "short_id": "0e"
+        "server_name": "mygptagent.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "mygptagent.org"
         }
       }
     },

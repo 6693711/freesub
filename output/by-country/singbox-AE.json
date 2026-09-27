@@ -2,9 +2,21 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 675900",
+      "server": "85.204.107.178",
+      "server_port": 8080,
+      "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
+      "tls": {
+        "enabled": true,
+        "server_name": "hopp-romania-new.roxa.org",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "vless-1363486797",
-      "server": "uae.unixzone.us",
+      "tag": "vless-1351433254",
+      "server": "84.235.244.108",
       "server_port": 22573,
       "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
       "transport": {

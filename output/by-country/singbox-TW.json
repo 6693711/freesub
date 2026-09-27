@@ -2,58 +2,25 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "vmess-657051919",
-      "server": "165.154.195.38",
-      "server_port": 35034,
-      "uuid": "959a8caf-4cea-43d0-a548-3628e7ddfafc",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1124370652",
-      "server": "35.221.158.209",
-      "server_port": 32981,
-      "uuid": "41b96ee9-ee5e-455f-9753-187a9dead97a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.sony.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "JSn0GPz1WOSTUDBxN_XYnhgb2Jpjc2LpfBTzX1j3V2E",
-          "short_id": "70f4b7a4c40636"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "hysteria2-1482139052",
+      "tag": "hysteria2-468892444",
       "server": "vpn-tw-002.fastervpn.world",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "off",
+        "server_name": "t.me",
         "insecure": true
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-700290962",
-      "server": "103.115.109.49",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2foneclickvpnkeys",
-        "insecure": true
-      }
+      "type": "vmess",
+      "tag": "🆔surfboardv2ray 🔓 VM-TCP-N/A ❔ XX 203ms",
+      "server": "165.154.195.38",
+      "server_port": 35034,
+      "uuid": "959a8caf-4cea-43d0-a548-3628e7ddfafc",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

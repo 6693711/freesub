@@ -3,22 +3,35 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1525805769
-  port: 40443
+  name: vless-825595682
+  port: 443
   reality-opts:
-    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
-    short-id: db46e2946fc466fd
-  server: 193.202.10.248
-  servername: deepl.com
+    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
+    short-id: a3a578ab
+  server: 185.95.231.156
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
+  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1470460718
+  name: vless-1449562681
+  port: 443
+  reality-opts:
+    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
+    short-id: a1b2c3d4
+  server: 185.95.231.233
+  servername: store.steampowered.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1443573154
   port: 443
   reality-opts:
     public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
@@ -32,8 +45,9 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1525805769
-  - vless-1470460718
+  - vless-825595682
+  - vless-1449562681
+  - vless-1443573154
   type: select
 rules:
 - MATCH,PROXY

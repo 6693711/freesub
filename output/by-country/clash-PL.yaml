@@ -4,46 +4,23 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 107ms
-  port: 8444
+  grpc-opts:
+    grpc-service-name: TunService
+  name: 🏳️ ShatakVPN 120445
+  network: grpc
+  port: 33743
   reality-opts:
-    public-key: sQ9CcspZ6urWlzGNjjmtfp8EuuDll5RVtcsVoq_EfUE
-    short-id: a3f509aa7a4b41cc
-  server: pl1.gursub.com
-  servername: pl1.gursub.com
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 185.223.57.10
+  servername: www.google.com
   tls: true
   type: vless
   udp: true
-  uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7
-- name: hysteria2-652726817
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: admin.wwwinternetvideo.click
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- name: hysteria2-855659702
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  port: 443
-  server: 217.60.33.215
-  skip-cert-verify: true
-  sni: streambox.wwwinternetvideo.click
-  type: hysteria2
-- name: 🏳️ ShatakVPN 915468
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 107ms
-  - hysteria2-652726817
-  - hysteria2-855659702
-  - 🏳️ ShatakVPN 915468
+  - 🏳️ ShatakVPN 120445
   type: select
 rules:
 - MATCH,PROXY
