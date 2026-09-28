@@ -3,25 +3,40 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1546237831
-  password: foHuoXlfaX4nHHz/zioppturXfvYRcBoJ6GU8GoLj1E=
-  port: 59924
-  server: 130.61.43.139
-  type: ss
+- name: vless-1539376555
+  network: ws
+  port: 80
+  server: 192.248.179.81
+  type: vless
   udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1538774174
-  password: QQyhsWE4kraFnuIyxSx/tfdFnd1+IUu3YrQM92BGVrQ=
-  port: 59924
-  server: 130.61.227.119
-  type: ss
+  uuid: 2787849c-1a49-4457-9db7-efcdb2578268
+  ws-opts:
+    headers: {}
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🔒 VL-TCP-TLS 🇩🇪 DE-57.129.96.67 443
+  port: 443
+  server: 57.129.96.67
+  servername: nasnet-571299667-direct.mbghalibaf.com
+  tls: true
+  type: vless
   udp: true
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+- alterId: 0
+  cipher: auto
+  name: vmess-1545116375
+  port: 8080
+  server: 91.107.191.154
+  type: vmess
+  udp: true
+  uuid: a6fae451-7d8d-4452-991f-2245e0d4ff0e
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1546237831
-  - shadowsocks-1538774174
+  - vless-1539376555
+  - 🔒 VL-TCP-TLS 🇩🇪 DE-57.129.96.67 443
+  - vmess-1545116375
   type: select
 rules:
 - MATCH,PROXY

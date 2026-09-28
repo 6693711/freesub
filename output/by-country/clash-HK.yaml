@@ -3,55 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1549586943
-  port: 9443
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  server: 45.207.157.8
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 966990b5-5868-4af1-add6-011c72b4a443
-- name: 🏳️ ShatakVPN 236037
-  password: XuMweB2PWs
-  port: 45464
-  server: 2.27.109.179
-  sni: 2.27.109.179.sslip.io
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1522709953
-  password: ac2jdpwv1zl10jim
-  port: 1081
-  server: sth.free-outline.giize.com
-  type: ss
-  udp: true
-- name: hysteria2-1550053635
-  password: 45bc25b2-1a10-11ed-91c0-f23c91cfbbc9
+- name: hysteria2-1456970892
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: acf1b599-tmeqo0-u4zl7f-1jk6u.nw4.hyhuawei.com
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: acf1b599-tmeqo0-u4zl7f-1jk6u.nw4.hyhuawei.com
+  sni: https%3a%2f%2ft.me%2fwangcai2%ef%a3%bf%c3%bc%c3%a1
   type: hysteria2
-- name: hysteria2-863226972
-  password: b0917015b656b3dd2286b5633af0c5c1
-  port: 50160
-  server: 31.57.248.176
+- name: 🏳️ ShatakVPN 424100
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: 202.146.222.29
+  type: hysteria2
+- name: hysteria2-650663575
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.174
+  skip-cert-verify: true
+  sni: 202.146.222.174
+  type: hysteria2
+- name: hysteria2-721489373
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: t.me
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1549586943
-  - 🏳️ ShatakVPN 236037
-  - shadowsocks-1522709953
-  - hysteria2-1550053635
-  - hysteria2-863226972
+  - hysteria2-1456970892
+  - 🏳️ ShatakVPN 424100
+  - hysteria2-650663575
+  - hysteria2-721489373
   type: select
 rules:
 - MATCH,PROXY

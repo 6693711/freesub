@@ -2,18 +2,10 @@ allow-lan: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- name: hysteria2-1550053635
-  password: 45bc25b2-1a10-11ed-91c0-f23c91cfbbc9
-  port: 443
-  server: acf1b599-tmeqo0-u4zl7f-1jk6u.nw4.hyhuawei.com
-  skip-cert-verify: true
-  sni: acf1b599-tmeqo0-u4zl7f-1jk6u.nw4.hyhuawei.com
-  type: hysteria2
+proxies: []
 proxy-groups:
 - name: PROXY
-  proxies:
-  - hysteria2-1550053635
+  proxies: []
   type: select
 rules:
 - MATCH,PROXY

@@ -2,20 +2,41 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1546237831",
-      "server": "130.61.43.139",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "foHuoXlfaX4nHHz/zioppturXfvYRcBoJ6GU8GoLj1E="
+      "type": "vless",
+      "tag": "vless-1539376555",
+      "server": "192.248.179.81",
+      "server_port": 80,
+      "uuid": "2787849c-1a49-4457-9db7-efcdb2578268",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {}
+      }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1538774174",
-      "server": "130.61.227.119",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "QQyhsWE4kraFnuIyxSx/tfdFnd1+IUu3YrQM92BGVrQ="
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS 🇩🇪 DE-57.129.96.67 443",
+      "server": "57.129.96.67",
+      "server_port": 443,
+      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nasnet-571299667-direct.mbghalibaf.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1545116375",
+      "server": "91.107.191.154",
+      "server_port": 8080,
+      "uuid": "a6fae451-7d8d-4452-991f-2245e0d4ff0e",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

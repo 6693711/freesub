@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-1544320459
+  port: 8443
+  reality-opts:
+    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
+    short-id: 1be482b8e08aa0ef
+  server: 185.255.114.91
+  servername: nl2.reddotcorp.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7faa65a6-b43b-413e-9480-a81fae3d0c49
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1544320459
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
