@@ -3,10 +3,10 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: TunService
-  name: vless-1126122351
+  name: vless-1141367427
   network: grpc
   port: 33743
   reality-opts:
@@ -17,42 +17,57 @@ proxies:
   type: vless
   udp: true
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- cipher: aes-256-cfb
-  name: shadowsocks-768399401
-  password: 7heRqkPG3hg4UnRm
-  port: 9099
-  server: 217.30.10.44
-  type: ss
-  udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1552052019
+- name: hysteria2-652726817
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: 50.7.249.198
-  servername: polka.failspace.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.2.33 443
-  port: 443
-  server: 144.31.2.33
-  servername: pl3.moritech.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- client-fingerprint: chrome
+  server: admin.wwwinternetvideo.click
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
+- client-fingerprint: qq
   grpc-opts:
     grpc-service-name: TunService
-  name: vless-1126122350
+  name: vless-1365265785
   network: grpc
   port: 33743
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   server: 185.223.57.16
+  servername: www.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: TunService
+  name: vless-1105975118
+  network: grpc
+  port: 33743
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 185.223.57.10
+  servername: www.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+- cipher: aes-256-cfb
+  name: shadowsocks-812343744
+  password: S2zDyyPcmZN2h8EC
+  port: 9076
+  server: 217.30.10.44
+  type: ss
+  udp: true
+- client-fingerprint: edge
+  grpc-opts:
+    grpc-service-name: TunService
+  name: vless-1105975116
+  network: grpc
+  port: 33743
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  server: 185.223.57.10
   servername: www.google.com
   tls: true
   type: vless
@@ -61,11 +76,12 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1126122351
-  - shadowsocks-768399401
-  - vless-1552052019
-  - 🔒 VL-TCP-TLS 🇵🇱 PL-144.31.2.33 443
-  - vless-1126122350
+  - vless-1141367427
+  - hysteria2-652726817
+  - vless-1365265785
+  - vless-1105975118
+  - shadowsocks-812343744
+  - vless-1105975116
   type: select
 rules:
 - MATCH,PROXY

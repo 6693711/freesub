@@ -3,23 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1546710186
-  port: 22117
-  reality-opts:
-    public-key: Vqwhml0SG253PsBtx9xi3GJY-hhyA6sgGUJ_wVI7Q1g
-    short-id: c7994be0
-  server: 178.79.149.80
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
+- cipher: aes-128-gcm
+  name: 🏳️ ShatakVPN 338536
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
+  type: ss
   udp: true
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1546710186
+  - 🏳️ ShatakVPN 338536
   type: select
 rules:
 - MATCH,PROXY

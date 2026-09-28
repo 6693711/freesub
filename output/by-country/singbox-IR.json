@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🆔lrnbymaa 🔒 VL-TCP- ❔ XX 145ms",
+      "server": "62.60.152.1",
+      "server_port": 56328,
+      "uuid": "ce230b9c-0531-40da-bc3f-f27a8e059db1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "table.vkroom-it-service.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M",
+          "short_id": "f3a9c21e8b6d4571"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- 🇸🇪 SE 158ms",
+      "server": "62.60.152.1",
+      "server_port": 56328,
+      "uuid": "ce230b9c-0531-40da-bc3f-f27a8e059db1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "table.vkroom-it-service.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M",
+          "short_id": "f3a9c21e8b6d4571"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

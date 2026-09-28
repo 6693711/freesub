@@ -3,26 +3,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1546718103",
-      "server": "87.120.107.246",
-      "server_port": 443,
-      "uuid": "10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2",
+      "tag": "vless-308285377",
+      "server": "185.79.138.71",
+      "server_port": 448,
+      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc",
-          "short_id": "fd4f9db207ff64db"
+          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
+          "short_id": "cd21e552537c7c0b"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel_nl"
       }
     },
     {

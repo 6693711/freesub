@@ -3,22 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  name: vless-1258929849
-  port: 2053
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1559265356
+  port: 443
   reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-    short-id: 9980e0609b0d3891
-  server: 194.61.31.126
-  servername: www.apple.com
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  server: 139.84.177.239
+  servername: googleapis.com
   tls: true
   type: vless
   udp: true
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1258929849
+  - vless-1559265356
   type: select
 rules:
 - MATCH,PROXY

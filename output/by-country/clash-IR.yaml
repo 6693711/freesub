@@ -1,0 +1,40 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔lrnbymaa 🔒 VL-TCP- ❔ XX 145ms
+  port: 56328
+  reality-opts:
+    public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M
+    short-id: f3a9c21e8b6d4571
+  server: 62.60.152.1
+  servername: table.vkroom-it-service.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- 🇸🇪 SE 158ms
+  port: 56328
+  reality-opts:
+    public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M
+    short-id: f3a9c21e8b6d4571
+  server: 62.60.152.1
+  servername: table.vkroom-it-service.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔lrnbymaa 🔒 VL-TCP- ❔ XX 145ms
+  - 🆔ar14n24b 🔒 VL-TCP- 🇸🇪 SE 158ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

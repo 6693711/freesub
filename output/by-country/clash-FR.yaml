@@ -5,21 +5,32 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 167848
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 140ms
   port: 443
   reality-opts:
-    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
-    short-id: b390e0a721d242b0
-  server: 137.74.16.237
-  servername: www.icloud.com
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  server: 185.171.202.105
+  servername: fra.loozerp.wiki
   tls: true
   type: vless
   udp: true
-  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 836345
+  port: 443
+  server: 162.19.10.99
+  servername: nasnet-162191099-direct.mbghalibaf.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 167848
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 140ms
+  - 🏳️ ShatakVPN 836345
   type: select
 rules:
 - MATCH,PROXY

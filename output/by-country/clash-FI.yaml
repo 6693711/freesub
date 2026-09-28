@@ -3,25 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc-tunnel_nl
-  name: vless-1546718103
-  network: grpc
-  port: 443
+- client-fingerprint: chrome
+  name: vless-308285377
+  port: 448
   reality-opts:
-    public-key: 20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc
-    short-id: fd4f9db207ff64db
-  server: 87.120.107.246
-  servername: dl.google.com
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+    short-id: cd21e552537c7c0b
+  server: 185.79.138.71
+  servername: www.samsung.com
   tls: true
   type: vless
   udp: true
-  uuid: 10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1546718103
+  - vless-308285377
   type: select
 rules:
 - MATCH,PROXY

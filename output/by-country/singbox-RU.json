@@ -3,22 +3,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1544320459",
-      "server": "185.255.114.91",
-      "server_port": 8443,
-      "uuid": "7faa65a6-b43b-413e-9480-a81fae3d0c49",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇷🇺_RU_俄罗斯",
+      "server": "fbsv6.guardora.pro",
+      "server_port": 443,
+      "uuid": "bc5ec86c-3e65-4272-994c-59a924c72a68",
       "tls": {
         "enabled": true,
-        "server_name": "nl2.reddotcorp.org",
+        "server_name": "fbsv6.guardora.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U",
-          "short_id": "1be482b8e08aa0ef"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "fbsv6.guardora.pro"
         }
       }
     },
