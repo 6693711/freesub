@@ -1,0 +1,53 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: random
+  grpc-opts:
+    grpc-service-name: grpc-tunnel_nl
+  name: vless-1547809311
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: 20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc
+    short-id: fd4f9db207ff64db
+  server: 87.120.107.246
+  servername: dl.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 250ms
+  port: 443
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: cosw.ggisopi.su
+  tls: true
+  type: vless
+  udp: true
+  uuid: d0f0a880-0df1-0003-bdf1-5669fb9483ce
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-1374958301
+  port: 443
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: est1313.ggisopi.su
+  servername: est1313.ggisopi.su
+  tls: true
+  type: vless
+  udp: true
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1547809311
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 250ms
+  - vless-1374958301
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

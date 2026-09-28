@@ -3,163 +3,98 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1227273038
-  password: BWAFlp8g53
-  port: 443
-  server: 72.56.102.31
-  skip-cert-verify: false
-  sni: hys28.wba-pn.ru
-  type: hysteria2
-- name: hysteria2-1013870201
-  password: wrSuBorIlf
-  port: 443
-  server: 72.56.116.57
-  skip-cert-verify: false
-  sni: hys9.wba-pn.ru
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-656232073
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.8
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-721524043
-  port: 443
-  reality-opts:
-    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
-    short-id: 1d86d17709852910
-  server: 86.54.28.75
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
-- client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: shiforgrpc
-  name: vless-1251937528
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A
-    short-id: b4e3b0b55b8dc75b
-  server: 31.56.184.132
-  servername: cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 479325
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.93
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1531177228
-  port: 443
-  reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
-  server: 152.70.58.201
-  servername: www.nvidia.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1540093604
-  port: 443
-  server: 153.76.122.38
-  servername: kosta8.api3-max.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: cdd6bfce-781a-4454-b7d5-4778abb5c24f
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 624562
-  port: 443
-  reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
-  server: 152.70.58.201
-  servername: www.nvidia.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
 - cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 216732
+  name: shadowsocks-274
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.10
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 304096
   password: CJmTCCx7Ltud
   port: 8388
   server: 108.181.58.239
   type: ss
   udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 412380
+  password: QCXDxuDlTTMD7jtgHUjIoj
+  port: 8080
+  server: 193.29.139.168
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 843227
+  name: vless-1539064016
+  port: 443
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 93ae75024604f796
+  server: 89.105.197.204
+  servername: anyfile2file.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 22a375e0-f7c6-0003-a154-81189914bbf4
+- name: 🏳️ ShatakVPN 878525
+  password: CnVfXXvMzh
+  port: 443
+  server: 72.56.92.120
+  skip-cert-verify: true
+  sni: hys13.wba-pn.ru
+  type: hysteria2
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-700283238
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.25
+  server: 51.158.206.20
   servername: fuck.rkn
   tls: true
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: 🏳️ ShatakVPN 202666
-  password: wrSuBorIlf
-  port: 443
-  server: 72.56.116.57
-  skip-cert-verify: true
-  sni: hys9.wba-pn.ru
-  type: hysteria2
 - client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: vless-1541276829
+  name: vless-1511874660
   port: 443
-  server: 50.7.120.203
-  servername: nl-dedic-mori-4.failspace.top
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 64c1fe36c7846400
+  server: 89.105.197.204
+  servername: anyfile2file.com
   tls: true
   type: vless
   udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  uuid: 22a375e0-f7c6-0003-a154-81189914bbf4
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-166303196
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.198
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-1538775161
+  password: tWDq/qplPVZPp9FHByeWAK50WfaKq2n77o2RFHUFLGI=
+  port: 45819
+  server: 158.101.192.220
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1227273038
-  - hysteria2-1013870201
-  - vless-656232073
-  - vless-721524043
-  - vless-1251937528
-  - 🏳️ ShatakVPN 479325
-  - vless-1531177228
-  - vless-1540093604
-  - 🏳️ ShatakVPN 624562
-  - 🏳️ ShatakVPN 216732
-  - 🏳️ ShatakVPN 843227
-  - 🏳️ ShatakVPN 202666
-  - vless-1541276829
+  - shadowsocks-274
+  - 🏳️ ShatakVPN 304096
+  - 🏳️ ShatakVPN 412380
+  - vless-1539064016
+  - 🏳️ ShatakVPN 878525
+  - vless-700283238
+  - vless-1511874660
+  - shadowsocks-166303196
+  - shadowsocks-1538775161
   type: select
 rules:
 - MATCH,PROXY

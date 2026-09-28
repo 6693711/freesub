@@ -5,20 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1270653457
-  port: 443
-  reality-opts:
-    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
-    short-id: 3d3c1e645f763ee3
-  server: 158.69.112.254
-  servername: www.speedtest.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-175680235
+  name: vless-18572420
   port: 41373
   reality-opts:
     public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
@@ -29,45 +16,41 @@ proxies:
   type: vless
   udp: true
   uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-- client-fingerprint: chrome
-  name: vless-1344116852
-  port: 2053
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  server: 66.70.179.198
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-- client-fingerprint: chrome
-  name: vless-1307937041
-  port: 2053
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  server: 66.70.179.198
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 215226
-  password: FD3rCuOsxOay
-  port: 8388
-  server: 15.235.75.71
+- cipher: aes-128-gcm
+  name: shadowsocks-208
+  password: shadowsocks
+  port: 443
+  server: 149.22.95.183
   type: ss
   udp: true
+- alterId: 0
+  cipher: auto
+  name: vmess-101274522
+  port: 18000
+  server: 134.195.196.211
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-91983783
+  port: 443
+  reality-opts:
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    short-id: 3d3c1e645f763ee3
+  server: 158.69.112.254
+  servername: www.speedtest.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1270653457
-  - vless-175680235
-  - vless-1344116852
-  - vless-1307937041
-  - 🏳️ ShatakVPN 215226
+  - vless-18572420
+  - shadowsocks-208
+  - vmess-101274522
+  - vless-91983783
   type: select
 rules:
 - MATCH,PROXY

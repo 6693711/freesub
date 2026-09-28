@@ -2,86 +2,20 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇷🇺 RU-95.163.232.171 14443",
-      "server": "95.163.232.171",
-      "server_port": 14443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
-      "tls": {
-        "enabled": true,
-        "server_name": "media-se.compressor.work",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {}
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1509507437",
-      "server": "api-4pda-k9x4m.xubi.org",
-      "server_port": 443,
-      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "4pda.to",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM",
-          "short_id": "d4f6a8c1b2e3f9aa"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1537897020",
-      "server": "192.248.179.81",
-      "server_port": 80,
-      "uuid": "2787849c-1a49-4457-9db7-efcdb2578268",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1546237831",
+      "server": "130.61.43.139",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "foHuoXlfaX4nHHz/zioppturXfvYRcBoJ6GU8GoLj1E="
     },
     {
       "type": "shadowsocks",
-      "tag": "shadowsocks-1543608943",
-      "server": "80.97.27.106",
-      "server_port": 116,
-      "method": "chacha20-ietf-poly1305",
-      "password": "9binmVT58Wnr6vNzxu_JmpzEW6i-FgAj"
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1455404218",
-      "server": "89.169.53.176",
-      "server_port": 4443,
-      "uuid": "20dd9433-389e-4573-ba7b-689619cf13da",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "de.wvpn.one",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw",
-          "short_id": "df3aff719526dc5a"
-        }
-      }
+      "tag": "shadowsocks-1538774174",
+      "server": "130.61.227.119",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "QQyhsWE4kraFnuIyxSx/tfdFnd1+IUu3YrQM92BGVrQ="
     },
     {
       "type": "direct",

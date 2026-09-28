@@ -2,32 +2,53 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🏳️ ShatakVPN 785401",
-      "server": "66.163.117.58",
+      "type": "shadowsocks",
+      "tag": "shadowsocks-271",
+      "server": "141.98.101.181",
       "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "security": "auto",
-      "alter_id": 0,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1005580180",
+      "server": "labs.frkn.org",
+      "server_port": 443,
+      "password": "3b8c82ed-fe66-472d-915e-034ccb57103f",
       "tls": {
         "enabled": true,
-        "server_name": "aksai.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/linkvws",
-        "headers": {
-          "Host": "aksai.org"
-        }
+        "server_name": "labs.frkn.org",
+        "insecure": true
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 313308",
+      "tag": "🏳️ ShatakVPN 871777",
       "server": "158.173.221.214",
       "server_port": 11001,
       "method": "chacha20-ietf-poly1305",
       "password": "c58d16e593d44f42"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1007208113",
+      "server": "3.9.135.156",
+      "server_port": 51847,
+      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
+          "short_id": "0eec442e7b34d2f2"
+        }
+      }
     },
     {
       "type": "direct",

@@ -3,73 +3,55 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-483633861
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1549586943
+  port: 9443
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  server: 45.207.157.8
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 966990b5-5868-4af1-add6-011c72b4a443
+- name: 🏳️ ShatakVPN 236037
+  password: XuMweB2PWs
+  port: 45464
+  server: 2.27.109.179
+  sni: 2.27.109.179.sslip.io
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1522709953
+  password: ac2jdpwv1zl10jim
+  port: 1081
+  server: sth.free-outline.giize.com
+  type: ss
+  udp: true
+- name: hysteria2-1550053635
+  password: 45bc25b2-1a10-11ed-91c0-f23c91cfbbc9
   port: 443
-  server: 202.146.222.29
+  server: acf1b599-tmeqo0-u4zl7f-1jk6u.nw4.hyhuawei.com
   skip-cert-verify: true
-  sni: google.com
+  sni: acf1b599-tmeqo0-u4zl7f-1jk6u.nw4.hyhuawei.com
   type: hysteria2
-- name: hysteria2-1255010039
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
+- name: hysteria2-863226972
+  password: b0917015b656b3dd2286b5633af0c5c1
+  port: 50160
+  server: 31.57.248.176
   skip-cert-verify: true
-  sni: https%3a%2f%2ft.me%2fwangcai2
-  type: hysteria2
-- name: hysteria2-1276640916
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87ð\x9F\x87"
-  type: hysteria2
-- name: hysteria2-1532454241
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2�
-  type: hysteria2
-- name: hysteria2-1527482523
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: 'off'
-  type: hysteria2
-- name: hysteria2-656706481
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: 202.146.222.29
-  type: hysteria2
-- name: hysteria2-591633775
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.89
-  skip-cert-verify: true
-  sni: 202.146.222.89
-  type: hysteria2
-- name: 🏳️ ShatakVPN 506291
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: 202.146.222.29
+  sni: www.bing.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-483633861
-  - hysteria2-1255010039
-  - hysteria2-1276640916
-  - hysteria2-1532454241
-  - hysteria2-1527482523
-  - hysteria2-656706481
-  - hysteria2-591633775
-  - 🏳️ ShatakVPN 506291
+  - vless-1549586943
+  - 🏳️ ShatakVPN 236037
+  - shadowsocks-1522709953
+  - hysteria2-1550053635
+  - hysteria2-863226972
   type: select
 rules:
 - MATCH,PROXY
