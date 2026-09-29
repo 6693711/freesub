@@ -2,15 +2,37 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-1511520015",
+      "server": "8.211.15.144",
+      "server_port": 8443,
+      "password": "fc04RSUu3TfONQnlbKTwvA",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 126ms",
-      "server": "167.233.182.218",
-      "server_port": 80,
-      "uuid": "1a64c956-522f-44ea-8e7e-f4a909a40ec5",
+      "tag": "🇩🇪 ShatakVPN 923286",
+      "server": "2.26.125.147",
+      "server_port": 2096,
+      "uuid": "11d826ce-d6e5-4154-8658-6829bb17dca2",
+      "tls": {
+        "enabled": true,
+        "server_name": "stf94fd.rumedia-cdn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/",
-        "headers": {}
+        "path": "/cdn/v3/live",
+        "headers": {
+          "Host": "stf94fd.rumedia-cdn.com"
+        }
       }
     },
     {

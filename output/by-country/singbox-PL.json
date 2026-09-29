@@ -3,7 +3,7 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 500808",
+      "tag": "🏳️ ShatakVPN 470656",
       "server": "45.192.12.93",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
@@ -15,23 +15,30 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1384585684",
-      "server": "144.31.131.38",
+      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-50.7.249.182 443",
+      "server": "50.7.249.182",
       "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "flow": "xtls-rprx-vision-udp443",
       "tls": {
         "enabled": true,
-        "server_name": "prod.pl-node-01.security-sbrf.ru",
+        "server_name": "poland-ded-new-one.failspace.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 375222",
+      "server": "144.31.49.47",
+      "server_port": 443,
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {

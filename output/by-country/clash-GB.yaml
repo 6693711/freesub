@@ -5,21 +5,42 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1546710186
-  port: 22117
+  name: vless-1546710185
+  port: 54865
   reality-opts:
-    public-key: Vqwhml0SG253PsBtx9xi3GJY-hhyA6sgGUJ_wVI7Q1g
-    short-id: c7994be0
-  server: 178.79.149.80
+    public-key: frK9LTk4kF7lh4-ZVCuHCQm87Oy6uboRtoS-o6Fb6WE
+    short-id: '7436'
+  server: 178.79.129.203
   servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
   uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1562204167
+  port: 52006
+  server: 87.192.47.10
+  servername: grok.setlisting.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1254790076
+  network: grpc
+  port: 2083
+  server: 66.90.104.42
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1546710186
+  - vless-1546710185
+  - vless-1562204167
+  - vless-1254790076
   type: select
 rules:
 - MATCH,PROXY
