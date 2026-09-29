@@ -3,25 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🇷🇴RO_1|1.7MB/s
+- name: hysteria2-1557120180
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8443
+  server: 85.204.107.179
+  skip-cert-verify: false
+  sni: hopp-romania-new.roxa.org
+  type: hysteria2
+- name: hysteria2-1391610042
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8443
+  server: 85.204.107.187
+  skip-cert-verify: false
+  sni: hopp-romania-new.roxa.org
+  type: hysteria2
+- name: hysteria2-1209963836
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8443
+  server: 85.204.107.186
+  skip-cert-verify: true
+  sni: hopp-romania-new.roxa.org
+  type: hysteria2
+- name: 🇷🇴 罗马尼亚 | ROU
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8443
   server: 85.204.107.179
   skip-cert-verify: true
   sni: hopp-romania-new.roxa.org
   type: hysteria2
-- name: hysteria2-1059436567
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  port: 8443
-  server: 85.204.107.185
-  skip-cert-verify: true
-  sni: hopp-romania-new.roxa.org
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇷🇴RO_1|1.7MB/s
-  - hysteria2-1059436567
+  - hysteria2-1557120180
+  - hysteria2-1391610042
+  - hysteria2-1209963836
+  - 🇷🇴 罗马尼亚 | ROU
   type: select
 rules:
 - MATCH,PROXY

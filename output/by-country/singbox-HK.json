@@ -2,25 +2,35 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 | USA",
-      "server": "103.71.23.247",
+      "type": "vmess",
+      "tag": "vmess-1570798257",
+      "server": "194.99.79.26",
       "server_port": 443,
-      "uuid": "0250424c-ae75-4b6b-890f-3fe26fae36c3",
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
       "tls": {
         "enabled": true,
-        "server_name": "hk.152568.xyz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
+        "server_name": "aksai.org"
       },
       "transport": {
         "type": "ws",
-        "path": "/cdn/packages/runtime-core.tar.gz",
+        "path": "/linkvws",
         "headers": {
-          "Host": "hk.152568.xyz"
+          "Host": "aksai.org"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-663905691",
+      "server": "202.146.222.89",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "202.146.222.89",
+        "insecure": true
       }
     },
     {
