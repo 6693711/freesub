@@ -3,15 +3,70 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  name: vless-1557930309
-  port: 443
-  server: 172.237.89.202
-  servername: onhit.shalana.xyz
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-522223666
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: firefox
+  name: vless-1327864776
+  port: 2053
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  server: 217.217.254.126
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1020070647
+  port: 12512
+  reality-opts:
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: e692a8250d2e2fd0
+  server: 46.137.202.178
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1071893213
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  server: 146.235.16.130
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1015042547
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  server: 146.235.16.130
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
 - cipher: rc4-md5
   name: shadowsocks-27347
   password: 14fFPrbezE3HDZzsMOr6
@@ -19,14 +74,19 @@ proxies:
   server: 68.183.227.236
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 🏳️ ShatakVPN 421022
-  port: 18000
-  server: 149.88.23.207
-  type: vmess
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-189834220
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - alterId: 0
   cipher: auto
   name: vmess-1071045860
@@ -35,13 +95,40 @@ proxies:
   type: vmess
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: vmess-655845742
+  port: 18000
+  server: 149.88.23.202
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 211ms
+  port: 26415
+  reality-opts:
+    public-key: eC5S3o9uFN6i_YjDjiALCXbc_dzh3kEm2C5zduDGtS8
+    short-id: b7dd999667b0406e
+  server: 54.251.239.81
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1557930309
+  - vless-522223666
+  - vless-1327864776
+  - vless-1020070647
+  - vless-1071893213
+  - vless-1015042547
   - shadowsocks-27347
-  - 🏳️ ShatakVPN 421022
+  - vless-189834220
   - vmess-1071045860
+  - vmess-655845742
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 211ms
   type: select
 rules:
 - MATCH,PROXY

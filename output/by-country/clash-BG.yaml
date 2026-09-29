@@ -4,16 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-cfb
-  name: shadowsocks-738053649
-  password: GeregetR8cvQHzYr
-  port: 9030
+  name: shadowsocks-819466430
+  password: PRBf4BS2HvJqtWxY
+  port: 9049
   server: 213.183.63.60
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-738053649
+  - shadowsocks-819466430
   type: select
 rules:
 - MATCH,PROXY
