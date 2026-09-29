@@ -3,24 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-1568073335
-  network: ws
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-1565952556
   port: 443
-  server: 152.69.200.216
-  servername: jp3.yohototo.top
+  reality-opts:
+    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
+    short-id: 913e9b95fbc71278
+  server: 43.133.11.187
+  servername: cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: chrome
+  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-656230600
-  port: 19645
+  name: vless-700888653
+  port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -32,54 +31,33 @@ proxies:
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1554574402
-  port: 38830
+  name: vless-1407179626
+  port: 10583
   reality-opts:
-    public-key: 5E5p5boHrgCyBlt5qZPX1XozU9I90JoBgS4zmXngllI
-    short-id: ac12ed79
-  server: 13.230.30.102
-  servername: www.cloudflare.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-- client-fingerprint: firefox
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-1013983970
-  port: 28573
+  name: vless-933894350
+  port: 18007
   reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- name: hysteria2-650665463
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: 45.88.43.116
-  type: hysteria2
-- client-fingerprint: chrome
-  name: vless-1532046171
-  network: ws
-  port: 443
-  server: 104.21.0.87
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: chrome
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1007755579
+  name: vless-987610015
   port: 50159
   reality-opts:
     public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
@@ -90,60 +68,28 @@ proxies:
   type: vless
   udp: true
   uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- name: vless-860344657
-  port: 443
-  server: 137.220.221.179
-  type: vless
-  udp: true
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- client-fingerprint: android
-  name: vless-1162311187
-  network: ws
-  port: 443
-  server: 172.67.217.240
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-12945898
-  port: 19645
+  name: vless-1355866272
+  port: 28573
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  server: 18.183.215.124
+  servername: www.sony.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-1475048771
-  password: my_super_password_123
-  port: 443
-  server: open.w2m.ink
-  skip-cert-verify: false
-  sni: open.w2m.ink
-  type: hysteria2
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1568073335
-  - vless-656230600
-  - vless-1554574402
-  - vless-1013983970
-  - hysteria2-650665463
-  - vless-1532046171
-  - vless-1007755579
-  - vless-860344657
-  - vless-1162311187
-  - vless-12945898
-  - hysteria2-1475048771
+  - vless-1565952556
+  - vless-700888653
+  - vless-1407179626
+  - vless-933894350
+  - vless-987610015
+  - vless-1355866272
   type: select
 rules:
 - MATCH,PROXY

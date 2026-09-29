@@ -3,36 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 470656
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443
-  name: 🔒 VL-TCP-TLS 🇵🇱 PL-50.7.249.182 443
-  port: 443
-  server: 50.7.249.182
-  servername: poland-ded-new-one.failspace.top
-  tls: true
-  type: vless
+- cipher: aes-256-cfb
+  name: shadowsocks-696781307
+  password: mENfxTFQpRKKh4As
+  port: 9071
+  server: 217.30.10.44
+  type: ss
   udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- name: 🏳️ ShatakVPN 375222
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 144.31.49.47
-  skip-cert-verify: true
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
+- cipher: aes-256-cfb
+  name: shadowsocks-738053629
+  password: N7j3pdTYkKmsy8CR
+  port: 9095
+  server: 217.30.10.44
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 470656
-  - 🔒 VL-TCP-TLS 🇵🇱 PL-50.7.249.182 443
-  - 🏳️ ShatakVPN 375222
+  - shadowsocks-696781307
+  - shadowsocks-738053629
   type: select
 rules:
 - MATCH,PROXY

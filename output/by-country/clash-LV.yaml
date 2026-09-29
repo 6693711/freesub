@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: aes-256-cfb
+  name: shadowsocks-795694248
+  password: hbtvgUz5uNYyB3Rf
+  port: 9036
+  server: 185.135.86.175
+  type: ss
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - shadowsocks-795694248
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

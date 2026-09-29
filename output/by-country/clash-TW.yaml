@@ -3,33 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-656706489
+- name: hysteria2-650429104
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
   skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
-  type: hysteria2
-- name: hysteria2-468892432
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: 160.187.100.109
-  type: hysteria2
-- name: hysteria2-1163840992
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: www.bing.com
+  sni: 103.115.109.49
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-656706489
-  - hysteria2-468892432
-  - hysteria2-1163840992
+  - hysteria2-650429104
   type: select
 rules:
 - MATCH,PROXY

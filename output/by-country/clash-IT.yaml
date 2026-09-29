@@ -3,17 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1558648926
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  port: 18333
-  server: us4.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: us4.xiaoliyu.cyou
-  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1272976717
+  port: 443
+  reality-opts:
+    public-key: R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU
+    short-id: cd6065902eea7a02
+  server: 82.118.16.187
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: dc2259c4-388e-4285-ba18-df619b6672b6
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1558648926
+  - vless-1272976717
   type: select
 rules:
 - MATCH,PROXY
