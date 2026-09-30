@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 418477",
+      "server": "20.123.34.66",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "r5D6YOSrT6kC76ro"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

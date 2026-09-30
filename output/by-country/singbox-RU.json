@@ -2,9 +2,21 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 | RUS",
+      "server": "srv-17e124.21freedom.net",
+      "server_port": 11592,
+      "password": "41edb44c8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-17e124.21freedom.net",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "vless-1568130912",
-      "server": "china.letsconnectpoint.com",
+      "tag": "vless-1571789122",
+      "server": "139.28.168.201",
       "server_port": 443,
       "uuid": "a368752a-32fc-42f3-980a-6b049218b23f",
       "flow": "xtls-rprx-vision",
@@ -13,7 +25,7 @@
         "server_name": "china.letsconnectpoint.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

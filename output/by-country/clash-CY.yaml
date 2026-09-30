@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1454570537
-  port: 443
+  name: vless-1310954686
+  port: 40443
   reality-opts:
-    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
-    short-id: a1b2c3d4
-  server: 185.95.231.233
-  servername: store.steampowered.com
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
+  server: dorado.yokkastars.com
+  servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1454570537
+  - vless-1310954686
   type: select
 rules:
 - MATCH,PROXY

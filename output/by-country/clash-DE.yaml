@@ -3,17 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 766298
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1577129297
+  password: iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c=
+  port: 11950
+  server: 31.76.11.83
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-209
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 766298
+  - shadowsocks-1577129297
+  - shadowsocks-209
   type: select
 rules:
 - MATCH,PROXY

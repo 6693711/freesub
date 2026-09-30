@@ -1,0 +1,33 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 233ms
+  port: 2063
+  reality-opts:
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+  server: pl-waw.dontblockmepls.com
+  servername: rusbid.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+- name: 🏳️ ShatakVPN 838966
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 144.31.49.47
+  skip-cert-verify: true
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 233ms
+  - 🏳️ ShatakVPN 838966
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
