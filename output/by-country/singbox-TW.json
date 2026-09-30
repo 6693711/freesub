@@ -2,39 +2,44 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "vmess-824104189",
+      "server": "165.154.195.38",
+      "server_port": 35034,
+      "uuid": "959a8caf-4cea-43d0-a548-3628e7ddfafc",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
       "type": "hysteria2",
-      "tag": "hysteria2-655837404",
+      "tag": "hysteria2-656706489",
       "server": "103.115.109.49",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2🇨🇳",
+        "server_name": "https://t.me/oneclickvpnkeys",
         "insecure": true
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 174514",
-      "server": "160.187.100.109",
+      "type": "vless",
+      "tag": "vless-1571210920",
+      "server": "35.201.181.122",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "uuid": "22a0b0bd-1cd0-43fa-a7c3-73b24eae44e2",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-207301017",
-      "server": "160.187.100.109",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-tw-002.fastervpn.world",
-        "insecure": true
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PLslPQOBA3bfWO5hXLv7jioCTuNR8vCxa_axi0dC7C0",
+          "short_id": "32f66f37df3f58d2"
+        }
       }
     },
     {

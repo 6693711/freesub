@@ -3,21 +3,7 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
-  name: 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.144 443
-  network: ws
-  port: 443
-  server: 88.216.69.144
-  servername: r5zenrelur2s.pqzdileiu8es.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 50414e45-4c5f-5a45-5553-4d64f1370eeb
-  ws-opts:
-    headers:
-      Host: r5zenrelur2s.pqzdileiu8es.workers.dev
-    path: /stream/PANEL_ZEUS/4d64f1370eeb/loc-0
-- name: hysteria2-1005580211
+- name: hysteria2-1004725118
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 35.181.166.40
@@ -25,25 +11,36 @@ proxies:
   sni: 35.181.166.40
   type: hysteria2
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.175.23 443
-  network: ws
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 591705
   port: 443
-  server: 172.67.175.23
-  servername: trex-panel-nubj0s.samifakor.workers.dev
+  server: 162.19.10.99
+  servername: nasnet-162191099-direct.mbghalibaf.com
   tls: true
   type: vless
   udp: true
-  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
-  ws-opts:
-    headers:
-      Host: trex-panel-nubj0s.samifakor.workers.dev
-    path: /stream/TrexBridge/ef859652a80e
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc-common3
+  name: vless-1413435162
+  network: grpc
+  port: 35108
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  server: 152.228.139.33
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.144 443
-  - hysteria2-1005580211
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.175.23 443
+  - hysteria2-1004725118
+  - 🏳️ ShatakVPN 591705
+  - vless-1413435162
   type: select
 rules:
 - MATCH,PROXY

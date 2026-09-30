@@ -3,23 +3,12 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "🔒 VM-WS-TLS 🇪🇸 ES-66.163.118.73 443",
+      "tag": "vmess-1446234800",
       "server": "66.163.118.73",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
       "security": "auto",
-      "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "server_name": "mygptagent.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/linkvws",
-        "headers": {
-          "Host": "mygptagent.org"
-        }
-      }
+      "alter_id": 0
     },
     {
       "type": "direct",

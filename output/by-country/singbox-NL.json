@@ -3,194 +3,117 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 177488",
-      "server": "72.56.116.57",
+      "tag": "hysteria2-951497726",
+      "server": "hys28.wba-pn.ru",
       "server_port": 443,
-      "password": "wrSuBorIlf",
+      "password": "BWAFlp8g53",
       "tls": {
         "enabled": true,
-        "server_name": "72.56.116.57",
+        "server_name": "hys28.wba-pn.ru",
         "insecure": true
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "shadowsocks-11033",
-      "server": "82.38.31.215",
+      "tag": "🏳️ ShatakVPN 582694",
+      "server": "193.29.139.212",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 393233",
+      "server": "72.56.102.31",
+      "server_port": 443,
+      "password": "BWAFlp8g53",
+      "tls": {
+        "enabled": true,
+        "server_name": "72.56.102.31",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-190",
+      "server": "82.38.31.191",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "k1dBOmOB4oqi7Ump37a1bQ"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 634023",
-      "server": "82.38.31.149",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
       "type": "vless",
-      "tag": "vless-1347369094",
-      "server": "31.56.184.132",
-      "server_port": 8443,
-      "uuid": "11f21602-47aa-42e2-9149-69120f2e6df6",
+      "tag": "vless-1580893141",
+      "server": "185.80.234.87",
+      "server_port": 443,
+      "uuid": "4abdfe42-aec7-4b66-974d-3f891e2e8184",
       "tls": {
         "enabled": true,
-        "server_name": "cloudflare.com",
+        "server_name": "nlll.gaz-service.shop",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A",
-          "short_id": "b4e3b0b55b8dc75b"
+          "public_key": "Zl6Fe6WYQuaFe_QNUB4qU7nRkGujy7LqjoQ96GO3jUc"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "shiforgrpc"
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS 🇺🇸 US-69.46.46.39 443",
+      "server": "69.46.46.39",
+      "server_port": 443,
+      "uuid": "34361f9d-bd48-f724-6e33-19d62a5633a8",
+      "tls": {
+        "enabled": true,
+        "server_name": "mofyujk-production.up.railway.app",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws/34361f9d-bd48-f724-6e33-19d62a5633a8",
+        "headers": {
+          "Host": "mofyujk-production.up.railway.app"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 965236",
+      "server": "51.158.206.8",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "shadowsocks-24869",
-      "server": "82.38.31.61",
+      "tag": "shadowsocks-11021",
+      "server": "82.38.31.185",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 872733",
-      "server": "51.158.206.20",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 570089",
-      "server": "72.56.116.57",
-      "server_port": 443,
-      "password": "wrSuBorIlf",
-      "tls": {
-        "enabled": true,
-        "server_name": "72.56.116.57",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-45641610",
-      "server": "158.173.20.208",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🆔spotify_porteghali 🔒 VL-GRPC- ❔ XX 114ms",
-      "server": "31.56.184.132",
-      "server_port": 8443,
-      "uuid": "11f21602-47aa-42e2-9149-69120f2e6df6",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A",
-          "short_id": "b4e3b0b55b8dc75b"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "shiforgrpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1251937507",
-      "server": "31.56.184.132",
-      "server_port": 8443,
-      "uuid": "11f21602-47aa-42e2-9149-69120f2e6df6",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A",
-          "short_id": "b4e3b0b55b8dc75b"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "shiforgrpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 721654",
-      "server": "51.158.206.87",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 153754",
-      "server": "51.158.206.25",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
-        }
-      }
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
     },
     {
       "type": "direct",
