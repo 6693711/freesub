@@ -3,33 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: vmess-1570798257
-  network: ws
-  port: 443
-  server: 194.99.79.26
-  servername: aksai.org
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aksai.org
-    path: /linkvws
-- name: hysteria2-663905691
+- name: hysteria2-1509475552
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.89
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: 202.146.222.89
+  sni: https://t.me/wangcai2üáüá
+  type: hysteria2
+- name: hysteria2-1532454244
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2��
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-1570798257
-  - hysteria2-663905691
+  - hysteria2-1509475552
+  - hysteria2-1532454244
   type: select
 rules:
 - MATCH,PROXY

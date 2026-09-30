@@ -3,38 +3,55 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 128467
-  port: 52006
-  server: 87.192.47.10
-  servername: grok.setlisting.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
-- cipher: rc4-md5
-  name: shadowsocks-468218595
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.23.32
+- cipher: aes-256-gcm
+  name: shadowsocks-717969059
+  password: LXchLsIwtCeUAUgu
+  port: 443
+  server: 149.102.149.207
   type: ss
   udp: true
 - grpc-opts:
     grpc-service-name: vless
-  name: 🆔ar14n24b 🔓 VL-GRPC-N/A ❔ XX down
+  name: vless-1245422997
   network: grpc
   port: 2083
-  server: 66.90.104.43
+  server: 66.90.104.42
   type: vless
   udp: true
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- client-fingerprint: random
+  name: vless-1302936702
+  port: 2053
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: 9922313fffed1c63
+  server: 46.250.250.149
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+- client-fingerprint: chrome
+  name: 🆔surfboardv2ray 🔒 VL-WS-N/A ❔ XX 51ms
+  network: ws
+  port: 443
+  server: 172.67.151.109
+  servername: jdzit4e4urks.xwzohsebujps.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
+  ws-opts:
+    headers:
+      Host: jdzit4e4urks.xwzohsebujps.workers.dev
+    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 128467
-  - shadowsocks-468218595
-  - 🆔ar14n24b 🔓 VL-GRPC-N/A ❔ XX down
+  - shadowsocks-717969059
+  - vless-1245422997
+  - vless-1302936702
+  - 🆔surfboardv2ray 🔒 VL-WS-N/A ❔ XX 51ms
   type: select
 rules:
 - MATCH,PROXY
