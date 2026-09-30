@@ -3,21 +3,14 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🇷🇺 俄罗斯 | RUS
-  password: 41edb44c8e
-  port: 11592
-  server: srv-17e124.21freedom.net
-  skip-cert-verify: true
-  sni: srv-17e124.21freedom.net
-  type: hysteria2
-- client-fingerprint: chrome
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1571789122
+  name: vless-1559491698
   port: 443
   reality-opts:
     public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
     short-id: 3b74d85e
-  server: 139.28.168.201
+  server: china.letsconnectpoint.com
   servername: china.letsconnectpoint.com
   tls: true
   type: vless
@@ -26,8 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇷🇺 俄罗斯 | RUS
-  - vless-1571789122
+  - vless-1559491698
   type: select
 rules:
 - MATCH,PROXY

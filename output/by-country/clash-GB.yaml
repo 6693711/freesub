@@ -3,25 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 576005
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
+- cipher: aes-128-gcm
+  name: shadowsocks-271
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
   type: ss
   udp: true
-- cipher: rc4-md5
-  name: shadowsocks-165
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.37
-  type: ss
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1483330744
+  network: grpc
+  port: 2083
+  server: 66.90.105.211
+  type: vless
   udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- grpc-opts:
+    grpc-service-name: vless
+  name: vless-1245422997
+  network: grpc
+  port: 2083
+  server: 66.90.104.42
+  type: vless
+  udp: true
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 576005
-  - shadowsocks-165
+  - shadowsocks-271
+  - vless-1483330744
+  - vless-1245422997
   type: select
 rules:
 - MATCH,PROXY

@@ -3,7 +3,33 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 494004",
+      "tag": "🇫🇷 法国 | FRA",
+      "server": "vpn-fr-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "127.0.0.1",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 99ms",
+      "server": "51.75.118.5",
+      "server_port": 20161,
+      "uuid": "fb2defa0-2ee5-4ad9-90b7-dde7cbf3f01f",
+      "transport": {
+        "type": "ws",
+        "path": "/batman-ws",
+        "headers": {
+          "Host": "51.75.118.5"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 427440",
       "server": "35.181.166.40",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
@@ -11,6 +37,28 @@
         "enabled": true,
         "server_name": "vpn-fr-002.fastervpn.world",
         "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 5ms",
+      "server": "172.67.185.98",
+      "server_port": 2053,
+      "uuid": "9d672694-c146-422e-b3b5-3717a38a0fcc",
+      "tls": {
+        "enabled": true,
+        "server_name": "fr.api-music-fa.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/voip/updates/static/fr2035",
+        "headers": {
+          "Host": "fr.api-music-fa.com"
+        }
       }
     },
     {

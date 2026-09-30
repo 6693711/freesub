@@ -3,26 +3,56 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-737135161
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: 'https:'
-  type: hysteria2
 - alterId: 0
   cipher: auto
-  name: vmess-682259480
+  name: vmess-197954839
   port: 35034
   server: 165.154.195.38
   type: vmess
   udp: true
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- alterId: 0
+  cipher: auto
+  name: vmess-656231634
+  port: 35034
+  server: 165.154.195.38
+  type: vmess
+  udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- alterId: 0
+  cipher: auto
+  name: vmess-1575903255
+  port: 35034
+  server: 165.154.195.38
+  type: vmess
+  udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- client-fingerprint: chrome
+  name: 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 232ms
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  server: hinet1.2yly.com
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+- name: 🏳️ ShatakVPN 554146
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-737135161
-  - vmess-682259480
+  - vmess-197954839
+  - vmess-656231634
+  - vmess-1575903255
+  - 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 232ms
+  - 🏳️ ShatakVPN 554146
   type: select
 rules:
 - MATCH,PROXY
