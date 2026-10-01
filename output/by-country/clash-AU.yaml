@@ -5,23 +5,7 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: vmess-1061528836
-  port: 18000
-  server: ww11.levikogjgfdd.ir
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: vmess-485686931
-  port: 18000
-  server: 84.17.41.2
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: vmess-5258760
+  name: 🏳️ ShatakVPN 703341
   port: 18000
   server: 149.88.23.207
   type: vmess
@@ -29,19 +13,44 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: vmess-2386865
+  name: vmess-1060904497
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: vmess-1327548634
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: vmess-2387880
   port: 18000
   server: 67.220.85.46
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: vmess-1078158516
+  port: 18000
+  server: 149.88.23.207
   type: vmess
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-1061528836
-  - vmess-485686931
-  - vmess-5258760
-  - vmess-2386865
+  - 🏳️ ShatakVPN 703341
+  - vmess-1060904497
+  - vmess-1327548634
+  - vmess-2387880
+  - vmess-1078158516
   type: select
 rules:
 - MATCH,PROXY
