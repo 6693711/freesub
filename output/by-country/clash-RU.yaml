@@ -3,9 +3,16 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- cipher: aes-256-gcm
+  name: shadowsocks-1612509898
+  password: 81a20429165df87e
+  port: 20998
+  server: 195.133.23.200
+  type: ss
+  udp: true
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1579283210
+  name: vless-1581609717
   port: 443
   reality-opts:
     public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
@@ -15,11 +22,12 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  uuid: 914f3806-07a1-4158-9624-e183de065a38
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1579283210
+  - shadowsocks-1612509898
+  - vless-1581609717
   type: select
 rules:
 - MATCH,PROXY

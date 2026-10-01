@@ -3,23 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 99ms
+  name: vless-1468175808
   port: 443
   reality-opts:
-    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
-    short-id: b390e0a721d242b0
-  server: 137.74.16.237
-  servername: www.icloud.com
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  server: 185.171.202.105
+  servername: fra.loozerp.wiki
   tls: true
   type: vless
   udp: true
-  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 99ms
+  - vless-1468175808
   type: select
 rules:
 - MATCH,PROXY
