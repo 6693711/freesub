@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "vless-1589195421",
+      "server": "77.42.20.51",
+      "server_port": 1085,
+      "uuid": "0c1b7949-fe09-43d9-863f-2c031f66bfc1"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

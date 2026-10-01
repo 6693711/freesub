@@ -2,6 +2,18 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "hysteria2-1111846187",
+      "server": "152.67.200.82",
+      "server_port": 50160,
+      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "tls": {
+        "enabled": true,
+        "server_name": "css.rbxcdn.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "vmess",
       "tag": "vmess-5259790",
       "server": "140.238.2.250",
@@ -9,18 +21,6 @@
       "uuid": "41a7089a-040b-4538-8b8d-010902405bde",
       "security": "auto",
       "alter_id": 0
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1093669534",
-      "server": "152.67.200.82",
-      "server_port": 50160,
-      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "insecure": true
-      }
     },
     {
       "type": "direct",

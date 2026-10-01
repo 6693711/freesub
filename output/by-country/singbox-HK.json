@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1532454244",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/wangcai2��",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1601949351",
+      "server": "31.57.248.176",
+      "server_port": 50160,
+      "password": "b0917015b656b3dd2286b5633af0c5c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "off",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1606586948",
+      "server": "hk4.miyazono-kaori.com",
+      "server_port": 443,
+      "uuid": "f1d601f2-cc29-4fc2-bafc-7ac833af466a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk4e-launcher-static.hoyoverse.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "KhRbgahSFqlPKB6QNp9QYb4oXMy2SIgi440tm6iFZHA",
+          "short_id": "ea6b43"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

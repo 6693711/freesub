@@ -5,46 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1016882879
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1552655304
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-962693501
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1501192020
+  name: vless-1537154001
   port: 443
   reality-opts:
     public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
@@ -57,27 +18,7 @@ proxies:
   uuid: 4192524f-09f0-414f-88fd-7a14378491c7
 - client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-698153465
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-479013117
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: 45.88.43.116
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1013983970
+  name: vless-1275190663
   port: 28573
   reality-opts:
     public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
@@ -88,10 +29,10 @@ proxies:
   type: vless
   udp: true
   uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- client-fingerprint: ios
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-479071125
-  port: 18007
+  name: vless-470978002
+  port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -101,17 +42,92 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: vless-702719096
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- client-fingerprint: safari
+  name: 🇯🇵 日本 | JPN
+  network: ws
+  port: 49152
+  server: qp.lichao0223.cn
+  servername: qp.lichao0223.cn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 71b460a1-8f78-45c5-fb3c-ab26a2a1f7b9
+  ws-opts:
+    headers:
+      Host: qp.lichao0223.cn
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1359302648
+  port: 50159
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- client-fingerprint: safari
+  name: vless-1162311248
+  network: ws
+  port: 443
+  server: 162.159.254.3
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-1503562392
+  port: 443
+  reality-opts:
+    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
+    short-id: 913e9b95fbc71278
+  server: 43.133.11.187
+  servername: cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
+- cipher: aes-256-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
+  udp: true
+- name: vless-860344657
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1016882879
-  - vless-1552655304
-  - vless-962693501
-  - vless-1501192020
-  - vless-698153465
-  - hysteria2-479013117
-  - vless-1013983970
-  - vless-479071125
+  - vless-1537154001
+  - vless-1275190663
+  - vless-470978002
+  - vless-702719096
+  - 🇯🇵 日本 | JPN
+  - vless-1359302648
+  - vless-1162311248
+  - vless-1503562392
+  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  - vless-860344657
   type: select
 rules:
 - MATCH,PROXY

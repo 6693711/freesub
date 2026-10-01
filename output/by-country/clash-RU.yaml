@@ -4,20 +4,8 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 935049
-  port: 26424
-  reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
-  server: 45.12.75.242
-  servername: ya.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1571781969
+  name: vless-1579283210
   port: 443
   reality-opts:
     public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
@@ -28,25 +16,10 @@ proxies:
   type: vless
   udp: true
   uuid: a368752a-32fc-42f3-980a-6b049218b23f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1571789123
-  port: 443
-  reality-opts:
-    public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
-    short-id: 3b74d85e
-  server: china.letsconnectpoint.com
-  servername: china.letsconnectpoint.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 914f3806-07a1-4158-9624-e183de065a38
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 935049
-  - vless-1571781969
-  - vless-1571789123
+  - vless-1579283210
   type: select
 rules:
 - MATCH,PROXY
