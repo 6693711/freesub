@@ -3,44 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1397731731
-  port: 443
-  reality-opts:
-    public-key: YhT24GkuI1r7Fwo8pxIYH3CmTtbRlYs5X7fWtYp3vTY
-    short-id: 05f4f85fdc6c1379
-  server: 195.154.118.134
-  servername: w-mebel.pro
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3c48b5f5-7766-4896-874e-b3ba1860e83a
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1536...
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
-  udp: true
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-  name: 🔒 VL-GRPC-TLS 🇫🇷 FR-143.246.208.113 443
-  network: grpc
-  port: 443
-  server: 143.246.208.113
-  servername: assets-fr4.pleiades.codes
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 893203
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.2
+  servername: fuck.rkn
   tls: true
   type: vless
   udp: true
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1397731731
-  - 🇫🇷[www.v2nodes.com] ss-FR-1536...
-  - 🔒 VL-GRPC-TLS 🇫🇷 FR-143.246.208.113 443
+  - 🏳️ ShatakVPN 893203
   type: select
 rules:
 - MATCH,PROXY

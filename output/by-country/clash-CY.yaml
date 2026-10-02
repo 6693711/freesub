@@ -4,36 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 775144
-  port: 443
-  reality-opts:
-    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
-    short-id: c1e3d5d4
-  server: 5.253.42.159
-  servername: india.letsconnectpoint.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a368752a-32fc-42f3-980a-6b049218b23f
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1618560031
+  name: vless-178038888
   port: 40443
   reality-opts:
-    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-    short-id: 68a8
-  server: 5.253.28.224
+    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+    short-id: a8ae
+  server: 194.76.154.31
   servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 775144
-  - vless-1618560031
+  - vless-178038888
   type: select
 rules:
 - MATCH,PROXY
