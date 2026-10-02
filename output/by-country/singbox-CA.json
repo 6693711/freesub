@@ -3,50 +3,21 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "vmess-656060465",
-      "server": "23.162.200.198",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1466812133",
-      "server": "158.69.112.254",
-      "server_port": 443,
-      "uuid": "661f395d-b153-4199-a04b-693f5fe7f261",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.speedtest.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y",
-          "short_id": "3d3c1e645f763ee3"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "vmess-1444864743",
-      "server": "134.195.198.214",
+      "tag": "vmess-1451757973",
+      "server": "66.163.113.176",
       "server_port": 22324,
       "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
       "security": "auto",
       "alter_id": 0
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1118951746",
-      "server": "51.222.200.165",
-      "server_port": 5000,
-      "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
+      "type": "vmess",
+      "tag": "vmess-704660104",
+      "server": "23.162.200.198",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

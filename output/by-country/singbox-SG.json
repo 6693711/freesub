@@ -3,7 +3,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1353776240",
+      "tag": "vless-1308942455",
       "server": "54.169.200.246",
       "server_port": 41688,
       "uuid": "49c0aac1-5e05-4f04-b624-248fc59e03c4",
@@ -13,7 +13,7 @@
         "server_name": "www.intel.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -23,32 +23,23 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1598891473",
-      "server": "46.137.202.178",
-      "server_port": 12512,
-      "uuid": "2a6c617d-98e4-49c3-95ab-76f02fcf0150",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-1623484008",
+      "server": "fa03629b-tmm5c0-u1dafb-1ro8s.sg7.hyhuawei.com",
+      "server_port": 443,
+      "password": "a18ef18e-293a-11ef-b76e-f23c91cfbbc9",
       "tls": {
         "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA",
-          "short_id": "e692a8250d2e2fd0"
-        }
+        "server_name": "fa03629b-tmm5c0-u1dafb-1ro8s.sg7.hyhuawei.com",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1590136825",
-      "server": "5.223.41.164",
+      "tag": "vless-1609161777",
+      "server": "5.223.41.95",
       "server_port": 80,
-      "uuid": "ef24e9b9-e7b2-4e01-b335-f289612d2d7a",
+      "uuid": "f29e9fce-1f37-4a83-9e6c-05a997123dfb",
       "transport": {
         "type": "ws",
         "path": "/",
@@ -56,12 +47,100 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-27350",
-      "server": "68.183.227.45",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "type": "vmess",
+      "tag": "vmess-1249139858",
+      "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1622157678",
+      "server": "5.223.41.248",
+      "server_port": 80,
+      "uuid": "2e055175-728b-44be-90a4-e7f59ed16f1b",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {}
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-656230649",
+      "server": "149.88.23.207",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1623484020",
+      "server": "756c5a00-tmm5c0-tr9h64-1f1f1.sg7.hyhuawei.com",
+      "server_port": 443,
+      "password": "61c4be90-6235-11ec-a8bf-f23c91cfbbc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "756c5a00-tmm5c0-tr9h64-1f1f1.sg7.hyhuawei.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1586729679",
+      "server": "5.223.41.179",
+      "server_port": 80,
+      "uuid": "ff642d7a-9a24-4078-a031-f8c656f4554e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {}
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-522223666",
+      "server": "3.0.111.82",
+      "server_port": 17623,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1623652209",
+      "server": "25c5ca1f-tmm5c0-tmapa2-1ryup.sg7.hyhuawei.com",
+      "server_port": 443,
+      "password": "3ee091ca-ab9c-11ef-a791-f23c9164ca5d",
+      "tls": {
+        "enabled": true,
+        "server_name": "25c5ca1f-tmm5c0-tmapa2-1ryup.sg7.hyhuawei.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🏳️ ShatakVPN 586337",
+      "server": "149.88.23.207",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

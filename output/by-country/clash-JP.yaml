@@ -3,29 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-1275190658
-  port: 11690
-  reality-opts:
-    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
-    short-id: 034885e346fd30
-  server: 13.231.19.51
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
-- name: hysteria2-1495885491
-  password: my_super_password_123
-  port: 5443
-  server: open.2ml.cc.cd
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-816741386
+  name: vless-665034486
   port: 18007
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -36,93 +16,41 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1278126349
-  port: 28573
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1383599296
-  port: 28573
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
 - alterId: 0
   cipher: auto
-  name: vmess-1122508704
+  name: vmess-1572245376
   port: 4433
   server: 45.32.57.118
   type: vmess
   udp: true
   uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1518612550
+- name: hysteria2-1470835089
+  password: my_super_password_123
   port: 443
+  server: open.w2m.ink
+  skip-cert-verify: true
+  sni: open.w2m.ink
+  type: hysteria2
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-665034487
+  port: 19645
   reality-opts:
-    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
-    short-id: 913e9b95fbc71278
-  server: 43.133.11.187
-  servername: cloudflare.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
-- name: vless-732726857
-  port: 443
-  server: 137.220.221.179
-  type: vless
-  udp: true
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: vless-1503562392
-  port: 443
-  reality-opts:
-    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
-    short-id: 913e9b95fbc71278
-  server: 43.133.11.187
-  servername: cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
-- alterId: 0
-  cipher: auto
-  name: vmess-1130434817
-  port: 4433
-  server: 45.32.57.118
-  type: vmess
-  udp: true
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1275190658
-  - hysteria2-1495885491
-  - vless-816741386
-  - vless-1278126349
-  - vless-1383599296
-  - vmess-1122508704
-  - vless-1518612550
-  - vless-732726857
-  - vless-1503562392
-  - vmess-1130434817
+  - vless-665034486
+  - vmess-1572245376
+  - hysteria2-1470835089
+  - vless-665034487
   type: select
 rules:
 - MATCH,PROXY

@@ -3,51 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1477042760
-  port: 40443
-  reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
-  server: 5.253.28.240
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-1418865183
-  port: 40443
+  name: 🏳️ ShatakVPN 775144
+  port: 443
   reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
-  server: hydra.yokkastars.com
-  servername: deepl.com
+    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
+    short-id: c1e3d5d4
+  server: 5.253.42.159
+  servername: india.letsconnectpoint.com
   tls: true
   type: vless
   udp: true
-  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
-- client-fingerprint: chrome
+  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-459508008
+  name: vless-1618560031
   port: 40443
   reality-opts:
     public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
     short-id: 68a8
-  server: 5.253.42.164
+  server: 5.253.28.224
   servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1477042760
-  - vless-1418865183
-  - vless-459508008
+  - 🏳️ ShatakVPN 775144
+  - vless-1618560031
   type: select
 rules:
 - MATCH,PROXY

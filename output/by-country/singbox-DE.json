@@ -2,40 +2,13 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1611272155",
-      "server": "130.61.42.148",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "tGXsbUDisR28c/KS0RDOlgQS1gVT7UJ5Sf0/5QvMwR4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1610602170",
-      "server": "31.76.11.83",
-      "server_port": 11750,
-      "method": "chacha20-ietf-poly1305",
-      "password": "iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c="
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1605295136",
-      "server": "dehys.superbuba.top",
-      "server_port": 443,
-      "password": "d4cae7df-50a1-428c-bd62-881c8f3bbd90",
-      "tls": {
-        "enabled": true,
-        "server_name": "dehys.superbuba.top",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 992369",
-      "server": "51.195.126.38",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "2YdE4lFOid5a"
+      "type": "vmess",
+      "tag": "🆔v2ray1_ng 🔓 VM-TCP-N/A 🇩🇪 DE 123ms",
+      "server": "216.106.187.60",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

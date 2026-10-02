@@ -3,41 +3,18 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-1611272155
-  password: tGXsbUDisR28c/KS0RDOlgQS1gVT7UJ5Sf0/5QvMwR4=
-  port: 59924
-  server: 130.61.42.148
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🆔v2ray1_ng 🔓 VM-TCP-N/A 🇩🇪 DE 123ms
+  port: 22324
+  server: 216.106.187.60
+  type: vmess
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1610602170
-  password: iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c=
-  port: 11750
-  server: 31.76.11.83
-  type: ss
-  udp: true
-- name: hysteria2-1605295136
-  password: d4cae7df-50a1-428c-bd62-881c8f3bbd90
-  port: 443
-  server: dehys.superbuba.top
-  skip-cert-verify: true
-  sni: dehys.superbuba.top
-  type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 992369
-  password: 2YdE4lFOid5a
-  port: 8388
-  server: 51.195.126.38
-  type: ss
-  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1611272155
-  - shadowsocks-1610602170
-  - hysteria2-1605295136
-  - 🏳️ ShatakVPN 992369
+  - 🆔v2ray1_ng 🔓 VM-TCP-N/A 🇩🇪 DE 123ms
   type: select
 rules:
 - MATCH,PROXY

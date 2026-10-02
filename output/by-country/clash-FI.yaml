@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: hysteria2-1599779135
+  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
+  port: 443
+  server: 144.31.232.216
+  skip-cert-verify: true
+  sni: fi01.clgate.network
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - hysteria2-1599779135
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
