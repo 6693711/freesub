@@ -3,10 +3,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-26652141
-  port: 18007
+  name: vless-1275190663
+  port: 28573
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  server: 18.183.215.124
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1107791215
+  port: 50159
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  server: 154.31.114.248
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-698153465
+  port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -16,10 +42,17 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-1503208276
+  password: my_super_password_123
+  port: 443
+  server: open.w2m.ink
+  skip-cert-verify: true
+  sni: open.w2m.ink
+  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-335170842
-  port: 19645
+  name: vless-212135096
+  port: 10583
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -31,7 +64,36 @@ proxies:
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - alterId: 0
   cipher: auto
-  name: vmess-1469367462
+  name: vmess-1572245376
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- alterId: 0
+  cipher: auto
+  name: vmess-1122508704
+  port: 4433
+  server: 45.32.57.118
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1631688802
+  port: 443
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  server: 160.16.139.182
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+- alterId: 0
+  cipher: auto
+  name: vmess-192463137
   network: ws
   port: 80
   server: 168.138.43.75
@@ -39,37 +101,20 @@ proxies:
   udp: true
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
-    headers:
-      Host: none
+    headers: {}
     path: /cctv13.m3u8
-- name: hysteria2-1495885491
-  password: my_super_password_123
-  port: 5443
-  server: open.2ml.cc.cd
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1503562367
-  port: 443
-  reality-opts:
-    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
-    short-id: 913e9b95fbc71278
-  server: 43.133.11.187
-  servername: cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-26652141
-  - vless-335170842
-  - vmess-1469367462
-  - hysteria2-1495885491
-  - vless-1503562367
+  - vless-1275190663
+  - vless-1107791215
+  - vless-698153465
+  - hysteria2-1503208276
+  - vless-212135096
+  - vmess-1572245376
+  - vmess-1122508704
+  - vless-1631688802
+  - vmess-192463137
   type: select
 rules:
 - MATCH,PROXY
