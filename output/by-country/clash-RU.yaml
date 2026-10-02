@@ -3,31 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: shadowsocks-1612509898
-  password: 81a20429165df87e
-  port: 20998
-  server: 195.133.23.200
-  type: ss
-  udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1581609717
-  port: 443
-  reality-opts:
-    public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
-    short-id: 3b74d85e
-  server: 139.28.168.201
-  servername: china.letsconnectpoint.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 914f3806-07a1-4158-9624-e183de065a38
+- name: 🇷🇺 俄罗斯 | RUS
+  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
+  port: 22443
+  server: 91.240.86.70
+  skip-cert-verify: true
+  sni: 91.240.86.70
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1612509898
-  - vless-1581609717
+  - 🇷🇺 俄罗斯 | RUS
   type: select
 rules:
 - MATCH,PROXY

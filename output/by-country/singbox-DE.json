@@ -2,34 +2,40 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1583740705",
-      "server": "85.234.100.9",
-      "server_port": 40443,
-      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
-      "flow": "xtls-rprx-vision",
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1611272155",
+      "server": "130.61.42.148",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "tGXsbUDisR28c/KS0RDOlgQS1gVT7UJ5Sf0/5QvMwR4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1610602170",
+      "server": "31.76.11.83",
+      "server_port": 11750,
+      "method": "chacha20-ietf-poly1305",
+      "password": "iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c="
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1605295136",
+      "server": "dehys.superbuba.top",
+      "server_port": 443,
+      "password": "d4cae7df-50a1-428c-bd62-881c8f3bbd90",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
-          "short_id": "db46e2946fc466fd"
-        }
+        "server_name": "dehys.superbuba.top",
+        "insecure": true
       }
     },
     {
-      "type": "vmess",
-      "tag": "vmess-1570510805",
-      "server": "185.177.229.129",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto",
-      "alter_id": 0
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 992369",
+      "server": "51.195.126.38",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2YdE4lFOid5a"
     },
     {
       "type": "direct",

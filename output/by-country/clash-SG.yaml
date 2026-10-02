@@ -3,44 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  name: vless-1603577410
-  network: ws
-  port: 443
-  server: trackydev.site
-  servername: trackydev.site
-  tls: true
-  type: vless
-  udp: true
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
-  ws-opts:
-    headers: {}
-    path: /
-- client-fingerprint: chrome
-  name: vless-1343742641
-  port: 2053
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-- client-fingerprint: chrome
-  name: vless-1610386029
-  network: ws
-  port: 443
-  server: 140.245.120.16
-  servername: trackydev.site
-  tls: true
-  type: vless
-  udp: true
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
-  ws-opts:
-    headers: {}
-    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-1353776240
@@ -54,75 +16,43 @@ proxies:
   type: vless
   udp: true
   uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-- alterId: 0
-  cipher: auto
-  name: vmess-1328612194
-  port: 18000
-  server: ww11.levikogjgfdd.ir
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- client-fingerprint: chrome
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-1046914396
-  port: 19825
+  name: vless-1598891473
+  port: 12512
   reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: 6ba85179e30d4fc2
-  server: 146.235.16.130
-  servername: sg2-8sb.6121999.dpdns.org
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: e692a8250d2e2fd0
+  server: 46.137.202.178
+  servername: www.intel.com
   tls: true
   type: vless
   udp: true
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- name: vless-1598877197
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+- name: vless-1590136825
   network: ws
   port: 80
-  server: 5.223.41.121
+  server: 5.223.41.164
   type: vless
   udp: true
-  uuid: 0f7996b1-3ef7-4274-b612-0310270d2a41
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
   ws-opts:
     headers: {}
     path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-81049727
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
+- cipher: rc4-md5
+  name: shadowsocks-27350
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.45
+  type: ss
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-721524026
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1603577410
-  - vless-1343742641
-  - vless-1610386029
   - vless-1353776240
-  - vmess-1328612194
-  - vless-1046914396
-  - vless-1598877197
-  - vless-81049727
-  - vless-721524026
+  - vless-1598891473
+  - vless-1590136825
+  - shadowsocks-27350
   type: select
 rules:
 - MATCH,PROXY
