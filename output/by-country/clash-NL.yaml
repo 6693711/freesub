@@ -4,46 +4,171 @@ mode: rule
 port: 7890
 proxies:
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-269
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  name: shadowsocks-275
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 82.38.31.199
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 150471
-  password: CJmTCCx7Ltud
-  port: 8388
-  server: 108.181.58.239
+  server: 82.38.31.7
   type: ss
   udp: true
 - client-fingerprint: chrome
+  name: vless-1581582900
+  port: 443
+  server: 107.189.18.145
+  servername: restnet.duckdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 67a171fb-a31d-49f3-a9d6-98de350763e8
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 847781
+  name: vless-652375328
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  server: 51.158.206.25
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 578876
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  server: 51.158.206.20
+  server: 51.158.206.98
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1636186914
+  port: 443
+  reality-opts:
+    public-key: sgPREsDFJUchKawgXgFGEM4YBjTDur0rgD2GuQmZXzA
+    short-id: 04b9f0b2470fae16
+  server: nl5.freekeysh110.online
+  servername: nl5.freekeysh110.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 83259363-fa20-4914-9b89-5d49186e7f0a
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 499501
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.186
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔soskeynet 🔒 VL-TCP- 🇳🇱 NL 147ms
+  port: 443
+  reality-opts:
+    public-key: G3Ljfvmg8X2VYuxSgGCBdn3Rca207x86GNRBLLmxuUQ
+    short-id: 0aaf3be85ef94749
+  server: 87.58.201.67
+  servername: ne3.paledweld.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6e38d9f6-0c9d-437b-8135-20f93f94c572
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 382722
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.86
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 624020
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.98
   servername: fuck.rkn
   tls: true
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-174
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  name: shadowsocks-10898
+  password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
-  server: 82.38.31.155
+  server: 82.38.31.203
   type: ss
   udp: true
+- client-fingerprint: firefox
+  name: vless-1563470849
+  port: 443
+  server: 107.189.18.145
+  servername: restnet.duckdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 67a171fb-a31d-49f3-a9d6-98de350763e8
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 117500
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.86
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-48399240
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.39
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 785449
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.93
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-269
-  - 🏳️ ShatakVPN 150471
-  - 🏳️ ShatakVPN 847781
-  - shadowsocks-174
+  - shadowsocks-275
+  - vless-1581582900
+  - vless-652375328
+  - 🏳️ ShatakVPN 578876
+  - vless-1636186914
+  - 🏳️ ShatakVPN 499501
+  - 🆔soskeynet 🔒 VL-TCP- 🇳🇱 NL 147ms
+  - 🏳️ ShatakVPN 382722
+  - 🏳️ ShatakVPN 624020
+  - shadowsocks-10898
+  - vless-1563470849
+  - 🏳️ ShatakVPN 117500
+  - shadowsocks-48399240
+  - 🏳️ ShatakVPN 785449
   type: select
 rules:
 - MATCH,PROXY

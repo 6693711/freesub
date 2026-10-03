@@ -4,19 +4,19 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🇩🇪 德国 | DEU
+  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms
   network: ws
-  port: 443
-  server: megariverport-nayab.org
-  servername: sdxih.maxpixel-hangover.sbs
+  port: 2053
+  server: 104.21.84.30
+  servername: fr.api-music-fa.com
   tls: true
   type: vless
   udp: true
-  uuid: a337aa84-3152-40f0-87fc-bdcbbb3b3b5d
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
   ws-opts:
     headers:
-      Host: sdxih.maxpixel-hangover.sbs
-    path: /bali
+      Host: fr.api-music-fa.com
+    path: /api/voip/updates/static/fr2035
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
@@ -30,7 +30,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪 德国 | DEU
+  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms
   - 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99 443
   type: select
 rules:
