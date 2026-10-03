@@ -3,9 +3,16 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
+- name: hysteria2-1111846211
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-48555241
+  name: vless-703656411
   port: 13672
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -16,18 +23,11 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-1060574025
-  password: 7302ad33229de166d393cd56143a1e4c
-  port: 50160
-  server: 131.186.19.174
-  skip-cert-verify: true
-  sni: google.com
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-48555241
-  - hysteria2-1060574025
+  - hysteria2-1111846211
+  - vless-703656411
   type: select
 rules:
 - MATCH,PROXY

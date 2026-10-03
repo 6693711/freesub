@@ -3,32 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🆔v2ray1_ng 🔓 VM-TCP-N/A ❔ XX 93ms
-  port: 110
-  server: 31.77.8.97
-  type: vmess
-  udp: true
-  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
-- client-fingerprint: firefox
+- client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: vless-84394360
+  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 96ms
   port: 443
   reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
+    public-key: FvxhTol6CtmTv7BQZANpoRGBRMUIrNSsLbTUe4x8JG8
+    short-id: a4b32f5132c11d9b
+  server: 179.254.163.11
+  servername: decemberfest.elfhost.ru
   tls: true
   type: vless
   udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  uuid: aef06aad-8e97-4452-9257-6142b5b1ceb7
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 98ms
+  port: 443
+  reality-opts:
+    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
+    short-id: c885e8f8
+  server: 144.31.215.227
+  servername: cdn-de.bulkavpn.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔v2ray1_ng 🔓 VM-TCP-N/A ❔ XX 93ms
-  - vless-84394360
+  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 96ms
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 98ms
   type: select
 rules:
 - MATCH,PROXY
