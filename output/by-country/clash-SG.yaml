@@ -3,23 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
+- name: hysteria2-1623484281
+  password: 40e084d6-0316-11f0-90e2-f23c913c8d2b
+  port: 443
+  server: 3677ca2a-tmm5c0-u0aht1-1rz5s.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 3677ca2a-tmm5c0-u0aht1-1rz5s.sg7.hyhuawei.com
+  type: hysteria2
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1010615625
-  port: 41688
+  name: vless-1623006764
+  port: 12512
   reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
-  server: 54.169.200.246
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: e692a8250d2e2fd0
+  server: 46.137.202.178
   servername: www.intel.com
   tls: true
   type: vless
   udp: true
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-- client-fingerprint: edge
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+- name: hysteria2-1623483703
+  password: ae5338ae-9a70-58c9-3d47-7d54a5675715
+  port: 443
+  server: b9aa4a60-tmm5c0-tv7dx2-py5w.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: b9aa4a60-tmm5c0-tv7dx2-py5w.sg7.hyhuawei.com
+  type: hysteria2
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-547757693
-  port: 17623
+  name: vless-856683707
+  port: 12972
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -29,13 +43,6 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: trojan-1645398601
-  password: UX82473651
-  port: 443
-  server: desired-boxer.rooster465.autos
-  sni: desired-boxer.rooster465.autos
-  type: trojan
-  udp: true
 - name: vless-1602615380
   network: ws
   port: 80
@@ -46,26 +53,61 @@ proxies:
   ws-opts:
     headers: {}
     path: /
-- client-fingerprint: firefox
-  name: vless-1272442255
-  port: 2053
+- name: vless-1588370068
+  network: ws
+  port: 80
+  server: 5.223.41.164
+  type: vless
+  udp: true
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  ws-opts:
+    headers: {}
+    path: /
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1308942455
+  port: 41688
   reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
-  servername: www.cloudflare.com
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: 7f342137c20387
+  server: 54.169.200.246
+  servername: www.intel.com
   tls: true
   type: vless
   udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-1645364924
+  port: 41295
+  reality-opts:
+    public-key: x1nqrSzJzU5Hq7fr36PEmtBfOf98A2XiFuRzIsdcz20
+    short-id: 5895914d
+  server: funagfr.alixxplay.com
+  servername: www.lamer.com.sg
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- name: hysteria2-1623483907
+  password: 5a4c13ae-6673-11ee-a149-f23c9164ca5d
+  port: 443
+  server: 014dd758-tmm5c0-tpda83-1lkbs.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 014dd758-tmm5c0-tpda83-1lkbs.sg7.hyhuawei.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1010615625
-  - vless-547757693
-  - trojan-1645398601
+  - hysteria2-1623484281
+  - vless-1623006764
+  - hysteria2-1623483703
+  - vless-856683707
   - vless-1602615380
-  - vless-1272442255
+  - vless-1588370068
+  - vless-1308942455
+  - vless-1645364924
+  - hysteria2-1623483907
   type: select
 rules:
 - MATCH,PROXY

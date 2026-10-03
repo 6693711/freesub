@@ -4,7 +4,7 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
+  name: vless-650319315
   port: 8443
   server: 94.183.170.135
   servername: estproxy4.lockdwn.com
@@ -12,22 +12,35 @@ proxies:
   type: vless
   udp: true
   uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-- name: vless-957016089
-  network: ws
-  port: 443
+- client-fingerprint: chrome
+  name: vless-781312931
+  port: 8443
   server: 94.183.170.135
+  servername: estproxy4.lockdwn.com
+  tls: true
   type: vless
   udp: true
   uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.246 8443
+  network: ws
+  port: 8443
+  server: 77.72.85.246
+  servername: fdghyt.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
   ws-opts:
     headers:
-      Host: 94.183.170.135
-    path: /
+      Host: fdghyt.com
+    path: /vpn-wss/fluxor/59011/
 proxy-groups:
 - name: PROXY
   proxies:
-  - '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
-  - vless-957016089
+  - vless-650319315
+  - vless-781312931
+  - 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.246 8443
   type: select
 rules:
 - MATCH,PROXY

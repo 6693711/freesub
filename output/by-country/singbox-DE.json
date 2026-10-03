@@ -2,28 +2,54 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1625674435",
-      "server": "31.76.11.83",
-      "server_port": 26150,
-      "uuid": "e676c6c8-44a8-4a1d-82cc-821a1f70f0c0"
-    },
-    {
       "type": "vmess",
-      "tag": "vmess-1629101312",
-      "server": "31.76.11.83",
-      "server_port": 23325,
-      "uuid": "3dff544a-379e-41f9-95d9-4b95a8e4026e",
+      "tag": "vmess-1624303751",
+      "server": "185.177.229.129",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
       "security": "auto",
       "alter_id": 0
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 881049",
+      "tag": "🏳️ ShatakVPN 707896",
       "server": "51.195.126.38",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
       "password": "2YdE4lFOid5a"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1617960160",
+      "server": "139.162.149.105",
+      "server_port": 80,
+      "uuid": "5aae7d2d-c152-42cc-afb6-fe805fb94531",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {}
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1643502321",
+      "server": "155.117.183.123",
+      "server_port": 443,
+      "uuid": "ff35ca20-2304-4b3a-80e5-2c82953cf2ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "de123.mech-pro.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4",
+          "short_id": "c42e96a6"
+        }
+      }
     },
     {
       "type": "direct",

@@ -4,16 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-cfb
-  name: shadowsocks-723348725
-  password: 9XwYyZsK8SNzQDtY
-  port: 9059
-  server: 91.201.65.122
+  name: shadowsocks-717969028
+  password: cp8pRSUAyLhTfVWH
+  port: 9064
+  server: 213.183.63.60
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-723348725
+  - shadowsocks-717969028
   type: select
 rules:
 - MATCH,PROXY

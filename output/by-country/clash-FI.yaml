@@ -3,22 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  name: vless-1333157775
-  port: 2053
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 162ms
+  port: 443
   reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  server: 95.216.27.15
-  servername: www.google.com
+    public-key: u9_Ta0DYmqruY94DwuZv4g_gnvY1xGMF1iT1SdV3cT8
+    short-id: d3a09fd1
+  server: 179.254.109.69
+  servername: m.swegg.daxaryx.fun
   tls: true
   type: vless
   udp: true
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  uuid: 61bd5829-a243-4548-97f0-a210c2069fec
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1333157775
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 162ms
   type: select
 rules:
 - MATCH,PROXY

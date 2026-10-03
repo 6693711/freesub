@@ -3,175 +3,101 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-803630131
-  port: 10583
+  name: vless-1525938361
+  port: 443
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
+    short-id: 913e9b95fbc71278
+  server: 43.133.11.187
+  servername: cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-721522923
-  port: 19645
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇯🇵 日本 | JPN
+  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
+- name: hysteria2-1553149732
+  password: 96ab5cd282733fd4c312a61f972f330a
+  port: 443
+  server: vp3.yysyy.online
+  skip-cert-verify: true
+  sni: vp3.yysyy.online
+  type: hysteria2
+- name: trojan-1648344549
   password: UX82473651
   port: 443
-  server: promoted-rattler.rooster465.autos
-  sni: promoted-rattler.rooster465.autos
+  server: assuring-skink.rooster465.autos
+  sni: assuring-skink.rooster465.autos
   type: trojan
   udp: true
-- name: hysteria2-1601948357
-  password: my_super_password_123
-  port: 5443
-  server: open.2ml.cc.cd
-  skip-cert-verify: true
-  sni: 'off'
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1019921570
-  port: 28573
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- alterId: 0
-  cipher: auto
-  name: vmess-1571547861
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  type: vmess
-  udp: true
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: jp01.a0a.xyz
-    path: /cctv13.m3u8
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: vless-1266360279
-  port: 11690
-  reality-opts:
-    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
-    short-id: 034885e346fd30
-  server: 13.231.19.51
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-1266369648
-  port: 11690
-  reality-opts:
-    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
-    short-id: 034885e346fd30
-  server: 13.231.19.51
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
-- name: hysteria2-1470835082
-  password: my_super_password_123
-  port: 5443
-  server: open.w2m.ink
-  skip-cert-verify: true
-  sni: open.w2m.ink
-  type: hysteria2
-- name: trojan-1644728125
+- name: 🆔ar14n24b 🔓 TR--N/A ❔ XX 250ms
   password: UX82473651
   port: 443
   server: comic-poodle.rooster465.autos
   sni: comic-poodle.rooster465.autos
   type: trojan
   udp: true
-- cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-  udp: true
-- name: hysteria2-1527031530
-  password: my_super_password_123
-  port: 5443
-  server: open.2ml.bid
-  skip-cert-verify: false
-  sni: open.2ml.bid
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: vmess-1571547860
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  type: vmess
-  udp: true
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers: {}
-    path: /cctv13.m3u8
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+- name: trojan-1643520542
+  password: UX82473651
   port: 443
-  server: 137.220.221.179
-  type: vless
+  server: brief-glider.rooster465.autos
+  sni: brief-glider.rooster465.autos
+  type: trojan
   udp: true
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-656230592
-  port: 18007
+  name: vless-1645364938
+  port: 443
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: AgTktefiMM58y7f-KFgEtmVti_YJbd0GPSkxNeJ0RH4
+    short-id: c8e49965
+  server: jpga01.jumpernode.site
+  servername: amzn.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: 05453546-201f-4e8d-97ae-fd70da0e951f
+- name: 🆔ar14n24b 🔓 TR--N/A ❔ XX 128ms
+  password: UX82473651
+  port: 443
+  server: fancy-javelin.rooster465.autos
+  sni: fancy-javelin.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1644728137
+  password: UX82473651
+  port: 443
+  server: integral-rodent.rooster465.autos
+  sni: integral-rodent.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1643520511
+  password: UX82473651
+  port: 443
+  server: intense-sole.rooster465.autos
+  sni: intense-sole.rooster465.autos
+  type: trojan
+  udp: true
+- name: '🇯🇵 日本 | JPN #2'
+  password: UX82473651
+  port: 443
+  server: evolving-platypus.rooster465.autos
+  sni: evolving-platypus.rooster465.autos
+  type: trojan
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-803630131
-  - vless-721522923
-  - 🇯🇵 日本 | JPN
-  - hysteria2-1601948357
-  - vless-1019921570
-  - vmess-1571547861
-  - vless-1266360279
-  - vless-1266369648
-  - hysteria2-1470835082
-  - trojan-1644728125
-  - 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  - hysteria2-1527031530
-  - vmess-1571547860
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
-  - vless-656230592
+  - vless-1525938361
+  - hysteria2-1553149732
+  - trojan-1648344549
+  - 🆔ar14n24b 🔓 TR--N/A ❔ XX 250ms
+  - trojan-1643520542
+  - vless-1645364938
+  - 🆔ar14n24b 🔓 TR--N/A ❔ XX 128ms
+  - trojan-1644728137
+  - trojan-1643520511
+  - '🇯🇵 日本 | JPN #2'
   type: select
 rules:
 - MATCH,PROXY
