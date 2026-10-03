@@ -1,0 +1,41 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 94ms
+  port: 2063
+  reality-opts:
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+  server: 31.77.13.19
+  servername: rusbid.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+- name: 🏳️ ShatakVPN 717742
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 45.192.12.93
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
+- name: 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
+  password: UX82473651
+  port: 443
+  server: 202.78.163.237
+  sni: cheerful-swan.rooster465.autos
+  type: trojan
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 94ms
+  - 🏳️ ShatakVPN 717742
+  - 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
