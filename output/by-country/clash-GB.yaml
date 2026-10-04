@@ -3,60 +3,18 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- grpc-opts:
-    grpc-service-name: vless
-  name: vless-1254790076
-  network: grpc
-  port: 2083
-  server: 66.90.104.42
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
 - alterId: 0
   cipher: auto
-  name: vmess-1443522751
-  network: ws
-  port: 443
-  server: aksai.org
-  servername: aksai.org
-  tls: true
+  name: vmess-1572874951
+  port: 22324
+  server: 186.190.211.147
   type: vmess
   udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aksai.org
-    path: /linkvws
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 357799
-  port: 51847
-  reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  server: 3.9.135.156
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 168ms
-  port: 52006
-  server: 87.192.47.10
-  servername: grok.setlisting.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1254790076
-  - vmess-1443522751
-  - 🏳️ ShatakVPN 357799
-  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 168ms
+  - vmess-1572874951
   type: select
 rules:
 - MATCH,PROXY

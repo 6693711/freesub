@@ -3,52 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1646771377
-  password: iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c=
-  port: 11650
-  server: 31.76.11.83
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🆔v2ray1_ng 🔓 VM-TCP-N/A ❔ XX 148ms
-  port: 22324
-  server: 216.106.187.60
-  type: vmess
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 653815
+  name: 🏳️ ShatakVPN 493404
   password: XKFKl2rULjIp74
   port: 8008
   server: 185.226.172.8
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-1635583799
-  port: 23325
-  server: 31.76.11.83
-  type: vmess
-  udp: true
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
-- alterId: 0
-  cipher: auto
-  name: vmess-1577691187
-  port: 22324
-  server: 185.177.229.129
-  type: vmess
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1646771377
-  - 🆔v2ray1_ng 🔓 VM-TCP-N/A ❔ XX 148ms
-  - 🏳️ ShatakVPN 653815
-  - vmess-1635583799
-  - vmess-1577691187
+  - 🏳️ ShatakVPN 493404
   type: select
 rules:
 - MATCH,PROXY

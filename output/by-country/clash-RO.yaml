@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: '8'
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 77.74.123.102
+  skip-cert-verify: false
+  sni: grape-test-italy.dynuddns.net
+  type: hysteria2
+proxy-groups:
+- name: PROXY
+  proxies:
+  - '8'
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

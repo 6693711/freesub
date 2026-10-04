@@ -3,57 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1651529603
-  password: 2c01eae6-0b6a-11ee-a058-f23c91369f2d
+- name: hysteria2-1640409574
+  password: d095ecc6-7b69-11eb-b77b-f23c913c8d2b
   port: 443
-  server: 12fbf518-tmm5c0-tzkd63-1jr1u.hk3.hyhuawei.com
+  server: ebd94864-tmm5c0-tvk1qn-19les.hk3.hyhuawei.com
   skip-cert-verify: false
-  sni: 12fbf518-tmm5c0-tzkd63-1jr1u.hk3.hyhuawei.com
-  type: hysteria2
-- name: hysteria2-1623483987
-  password: adbd0a82-3336-11ed-bd7c-f23c913c8d2b
-  port: 443
-  server: ab6440be-tmm5c0-truoje-1uni.hk3.hyhuawei.com
-  skip-cert-verify: true
-  sni: ab6440be-tmm5c0-truoje-1uni.hk3.hyhuawei.com
-  type: hysteria2
-- name: hysteria2-1623484083
-  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
-  port: 443
-  server: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
-  skip-cert-verify: true
-  sni: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
-  type: hysteria2
-- name: hysteria2-1623483651
-  password: af7ddbb2-3567-11ec-bd7c-f23c913c8d2b
-  port: 443
-  server: 61b2ab79-tmm5c0-u1q5od-t6fv.hk3.hyhuawei.com
-  skip-cert-verify: true
-  sni: 61b2ab79-tmm5c0-u1q5od-t6fv.hk3.hyhuawei.com
-  type: hysteria2
-- name: hysteria2-1632368523
-  password: 3085fcf8-a69c-11ec-bd7c-f23c913c8d2b
-  port: 443
-  server: 324d64f1-tmm5c0-tnsc3a-1f0gu.hk3.hyhuawei.com
-  skip-cert-verify: false
-  sni: 324d64f1-tmm5c0-tnsc3a-1f0gu.hk3.hyhuawei.com
-  type: hysteria2
-- name: hysteria2-1623652249
-  password: d18bcaf4-1323-11ec-a0fc-f23c913c8d2b
-  port: 443
-  server: 7cf51189-tmm5c0-tqrqo1-8rja.hk3.hyhuawei.com
-  skip-cert-verify: true
-  sni: 7cf51189-tmm5c0-tqrqo1-8rja.hk3.hyhuawei.com
+  sni: ebd94864-tmm5c0-tvk1qn-19les.hk3.hyhuawei.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1651529603
-  - hysteria2-1623483987
-  - hysteria2-1623484083
-  - hysteria2-1623483651
-  - hysteria2-1632368523
-  - hysteria2-1623652249
+  - hysteria2-1640409574
   type: select
 rules:
 - MATCH,PROXY

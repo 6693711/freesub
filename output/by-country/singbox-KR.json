@@ -2,43 +2,92 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇰🇷[www.v2nodes.com] ss-KR-1580...",
-      "server": "ce1fc2d8.krkt.hkssip.com",
-      "server_port": 49642,
-      "method": "aes-256-gcm",
-      "password": "ac9c0a7b"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1653307134",
-      "server": "43.201.103.218",
-      "server_port": 8443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1471631078",
-      "server": "152.67.200.82",
-      "server_port": 50160,
-      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "type": "trojan",
+      "tag": "trojan-1648344536",
+      "server": "pretty-rat.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "off",
-        "insecure": true
+        "server_name": "pretty-rat.rooster465.autos"
       }
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1276641967",
+      "tag": "hysteria2-1093669534",
       "server": "152.67.200.82",
       "server_port": 50160,
       "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "vk.com",
         "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🏳️ ShatakVPN 621942",
+      "server": "3.34.131.153",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "pretty-rat.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1656582123",
+      "server": "3.34.131.153",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "pretty-rat.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🆔ar14n24b 🔓 TR--N/A ❔ XX 137ms",
+      "server": "pretty-rat.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "pretty-rat.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷[www.v2nodes.com] trojan-KR-... #8",
+      "server": "balanced-stag.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "balanced-stag.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷[www.v2nodes.com] trojan-KR-... #5",
+      "server": "engaging-toucan.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "engaging-toucan.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 韩国 | KOR #2",
+      "server": "liked-eft.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "liked-eft.rooster465.autos"
       }
     },
     {
