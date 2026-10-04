@@ -2,29 +2,24 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 160801",
-      "server": "62.210.91.10",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
+      "type": "vmess",
+      "tag": "🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 2ms",
+      "server": "188.114.96.19",
+      "server_port": 80,
+      "uuid": "aed88e79-5762-4d2f-86fa-f438f32a7654",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 855255",
+      "tag": "🔒 VL-WS-TLS 🇩🇪 DE-81.95.4.189 443",
       "server": "81.95.4.189",
       "server_port": 443,
       "uuid": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",

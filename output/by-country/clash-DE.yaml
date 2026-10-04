@@ -3,51 +3,52 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1646771377
+  password: iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c=
+  port: 11650
+  server: 31.76.11.83
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: vmess-1624303751
+  name: 🆔v2ray1_ng 🔓 VM-TCP-N/A ❔ XX 148ms
+  port: 22324
+  server: 216.106.187.60
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 653815
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: vmess-1635583799
+  port: 23325
+  server: 31.76.11.83
+  type: vmess
+  udp: true
+  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
+- alterId: 0
+  cipher: auto
+  name: vmess-1577691187
   port: 22324
   server: 185.177.229.129
   type: vmess
   udp: true
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 707896
-  password: 2YdE4lFOid5a
-  port: 8388
-  server: 51.195.126.38
-  type: ss
-  udp: true
-- name: vless-1617960160
-  network: ws
-  port: 80
-  server: 139.162.149.105
-  type: vless
-  udp: true
-  uuid: 5aae7d2d-c152-42cc-afb6-fe805fb94531
-  ws-opts:
-    headers: {}
-    path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1643502321
-  port: 443
-  reality-opts:
-    public-key: CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4
-    short-id: c42e96a6
-  server: 155.117.183.123
-  servername: de123.mech-pro.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: ff35ca20-2304-4b3a-80e5-2c82953cf2ce
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-1624303751
-  - 🏳️ ShatakVPN 707896
-  - vless-1617960160
-  - vless-1643502321
+  - shadowsocks-1646771377
+  - 🆔v2ray1_ng 🔓 VM-TCP-N/A ❔ XX 148ms
+  - 🏳️ ShatakVPN 653815
+  - vmess-1635583799
+  - vmess-1577691187
   type: select
 rules:
 - MATCH,PROXY

@@ -4,16 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  name: shadowsocks-1647497757
-  password: bdb313adf74c2ede
-  port: 10991
-  server: 46.17.45.31
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1580...
+  password: ac9c0a7b
+  port: 49642
+  server: ce1fc2d8.krkt.hkssip.com
   type: ss
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1647497757
+  - 🇰🇷[www.v2nodes.com] ss-KR-1580...
   type: select
 rules:
 - MATCH,PROXY

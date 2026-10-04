@@ -3,27 +3,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: vmess-1565433479
-  port: 22324
-  server: 198.57.27.190
-  type: vmess
+- cipher: rc4-md5
+  name: shadowsocks-166
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 137.184.174.93
+  type: ss
   udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: vmess-1568133359
+  name: vmess-1444974391
   port: 22324
-  server: 198.57.27.190
+  server: 134.195.198.214
   type: vmess
   udp: true
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-1565433479
-  - vmess-1568133359
+  - shadowsocks-166
+  - vmess-1444974391
   type: select
 rules:
 - MATCH,PROXY
