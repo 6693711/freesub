@@ -3,17 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: '[ 🇨🇭 ] | @Cfox_SerVer'
-  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
-  port: 8443
-  server: 82.38.64.237
-  skip-cert-verify: false
-  sni: hopp-swizland-new.mysynology.net
-  type: hysteria2
+- client-fingerprint: chrome
+  name: vless-1648311787
+  port: 2053
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  server: 208.69.78.217
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
 proxy-groups:
 - name: PROXY
   proxies:
-  - '[ 🇨🇭 ] | @Cfox_SerVer'
+  - vless-1648311787
   type: select
 rules:
 - MATCH,PROXY
