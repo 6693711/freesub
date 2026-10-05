@@ -2,103 +2,29 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "vmess-1259951776",
-      "server": "149.88.23.207",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1665784891",
-      "server": "real-cardinal.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "real-cardinal.rooster465.autos"
-      }
-    },
-    {
       "type": "vless",
-      "tag": "vless-470977999",
-      "server": "3.0.111.82",
-      "server_port": 10574,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "tag": "vless-1383435358",
+      "server": "54.251.9.130",
+      "server_port": 24146,
+      "uuid": "9d9a048b-3aea-4b3e-b106-1106bf301feb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.intel.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
+          "public_key": "VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo",
+          "short_id": "7205d9079521832c"
         }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🆔ar14n24b 🔓 TR--N/A ❔ XX 224ms",
-      "server": "18.143.92.167",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "glowing-marmoset.rooster465.autos"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1657155153",
-      "server": "ae60bf88-tmm5c0-u1q5od-t6fv.sg7.hyhuawei.com",
-      "server_port": 443,
-      "password": "af7ddbb2-3567-11ec-bd7c-f23c913c8d2b",
-      "tls": {
-        "enabled": true,
-        "server_name": "ae60bf88-tmm5c0-u1q5od-t6fv.sg7.hyhuawei.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1535048610",
-      "server": "217.217.254.126",
-      "server_port": 2053,
-      "uuid": "cb15cce9-73ed-4928-b38c-462f0732cbe9",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw",
-          "short_id": "87829de0e2bb82cb"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1647915027",
-      "server": "desired-boxer.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "desired-boxer.rooster465.autos"
       }
     },
     {
       "type": "vmess",
-      "tag": "vmess-1216197041",
+      "tag": "vmess-1052102379",
       "server": "ww11.levikogjgfdd.ir",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -106,56 +32,48 @@
       "alter_id": 0
     },
     {
-      "type": "trojan",
-      "tag": "trojan-1656817251",
-      "server": "pet-antelope.rooster465.autos",
+      "type": "vless",
+      "tag": "vless-1669599719",
+      "server": "bgroup.sg1.ilovegairport.com",
       "server_port": 443,
-      "password": "UX82473651",
+      "uuid": "f354744d-21d9-4836-9934-4989e1c4d877",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pet-antelope.rooster465.autos"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-27347",
-      "server": "68.183.227.236",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1623483661",
-      "server": "6ecfa763-tmm5c0-tqruo0-1pqhp.sg7.hyhuawei.com",
-      "server_port": 443,
-      "password": "b02327ac-a49a-11ef-a673-f23c913c8d2b",
-      "tls": {
-        "enabled": true,
-        "server_name": "6ecfa763-tmm5c0-tqruo0-1pqhp.sg7.hyhuawei.com",
-        "insecure": true
+        "server_name": "ap-southeast-1.console.aws.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3QQxF4eV_tdOD8Z5lU4PBIWFmU-pRZBvBxNTNCZBpEU",
+          "short_id": "aaf565ccdea967"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-522223672",
-      "server": "3.0.111.82",
-      "server_port": 17623,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
+      "tag": "🇸🇬[www.v2nodes.com] vless-SG-1... #4",
+      "server": "support.zoom.us",
+      "server_port": 80,
+      "uuid": "9b0025a3-3a36-4915-b4e1-89c5cd65c9cb",
+      "transport": {
+        "type": "ws",
+        "path": "/shalana",
+        "headers": {
+          "Host": "onhit.shalana.shop"
         }
       }
+    },
+    {
+      "type": "vmess",
+      "tag": "vmess-1063859721",
+      "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "direct",

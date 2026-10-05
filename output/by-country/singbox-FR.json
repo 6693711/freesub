@@ -3,46 +3,45 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🆔soskeynet 🔒 VL-TCP-N/A 🇫🇷 FR 112ms",
-      "server": "nasnet-162191099-direct.mbghalibaf.com",
+      "tag": "🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99 443",
+      "server": "149.202.58.99",
       "server_port": 443,
-      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
-      "flow": "xtls-rprx-vision",
+      "uuid": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",
       "tls": {
         "enabled": true,
-        "server_name": "nasnet-162191099-direct.mbghalibaf.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇷[www.v2nodes.com] vless-FR-1... #1",
-      "server": "143.246.208.113",
-      "server_port": 443,
-      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-fr4.pleiades.codes",
+        "server_name": "bab-6.site",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.AssetService"
+        "type": "ws",
+        "path": "/vws/",
+        "headers": {
+          "Host": "bab-6.site"
+        }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇷[www.v2nodes.com] ss-FR-1536...",
-      "server": "51.255.13.232",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "BqnqToih0PbU"
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 285378",
+      "server": "149.202.58.99",
+      "server_port": 443,
+      "uuid": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",
+      "tls": {
+        "enabled": true,
+        "server_name": "bab-6.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vws/",
+        "headers": {}
+      }
     },
     {
       "type": "direct",

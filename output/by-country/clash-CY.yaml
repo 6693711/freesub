@@ -3,35 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-335163332
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-1155248858
   port: 40443
   reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-    short-id: a8ae
-  server: 194.76.154.31
+    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+    short-id: 88b6
+  server: 5.253.30.99
   servername: deepl.com
   tls: true
   type: vless
   udp: true
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-- client-fingerprint: firefox
-  name: vless-117872359
-  port: 40443
-  reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-    short-id: a8ae
-  server: 194.76.154.31
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-335163332
-  - vless-117872359
+  - vless-1155248858
   type: select
 rules:
 - MATCH,PROXY

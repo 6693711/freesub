@@ -3,17 +3,31 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: '🇳🇱 荷兰 | NLD #1'
+- name: hysteria2-1496260653
   password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
   port: 8443
-  server: 77.74.123.104
-  skip-cert-verify: true
+  server: 77.74.123.99
+  skip-cert-verify: false
   sni: grape-test-italy.dynuddns.net
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 223ms
+  port: 443
+  reality-opts:
+    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
+    short-id: 5ee019e02e6ed99a
+  server: bl3fk52.sysopnova.art
+  servername: yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
 proxy-groups:
 - name: PROXY
   proxies:
-  - '🇳🇱 荷兰 | NLD #1'
+  - hysteria2-1496260653
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 223ms
   type: select
 rules:
 - MATCH,PROXY

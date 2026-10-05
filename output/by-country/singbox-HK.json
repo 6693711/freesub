@@ -2,6 +2,29 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "trojan",
+      "tag": "trojan-1645310736",
+      "server": "strong-haddock.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "strong-haddock.rooster465.autos"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-705682240",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "hysteria2",
       "tag": "hysteria2-920243840",
       "server": "202.146.222.29",
@@ -15,25 +38,13 @@
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1655174799",
-      "server": "2dd0472e-tmm5c0-twj07b-fm2v.hk3.hyhuawei.com",
-      "server_port": 443,
-      "password": "3fed19ea-1671-11f0-bd2e-f23c9164ca5d",
-      "tls": {
-        "enabled": true,
-        "server_name": "2dd0472e-tmm5c0-twj07b-fm2v.hk3.hyhuawei.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1308897122",
-      "server": "202.146.222.29",
+      "tag": "hysteria2-892566711",
+      "server": "202.146.222.174",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2fwangcai2%d1%80%d2%b9%d2%af%d1%91%d1%80%d2%b9%d2%af%d1%96",
+        "server_name": "https%3a%2f%2ft.me%2foneclickvpnkeys",
         "insecure": true
       }
     },

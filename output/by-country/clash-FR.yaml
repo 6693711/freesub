@@ -4,40 +4,37 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔soskeynet 🔒 VL-TCP-N/A 🇫🇷 FR 112ms
+  name: 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99 443
+  network: ws
   port: 443
-  server: nasnet-162191099-direct.mbghalibaf.com
-  servername: nasnet-162191099-direct.mbghalibaf.com
+  server: 149.202.58.99
+  servername: bab-6.site
   tls: true
   type: vless
   udp: true
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  ws-opts:
+    headers:
+      Host: bab-6.site
+    path: /vws/
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  network: grpc
+  name: 🏳️ ShatakVPN 285378
+  network: ws
   port: 443
-  server: 143.246.208.113
-  servername: assets-fr4.pleiades.codes
+  server: 149.202.58.99
+  servername: bab-6.site
   tls: true
   type: vless
   udp: true
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1536...
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
-  udp: true
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  ws-opts:
+    headers: {}
+    path: /vws/
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔soskeynet 🔒 VL-TCP-N/A 🇫🇷 FR 112ms
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  - 🇫🇷[www.v2nodes.com] ss-FR-1536...
+  - 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99 443
+  - 🏳️ ShatakVPN 285378
   type: select
 rules:
 - MATCH,PROXY
