@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1486293139
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 77.74.123.98
+- name: hysteria2-1517930486
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  port: 8081
+  server: 162.249.127.130
   skip-cert-verify: true
-  sni: grape-test-italy.dynuddns.net
+  sni: hop-germany-september.dynuddns.com
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1486293139
+  - hysteria2-1517930486
   type: select
 rules:
 - MATCH,PROXY

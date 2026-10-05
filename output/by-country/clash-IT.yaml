@@ -3,17 +3,24 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: shadowsocks-1251465982
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.164.175.81
-  type: ss
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇮🇹 IT-57.131.21.102 8443
+  network: ws
+  port: 8443
+  server: 57.131.21.102
+  servername: milan.adaspoloandco.com
+  tls: true
+  type: vless
   udp: true
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
+  ws-opts:
+    headers:
+      Host: milan.adaspoloandco.com
+    path: /RoBeRt
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1251465982
+  - 🔒 VL-WS-TLS 🇮🇹 IT-57.131.21.102 8443
   type: select
 rules:
 - MATCH,PROXY

@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 110751
+  port: 8443
+  reality-opts:
+    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
+    short-id: 1be482b8e08aa0ef
+  server: 172.93.122.4
+  servername: nl2.reddotcorp.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: b812a4e0-c90a-4864-8ffb-2af71d69d4f4
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 110751
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

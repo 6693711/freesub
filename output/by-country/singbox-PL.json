@@ -3,43 +3,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸_US_美国->🇵🇱_PL_波兰",
-      "server": "iiproxy8.iiproxy.com",
-      "server_port": 8443,
-      "uuid": "806fa224-44f7-4c1b-b7a3-05bfdfdfbf87",
-      "tls": {
-        "enabled": true,
-        "server_name": "iiproxy8.iiproxy.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1664687664",
-      "server": "50.7.249.98",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 110ms",
+      "server": "83.168.107.220",
       "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "uuid": "b1813cbd-831f-4cb3-baf8-5bc0cc8298bc",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pol-pol-poland.failspace.top",
+        "server_name": "google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo",
+          "short_id": "c56d4f1c"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1634425716",
+      "tag": "🏳️ ShatakVPN 915214",
       "server": "83.168.95.145",
       "server_port": 443,
       "uuid": "f28e0ce1-ed75-4e90-b069-5215a80dfb4a",
@@ -56,34 +41,6 @@
           "public_key": "AcuvO982QLzf76fVydfSuJIiF5520rmj7AxpaxyRwUg",
           "short_id": "d345ad4657adeef9"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-50.7.249.155 443",
-      "server": "50.7.249.155",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "poland-good.failspace.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱[www.v2nodes.com] vless-PL-1...",
-      "server": "70.34.252.154",
-      "server_port": 80,
-      "uuid": "d9c7ec1f-5aa3-469a-b860-760c686806b0",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
       }
     },
     {

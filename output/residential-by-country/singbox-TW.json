@@ -3,23 +3,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 688093",
-      "server": "78.159.246.110",
+      "tag": "vless-1658243119",
+      "server": "argo6.5671234.xyz",
       "server_port": 443,
-      "uuid": "bc5ec86c-3e65-4272-994c-59a924c72a68",
+      "uuid": "08aaab35-a42d-4755-a03e-20c18cb1b3e8",
       "tls": {
         "enabled": true,
-        "server_name": "fbsv6.guardora.pro",
+        "server_name": "argo6.5671234.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/ws",
+        "path": "/e8e2cecb6188f7fb",
         "headers": {
-          "Host": "fbsv6.guardora.pro"
+          "Host": "argo6.5671234.xyz"
         }
       }
     },

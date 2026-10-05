@@ -3,38 +3,32 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: qq
-  name: vless-1663841052
+- name: hysteria2-737135161
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  reality-opts:
-    public-key: qvekI7tKB1NDnZA6JcS_24aV4n8mlCbI3SFvkRr22wg
-    short-id: d74a6321deec9f31
-  server: 130.211.240.128
-  servername: www.cloudflare.com
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: 'https:'
+  type: hysteria2
+- client-fingerprint: chrome
+  name: vless-1658243119
+  network: ws
+  port: 443
+  server: argo6.5671234.xyz
+  servername: argo6.5671234.xyz
   tls: true
   type: vless
   udp: true
-  uuid: 31a40f42-4ad6-4a32-a760-71102b459584
-- name: hysteria2-722298630
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: whatsapp.com
-  type: hysteria2
-- name: 🏳️ ShatakVPN 821455
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  type: hysteria2
+  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
+  ws-opts:
+    headers:
+      Host: argo6.5671234.xyz
+    path: /e8e2cecb6188f7fb
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1663841052
-  - hysteria2-722298630
-  - 🏳️ ShatakVPN 821455
+  - hysteria2-737135161
+  - vless-1658243119
   type: select
 rules:
 - MATCH,PROXY
