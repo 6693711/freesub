@@ -3,25 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 129798
-  password: LXchLsIwtCeUAUgu
-  port: 80
-  server: 149.102.149.207
-  type: ss
+- client-fingerprint: firefox
+  name: vless-1258929861
+  port: 2053
+  reality-opts:
+    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
+    short-id: 4cc9dc65f7770115
+  server: 46.250.240.80
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-717969059
-  password: LXchLsIwtCeUAUgu
-  port: 443
-  server: 149.102.149.207
-  type: ss
-  udp: true
+  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 129798
-  - shadowsocks-717969059
+  - vless-1258929861
   type: select
 rules:
 - MATCH,PROXY

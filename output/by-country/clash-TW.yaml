@@ -3,32 +3,33 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-737135161
+- name: hysteria2-1601947373
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: 'off'
+  type: hysteria2
+- name: hysteria2-650314288
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
   skip-cert-verify: true
-  sni: 'https:'
+  sni: 103.115.109.49
   type: hysteria2
-- client-fingerprint: chrome
-  name: vless-1658243119
-  network: ws
+- name: hysteria2-667703181
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: argo6.5671234.xyz
-  servername: argo6.5671234.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
-  ws-opts:
-    headers:
-      Host: argo6.5671234.xyz
-    path: /e8e2cecb6188f7fb
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-737135161
-  - vless-1658243119
+  - hysteria2-1601947373
+  - hysteria2-650314288
+  - hysteria2-667703181
   type: select
 rules:
 - MATCH,PROXY

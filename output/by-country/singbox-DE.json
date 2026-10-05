@@ -2,14 +2,67 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "trojan-1655322075",
-      "server": "meet-goshawk.rooster465.autos",
+      "type": "vless",
+      "tag": "vless-1681294284",
+      "server": "189.74.106.116",
       "server_port": 443,
-      "password": "UX82473651",
+      "uuid": "684a58f3-e942-4486-a3a1-effd2f277b25",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "meet-goshawk.rooster465.autos"
+        "server_name": "api.setevoyprostor.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 | USA",
+      "server": "188.114.96.3",
+      "server_port": 2087,
+      "uuid": "f49d04d6-aaa7-4013-b323-bc35b78230db",
+      "tls": {
+        "enabled": true,
+        "server_name": "s3ws.ragingbull.de5.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wsrb7k2m",
+        "headers": {
+          "Host": "s3ws.ragingbull.de5.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1679873669",
+      "server": "189.74.106.116",
+      "server_port": 443,
+      "uuid": "684a58f3-e942-4486-a3a1-effd2f277b25",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.setevoyprostor.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        }
       }
     },
     {

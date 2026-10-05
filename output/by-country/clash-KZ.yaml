@@ -3,23 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 110751
-  port: 8443
+  name: vless-1679873664
+  port: 443
   reality-opts:
-    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
-    short-id: 1be482b8e08aa0ef
-  server: 172.93.122.4
-  servername: nl2.reddotcorp.org
+    public-key: ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY
+    short-id: ba4b2afa9e7193ea
+  server: 50.7.87.122
+  servername: edge-fr.extazy.net
   tls: true
   type: vless
   udp: true
-  uuid: b812a4e0-c90a-4864-8ffb-2af71d69d4f4
+  uuid: 9c104116-b231-4626-94cb-6d8fc4d2b000
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 110751
+  - vless-1679873664
   type: select
 rules:
 - MATCH,PROXY
