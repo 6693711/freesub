@@ -1,0 +1,50 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1683784816
+  port: 443
+  reality-opts:
+    public-key: zVEDSKwQEIM6xRD7YEhJakteNI2xPK3xhhKulDo_vWg
+    short-id: b664d93e9d7a04f1
+  server: nl3.freekeysh110.online
+  servername: nl3.freekeysh110.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8f25f14c-0ecd-464c-ba3f-05d7c6f0aea5
+- name: vless-89301153
+  network: ws
+  port: 22573
+  server: uae.unixzone.us
+  type: vless
+  udp: true
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  ws-opts:
+    headers:
+      Host: uae.unixzone.us
+    path: /
+- name: vless-474914683
+  network: ws
+  port: 22573
+  server: 84.235.244.108
+  type: vless
+  udp: true
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  ws-opts:
+    headers:
+      Host: uae.unixzone.us
+    path: /
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1683784816
+  - vless-89301153
+  - vless-474914683
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

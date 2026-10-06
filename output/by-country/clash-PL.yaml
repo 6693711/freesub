@@ -1,0 +1,23 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- name: vless-1590151523
+  network: ws
+  port: 80
+  server: 70.34.255.101
+  type: vless
+  udp: true
+  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
+  ws-opts:
+    headers: {}
+    path: /
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1590151523
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
