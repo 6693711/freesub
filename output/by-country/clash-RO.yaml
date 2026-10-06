@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 172ms
+  port: 443
+  reality-opts:
+    public-key: a_v5l6R-rpVGlENLeONW4sz-GdRwIoDqISOWXGov8nw
+    short-id: 87709fed663228e5
+  server: 109.104.106.149
+  servername: d3-ro.cloud-cdn.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 172ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

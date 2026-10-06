@@ -3,25 +3,54 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-722298610
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | HKG
+  network: ws
+  port: 44867
+  server: 47.244.120.197
+  type: vmess
+  udp: true
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  ws-opts:
+    headers: {}
+    path: /arki
+- name: hysteria2-892566713
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.174
+  skip-cert-verify: true
+  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  type: hysteria2
+- name: hysteria2-540983040
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: 202.146.222.89
+  type: hysteria2
+- name: hysteria2-864234258
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.89
+  skip-cert-verify: true
+  sni: https%253a%252f%252ft.me%252fclashv8%25f0%259f%2587%25a8%25f0%259f%2587%25b3
+  type: hysteria2
+- name: 🏳️ ShatakVPN 628340
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: whatsapp.com
+  sni: 202.146.222.29
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1576...
-  password: m5nsedvdczx6x06e
-  port: 1080
-  server: telegramx.khp25.com
-  type: ss
-  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-722298610
-  - 🇭🇰[www.v2nodes.com] ss-HK-1576...
+  - 🇭🇰 香港 | HKG
+  - hysteria2-892566713
+  - hysteria2-540983040
+  - hysteria2-864234258
+  - 🏳️ ShatakVPN 628340
   type: select
 rules:
 - MATCH,PROXY

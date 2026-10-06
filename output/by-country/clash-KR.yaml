@@ -3,111 +3,57 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: trojan-1648312992
-  password: UX82473651
-  port: 443
-  server: noted-cougar.rooster465.autos
-  sni: noted-cougar.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #9'
-  password: UX82473651
-  port: 443
-  server: pretty-rat.rooster465.autos
-  sni: pretty-rat.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1653446786
-  password: UX82473651
-  port: 443
-  server: main-fawn.rooster465.autos
-  sni: main-fawn.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #11'
+- name: trojan-1644338022
   password: UX82473651
   port: 443
   server: balanced-stag.rooster465.autos
   sni: balanced-stag.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1644338024
+- name: trojan-1662763585
+  password: UX82473651
+  port: 443
+  server: 3.35.168.225
+  sni: noted-cougar.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1654529250
+  password: UX82473651
+  port: 443
+  server: 3.34.131.153
+  sni: pretty-rat.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1652072061
+  password: UX82473651
+  port: 443
+  server: 3.34.131.153
+  sni: pretty-rat.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1660914752
   password: UX82473651
   port: 443
   server: main-fawn.rooster465.autos
   sni: main-fawn.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1657350218
-  password: UX82473651
-  port: 443
-  server: 43.201.252.164
-  sni: balanced-stag.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-1111846187
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #2'
-  password: UX82473651
-  port: 443
-  server: amazing-peacock.rooster465.autos
-  sni: amazing-peacock.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1649991581
+- name: trojan-1643520506
   password: UX82473651
   port: 443
   server: main-fawn.rooster465.autos
   sni: main-fawn.rooster465.autos
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-59621877
-  port: 18967
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: trojan-1663627156
-  password: UX82473651
-  port: 443
-  server: optimum-snapper.rooster465.autos
-  sni: optimum-snapper.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-655819436
-  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
-  port: 443
-  server: vpn-kr-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-kr-002.fastervpn.world
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - trojan-1648312992
-  - '🇰🇷[www.v2nodes.com] trojan-KR-... #9'
-  - trojan-1653446786
-  - '🇰🇷[www.v2nodes.com] trojan-KR-... #11'
-  - trojan-1644338024
-  - trojan-1657350218
-  - hysteria2-1111846187
-  - '🇰🇷[www.v2nodes.com] trojan-KR-... #2'
-  - trojan-1649991581
-  - vless-59621877
-  - trojan-1663627156
-  - hysteria2-655819436
+  - trojan-1644338022
+  - trojan-1662763585
+  - trojan-1654529250
+  - trojan-1652072061
+  - trojan-1660914752
+  - trojan-1643520506
   type: select
 rules:
 - MATCH,PROXY

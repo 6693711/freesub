@@ -2,8 +2,36 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 464002",
+      "server": "51.79.49.116",
+      "server_port": 8882,
+      "method": "aes-256-gcm",
+      "password": "kDWvXYZoTBcGkC4"
+    },
+    {
       "type": "vmess",
-      "tag": "vmess-2387849",
+      "tag": "vmess-1668101991",
+      "server": "158.51.123.42",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "khasav.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "khasav.org"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🆔v2ray1_ng 🔒 VM-TCP- ❔ XX 61ms",
       "server": "23.162.200.198",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -12,12 +40,23 @@
     },
     {
       "type": "vmess",
-      "tag": "vmess-1565433479",
-      "server": "198.57.27.190",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "tag": "vmess-1671029414",
+      "server": "158.51.123.42",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "security": "auto",
-      "alter_id": 0
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "khasav.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "khasav.org"
+        }
+      }
     },
     {
       "type": "direct",
