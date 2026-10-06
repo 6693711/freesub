@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: vless-1679873664
+  name: vless-661038937
   port: 443
   reality-opts:
-    public-key: ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY
-    short-id: ba4b2afa9e7193ea
-  server: 50.7.87.122
-  servername: edge-fr.extazy.net
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  server: 95.85.224.51
+  servername: max.ru
   tls: true
   type: vless
   udp: true
-  uuid: 9c104116-b231-4626-94cb-6d8fc4d2b000
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1679873664
+  - vless-661038937
   type: select
 rules:
 - MATCH,PROXY

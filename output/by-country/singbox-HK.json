@@ -2,35 +2,46 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 852000",
-      "server": "181.215.18.196",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "pno0e2keji2gsfea"
+      "type": "vmess",
+      "tag": "🏳️ ShatakVPN 492112",
+      "server": "194.99.79.26",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "aksai.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "aksai.org"
+        }
+      }
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1589277558",
+      "tag": "hysteria2-1577670529",
       "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2≡ƒç",
+        "server_name": "httpst.mewangcai2",
         "insecure": true
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1503942433",
-      "server": "31.57.248.176",
-      "server_port": 50160,
-      "password": "b0917015b656b3dd2286b5633af0c5c1",
+      "type": "trojan",
+      "tag": "trojan-1663837627",
+      "server": "185.244.208.69",
+      "server_port": 443,
+      "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147",
-        "insecure": true
+        "server_name": "strong-haddock.rooster465.autos"
       }
     },
     {
