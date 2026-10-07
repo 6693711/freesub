@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down
+  port: 443
+  reality-opts:
+    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
+    short-id: 5efa80b939612291
+  server: 132.243.231.4
+  servername: d3-se1.cloud-cdn.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

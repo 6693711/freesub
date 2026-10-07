@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1030343777
+  name: vless-1123354643
   port: 443
   reality-opts:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
@@ -16,9 +16,9 @@ proxies:
   type: vless
   udp: true
   uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-812343856
+  name: vless-868400801
   port: 443
   reality-opts:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
@@ -32,8 +32,8 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1030343777
-  - vless-812343856
+  - vless-1123354643
+  - vless-868400801
   type: select
 rules:
 - MATCH,PROXY
