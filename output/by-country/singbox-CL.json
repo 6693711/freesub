@@ -3,15 +3,29 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇲🇾[www.v2nodes.com] vless-MY-1... #1",
-      "server": "platform101.golnamakcert.top",
+      "tag": "🇲🇾[www.v2nodes.com] vless-MY-1... #6",
+      "server": "platform107.golnamakcert.top",
       "server_port": 80,
       "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
       "transport": {
         "type": "ws",
-        "path": "/platform101",
+        "path": "/platform107",
         "headers": {
-          "Host": "platform101.halalkhor.info"
+          "Host": "platform107.halalkhor.info"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇿🇦[www.v2nodes.com] vless-ZA-1...",
+      "server": "platform103.golnamakcert.top",
+      "server_port": 80,
+      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
+      "transport": {
+        "type": "ws",
+        "path": "/platform103",
+        "headers": {
+          "Host": "platform103.halalkhor.info"
         }
       }
     },

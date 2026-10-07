@@ -3,16 +3,88 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-RAW-TLS 🇪🇪 EE-94.183.170.135 8443",
-      "server": "94.183.170.135",
+      "tag": "🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443",
+      "server": "77.72.85.247",
       "server_port": 8443,
-      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
       "tls": {
         "enabled": true,
-        "server_name": "estproxy4.lockdwn.com",
+        "server_name": "fdghyt.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vpn-wss/fluxor/59011/",
+        "headers": {
+          "Host": "fdghyt.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443_1",
+      "server": "77.72.85.247",
+      "server_port": 8443,
+      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tls": {
+        "enabled": true,
+        "server_name": "fdghyt.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vpn-wss/fluxor/59011/",
+        "headers": {
+          "Host": "fdghyt.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🆔anty_filter 🔒 VL-WS-N/A ❔ XX 170ms",
+      "server": "77.72.85.246",
+      "server_port": 8443,
+      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tls": {
+        "enabled": true,
+        "server_name": "fdghyt.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vpn-wss/fluxor/59011/",
+        "headers": {
+          "Host": "fdghyt.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1699358973",
+      "server": "5.175.178.30",
+      "server_port": 443,
+      "uuid": "8fc806fa-350b-4548-937a-2bf35f7fe7eb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ee1.sky-vault.top",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0",
+          "short_id": "ae64c9b46bff174a"
         }
       }
     },

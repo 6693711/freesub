@@ -3,84 +3,214 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1051520123
-  port: 28573
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- name: trojan-1648313012
+- name: trojan-1659399068
   password: UX82473651
   port: 443
-  server: organic-caribou.rooster465.autos
-  sni: organic-caribou.rooster465.autos
+  server: musical-terrier.rooster465.autos
+  sni: musical-terrier.rooster465.autos
   type: trojan
   udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1013983970
-  port: 28573
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- name: trojan-1657350234
+- name: trojan-1651710645
   password: UX82473651
   port: 443
   server: 13.230.139.12
   sni: brief-glider.rooster465.autos
   type: trojan
   udp: true
-- name: hysteria2-1552152557
-  password: 96ab5cd282733fd4c312a61f972f330a
+- name: trojan-1646372252
+  password: UX82473651
   port: 443
-  server: vp3.yysyy.online
-  skip-cert-verify: true
-  sni: vp3.yysyy.online
-  type: hysteria2
-- name: hysteria2-1601948357
+  server: brief-glider.rooster465.autos
+  sni: brief-glider.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🏳️ ShatakVPN 188355
+  password: UX82473651
+  port: 443
+  server: 54.250.237.143
+  sni: accurate-frog.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1699960662
+  password: UX82473651
+  port: 443
+  server: 18.176.61.69
+  sni: intense-sole.rooster465.autos
+  type: trojan
+  udp: true
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #9'
+  password: UX82473651
+  port: 443
+  server: intense-sole.rooster465.autos
+  sni: intense-sole.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-1275190661
+  port: 28573
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  server: 18.183.215.124
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+- name: 🆔ar14n24b 🔒 TR--N/A ❔ XX 115ms
+  password: UX82473651
+  port: 443
+  server: dynamic-imp.rooster465.autos
+  sni: dynamic-imp.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1699960676
+  password: UX82473651
+  port: 443
+  server: 54.249.36.167
+  sni: comic-poodle.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-665034487
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-1669882362
   password: my_super_password_123
   port: 5443
-  server: open.2ml.cc.cd
-  skip-cert-verify: true
-  sni: 'off'
+  server: 132.226.14.77
+  skip-cert-verify: false
+  sni: open.w2m.ink
   type: hysteria2
-- name: 🏳️ ShatakVPN 408620
+- name: trojan-1643520495
   password: UX82473651
   port: 443
-  server: 13.230.139.12
-  sni: brief-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1669338577
-  password: UX82473651
-  port: 443
-  server: prime-corgi.rooster465.autos
-  sni: prime-corgi.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1651470519
-  password: UX82473651
-  port: 443
-  server: 43.207.198.39
-  sni: fancy-javelin.rooster465.autos
+  server: evolving-platypus.rooster465.autos
+  sni: evolving-platypus.rooster465.autos
   type: trojan
   udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-650632896
+  name: vless-222487013
+  port: 18007
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: trojan-1653446776
+  password: UX82473651
+  port: 443
+  server: comic-poodle.rooster465.autos
+  sni: comic-poodle.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1656275078
+  password: UX82473651
+  port: 443
+  server: dynamic-imp.rooster465.autos
+  sni: dynamic-imp.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1669884366
+  password: UX82473651
+  port: 443
+  server: musical-terrier.rooster465.autos
+  sni: musical-terrier.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1666221801
+  password: UX82473651
+  port: 443
+  server: 3.112.245.255
+  sni: dynamic-imp.rooster465.autos
+  type: trojan
+  udp: true
+- name: hysteria2-1474773089
+  password: my_super_password_123
+  port: 5443
+  server: open.w2m.ink
+  skip-cert-verify: false
+  sni: open.w2m.ink
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1656489962
+  port: 443
+  reality-opts:
+    public-key: AgTktefiMM58y7f-KFgEtmVti_YJbd0GPSkxNeJ0RH4
+    short-id: c8e49965
+  server: jpga01.jumpernode.site
+  servername: amzn.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 05453546-201f-4e8d-97ae-fd70da0e951f
+- name: 🏳️ ShatakVPN 730554
+  password: UX82473651
+  port: 443
+  server: 13.231.247.130
+  sni: concrete-aardvark.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: safari
+  name: vless-1162311248
+  network: ws
+  port: 443
+  server: 162.159.254.3
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- name: hysteria2-1713695212
+  password: my_super_password_123
+  port: 443
+  server: 132.226.14.77
+  skip-cert-verify: true
+  sni: 132.226.14.77
+  type: hysteria2
+- name: trojan-1669884385
+  password: UX82473651
+  port: 443
+  server: evolving-platypus.rooster465.autos
+  sni: evolving-platypus.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1383076345
+  port: 28573
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  server: 18.183.215.124
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: vless-1444669526
   port: 18007
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -93,55 +223,8 @@ proxies:
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1275190660
-  port: 28573
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  server: 18.183.215.124
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- name: 🏳️ ShatakVPN 222169
-  password: UX82473651
-  port: 443
-  server: 54.199.66.128
-  sni: integral-rodent.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🏳️ ShatakVPN 931286
-  password: UX82473651
-  port: 443
-  server: 54.238.153.132
-  sni: obliging-louse.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1659399068
-  password: UX82473651
-  port: 443
-  server: musical-terrier.rooster465.autos
-  sni: musical-terrier.rooster465.autos
-  type: trojan
-  udp: true
-- name: vless-1442724478
-  port: 443
-  server: 137.220.221.179
-  type: vless
-  udp: true
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: trojan-1696475217
-  password: UX82473651
-  port: 443
-  server: musical-terrier.rooster465.autos
-  sni: musical-terrier.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1407179626
-  port: 10583
+  name: vless-197619540
+  port: 18007
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
@@ -151,66 +234,59 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: trojan-1674070319
+- name: trojan-1658243118
   password: UX82473651
   port: 443
-  server: 54.65.177.190
-  sni: winning-marten.rooster465.autos
+  server: dynamic-imp.rooster465.autos
+  sni: dynamic-imp.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1651710645
-  password: UX82473651
-  port: 443
-  server: 13.230.139.12
-  sni: brief-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🏳️ ShatakVPN 786744
-  password: UX82473651
-  port: 443
-  server: 54.65.177.190
-  sni: winning-marten.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-1527031539
+- name: hysteria2-1709198732
   password: my_super_password_123
-  port: 443
-  server: open.2ml.bid
-  skip-cert-verify: false
-  sni: open.2ml.bid
+  port: 5443
+  server: 138.2.21.246
+  skip-cert-verify: true
+  sni: 138.2.21.246
   type: hysteria2
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #5'
+- name: trojan-1647915026
   password: UX82473651
   port: 443
-  server: obliging-louse.rooster465.autos
-  sni: obliging-louse.rooster465.autos
+  server: winning-marten.rooster465.autos
+  sni: winning-marten.rooster465.autos
   type: trojan
   udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1051520123
-  - trojan-1648313012
-  - vless-1013983970
-  - trojan-1657350234
-  - hysteria2-1552152557
-  - hysteria2-1601948357
-  - 🏳️ ShatakVPN 408620
-  - trojan-1669338577
-  - trojan-1651470519
-  - vless-650632896
-  - vless-1275190660
-  - 🏳️ ShatakVPN 222169
-  - 🏳️ ShatakVPN 931286
   - trojan-1659399068
-  - vless-1442724478
-  - trojan-1696475217
-  - vless-1407179626
-  - trojan-1674070319
   - trojan-1651710645
-  - 🏳️ ShatakVPN 786744
-  - hysteria2-1527031539
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #5'
+  - trojan-1646372252
+  - 🏳️ ShatakVPN 188355
+  - trojan-1699960662
+  - '🇯🇵[www.v2nodes.com] trojan-JP-... #9'
+  - vless-1275190661
+  - 🆔ar14n24b 🔒 TR--N/A ❔ XX 115ms
+  - trojan-1699960676
+  - vless-665034487
+  - hysteria2-1669882362
+  - trojan-1643520495
+  - vless-222487013
+  - trojan-1653446776
+  - trojan-1656275078
+  - trojan-1669884366
+  - trojan-1666221801
+  - hysteria2-1474773089
+  - vless-1656489962
+  - 🏳️ ShatakVPN 730554
+  - vless-1162311248
+  - hysteria2-1713695212
+  - trojan-1669884385
+  - vless-1383076345
+  - vless-1444669526
+  - vless-197619540
+  - trojan-1658243118
+  - hysteria2-1709198732
+  - trojan-1647915026
   type: select
 rules:
 - MATCH,PROXY
