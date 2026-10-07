@@ -3,14 +3,13 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🆔surfboardv2ray 🔓 VM-TCP-N/A ❔ XX 161ms
-  port: 35034
-  server: 165.154.195.38
-  type: vmess
-  udp: true
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- name: hysteria2-328918461
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
 - name: hysteria2-721489375
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -21,7 +20,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔surfboardv2ray 🔓 VM-TCP-N/A ❔ XX 161ms
+  - hysteria2-328918461
   - hysteria2-721489375
   type: select
 rules:

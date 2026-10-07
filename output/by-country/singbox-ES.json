@@ -3,24 +3,30 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1473374135",
-      "server": "46.28.71.247",
+      "tag": "🔒 VL-GRPC-TLS 🇪🇸 ES-193.238.154.5 443",
+      "server": "193.238.154.5",
       "server_port": 443,
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
-      "flow": "xtls-rprx-vision",
+      "uuid": "e0b9fb0f-1bbd-478b-9580-c2294778338b",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "assets-es.pleiades.codes",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-16132",
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
     },
     {
       "type": "direct",

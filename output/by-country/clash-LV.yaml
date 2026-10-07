@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1397731731
+  name: vless-827658513
   port: 443
   reality-opts:
-    public-key: YhT24GkuI1r7Fwo8pxIYH3CmTtbRlYs5X7fWtYp3vTY
-    short-id: 05f4f85fdc6c1379
-  server: 195.154.118.134
-  servername: w-mebel.pro
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  server: 138.124.180.137
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 3c48b5f5-7766-4896-874e-b3ba1860e83a
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1397731731
+  - vless-827658513
   type: select
 rules:
 - MATCH,PROXY

@@ -3,14 +3,14 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
+- client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: vless-1668128799
+  name: vless-1664687671
   port: 44988
   reality-opts:
     public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
     short-id: bb82c8
-  server: 43.255.157.118
+  server: 45.153.130.119
   servername: www.tesla.com
   tls: true
   type: vless
@@ -19,7 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1668128799
+  - vless-1664687671
   type: select
 rules:
 - MATCH,PROXY

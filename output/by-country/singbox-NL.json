@@ -2,17 +2,66 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "vless-1683785823",
+      "server": "nl5.freekeysh110.online",
+      "server_port": 443,
+      "uuid": "8f25f14c-0ecd-464c-ba3f-05d7c6f0aea5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl5.freekeysh110.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sgPREsDFJUchKawgXgFGEM4YBjTDur0rgD2GuQmZXzA",
+          "short_id": "04b9f0b2470fae16"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1663837611",
+      "server": "109.235.49.234",
+      "server_port": 443,
+      "password": "529f1911-04d5-4427-94b9-c851fd459a27",
+      "tls": {
+        "enabled": true,
+        "server_name": "tcp-reset-club.net",
+        "insecure": false
+      }
+    },
+    {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 128687",
-      "server": "193.29.139.225",
+      "tag": "🏳️ ShatakVPN 349086",
+      "server": "108.181.126.122",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 145ms",
+      "server": "82.38.31.18",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 145ms",
+      "server": "193.29.139.197",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "vless",
-      "tag": "vless-1666218422",
-      "server": "2.27.71.54",
+      "tag": "vless-1684028056",
+      "server": "2.27.39.1",
       "server_port": 443,
       "uuid": "df53b6c2-8005-475c-9eb9-74e1be785dc8",
       "flow": "xtls-rprx-vision",
@@ -21,7 +70,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -31,18 +80,12 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 131ms",
-      "server": "151.243.173.119",
-      "server_port": 33736,
-      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/vmess-ws",
-        "headers": {}
-      }
+      "type": "shadowsocks",
+      "tag": "shadowsocks-175",
+      "server": "82.38.31.208",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
     },
     {
       "type": "shadowsocks",
@@ -54,15 +97,79 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "shadowsocks-11025",
-      "server": "82.38.31.198",
-      "server_port": 8080,
+      "tag": "🏳️ ShatakVPN 597757",
+      "server": "108.181.126.122",
+      "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+      "password": "CJmTCCx7Ltud"
     },
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 275008",
+      "tag": "vless-1634467113",
+      "server": "87.58.201.170",
+      "server_port": 443,
+      "uuid": "87fd990d-ca93-440a-bbd4-e8281c4a0910",
+      "tls": {
+        "enabled": true,
+        "server_name": "d3-nl1.cloud-cdn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏳️ ShatakVPN 797847",
+      "server": "108.181.58.239",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CJmTCCx7Ltud"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 147ms",
+      "server": "193.29.139.225",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 993351",
+      "server": "51.158.206.34",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-200379481",
+      "server": "193.29.139.234",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-656232107",
       "server": "51.158.206.86",
       "server_port": 23576,
       "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -83,65 +190,17 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 710282",
-      "server": "82.38.31.198",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇳🇱 ShatakVPN 591840",
-      "server": "193.29.139.168",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "QCXDxuDlTTMD7jtgHUjIoj"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 369328",
-      "server": "82.38.31.9",
+      "tag": "shadowsocks-83630747",
+      "server": "82.38.31.174",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 350651",
-      "server": "82.38.31.201",
+      "tag": "shadowsocks-258605573",
+      "server": "82.38.31.42",
       "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 504924",
-      "server": "82.38.31.155",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🏳️ ShatakVPN 467171",
-      "server": "82.38.31.205",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-158885953",
-      "server": "193.29.139.147",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "k1dBOmOB4oqi7Ump37a1bQ"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-921920790",
-      "server": "82.38.31.175",
-      "server_port": 443,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },

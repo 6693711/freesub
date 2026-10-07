@@ -3,21 +3,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: '🇲🇾[www.v2nodes.com] vless-MY-1... #4'
+- name: '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
   network: ws
   port: 80
-  server: platform115.golnamakcert.top
+  server: platform101.golnamakcert.top
   type: vless
   udp: true
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   ws-opts:
     headers:
-      Host: platform115.halalkhor.info
-    path: /platform115
+      Host: platform101.halalkhor.info
+    path: /platform101
 proxy-groups:
 - name: PROXY
   proxies:
-  - '🇲🇾[www.v2nodes.com] vless-MY-1... #4'
+  - '🇲🇾[www.v2nodes.com] vless-MY-1... #1'
   type: select
 rules:
 - MATCH,PROXY

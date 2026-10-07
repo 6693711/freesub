@@ -3,35 +3,41 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | DEU
+- name: 🏳️ ShatakVPN 770787
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
   port: 443
-  reality-opts:
-    public-key: x9yfMdHRe9ZAJJUF9kZnDnO3Y7otoyFBCS9RoaIG3Es
-  server: 159.194.250.154
-  servername: api-maps.yandex.ru
-  tls: true
-  type: vless
+  server: 31.76.103.140
+  sni: fi.zhabulik.ru
+  type: trojan
   udp: true
-  uuid: f0482c9d-ff67-4a43-af8e-76fc5d55c250
-- client-fingerprint: firefox
-  name: 🏳️ ShatakVPN 432827
-  port: 2053
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  server: 95.216.27.15
-  servername: www.google.com
-  tls: true
-  type: vless
+- cipher: aes-128-gcm
+  name: shadowsocks-1689700222
+  password: f9300a9bf39ae0347c3a3bfbc4dd7754
+  port: 18280
+  server: 185.103.110.66
+  type: ss
   udp: true
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+- cipher: aes-128-gcm
+  name: 🇫🇮[www.v2nodes.com] ss-FI-1203...
+  password: f9300a9bf39ae0347c3a3bfbc4dd7754
+  port: 18283
+  server: 185.103.110.68
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-1653901314
+  password: f9300a9bf39ae0347c3a3bfbc4dd7754
+  port: 18283
+  server: 185.103.110.68
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪 德国 | DEU
-  - 🏳️ ShatakVPN 432827
+  - 🏳️ ShatakVPN 770787
+  - shadowsocks-1689700222
+  - 🇫🇮[www.v2nodes.com] ss-FI-1203...
+  - shadowsocks-1653901314
   type: select
 rules:
 - MATCH,PROXY
