@@ -1,0 +1,35 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.185.98 2053
+  network: ws
+  port: 2053
+  server: 172.67.185.98
+  servername: fr.api-music-fa.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  ws-opts:
+    headers:
+      Host: fr.api-music-fa.com
+    path: /api/voip/updates/static/fr2035
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1536...
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.185.98 2053
+  - 🇫🇷[www.v2nodes.com] ss-FR-1536...
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
