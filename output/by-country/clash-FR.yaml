@@ -3,11 +3,40 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc_common3
+  name: vless-1403698672
+  network: grpc
+  port: 51671
+  reality-opts:
+    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
+    short-id: 2fed44d8c59f7e71
+  server: 152.228.139.33
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+- name: 🏳️ ShatakVPN 666454
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
+- name: hysteria2-1698989515
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 13.38.44.64
+  skip-cert-verify: true
+  sni: 13.38.44.64
+  type: hysteria2
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.185.98 2053
+  name: 🏳️ ShatakVPN 520948
   network: ws
   port: 2053
-  server: 172.67.185.98
+  server: 104.21.84.30
   servername: fr.api-music-fa.com
   tls: true
   type: vless
@@ -17,18 +46,53 @@ proxies:
     headers:
       Host: fr.api-music-fa.com
     path: /api/voip/updates/static/fr2035
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1536...
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
+- client-fingerprint: chrome
+  name: vless-1466814097
+  port: 2053
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+  server: 54.37.136.194
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc_common3
+  name: vless-1432809197
+  network: grpc
+  port: 51671
+  reality-opts:
+    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
+    short-id: 2fed44d8c59f7e71
+  server: 152.228.139.33
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1692643310
+  port: 443
+  server: 51.255.166.202
+  servername: e3k67dwms3-51255166202-direct.tavafog.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 593bf46b-8316-5050-9357-d8a41e4db78b
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-172.67.185.98 2053
-  - 🇫🇷[www.v2nodes.com] ss-FR-1536...
+  - vless-1403698672
+  - 🏳️ ShatakVPN 666454
+  - hysteria2-1698989515
+  - 🏳️ ShatakVPN 520948
+  - vless-1466814097
+  - vless-1432809197
+  - vless-1692643310
   type: select
 rules:
 - MATCH,PROXY

@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1693997646
-  port: 443
+  name: vless-1723896839
+  port: 44988
   reality-opts:
-    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
-    short-id: 6f76ad09
-  server: 157.228.155.238
-  servername: addons.mozilla.org
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+    short-id: bb82c8
+  server: 103.30.76.197
+  servername: www.tesla.com
   tls: true
   type: vless
   udp: true
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1693997646
+  - vless-1723896839
   type: select
 rules:
 - MATCH,PROXY
