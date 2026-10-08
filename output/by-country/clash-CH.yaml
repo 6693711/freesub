@@ -3,17 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: '🇺🇦 乌克兰 | UKR #1'
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+- name: hysteria2-1501696965
+  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   port: 8443
-  server: 103.126.51.46
+  server: 82.38.64.239
   skip-cert-verify: true
-  sni: ocober-romania-new.yyuyy.com
+  sni: hopp-swizland-new.mysynology.net
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - '🇺🇦 乌克兰 | UKR #1'
+  - hysteria2-1501696965
   type: select
 rules:
 - MATCH,PROXY

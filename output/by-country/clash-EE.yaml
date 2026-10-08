@@ -4,35 +4,7 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443
-  network: ws
-  port: 8443
-  server: 77.72.85.247
-  servername: fdghyt.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-  ws-opts:
-    headers:
-      Host: fdghyt.com
-    path: /vpn-wss/fluxor/59011/
-- client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443_1
-  network: ws
-  port: 8443
-  server: 77.72.85.247
-  servername: fdghyt.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-  ws-opts:
-    headers:
-      Host: fdghyt.com
-    path: /vpn-wss/fluxor/59011/
-- client-fingerprint: chrome
-  name: 🆔anty_filter 🔒 VL-WS-N/A ❔ XX 170ms
+  name: 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 173ms
   network: ws
   port: 8443
   server: 77.72.85.246
@@ -45,26 +17,10 @@ proxies:
     headers:
       Host: fdghyt.com
     path: /vpn-wss/fluxor/59011/
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1699358973
-  port: 443
-  reality-opts:
-    public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0
-    short-id: ae64c9b46bff174a
-  server: 5.175.178.30
-  servername: ee1.sky-vault.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8fc806fa-350b-4548-937a-2bf35f7fe7eb
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443
-  - 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443_1
-  - 🆔anty_filter 🔒 VL-WS-N/A ❔ XX 170ms
-  - vless-1699358973
+  - 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 173ms
   type: select
 rules:
 - MATCH,PROXY
