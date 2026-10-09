@@ -3,150 +3,54 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- cipher: aes-128-gcm
+  name: 🏳️ ShatakVPN 702322
+  password: shadowsocks
+  port: 443
+  server: 158.173.20.208
+  type: ss
+  udp: true
+- name: hysteria2-1671852511
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  port: 443
+  server: nl-hy-test.tcp-reset-club.net
+  skip-cert-verify: true
+  sni: tcp-reset-club.net
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-60057373
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.48
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-40118927
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.34
+  type: ss
+  udp: true
+- client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 569301
-  port: 23576
+  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 140ms
+  port: 443
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.26
-  servername: fuck.rkn
+    public-key: MTYXgxLIK9PzmQGAjuCmhI1FikCNlvU66NKgQ5g14Bc
+    short-id: 0b135481ea1283fc
+  server: 185.112.59.210
+  servername: nl2.nztvpn.com
   tls: true
   type: vless
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-186
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.204
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-1427653378
-  network: ws
-  port: 33736
-  server: 151.243.173.119
-  type: vmess
-  udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  ws-opts:
-    headers:
-      Host: 151.243.173.119
-    path: /vmess-ws
-- cipher: chacha20-ietf-poly1305
-  name: 🆔ar14n24b 🔒 SS-TCP-TLS 🇳🇱 NL down
+  name: 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 102ms
   password: y7KeRTzmH0vXT2kp
   port: 443
   server: c3.nastuh.link
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 177179
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.201
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-656231955
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.34
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: randomized
-  flow: xtls-rprx-vision
-  name: vless-1666218436
-  port: 443
-  reality-opts:
-    public-key: FTB4bvTP-3JAbScj_vvkIOPFGjtN2TaNTUfeY-Ew8EU
-    short-id: 4d767145
-  server: 2.27.71.48
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: api.v2.nl6d19f4b7
-  name: vless-1713661963
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: eZXyfQzQgQSreAbhKSorx38cgnKmGuSOiQbthBfG5k0
-    short-id: 0e903b415d812c59
-  server: nl6.bbobr.win
-  servername: nl6.bbobr.win
-  tls: true
-  type: vless
-  udp: true
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: api.v2.nl2e63a0c5
-  name: vless-1713661966
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: eztZ1H-OkkHao6d4FhX8Q728qN1UIeFcYH2jObRq1gc
-    short-id: fbe9c012125d90d2
-  server: nl2.bbobr.win
-  servername: nl2.bbobr.win
-  tls: true
-  type: vless
-  udp: true
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
-- client-fingerprint: chrome
-  name: vless-1609622992
-  port: 443
-  reality-opts:
-    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
-    short-id: 82c2b7d5e70ff000
-  server: 162.35.242.252
-  servername: nl.aksay.pro
-  tls: true
-  type: vless
-  udp: true
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-10898
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.203
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-11032
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.214
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: api.v2.nl2e63a0c5
-  name: vless-1730268582
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: eztZ1H-OkkHao6d4FhX8Q728qN1UIeFcYH2jObRq1gc
-    short-id: fbe9c012125d90d2
-  server: 185.170.211.187
-  servername: nl2.bbobr.win
-  tls: true
-  type: vless
-  udp: true
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
 - cipher: chacha20-ietf-poly1305
   name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 101ms
   password: oZIoA69Q8yhcQV8ka3Pa3A
@@ -155,111 +59,67 @@ proxies:
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 427552
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  name: shadowsocks-186
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 82.38.31.201
+  server: 193.29.139.204
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 102ms
-  password: y7KeRTzmH0vXT2kp
-  port: 443
-  server: c3.nastuh.link
+  name: shadowsocks-254910437
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.175
   type: ss
   udp: true
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: api.v2.nl2e63a0c5
-  name: vless-1712736897
-  network: grpc
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1665749752
   port: 443
   reality-opts:
-    public-key: eztZ1H-OkkHao6d4FhX8Q728qN1UIeFcYH2jObRq1gc
-    short-id: fbe9c012125d90d2
-  server: 185.170.211.187
-  servername: nl2.bbobr.win
+    public-key: uTOxHZkQuw_YnO3GEIV0jDkVNOsOPQrTIPdRb2Rk8DQ
+    short-id: 00353c
+  server: 72.56.85.221
+  servername: apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
+  uuid: ca990a85-cb33-44af-bb17-61b30b43d51e
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-125944315
+  name: shadowsocks-713934687
   password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.162
+  port: 8080
+  server: 193.29.139.197
   type: ss
   udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 417757
+  name: 🏳️ ShatakVPN 458530
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  server: 51.158.206.8
+  server: 51.158.206.12
   servername: fuck.rkn
   tls: true
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-700283240
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  server: 51.158.206.29
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-184
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.151
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1716669406
-  port: 443
-  reality-opts:
-    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
-    short-id: f3c023cc
-  server: 2.27.39.233
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 569301
-  - shadowsocks-186
-  - vmess-1427653378
-  - 🆔ar14n24b 🔒 SS-TCP-TLS 🇳🇱 NL down
-  - 🏳️ ShatakVPN 177179
-  - vless-656231955
-  - vless-1666218436
-  - vless-1713661963
-  - vless-1713661966
-  - vless-1609622992
-  - shadowsocks-10898
-  - shadowsocks-11032
-  - vless-1730268582
-  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 101ms
-  - 🏳️ ShatakVPN 427552
+  - 🏳️ ShatakVPN 702322
+  - hysteria2-1671852511
+  - shadowsocks-60057373
+  - shadowsocks-40118927
+  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 140ms
   - 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 102ms
-  - vless-1712736897
-  - shadowsocks-125944315
-  - 🏳️ ShatakVPN 417757
-  - vless-700283240
-  - shadowsocks-184
-  - vless-1716669406
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 101ms
+  - shadowsocks-186
+  - shadowsocks-254910437
+  - vless-1665749752
+  - shadowsocks-713934687
+  - 🏳️ ShatakVPN 458530
   type: select
 rules:
 - MATCH,PROXY

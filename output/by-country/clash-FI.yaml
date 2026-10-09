@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1723896839
-  port: 44988
+  name: 🏳️ ShatakVPN 397122
+  port: 443
   reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
-  server: 103.30.76.197
-  servername: www.tesla.com
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  server: 65.108.3.59
+  servername: web.eitaa.com
   tls: true
   type: vless
   udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1723896839
+  - 🏳️ ShatakVPN 397122
   type: select
 rules:
 - MATCH,PROXY

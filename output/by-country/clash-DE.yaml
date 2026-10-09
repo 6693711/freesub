@@ -3,9 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 104ms
+  name: vless-1684524087
   port: 443
   reality-opts:
     public-key: zAmNLsLPizp96b55zNe2kJ3zXBdpuNY0olnRaOpluks
@@ -18,52 +18,7 @@ proxies:
   uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1440428017
-  port: 4443
-  reality-opts:
-    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
-    short-id: df3aff719526dc5a
-  server: 89.169.53.176
-  servername: de.wvpn.one
-  tls: true
-  type: vless
-  udp: true
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-- name: trojan-1709232365
-  password: UX82473651
-  port: 443
-  server: 3.75.93.113
-  sni: meet-goshawk.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: firefox
-  name: 🆔ar14n24b 🔒 VL-TCP- 🇩🇪 DE 97ms
-  port: 443
-  reality-opts:
-    public-key: _OmNcv89o5SDt4H3ButRX9UynGIVwNZR250w4Zie-yk
-    short-id: 73693dea6faae051
-  server: 91.107.165.48
-  servername: www.actionvfx.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6f0f17f0-d45c-4584-bf50-a00cb6e423d3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1670155830
-  port: 443
-  reality-opts:
-    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
-    short-id: e696e744
-  server: 2.27.69.128
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-- client-fingerprint: randomized
-  flow: xtls-rprx-vision
-  name: vless-1691291864
+  name: vless-1716366320
   port: 443
   reality-opts:
     public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
@@ -74,43 +29,70 @@ proxies:
   type: vless
   udp: true
   uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-209
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
+  type: ss
+  udp: true
+- name: hysteria2-1720683554
+  password: 83rwy5zazcx1f4i6
+  port: 443
+  server: top.bostnet.xyz
+  skip-cert-verify: true
+  sni: top.bostnet.xyz
+  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-685581298
+  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 89ms
   port: 443
   reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 82.39.171.142
+  servername: yahoo.com
   tls: true
   type: vless
   udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-- client-fingerprint: chrome
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- name: vless-1701439545
+  port: 22849
+  server: 31.76.11.83
+  type: vless
+  udp: true
+  uuid: 2e511783-125c-466b-925d-a9cd1c98e30e
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1695403497
+  name: vless-1662800516
   port: 443
   reality-opts:
-    public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
-    short-id: 123c2bff
-  server: 2.27.69.117
-  servername: addons.mozilla.org
+    public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
+    short-id: 9e4eced6e98ed4d4
+  server: 130.17.25.67
+  servername: github.com
   tls: true
   type: vless
   udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  uuid: 1c5ed2e1-56da-41ab-9a78-159d9892ec17
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1721874015
+  password: adzpq0ltVHdCxO2lsW5N9C8H5B9hXnD7YyXZfP5aulw=
+  port: 42800
+  server: 31.76.11.83
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 104ms
-  - vless-1440428017
-  - trojan-1709232365
-  - 🆔ar14n24b 🔒 VL-TCP- 🇩🇪 DE 97ms
-  - vless-1670155830
-  - vless-1691291864
-  - vless-685581298
-  - vless-1695403497
+  - vless-1684524087
+  - vless-1716366320
+  - shadowsocks-209
+  - hysteria2-1720683554
+  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 89ms
+  - vless-1701439545
+  - vless-1662800516
+  - shadowsocks-1721874015
   type: select
 rules:
 - MATCH,PROXY
