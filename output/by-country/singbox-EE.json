@@ -3,14 +3,46 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-898033982",
-      "server": "94.183.170.135",
-      "server_port": 443,
-      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "tag": "🆔vpnserverrr 🔒 VL-WS-N/A ❔ XX 160ms",
+      "server": "77.72.85.246",
+      "server_port": 8443,
+      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tls": {
+        "enabled": true,
+        "server_name": "fdghyt.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/",
-        "headers": {}
+        "path": "/vpn-wss/fluxor/59011/",
+        "headers": {
+          "Host": "fdghyt.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 858289",
+      "server": "77.72.85.246",
+      "server_port": 8443,
+      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tls": {
+        "enabled": true,
+        "server_name": "fdghyt.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vpn-wss/fluxor/59011/",
+        "headers": {
+          "Host": "fdghyt.com"
+        }
       }
     },
     {

@@ -3,49 +3,61 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-540983040
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1748616606
+  port: 443
+  reality-opts:
+    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
+    short-id: ac3342a709db
+  server: 82.29.36.250
+  servername: aws.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
+- name: hysteria2-483633865
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.89
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: 202.146.222.89
+  sni: "https://t.me/wangcai2ð\x9F\x87¨ð\x9F\x87³"
   type: hysteria2
-- name: hysteria2-467420662
+- name: hysteria2-1456970891
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https%3a%2f%2ft.me%2fwangcai2%c3%b0%c2%9f%c2%87%c2%a8%c3%b0%c2%9f%c2%87%c2%b3
+  type: hysteria2
+- name: hysteria2-721489368
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.174
   skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
+  sni: t.me
   type: hysteria2
-- name: hysteria2-589844071
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1739138595
   port: 443
-  server: 202.146.222.89
-  skip-cert-verify: true
-  sni: https://t.me/clashv8
-  type: hysteria2
-- name: hysteria2-1582653577
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https3a2f2ft.me2fwangcai2efa3bfc3bcc3a1
-  type: hysteria2
-- name: hysteria2-1276640916
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87ð\x9F\x87"
-  type: hysteria2
+  reality-opts:
+    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
+    short-id: ac3342a709db
+  server: 82.29.36.250
+  servername: aws.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-540983040
-  - hysteria2-467420662
-  - hysteria2-589844071
-  - hysteria2-1582653577
-  - hysteria2-1276640916
+  - vless-1748616606
+  - hysteria2-483633865
+  - hysteria2-1456970891
+  - hysteria2-721489368
+  - vless-1739138595
   type: select
 rules:
 - MATCH,PROXY

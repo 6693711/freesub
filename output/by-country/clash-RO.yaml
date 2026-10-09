@@ -3,23 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1358520492
-  port: 443
-  reality-opts:
-    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
-    short-id: fe24f8a0a560056e
-  server: 146.70.124.85
-  servername: www.datadoghq.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+- name: hysteria2-1714782261
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 77.74.123.109
+  skip-cert-verify: true
+  sni: grape-test-italy.dynuddns.net
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1358520492
+  - hysteria2-1714782261
   type: select
 rules:
 - MATCH,PROXY

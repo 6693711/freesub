@@ -3,23 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1697130581
+  name: vless-1679840077
   port: 443
   reality-opts:
-    public-key: 65d6SIYIqiX-SN4vx_BnNiQJ8Lnr0HAgUKoT7WgWRgI
-    short-id: ee169e93d3c277a1
-  server: 193.202.113.5
-  servername: edge-uk2.mystatic-cdn.ru
+    public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
+    short-id: 9e4eced6e98ed4d4
+  server: 81.177.215.175
+  servername: github.com
   tls: true
   type: vless
   udp: true
-  uuid: 6f756511-7fc3-41ba-874b-8cdc8e1b225f
+  uuid: 1c5ed2e1-56da-41ab-9a78-159d9892ec17
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1697130581
+  - vless-1679840077
   type: select
 rules:
 - MATCH,PROXY

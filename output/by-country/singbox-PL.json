@@ -2,26 +2,48 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🏳️ ShatakVPN 389028",
-      "server": "222.167.245.248",
-      "server_port": 2097,
-      "password": "gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU",
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-2.26.225.89 8443",
+      "server": "2.26.225.89",
+      "server_port": 8443,
+      "uuid": "51a1fd52-fd88-4905-a976-35e44be28e4b",
       "tls": {
         "enabled": true,
-        "server_name": "pol2.fytpn.com"
+        "server_name": "pl.flen-vpn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 332943",
-      "server": "144.31.49.47",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "type": "vless",
+      "tag": "vless-1715315367",
+      "server": "95.85.253.241",
+      "server_port": 2053,
+      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
       "tls": {
         "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": true
+        "server_name": "95.85.253.241",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-95.85.253.241 2083",
+      "server": "95.85.253.241",
+      "server_port": 2083,
+      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.253.241",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {

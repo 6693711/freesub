@@ -4,33 +4,57 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: vless-1699932295
+  name: vless-1712070147
   network: ws
-  port: 443
+  port: 8443
   server: asia.csmaster.site
+  servername: asia.csmaster.site
   tls: true
   type: vless
   udp: true
-  uuid: a853e120-3570-462b-aec1-e8f3d4f92d24
+  uuid: 799b1006-3255-4e36-8ea0-64fe24d2bfa7
   ws-opts:
-    headers:
-      Host: asia.csmaster.site
+    headers: {}
     path: /
-- name: 🇸🇬 新加坡 | SGP
+- name: hysteria2-1058426437
+  password: f87376e17da040ed04c9665ce8972930
+  port: 50160
+  server: 138.2.73.238
+  skip-cert-verify: true
+  sni: 138.2.73.238
+  type: hysteria2
+- name: trojan-1695855021
   password: UX82473651
   port: 443
-  server: present-ram.rooster465.autos
-  sni: present-ram.rooster465.autos
+  server: 52.221.220.227
+  sni: pet-antelope.rooster465.autos
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-685048486
-  port: 18000
-  server: 149.88.23.207
-  type: vmess
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-479071122
+  port: 10574
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: vless-1386424543
+  port: 2053
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  server: 217.217.254.126
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-212135095
@@ -44,45 +68,108 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: trojan-1739093813
-  password: UX82473651
-  port: 443
-  server: musical-mouse.rooster465.autos
-  sni: musical-mouse.rooster465.autos
-  type: trojan
+- client-fingerprint: chrome
+  name: vless-1719452376
+  network: ws
+  port: 8443
+  server: asia.csmaster.site
+  tls: true
+  type: vless
   udp: true
+  uuid: 799b1006-3255-4e36-8ea0-64fe24d2bfa7
+  ws-opts:
+    headers: {}
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-81049727
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-522223669
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - alterId: 0
   cipher: auto
-  name: vmess-2387871
+  name: vmess-1060904497
   port: 18000
-  server: 149.88.23.207
+  server: ww11.levikogjgfdd.ir
   type: vmess
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: trojan-1703768245
+- name: trojan-1744442935
   password: UX82473651
   port: 443
-  server: pet-antelope.rooster465.autos
-  sni: pet-antelope.rooster465.autos
+  server: fond-mammoth.rooster465.autos
+  sni: fond-mammoth.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1653307128
-  password: UX82473651
-  port: 443
-  server: holy-lamb.rooster465.autos
-  sni: holy-lamb.rooster465.autos
-  type: trojan
+- client-fingerprint: random
+  name: vless-1310955303
+  port: 2053
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  server: 217.217.254.126
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
-- name: trojan-1681033280
-  password: UX82473651
-  port: 443
-  server: 52.221.220.227
-  sni: pet-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: edge
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-730478143
+  name: vless-1128668021
+  port: 10574
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: trojan-1738407200
+  password: UX82473651
+  port: 443
+  server: present-ram.rooster465.autos
+  sni: present-ram.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  name: 🔒 VL-WS-TLS 🇺🇸 US-170.114.45.6 8443
+  network: ws
+  port: 8443
+  server: 170.114.45.6
+  servername: primelinelk.me
+  tls: true
+  type: vless
+  udp: true
+  uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
+  ws-opts:
+    headers:
+      Host: primelinelk.me
+    path: /xprolk-primeline
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-838598334
   port: 12972
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -93,36 +180,9 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: vless-1717435531
-  network: ws
-  port: 443
-  server: asia.csmaster.site
-  tls: true
-  type: vless
-  udp: true
-  uuid: a853e120-3570-462b-aec1-e8f3d4f92d24
-  ws-opts:
-    headers:
-      Host: asia.csmaster.site
-    path: /
-- client-fingerprint: firefox
-  name: 🔒 VL-WS-TLS 🇺🇸 US-170.114.46.6 8443
-  network: ws
-  port: 8443
-  server: 170.114.46.6
-  servername: primelinelk.me
-  tls: true
-  type: vless
-  udp: true
-  uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
-  ws-opts:
-    headers:
-      Host: primelinelk.me
-    path: /xprolk-primeline
-- client-fingerprint: qq
+- client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: vless-1353776248
+  name: vless-1272943357
   port: 41688
   reality-opts:
     public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
@@ -133,30 +193,113 @@ proxies:
   type: vless
   udp: true
   uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-- name: 🔒 TR-TCP-TLS 🇸🇬 SG-52.221.218.179 443
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1345556731
+  port: 41688
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: 7f342137c20387
+  server: 54.169.200.246
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- client-fingerprint: chrome
+  name: vless-1704573043
+  network: ws
+  port: 443
+  server: asia.csmaster.site
+  servername: asia.csmaster.site
+  tls: true
+  type: vless
+  udp: true
+  uuid: a853e120-3570-462b-aec1-e8f3d4f92d24
+  ws-opts:
+    headers:
+      Host: asia.csmaster.site
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1553160137
+  port: 41688
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: 7f342137c20387
+  server: 54.169.200.246
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- name: 🇸🇬_SG_新加坡
   password: UX82473651
   port: 443
-  server: 52.221.218.179
-  sni: real-cardinal.rooster465.autos
+  server: ace-liger.rooster465.autos
+  sni: ace-liger.rooster465.autos
   type: trojan
   udp: true
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: vless-479071123
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: trojan-1698571994
+  password: UX82473651
+  port: 443
+  server: 13.212.81.3
+  sni: holy-lamb.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-862912453
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  server: 146.235.16.130
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1699932295
-  - 🇸🇬 新加坡 | SGP
-  - vmess-685048486
+  - vless-1712070147
+  - hysteria2-1058426437
+  - trojan-1695855021
+  - vless-479071122
+  - vless-1386424543
   - vless-212135095
-  - trojan-1739093813
-  - vmess-2387871
-  - trojan-1703768245
-  - trojan-1653307128
-  - trojan-1681033280
-  - vless-730478143
-  - vless-1717435531
-  - 🔒 VL-WS-TLS 🇺🇸 US-170.114.46.6 8443
-  - vless-1353776248
-  - 🔒 TR-TCP-TLS 🇸🇬 SG-52.221.218.179 443
+  - vless-1719452376
+  - vless-81049727
+  - vless-522223669
+  - vmess-1060904497
+  - trojan-1744442935
+  - vless-1310955303
+  - vless-1128668021
+  - trojan-1738407200
+  - 🔒 VL-WS-TLS 🇺🇸 US-170.114.45.6 8443
+  - vless-838598334
+  - vless-1272943357
+  - vless-1345556731
+  - vless-1704573043
+  - vless-1553160137
+  - 🇸🇬_SG_新加坡
+  - vless-479071123
+  - trojan-1698571994
+  - vless-862912453
   type: select
 rules:
 - MATCH,PROXY
