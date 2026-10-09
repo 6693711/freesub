@@ -3,36 +3,27 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🔒 HYSTERIA-UDP 🇫🇷 FR-51.44.167.227 443
+- client-fingerprint: chrome
+  name: 🆔vpnserverrr 🔒 VL-TCP- 🇵🇱 PL 107ms
+  port: 2053
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+  server: 54.37.136.194
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+- name: hysteria2-1705809157
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 51.44.167.227
   skip-cert-verify: true
   sni: vpn-fr-001.fastervpn.world
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 325729
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
-  udp: true
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.72.47 443
-  network: ws
-  port: 443
-  server: 104.21.72.47
-  servername: trex-panel-nubj0s.samifakor.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
-  ws-opts:
-    headers:
-      Host: trex-panel-nubj0s.samifakor.workers.dev
-    path: /stream/TrexBridge/ef859652a80e
-- client-fingerprint: chrome
-  name: vless-1298542551
+  name: vless-1305630326
   port: 2053
   reality-opts:
     public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
@@ -46,10 +37,9 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 HYSTERIA-UDP 🇫🇷 FR-51.44.167.227 443
-  - 🏳️ ShatakVPN 325729
-  - 🔒 VL-WS-TLS 🏴‍☠️ NA-104.21.72.47 443
-  - vless-1298542551
+  - 🆔vpnserverrr 🔒 VL-TCP- 🇵🇱 PL 107ms
+  - hysteria2-1705809157
+  - vless-1305630326
   type: select
 rules:
 - MATCH,PROXY

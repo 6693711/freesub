@@ -1,0 +1,21 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇵🇭_PH_菲律宾
+  port: 11244
+  server: silversbgfgov.vip44.wogbcnmnagfwgov.com
+  type: vmess
+  udp: true
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇨🇳_CN_中国->🇵🇭_PH_菲律宾
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

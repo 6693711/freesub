@@ -3,53 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
-  password: UX82473651
-  port: 443
-  server: 202.78.163.237
-  sni: cheerful-swan.rooster465.autos
+- name: 🏳️ ShatakVPN 389028
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  port: 2097
+  server: 222.167.245.248
+  sni: pol2.fytpn.com
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  name: vless-1719923950
-  port: 2053
-  server: 95.85.253.241
-  servername: 95.85.253.241
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
-- name: 🏳️ ShatakVPN 892961
+- name: 🏳️ ShatakVPN 332943
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
+  server: 144.31.49.47
+  skip-cert-verify: true
   sni: admin.wwwinternetvideo.click
   type: hysteria2
-- name: hysteria2-1730268592
-  password: b4c8ee9caa74b7ba0a61
-  port: 35076
-  server: 78.17.128.153
-  skip-cert-verify: true
-  sni: scrap.halyvanedorogo.ru
-  type: hysteria2
-- client-fingerprint: firefox
-  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 112ms
-  port: 2053
-  server: 95.85.253.241
-  servername: 95.85.253.241
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
-  - vless-1719923950
-  - 🏳️ ShatakVPN 892961
-  - hysteria2-1730268592
-  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 112ms
+  - 🏳️ ShatakVPN 389028
+  - 🏳️ ShatakVPN 332943
   type: select
 rules:
 - MATCH,PROXY

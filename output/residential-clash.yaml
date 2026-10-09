@@ -2,22 +2,10 @@ allow-lan: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- client-fingerprint: safari
-  name: vless-1724761845
-  port: 24215
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  server: 61.230.162.88
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+proxies: []
 proxy-groups:
 - name: PROXY
-  proxies:
-  - vless-1724761845
+  proxies: []
   type: select
 rules:
 - MATCH,PROXY

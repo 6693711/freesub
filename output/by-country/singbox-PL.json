@@ -3,67 +3,25 @@
   "outbounds": [
     {
       "type": "trojan",
-      "tag": "🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443",
-      "server": "202.78.163.237",
-      "server_port": 443,
-      "password": "UX82473651",
+      "tag": "🏳️ ShatakVPN 389028",
+      "server": "222.167.245.248",
+      "server_port": 2097,
+      "password": "gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU",
       "tls": {
         "enabled": true,
-        "server_name": "cheerful-swan.rooster465.autos"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1719923950",
-      "server": "95.85.253.241",
-      "server_port": 2053,
-      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
-      "tls": {
-        "enabled": true,
-        "server_name": "95.85.253.241",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "pol2.fytpn.com"
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 892961",
-      "server": "45.192.12.93",
+      "tag": "🏳️ ShatakVPN 332943",
+      "server": "144.31.49.47",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
         "server_name": "admin.wwwinternetvideo.click",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1730268592",
-      "server": "78.17.128.153",
-      "server_port": 35076,
-      "password": "b4c8ee9caa74b7ba0a61",
-      "tls": {
-        "enabled": true,
-        "server_name": "scrap.halyvanedorogo.ru",
         "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 112ms",
-      "server": "95.85.253.241",
-      "server_port": 2053,
-      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
-      "tls": {
-        "enabled": true,
-        "server_name": "95.85.253.241",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     },
     {
