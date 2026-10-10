@@ -3,13 +3,13 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🆔anty_filter 🔒 VL-WS-N/A ❔ XX 159ms",
-      "server": "77.72.85.247",
-      "server_port": 8443,
-      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tag": "🔒 VL-WS-TLS 🇩🇪 DE-94.143.231.146 443",
+      "server": "94.143.231.146",
+      "server_port": 443,
+      "uuid": "6e05822a-e9da-4135-a9db-71aa07a944af",
       "tls": {
         "enabled": true,
-        "server_name": "fdghyt.com",
+        "server_name": "sub.merky.top",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -17,9 +17,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/vpn-wss/fluxor/59011/",
+        "path": "/merky-connect/de6/",
         "headers": {
-          "Host": "fdghyt.com"
+          "Host": "sub.merky.top"
         }
       }
     },

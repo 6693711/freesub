@@ -3,20 +3,104 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: trojan-1652072061
+- name: trojan-1699960634
   password: UX82473651
   port: 443
-  server: 3.34.131.153
+  server: noted-cougar.rooster465.autos
+  sni: noted-cougar.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1746322864
+  password: UX82473651
+  port: 443
+  server: fancy-skink.rooster465.autos
+  sni: fancy-skink.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1648344538
+  password: UX82473651
+  port: 443
+  server: engaging-toucan.rooster465.autos
+  sni: engaging-toucan.rooster465.autos
+  type: trojan
+  udp: true
+- name: hysteria2-956723733
+  password: 1671a252e2a97dc2bda4e515475931da
+  port: 50160
+  server: 132.226.226.189
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+- name: trojan-1699960668
+  password: UX82473651
+  port: 443
+  server: optimum-snapper.rooster465.autos
+  sni: optimum-snapper.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1743792173
+  password: UX82473651
+  port: 443
+  server: working-tomcat.rooster465.autos
+  sni: working-tomcat.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1740746251
+  password: UX82473651
+  port: 443
+  server: central-jawfish.rooster465.autos
+  sni: central-jawfish.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1752686954
+  password: UX82473651
+  port: 443
+  server: cunning-grub.rooster465.autos
+  sni: cunning-grub.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1662763585
+  password: UX82473651
+  port: 443
+  server: 3.35.168.225
+  sni: noted-cougar.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1645398594
+  password: UX82473651
+  port: 443
+  server: kind-stork.rooster465.autos
+  sni: kind-stork.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1739093812
+  password: UX82473651
+  port: 443
+  server: glorious-lark.rooster465.autos
+  sni: glorious-lark.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1703768263
+  password: UX82473651
+  port: 443
+  server: pretty-rat.rooster465.autos
   sni: pretty-rat.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1716814615
+- name: trojan-1730268594
   password: UX82473651
   port: 443
-  server: delicate-buck.rooster465.autos
-  sni: delicate-buck.rooster465.autos
+  server: 3.39.225.215
+  sni: kind-stork.rooster465.autos
   type: trojan
   udp: true
+- name: hysteria2-1738516015
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  port: 443
+  server: 3.34.95.215
+  skip-cert-verify: true
+  sni: 3.34.95.215
+  type: hysteria2
 - name: trojan-1648312992
   password: UX82473651
   port: 443
@@ -24,121 +108,48 @@ proxies:
   sni: noted-cougar.rooster465.autos
   type: trojan
   udp: true
-- name: hysteria2-1745293716
-  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
-  port: 443
-  server: 43.203.202.217
-  skip-cert-verify: true
-  sni: 43.203.202.217
-  type: hysteria2
-- name: hysteria2-1701029218
-  password: 1671a252e2a97dc2bda4e515475931da
-  port: 50160
-  server: 132.226.226.189
-  skip-cert-verify: true
-  sni: 132.226.226.189
-  type: hysteria2
-- name: trojan-1660423667
+- name: trojan-1645398602
   password: UX82473651
   port: 443
-  server: 43.201.100.203
+  server: optimum-snapper.rooster465.autos
   sni: optimum-snapper.rooster465.autos
   type: trojan
   udp: true
-- name: 🆔ar14n24b 🔒 TR--N/A ❔ XX 549ms
-  password: UX82473651
-  port: 443
-  server: kind-stork.rooster465.autos
-  sni: kind-stork.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1696475220
-  password: UX82473651
-  port: 443
-  server: 52.78.203.191
-  sni: delicate-buck.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1696475224
-  password: UX82473651
-  port: 443
-  server: 43.201.100.203
-  sni: optimum-snapper.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1671592403
-  password: UX82473651
-  port: 443
-  server: 3.39.225.215
-  sni: kind-stork.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1727113527
-  password: UX82473651
-  port: 443
-  server: engaging-toucan.rooster465.autos
-  sni: engaging-toucan.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1655322078
+- name: trojan-1696475227
   password: UX82473651
   port: 443
   server: delicate-buck.rooster465.autos
   sni: delicate-buck.rooster465.autos
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  name: 🇰🇷 韩国 | KOR_1
-  port: 443
-  reality-opts:
-    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
-    short-id: 8685f8b4d9f4f51e
-  server: 34.22.111.30
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
-- name: trojan-1698571991
-  password: UX82473651
-  port: 443
-  server: 3.34.131.153
-  sni: pretty-rat.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1660423653
-  password: UX82473651
-  port: 443
-  server: 3.35.168.225
-  sni: noted-cougar.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1738567388
-  password: UX82473651
-  port: 443
-  server: pure-kodiak.rooster465.autos
-  sni: pure-kodiak.rooster465.autos
-  type: trojan
-  udp: true
+- name: hysteria2-1111846126
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: whatsapp.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - trojan-1652072061
-  - trojan-1716814615
+  - trojan-1699960634
+  - trojan-1746322864
+  - trojan-1648344538
+  - hysteria2-956723733
+  - trojan-1699960668
+  - trojan-1743792173
+  - trojan-1740746251
+  - trojan-1752686954
+  - trojan-1662763585
+  - trojan-1645398594
+  - trojan-1739093812
+  - trojan-1703768263
+  - trojan-1730268594
+  - hysteria2-1738516015
   - trojan-1648312992
-  - hysteria2-1745293716
-  - hysteria2-1701029218
-  - trojan-1660423667
-  - 🆔ar14n24b 🔒 TR--N/A ❔ XX 549ms
-  - trojan-1696475220
-  - trojan-1696475224
-  - trojan-1671592403
-  - trojan-1727113527
-  - trojan-1655322078
-  - 🇰🇷 韩国 | KOR_1
-  - trojan-1698571991
-  - trojan-1660423653
-  - trojan-1738567388
+  - trojan-1645398602
+  - trojan-1696475227
+  - hysteria2-1111846126
   type: select
 rules:
 - MATCH,PROXY

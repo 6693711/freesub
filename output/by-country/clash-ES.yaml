@@ -1,0 +1,27 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 24ms
+  network: ws
+  port: 2053
+  server: 185.220.249.44
+  servername: 185.220.249.44
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6d1590ed-4c0f-4bbc-931d-2431737615dd
+  ws-opts:
+    headers:
+      Host: es.fastmirror-labs.xyz
+    path: /ws-cdn1-vless
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 24ms
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

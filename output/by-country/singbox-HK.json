@@ -2,81 +2,29 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1748616606",
-      "server": "82.29.36.250",
-      "server_port": 443,
-      "uuid": "41a7af38-0bb1-4493-aa8d-634af0c2548b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "aws.amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g",
-          "short_id": "ac3342a709db"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "hysteria2-483633865",
+      "tag": "hysteria2-1451198729",
       "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2ð¨ð³",
+        "server_name": "https://t.me/wangcai2рҹүҹү",
         "insecure": true
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1456970891",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2fwangcai2%c3%b0%c2%9f%c2%87%c2%a8%c3%b0%c2%9f%c2%87%c2%b3",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-721489368",
-      "server": "202.146.222.174",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "t.me",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1739138595",
-      "server": "82.29.36.250",
-      "server_port": 443,
-      "uuid": "41a7af38-0bb1-4493-aa8d-634af0c2548b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "aws.amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g",
-          "short_id": "ac3342a709db"
-        }
+      "type": "vmess",
+      "tag": "🏳️ ShatakVPN 411614",
+      "server": "47.244.120.197",
+      "server_port": 44867,
+      "uuid": "845e6b08-2919-4290-ade0-5dc7dcea59ca",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/arki",
+        "headers": {}
       }
     },
     {

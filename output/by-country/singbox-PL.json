@@ -3,46 +3,63 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-2.26.225.89 8443",
-      "server": "2.26.225.89",
-      "server_port": 8443,
-      "uuid": "51a1fd52-fd88-4905-a976-35e44be28e4b",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 160ms",
+      "server": "177.1.192.81",
+      "server_port": 443,
+      "uuid": "5ac49a12-f275-44b4-b11d-26505f3f268e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl.flen-vpn.xyz",
+        "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "JNr60Nnq_sdeAz5jd25bxNDx_c9CeYLu7DRbQH3P5xk",
+          "short_id": "85766a81"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1715315367",
-      "server": "95.85.253.241",
-      "server_port": 2053,
-      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tag": "🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 154ms",
+      "server": "179.198.49.99",
+      "server_port": 443,
+      "uuid": "ee18d188-14cc-417e-beb1-70e4add6d023",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.253.241",
+        "server_name": "pl1.nztvpn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iwHKqXfMtE61bupFq0qdpc8_uGwQswGc3JpLvDVB9Wo",
+          "short_id": "088b263ae349cc97"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-95.85.253.241 2083",
-      "server": "95.85.253.241",
-      "server_port": 2083,
-      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tag": "🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 139ms",
+      "server": "31.77.13.19",
+      "server_port": 2063,
+      "uuid": "b18d5990-96eb-4587-a386-7f8ef7591e6a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.253.241",
+        "server_name": "rusbid.de",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
         }
       }
     },

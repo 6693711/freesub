@@ -4,24 +4,10 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🆔vpnserverrr 🔒 VL-WS-N/A ❔ XX 160ms
+  name: 🆔anty_filter 🔒 VL-WS-N/A ❔ XX 159ms
   network: ws
   port: 8443
-  server: 77.72.85.246
-  servername: fdghyt.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-  ws-opts:
-    headers:
-      Host: fdghyt.com
-    path: /vpn-wss/fluxor/59011/
-- client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 858289
-  network: ws
-  port: 8443
-  server: 77.72.85.246
+  server: 77.72.85.247
   servername: fdghyt.com
   tls: true
   type: vless
@@ -34,8 +20,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔vpnserverrr 🔒 VL-WS-N/A ❔ XX 160ms
-  - 🏳️ ShatakVPN 858289
+  - 🆔anty_filter 🔒 VL-WS-N/A ❔ XX 159ms
   type: select
 rules:
 - MATCH,PROXY

@@ -3,10 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: vless-474914684
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1693989536
+  port: 443
+  reality-opts:
+    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
+    short-id: 6f76ad09
+  server: 157.228.155.238
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+- name: vless-81052
   network: ws
   port: 22573
-  server: uae.unixzone.us
+  server: 84.235.244.108
   type: vless
   udp: true
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
@@ -14,10 +27,27 @@ proxies:
     headers:
       Host: uae.unixzone.us
     path: /
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: astracat
+  name: vless-1744820610
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+    short-id: 6dbf4931096f9890
+  server: 31.59.210.37
+  servername: www.yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-474914684
+  - vless-1693989536
+  - vless-81052
+  - vless-1744820610
   type: select
 rules:
 - MATCH,PROXY
