@@ -2,10 +2,23 @@ allow-lan: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1742656911
+  port: 443
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+  server: t4.qifei.app
+  servername: s3.ap-east-1.amazonaws.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
 proxy-groups:
 - name: PROXY
-  proxies: []
+  proxies:
+  - vless-1742656911
   type: select
 rules:
 - MATCH,PROXY

@@ -16,20 +16,48 @@ proxies:
   type: vless
   udp: true
   uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-- client-fingerprint: chrome
-  name: vless-1723901256
-  port: 2087
-  server: 95.85.253.241
-  servername: 95.85.253.241
+- client-fingerprint: randomized
+  flow: xtls-rprx-vision
+  name: 🆔anty_filter 🔒 VL-TCP- ❔ XX 123ms
+  port: 443
+  reality-opts:
+    public-key: qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8
+    short-id: 770618b6
+  server: 177.1.192.74
+  servername: addons.mozilla.org
   tls: true
   type: vless
   udp: true
-  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+- name: 🏳️ ShatakVPN 614155
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 45.192.12.93
+  skip-cert-verify: false
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
+- name: 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
+  password: UX82473651
+  port: 443
+  server: 202.78.163.237
+  sni: cheerful-swan.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🏳️ ShatakVPN 740558
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  port: 443
+  server: 144.31.49.47
+  skip-cert-verify: true
+  sni: admin.wwwinternetvideo.click
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
   - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 131ms
-  - vless-1723901256
+  - 🆔anty_filter 🔒 VL-TCP- ❔ XX 123ms
+  - 🏳️ ShatakVPN 614155
+  - 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
+  - 🏳️ ShatakVPN 740558
   type: select
 rules:
 - MATCH,PROXY

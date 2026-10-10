@@ -3,16 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 186ms
-  password: NcAXc0UZI6yQJE1p8QmOv8
-  port: 8388
-  server: 57.129.113.16
-  type: ss
-  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1598019934
+  name: vless-1750214712
+  port: 443
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 0fa4a0e2493392
+  server: defrnode.xyy123.bid
+  servername: p-y3-www-amazon-com-kalias.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1592758627
   port: 443
   reality-opts:
     public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
@@ -24,40 +30,75 @@ proxies:
   udp: true
   uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-86611003
-  port: 443
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
+  name: 🔒 VL-TCP-TLS 🇩🇪 DE-141.98.7.193 2083
+  port: 2083
+  server: 141.98.7.193
+  servername: 141.98.7.193
   tls: true
   type: vless
   udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-- name: trojan-1755559621
+  uuid: e9e60f73-1618-491c-a85b-477bdc959ae6
+- client-fingerprint: chrome
+  name: 🔒 VL-TCP-TLS 🇩🇪 DE-141.98.7.193 2083_1
+  port: 2083
+  server: 141.98.7.193
+  servername: 141.98.7.193
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9e60f73-1618-491c-a85b-477bdc959ae6
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 259ms
+  port: 443
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 0fa4a0e2493392
+  server: defrnode.xyy123.bid
+  servername: p-y3-www-amazon-com-kalias.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+- client-fingerprint: chrome
+  name: 🔒 VL-TCP-TLS 🇩🇪 DE-141.98.7.193 2053
+  port: 2053
+  server: 141.98.7.193
+  servername: 141.98.7.193
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9e60f73-1618-491c-a85b-477bdc959ae6
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1742848917
+  port: 4443
+  reality-opts:
+    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
+  server: 89.169.53.176
+  servername: de.wvpn.one
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+- name: 🆔ar14n24b 🔓 TR--N/A ❔ XX 150ms
   password: UX82473651
   port: 443
   server: cuddly-sheepdog.rooster465.autos
   sni: cuddly-sheepdog.rooster465.autos
   type: trojan
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-209
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
-  type: ss
-  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 186ms
-  - vless-1598019934
-  - vless-86611003
-  - trojan-1755559621
-  - shadowsocks-209
+  - vless-1750214712
+  - vless-1592758627
+  - 🔒 VL-TCP-TLS 🇩🇪 DE-141.98.7.193 2083
+  - 🔒 VL-TCP-TLS 🇩🇪 DE-141.98.7.193 2083_1
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 259ms
+  - 🔒 VL-TCP-TLS 🇩🇪 DE-141.98.7.193 2053
+  - vless-1742848917
+  - 🆔ar14n24b 🔓 TR--N/A ❔ XX 150ms
   type: select
 rules:
 - MATCH,PROXY

@@ -4,10 +4,10 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443
+  name: 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.246 8443
   network: ws
   port: 8443
-  server: 77.72.85.247
+  server: 77.72.85.246
   servername: fdghyt.com
   tls: true
   type: vless
@@ -20,7 +20,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443
+  - 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.246 8443
   type: select
 rules:
 - MATCH,PROXY
