@@ -3,97 +3,32 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: vless-1687993529
+  port: 22849
+  server: 31.76.11.83
+  type: vless
+  udp: true
+  uuid: 2e511783-125c-466b-925d-a9cd1c98e30e
+- name: hysteria2-1725316146
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-de-002.fastervpn.world
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
 - cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 498141
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
+  name: shadowsocks-1688379115
+  password: Y6R9pAtvxxzmGC
+  port: 5000
+  server: 213.202.208.199
   type: ss
   udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-86611004
-  port: 443
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 144ms
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 82.39.171.142
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 145ms
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 82.39.171.12
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX down
-  port: 443
-  reality-opts:
-    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
-    short-id: 4be4110078ebed4a
-  server: 144.31.62.170
-  servername: de2.srv.vbuste.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 156ms
-  port: 443
-  reality-opts:
-    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
-    short-id: c885e8f8
-  server: 144.31.215.227
-  servername: cdn-de.bulkavpn.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
-- client-fingerprint: chrome
-  name: 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 132ms
-  port: 2087
-  server: 141.98.7.193
-  servername: 141.98.7.193
-  tls: true
-  type: vless
-  udp: true
-  uuid: e9e60f73-1618-491c-a85b-477bdc959ae6
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 498141
-  - vless-86611004
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 144ms
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 145ms
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX down
-  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 156ms
-  - 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 132ms
+  - vless-1687993529
+  - hysteria2-1725316146
+  - shadowsocks-1688379115
   type: select
 rules:
 - MATCH,PROXY

@@ -3,42 +3,48 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: trojan-1699960634
+- name: trojan-1747826296
   password: UX82473651
   port: 443
-  server: noted-cougar.rooster465.autos
-  sni: noted-cougar.rooster465.autos
+  server: inviting-rabbit.rooster465.autos
+  sni: inviting-rabbit.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1746322864
-  password: UX82473651
-  port: 443
-  server: fancy-skink.rooster465.autos
-  sni: fancy-skink.rooster465.autos
-  type: trojan
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-652343144
+  port: 13672
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-- name: trojan-1648344538
-  password: UX82473651
-  port: 443
-  server: engaging-toucan.rooster465.autos
-  sni: engaging-toucan.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-956723733
-  password: 1671a252e2a97dc2bda4e515475931da
-  port: 50160
-  server: 132.226.226.189
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- name: trojan-1699960668
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: trojan-1663627156
   password: UX82473651
   port: 443
   server: optimum-snapper.rooster465.autos
   sni: optimum-snapper.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1743792173
+- name: trojan-1755588921
+  password: UX82473651
+  port: 443
+  server: 3.34.192.47
+  sni: central-jawfish.rooster465.autos
+  type: trojan
+  udp: true
+- name: hysteria2-1232696196
+  password: maintell
+  port: 2053
+  server: 152.70.237.123
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria2
+- name: trojan-1749759379
   password: UX82473651
   port: 443
   server: working-tomcat.rooster465.autos
@@ -52,104 +58,68 @@ proxies:
   sni: central-jawfish.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1752686954
-  password: UX82473651
-  port: 443
-  server: cunning-grub.rooster465.autos
-  sni: cunning-grub.rooster465.autos
-  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-59621877
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-- name: trojan-1662763585
-  password: UX82473651
-  port: 443
-  server: 3.35.168.225
-  sni: noted-cougar.rooster465.autos
-  type: trojan
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-270700471
+  port: 13672
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-- name: trojan-1645398594
-  password: UX82473651
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: hysteria2-1758941469
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
   port: 443
-  server: kind-stork.rooster465.autos
-  sni: kind-stork.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1739093812
+  server: 52.78.158.255
+  skip-cert-verify: true
+  sni: 52.78.158.255
+  type: hysteria2
+- name: trojan-1737442108
   password: UX82473651
   port: 443
   server: glorious-lark.rooster465.autos
   sni: glorious-lark.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1703768263
+- name: 🔒 TR-TCP-TLS 🇰🇷 KR-3.35.168.225 443
   password: UX82473651
   port: 443
-  server: pretty-rat.rooster465.autos
-  sni: pretty-rat.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1730268594
-  password: UX82473651
-  port: 443
-  server: 3.39.225.215
-  sni: kind-stork.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-1738516015
-  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
-  port: 443
-  server: 3.34.95.215
-  skip-cert-verify: true
-  sni: 3.34.95.215
-  type: hysteria2
-- name: trojan-1648312992
-  password: UX82473651
-  port: 443
-  server: noted-cougar.rooster465.autos
+  server: 3.35.168.225
   sni: noted-cougar.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1645398602
-  password: UX82473651
-  port: 443
-  server: optimum-snapper.rooster465.autos
-  sni: optimum-snapper.rooster465.autos
-  type: trojan
-  udp: true
-- name: trojan-1696475227
-  password: UX82473651
-  port: 443
-  server: delicate-buck.rooster465.autos
-  sni: delicate-buck.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-1111846126
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: whatsapp.com
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - trojan-1699960634
-  - trojan-1746322864
-  - trojan-1648344538
-  - hysteria2-956723733
-  - trojan-1699960668
-  - trojan-1743792173
+  - trojan-1747826296
+  - vless-652343144
+  - trojan-1663627156
+  - trojan-1755588921
+  - hysteria2-1232696196
+  - trojan-1749759379
   - trojan-1740746251
-  - trojan-1752686954
-  - trojan-1662763585
-  - trojan-1645398594
-  - trojan-1739093812
-  - trojan-1703768263
-  - trojan-1730268594
-  - hysteria2-1738516015
-  - trojan-1648312992
-  - trojan-1645398602
-  - trojan-1696475227
-  - hysteria2-1111846126
+  - vless-59621877
+  - vless-270700471
+  - hysteria2-1758941469
+  - trojan-1737442108
+  - 🔒 TR-TCP-TLS 🇰🇷 KR-3.35.168.225 443
   type: select
 rules:
 - MATCH,PROXY

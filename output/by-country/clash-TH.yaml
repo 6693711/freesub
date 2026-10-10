@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: vmess-906676251
+  name: vmess-971093565
   port: 37515
   server: 119.46.51.45
   type: vmess
@@ -14,7 +14,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-906676251
+  - vmess-971093565
   type: select
 rules:
 - MATCH,PROXY

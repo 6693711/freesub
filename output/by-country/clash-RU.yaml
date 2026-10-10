@@ -3,17 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 238381
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  port: 443
-  server: 91.196.32.163
-  skip-cert-verify: true
-  sni: germany3.h2corp.local
-  type: hysteria2
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: ''
+  name: 🇩🇪 德国 | DEU_1
+  network: grpc
+  port: 8444
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  server: 193.233.74.6
+  servername: github.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 238381
+  - 🇩🇪 德国 | DEU_1
   type: select
 rules:
 - MATCH,PROXY

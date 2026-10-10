@@ -4,49 +4,18 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 160ms
-  port: 443
-  reality-opts:
-    public-key: JNr60Nnq_sdeAz5jd25bxNDx_c9CeYLu7DRbQH3P5xk
-    short-id: 85766a81
-  server: 177.1.192.81
-  servername: addons.mozilla.org
+  name: 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 150ms
+  port: 8443
+  server: 2.26.225.89
+  servername: pl.flen-vpn.xyz
   tls: true
   type: vless
   udp: true
-  uuid: 5ac49a12-f275-44b4-b11d-26505f3f268e
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 154ms
-  port: 443
-  reality-opts:
-    public-key: iwHKqXfMtE61bupFq0qdpc8_uGwQswGc3JpLvDVB9Wo
-    short-id: 088b263ae349cc97
-  server: 179.198.49.99
-  servername: pl1.nztvpn.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 139ms
-  port: 2063
-  reality-opts:
-    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-  server: 31.77.13.19
-  servername: rusbid.de
-  tls: true
-  type: vless
-  udp: true
-  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 160ms
-  - 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 154ms
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 139ms
+  - 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 150ms
   type: select
 rules:
 - MATCH,PROXY

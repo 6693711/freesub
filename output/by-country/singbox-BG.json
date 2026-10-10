@@ -3,13 +3,13 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇩🇪 DE-94.143.231.146 443",
-      "server": "94.143.231.146",
+      "tag": "🔒 VL-WS-TLS 🇹🇷 TR-31.40.204.131 443",
+      "server": "31.40.204.131",
       "server_port": 443,
-      "uuid": "6e05822a-e9da-4135-a9db-71aa07a944af",
+      "uuid": "86b6c7ba-d613-4567-962a-acfdad5c22db",
       "tls": {
         "enabled": true,
-        "server_name": "sub.merky.top",
+        "server_name": "0gltyawm4dbxby5k6kw-3d2475.arta-ts.workers.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -17,9 +17,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/merky-connect/de6/",
+        "path": "/",
         "headers": {
-          "Host": "sub.merky.top"
+          "Host": "0gltyawm4dbxby5k6kw-3d2475.arta-ts.workers.dev"
         }
       }
     },
