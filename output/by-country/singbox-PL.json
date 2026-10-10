@@ -3,13 +3,34 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 150ms",
-      "server": "2.26.225.89",
-      "server_port": 8443,
-      "uuid": "51a1fd52-fd88-4905-a976-35e44be28e4b",
+      "tag": "🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 131ms",
+      "server": "177.1.192.72",
+      "server_port": 443,
+      "uuid": "4d852af3-a121-41aa-9aed-4ca40a6f7b4d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl.flen-vpn.xyz",
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM",
+          "short_id": "46455ff0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1723901256",
+      "server": "95.85.253.241",
+      "server_port": 2087,
+      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.253.241",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"

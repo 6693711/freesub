@@ -4,22 +4,21 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-868400801
-  port: 443
+  name: vless-1258929849
+  port: 2053
   reality-opts:
-    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
-    short-id: a3a578ab
-  server: 185.95.231.156
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+    short-id: 9980e0609b0d3891
+  server: 194.61.31.126
   servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-868400801
+  - vless-1258929849
   type: select
 rules:
 - MATCH,PROXY

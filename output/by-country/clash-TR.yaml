@@ -5,14 +5,13 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   grpc-opts:
-    grpc-service-name: ''
-  name: 🇩🇪 德国 | DEU_1
+    grpc-service-name: GunService
+  name: vless-1753896430
   network: grpc
   port: 8444
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-    short-id: 457fab2ac885dbe0
-  server: 193.233.74.6
+  server: 62.60.233.157
   servername: github.com
   tls: true
   type: vless
@@ -21,7 +20,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪 德国 | DEU_1
+  - vless-1753896430
   type: select
 rules:
 - MATCH,PROXY

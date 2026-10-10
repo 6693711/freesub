@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1685276578
-  port: 443
+  name: 🇸🇪 瑞典 | SWE
+  port: 25119
   reality-opts:
-    public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg
-    short-id: 5ea112e8
-  server: 157.228.155.185
-  servername: addons.mozilla.org
+    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
+    short-id: 10f517
+  server: se3.h1cloud.net
+  servername: www.samsung.com
   tls: true
   type: vless
   udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1685276578
+  - 🇸🇪 瑞典 | SWE
   type: select
 rules:
 - MATCH,PROXY
