@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1769782700
+  name: vless-1770607139
   port: 21033
   reality-opts:
     public-key: EG-jzQw1RyOwAM4L9rMKondSx7cyFmPyv1OP7xXkIk4
@@ -19,7 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1769782700
+  - vless-1770607139
   type: select
 rules:
 - MATCH,PROXY

@@ -4,36 +4,82 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: random
-  name: 🔒 VL-WS-TLS 🇩🇪 DE-140.225.208.50 2083
-  network: ws
-  port: 2083
-  server: 140.225.208.50
-  servername: speedtestmark.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  ws-opts:
-    headers: {}
-    path: /vless-ws#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 126ms
+  name: vless-1690637327
   port: 443
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 82.39.171.142
-  servername: yahoo.com
+    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
+    short-id: e696e744
+  server: 2.27.35.55
+  servername: addons.mozilla.org
   tls: true
   type: vless
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+- name: 🏳️ ShatakVPN 864684
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 35.158.96.132
+  skip-cert-verify: true
+  sni: vpn-de-002.fastervpn.world
+  type: hysteria2
+- name: 🇩🇪[www.v2nodes.com] trojan-DE-...
+  password: UX82473651
+  port: 443
+  server: cuddly-sheepdog.rooster465.autos
+  sni: cuddly-sheepdog.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: randomized
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 302436
+  port: 443
+  reality-opts:
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+    short-id: 4be4110078ebed4a
+  server: 179.254.166.40
+  servername: de2.srv.vbuste.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1759206698
+  port: 443
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 0fa4a0e2493392
+  server: defrnode.xyy123.bid
+  servername: p-y3-www-amazon-com-kalias.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+- client-fingerprint: random
+  grpc-opts:
+    grpc-service-name: GunService
+  name: vless-1748221856
+  network: grpc
+  port: 8444
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  server: 178.17.57.33
+  servername: github.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-WS-TLS 🇩🇪 DE-140.225.208.50 2083
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 126ms
+  - vless-1690637327
+  - 🏳️ ShatakVPN 864684
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - 🏳️ ShatakVPN 302436
+  - vless-1759206698
+  - vless-1748221856
   type: select
 rules:
 - MATCH,PROXY

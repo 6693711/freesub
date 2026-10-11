@@ -3,56 +3,13 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: api.v2.nl6d19f4b7
-  name: vless-1713661963
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: eZXyfQzQgQSreAbhKSorx38cgnKmGuSOiQbthBfG5k0
-    short-id: 0e903b415d812c59
-  server: nl6.bbobr.win
-  servername: nl6.bbobr.win
-  tls: true
-  type: vless
-  udp: true
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: api.v2.nl6d19f4b7
-  name: vless-1712736886
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: eZXyfQzQgQSreAbhKSorx38cgnKmGuSOiQbthBfG5k0
-    short-id: 0e903b415d812c59
-  server: 185.170.211.197
-  servername: nl6.bbobr.win
-  tls: true
-  type: vless
-  udp: true
-  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
 - cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 213289
+  name: 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 123ms
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 193.29.139.225
+  server: 82.38.31.17
   type: ss
   udp: true
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: vless-1350531169
-  port: 443
-  reality-opts:
-    public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
-    short-id: ef1d3554c652a436
-  server: 87.199.205.28
-  servername: vkvd754.okcdn.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 501a2da5-cb22-4a3f-915e-e3b821d1d62d
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: vless-1361919261
@@ -66,50 +23,79 @@ proxies:
   type: vless
   udp: true
   uuid: aa923621-7ac0-482b-9ae8-e5dbb2ecae26
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1766466795
-  port: 443
-  reality-opts:
-    public-key: nSDCUz3Hfy3iu_EtHXZKAqRV87rPoP_EFQe3QyhcKik
-    short-id: eba7ad82c6344ab6
-  server: 37.49.229.6
-  servername: n3.vimeostream.online
-  tls: true
-  type: vless
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-277388490
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.225
+  type: ss
   udp: true
-  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 986572
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.13
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 799523
+  name: 🏳️ ShatakVPN 860486
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  server: 51.158.206.26
+  server: 51.158.206.93
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 930040
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.80
   servername: fuck.rkn
   tls: true
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - cipher: chacha20-ietf-poly1305
-  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 122ms
-  password: QCXDxuDlTTMD7jtgHUjIoj
+  name: shadowsocks-49012021
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 193.29.139.168
+  server: 82.38.31.46
   type: ss
   udp: true
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: api.v2.nl2e63a0c5
+  name: vless-1752371475
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: eztZ1H-OkkHao6d4FhX8Q728qN1UIeFcYH2jObRq1gc
+    short-id: fbe9c012125d90d2
+  server: nl2.bbobr.win
+  servername: nl2.bbobr.win
+  tls: true
+  type: vless
+  udp: true
+  uuid: 267b3a79-81f2-42ac-a409-c23b05b6329d
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1713661963
-  - vless-1712736886
-  - 🏳️ ShatakVPN 213289
-  - vless-1350531169
+  - 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 123ms
   - vless-1361919261
-  - vless-1766466795
-  - 🏳️ ShatakVPN 799523
-  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 122ms
+  - shadowsocks-277388490
+  - 🏳️ ShatakVPN 986572
+  - 🏳️ ShatakVPN 860486
+  - 🏳️ ShatakVPN 930040
+  - shadowsocks-49012021
+  - vless-1752371475
   type: select
 rules:
 - MATCH,PROXY

@@ -1,0 +1,36 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  name: 🔒 VL-TCP-TLS 🇵🇱 PL-95.85.253.241 2087
+  port: 2087
+  server: 95.85.253.241
+  servername: 95.85.253.241
+  tls: true
+  type: vless
+  udp: true
+  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1768489477
+  port: 443
+  reality-opts:
+    public-key: DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg
+    short-id: f8b695e5c59d028c
+  server: pl.golangwikito.cfd
+  servername: pl.golangwikito.cfd
+  tls: true
+  type: vless
+  udp: true
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🔒 VL-TCP-TLS 🇵🇱 PL-95.85.253.241 2087
+  - vless-1768489477
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

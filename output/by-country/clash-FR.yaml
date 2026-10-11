@@ -3,17 +3,54 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-24391
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: fr5grpc
+  name: vless-1766466712
+  network: grpc
+  port: 8443
+  server: 37.49.230.85
+  servername: fr5.sodahub.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
+- name: 🏳️ ShatakVPN 154202
   password: dongtaiwang.com
   port: 22000
   server: 62.210.124.146
   skip-cert-verify: true
   sni: www.microsoft.com
   type: hysteria2
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: fr5grpc
+  name: vless-1775661721
+  network: grpc
+  port: 8443
+  server: 37.49.230.85
+  servername: fr5.sodahub.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔soskeynet 🔒 VL-TCP-N/A 🇫🇷 FR 107ms
+  port: 443
+  server: 193.70.85.96
+  servername: 7q4eiwcseu-193708596-direct.rahbarii.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 58756a39-0472-5f8a-89e3-a80fa94af59e
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-24391
+  - vless-1766466712
+  - 🏳️ ShatakVPN 154202
+  - vless-1775661721
+  - 🆔soskeynet 🔒 VL-TCP-N/A 🇫🇷 FR 107ms
   type: select
 rules:
 - MATCH,PROXY
