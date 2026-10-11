@@ -3,45 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 677271
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.10
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- cipher: chacha20-ietf-poly1305
-  name: 🏳️ ShatakVPN 625612
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 191ms
-  network: ws
-  port: 80
-  server: 145.239.55.210
-  type: vmess
-  udp: true
-  uuid: e5e563fb-cf72-4250-bfff-fa0385301061
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-    path: /
+- name: hysteria2-24391
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 677271
-  - 🏳️ ShatakVPN 625612
-  - 🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 191ms
+  - hysteria2-24391
   type: select
 rules:
 - MATCH,PROXY

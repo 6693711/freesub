@@ -3,50 +3,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: content.v1.Feed
-  name: 🔒 VL-GRPC-TLS 🇩🇪 DE-163.245.43.50 443
-  network: grpc
-  port: 443
-  server: 163.245.43.50
-  servername: se-twitch.global-cdn.org
+- client-fingerprint: random
+  name: 🔒 VL-WS-TLS 🇩🇪 DE-140.225.208.50 2083
+  network: ws
+  port: 2083
+  server: 140.225.208.50
+  servername: speedtestmark.com
   tls: true
   type: vless
   udp: true
-  uuid: 203d434a-2a92-45df-8973-ca80434ecf73
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-86611004
-  port: 443
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  ws-opts:
+    headers: {}
+    path: /vless-ws#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-86611003
+  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 126ms
   port: 443
   reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 82.39.171.142
+  servername: yahoo.com
   tls: true
   type: vless
   udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-GRPC-TLS 🇩🇪 DE-163.245.43.50 443
-  - vless-86611004
-  - vless-86611003
+  - 🔒 VL-WS-TLS 🇩🇪 DE-140.225.208.50 2083
+  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 126ms
   type: select
 rules:
 - MATCH,PROXY

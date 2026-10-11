@@ -3,41 +3,46 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1766466824",
-      "server": "185.209.15.100",
+      "tag": "vless-648965652",
+      "server": "94.183.170.135",
       "server_port": 8443,
-      "uuid": "c6db98c5-9959-425e-9340-300779fc4e4b",
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
       "tls": {
         "enabled": true,
-        "server_name": "n1.vimeostream.online",
+        "server_name": "estproxy4.lockdwn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "nl1grpc"
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1769993374",
-      "server": "185.209.15.100",
-      "server_port": 443,
-      "uuid": "c6db98c5-9959-425e-9340-300779fc4e4b",
-      "flow": "xtls-rprx-vision",
+      "tag": "🔒 VL-RAW-TLS 🇪🇪 EE-94.183.170.135 8443",
+      "server": "94.183.170.135",
+      "server_port": 8443,
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
       "tls": {
         "enabled": true,
-        "server_name": "n1.vimeostream.online",
+        "server_name": "estproxy4.lockdwn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-970024036",
+      "server": "94.183.170.135",
+      "server_port": 8443,
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "estproxy4.lockdwn.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "kK2a0QSYg0XQIMQOvDI7lJJvJcMH0-52RB90FivhVmM",
-          "short_id": "c334408a1056aaf8"
         }
       }
     },

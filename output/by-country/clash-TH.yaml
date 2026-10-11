@@ -3,27 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: vmess-923366306
-  port: 37515
-  server: 119.46.51.45
-  type: vmess
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1769782700
+  port: 21033
+  reality-opts:
+    public-key: EG-jzQw1RyOwAM4L9rMKondSx7cyFmPyv1OP7xXkIk4
+    short-id: cbd39bea0805e2
+  server: 154.21.203.106
+  servername: www.kaidee.com
+  tls: true
+  type: vless
   udp: true
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
-- alterId: 0
-  cipher: auto
-  name: vmess-906676251
-  port: 37515
-  server: 119.46.51.45
-  type: vmess
-  udp: true
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
 proxy-groups:
 - name: PROXY
   proxies:
-  - vmess-923366306
-  - vmess-906676251
+  - vless-1769782700
   type: select
 rules:
 - MATCH,PROXY
