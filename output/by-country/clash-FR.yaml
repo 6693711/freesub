@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 163243
+  name: 🏳️ ShatakVPN 677271
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
@@ -16,67 +16,32 @@ proxies:
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 822175
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.2
-  servername: fuck.rkn
-  tls: true
-  type: vless
+- cipher: chacha20-ietf-poly1305
+  name: 🏳️ ShatakVPN 625612
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc_common3
-  name: vless-1403698672
-  network: grpc
-  port: 51671
-  reality-opts:
-    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
-    short-id: 2fed44d8c59f7e71
-  server: 152.228.139.33
-  servername: www.sony.com
-  tls: true
-  type: vless
+- alterId: 0
+  cipher: auto
+  name: 🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 191ms
+  network: ws
+  port: 80
+  server: 145.239.55.210
+  type: vmess
   udp: true
-  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
-- client-fingerprint: chrome
-  name: vless-1732354695
-  port: 2053
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-  server: 51.77.217.70
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 232522
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 62.210.91.10
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: e5e563fb-cf72-4250-bfff-fa0385301061
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 163243
-  - 🏳️ ShatakVPN 822175
-  - vless-1403698672
-  - vless-1732354695
-  - 🏳️ ShatakVPN 232522
+  - 🏳️ ShatakVPN 677271
+  - 🏳️ ShatakVPN 625612
+  - 🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 191ms
   type: select
 rules:
 - MATCH,PROXY

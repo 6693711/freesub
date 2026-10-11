@@ -4,29 +4,16 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 108ms
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 263ms
+  password: LXchLsIwtCeUAUgu
+  port: 443
+  server: 149.102.149.207
   type: ss
   udp: true
-- client-fingerprint: chrome
-  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 113ms
-  port: 2053
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-    short-id: d051f678212f9d54
-  server: 51.89.194.151
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 108ms
-  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 113ms
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 263ms
   type: select
 rules:
 - MATCH,PROXY

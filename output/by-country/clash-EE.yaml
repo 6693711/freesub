@@ -3,34 +3,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
-  name: vless-648965652
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: nl1grpc
+  name: vless-1766466824
+  network: grpc
   port: 8443
-  server: 94.183.170.135
-  servername: estproxy4.lockdwn.com
+  server: 185.209.15.100
+  servername: n1.vimeostream.online
   tls: true
   type: vless
   udp: true
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-- client-fingerprint: unsafe
-  name: 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443
-  network: ws
-  port: 8443
-  server: 77.72.85.247
-  servername: fdghyt.com
+  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1769993374
+  port: 443
+  reality-opts:
+    public-key: kK2a0QSYg0XQIMQOvDI7lJJvJcMH0-52RB90FivhVmM
+    short-id: c334408a1056aaf8
+  server: 185.209.15.100
+  servername: n1.vimeostream.online
   tls: true
   type: vless
   udp: true
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-  ws-opts:
-    headers:
-      Host: fdghyt.com
-    path: /vpn-wss/fluxor/59011/
+  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-648965652
-  - 🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443
+  - vless-1766466824
+  - vless-1769993374
   type: select
 rules:
 - MATCH,PROXY

@@ -3,38 +3,41 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-648965652",
-      "server": "94.183.170.135",
+      "tag": "vless-1766466824",
+      "server": "185.209.15.100",
       "server_port": 8443,
-      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "uuid": "c6db98c5-9959-425e-9340-300779fc4e4b",
       "tls": {
         "enabled": true,
-        "server_name": "estproxy4.lockdwn.com",
+        "server_name": "n1.vimeostream.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "nl1grpc"
       }
     },
     {
       "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇪🇪 EE-77.72.85.247 8443",
-      "server": "77.72.85.247",
-      "server_port": 8443,
-      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tag": "vless-1769993374",
+      "server": "185.209.15.100",
+      "server_port": 443,
+      "uuid": "c6db98c5-9959-425e-9340-300779fc4e4b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "fdghyt.com",
+        "server_name": "n1.vimeostream.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "unsafe"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vpn-wss/fluxor/59011/",
-        "headers": {
-          "Host": "fdghyt.com"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kK2a0QSYg0XQIMQOvDI7lJJvJcMH0-52RB90FivhVmM",
+          "short_id": "c334408a1056aaf8"
         }
       }
     },
