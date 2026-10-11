@@ -3,74 +3,16 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: trojan-1745293717
-  password: UX82473651
-  port: 443
-  server: full-ox.rooster465.autos
-  sni: full-ox.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1765172221
-  port: 9443
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  server: 156.224.77.171
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1759811622
-  port: 9443
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  server: 156.224.77.171
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
-- name: hysteria2-1509475552
+- name: hysteria2-1589277557
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: https://t.me/wangcai2üáüá
+  sni: https://t.me/wangcai2ⁿß
   type: hysteria2
-- client-fingerprint: random
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1742656911
-  port: 443
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  server: t4.qifei.app
-  servername: s3.ap-east-1.amazonaws.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1756171733
-  port: 9443
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  server: 156.224.77.171
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1748616610
+  name: vless-1739138582
   port: 443
   reality-opts:
     public-key: KkSH2hoA6PuNJL5ZNUDGuWoAYe5kIwcGbrbCYuxHTx8
@@ -81,24 +23,11 @@ proxies:
   type: vless
   udp: true
   uuid: ebdec762-050b-4d54-b7bf-0406ce22f734
-- name: hysteria2-1582653577
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https3a2f2ft.me2fwangcai2efa3bfc3bcc3a1
-  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - trojan-1745293717
-  - vless-1765172221
-  - vless-1759811622
-  - hysteria2-1509475552
-  - vless-1742656911
-  - vless-1756171733
-  - vless-1748616610
-  - hysteria2-1582653577
+  - hysteria2-1589277557
+  - vless-1739138582
   type: select
 rules:
 - MATCH,PROXY

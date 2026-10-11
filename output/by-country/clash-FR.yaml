@@ -4,17 +4,46 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: vless-1298542551
-  port: 2053
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 163243
+  port: 23576
   reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-  server: 51.77.217.70
-  servername: www.apple.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.10
+  servername: fuck.rkn
   tls: true
   type: vless
   udp: true
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 822175
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.2
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc_common3
+  name: vless-1403698672
+  network: grpc
+  port: 51671
+  reality-opts:
+    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
+    short-id: 2fed44d8c59f7e71
+  server: 152.228.139.33
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
 - client-fingerprint: chrome
   name: vless-1732354695
   port: 2053
@@ -27,33 +56,14 @@ proxies:
   type: vless
   udp: true
   uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-- name: hysteria2-1697122862
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 13.36.234.11
-  skip-cert-verify: true
-  sni: vpn-fr-001.fastervpn.world
-  type: hysteria2
-- client-fingerprint: chrome
-  name: vless-1724947600
-  port: 2053
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-  server: 51.77.217.70
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 271309
+  name: 🏳️ ShatakVPN 232522
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  server: 62.210.91.2
+  server: 62.210.91.10
   servername: fuck.rkn
   tls: true
   type: vless
@@ -62,11 +72,11 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1298542551
+  - 🏳️ ShatakVPN 163243
+  - 🏳️ ShatakVPN 822175
+  - vless-1403698672
   - vless-1732354695
-  - hysteria2-1697122862
-  - vless-1724947600
-  - 🏳️ ShatakVPN 271309
+  - 🏳️ ShatakVPN 232522
   type: select
 rules:
 - MATCH,PROXY

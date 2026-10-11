@@ -3,47 +3,7 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 131ms
-  port: 443
-  reality-opts:
-    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
-    short-id: 46455ff0
-  server: 177.1.192.72
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-- client-fingerprint: randomized
-  flow: xtls-rprx-vision
-  name: 🆔anty_filter 🔒 VL-TCP- ❔ XX 123ms
-  port: 443
-  reality-opts:
-    public-key: qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8
-    short-id: 770618b6
-  server: 177.1.192.74
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-- name: 🏳️ ShatakVPN 614155
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  port: 443
-  server: 45.192.12.93
-  skip-cert-verify: false
-  sni: admin.wwwinternetvideo.click
-  type: hysteria2
-- name: 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
-  password: UX82473651
-  port: 443
-  server: 202.78.163.237
-  sni: cheerful-swan.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🏳️ ShatakVPN 740558
+- name: 🏳️ ShatakVPN 992590
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
   server: 144.31.49.47
@@ -53,11 +13,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 131ms
-  - 🆔anty_filter 🔒 VL-TCP- ❔ XX 123ms
-  - 🏳️ ShatakVPN 614155
-  - 🔒 TR-TCP-TLS 🇵🇱 PL-202.78.163.237 443
-  - 🏳️ ShatakVPN 740558
+  - 🏳️ ShatakVPN 992590
   type: select
 rules:
 - MATCH,PROXY
