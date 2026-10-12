@@ -4,36 +4,52 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 132ms
-  port: 443
-  reality-opts:
-    public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
-    short-id: 123c2bff
-  server: 2.27.69.117
-  servername: addons.mozilla.org
+  name: 🔒 VL-WS-TLS 🇩🇪 DE-94.103.168.133 2087
+  network: ws
+  port: 2087
+  server: 94.103.168.133
+  servername: fert6.localip.ir
   tls: true
   type: vless
   udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-- client-fingerprint: firefox
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  ws-opts:
+    headers:
+      Host: fert6.localip.ir
+    path: /hokm
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-86611004
+  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 94ms
   port: 443
   reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  server: 82.39.171.12
+  servername: yahoo.com
   tls: true
   type: vless
   udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- client-fingerprint: chrome
+  name: 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 273ms
+  network: ws
+  port: 2087
+  server: tuyiuoyuthgfdbf.localip.ir
+  servername: tuyiuoyuthgfdbf.localip.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  ws-opts:
+    headers:
+      Host: tuyiuoyuthgfdbf.localip.ir
+    path: /hokm
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 132ms
-  - vless-86611004
+  - 🔒 VL-WS-TLS 🇩🇪 DE-94.103.168.133 2087
+  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 94ms
+  - 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 273ms
   type: select
 rules:
 - MATCH,PROXY

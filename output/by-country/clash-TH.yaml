@@ -1,0 +1,20 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- cipher: aes-256-gcm
+  name: 🇹🇭[www.v2nodes.com] ss-TH-1591...
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
+  port: 52351
+  server: pphfree2.mvpnpvpn.de5.net
+  type: ss
+  udp: true
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇹🇭[www.v2nodes.com] ss-TH-1591...
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

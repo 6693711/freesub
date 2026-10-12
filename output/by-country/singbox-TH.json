@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇹🇭[www.v2nodes.com] ss-TH-1591...",
+      "server": "pphfree2.mvpnpvpn.de5.net",
+      "server_port": 52351,
+      "method": "aes-256-gcm",
+      "password": "sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c="
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

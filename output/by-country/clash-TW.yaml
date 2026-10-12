@@ -3,25 +3,25 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-700290962
+- name: hysteria2-200242609
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 103.115.109.49
+  server: vpn-tw-002.fastervpn.world
   skip-cert-verify: true
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
+  sni: vpn-tw-002.fastervpn.world
   type: hysteria2
-- name: 🏳️ ShatakVPN 434482
+- name: 🏳️ ShatakVPN 972715
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 103.115.109.49
+  server: 160.187.100.109
   skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
+  sni: vpn-tw-002.fastervpn.world
   type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-700290962
-  - 🏳️ ShatakVPN 434482
+  - hysteria2-200242609
+  - 🏳️ ShatakVPN 972715
   type: select
 rules:
 - MATCH,PROXY
