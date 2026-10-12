@@ -3,140 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-1754153293
-  port: 443
-  server: cdn-dynmedia.shalana.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: d3ad7253-2dbd-42fd-9b07-04caea38de54
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-721524026
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- alterId: 0
-  cipher: auto
-  name: vmess-1071045860
-  port: 18000
-  server: ww11.levikogjgfdd.ir
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: trojan-1769683865
-  password: UX82473651
-  port: 443
-  server: 13.229.121.67
-  sni: rested-seahorse.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
-  password: UX82473651
-  port: 443
-  server: joint-ewe.rooster465.autos
-  sni: joint-ewe.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: firefox
-  name: vless-1363486848
-  port: 2053
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #9'
-  password: UX82473651
-  port: 443
-  server: musical-mouse.rooster465.autos
-  sni: musical-mouse.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1014378462
-  port: 41688
-  reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
-  server: 54.169.200.246
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-- name: trojan-1746303511
-  password: UX82473651
-  port: 443
-  server: fond-mammoth.rooster465.autos
-  sni: fond-mammoth.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: vless-1752371474
-  port: 443
-  server: cdn-dynmedia.shalana.shop
-  servername: cdn-dynmedia.shalana.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: d3ad7253-2dbd-42fd-9b07-04caea38de54
-- client-fingerprint: chrome
-  name: vless-1510329151
-  port: 2053
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1713648997
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-  server: sg2-8sb.6121999.dpdns.org
-  servername: sg2-8sb.6121999.dpdns.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1568131908
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-  server: 146.235.16.130
-  servername: sg2-8sb.6121999.dpdns.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- name: trojan-1771819401
-  password: UX82473651
-  port: 443
-  server: 52.221.222.185
-  sni: joint-ewe.rooster465.autos
-  type: trojan
-  udp: true
 - name: trojan-1751007048
   password: UX82473651
   port: 443
@@ -146,15 +12,77 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: vmess-1078158516
+  name: vmess-1071893247
   port: 18000
-  server: 149.88.23.207
+  server: ww11.levikogjgfdd.ir
   type: vmess
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- name: trojan-1772545947
+  password: UX82473651
+  port: 443
+  server: 54.151.181.75
+  sni: moral-basilisk.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1659399072
+  password: UX82473651
+  port: 443
+  server: pet-antelope.rooster465.autos
+  sni: pet-antelope.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1746303511
+  password: UX82473651
+  port: 443
+  server: fond-mammoth.rooster465.autos
+  sni: fond-mammoth.rooster465.autos
+  type: trojan
+  udp: true
 - client-fingerprint: qq
+  name: vless-1757243692
+  port: 443
+  reality-opts:
+    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
+    short-id: eb97ce837da2f6ad
+  server: 34.87.113.18
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
+- name: trojan-1740069225
+  password: UX82473651
+  port: 443
+  server: ace-liger.rooster465.autos
+  sni: ace-liger.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1772545960
+  password: UX82473651
+  port: 443
+  server: 52.221.222.185
+  sni: joint-ewe.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: vless-1754153293
+  port: 443
+  server: cdn-dynmedia.shalana.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: d3ad7253-2dbd-42fd-9b07-04caea38de54
+- name: trojan-1755566067
+  password: UX82473651
+  port: 443
+  server: intense-wildcat.rooster465.autos
+  sni: intense-wildcat.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-522223673
+  name: vless-480356407
   port: 17623
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -165,70 +93,28 @@ proxies:
   type: vless
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1042196409
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: 6ba85179e30d4fc2
-  server: 146.235.16.130
-  servername: sg2-8sb.6121999.dpdns.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- client-fingerprint: edge
-  name: vless-1712734906
-  network: ws
-  port: 8443
-  server: support.zoom.us
-  servername: primelinelk.me
-  tls: true
-  type: vless
-  udp: true
-  uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
-  ws-opts:
-    headers:
-      Host: primelinelk.me
-    path: /xprolk-primeline
-- client-fingerprint: chrome
-  name: vless-1733288038
-  network: ws
-  port: 8443
-  server: 170.114.45.6
-  servername: primelinelk.me
-  tls: true
-  type: vless
-  udp: true
-  uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
-  ws-opts:
-    headers:
-      Host: primelinelk.me
-    path: /xprolk-primeline
+- name: hysteria2-1063751359
+  password: f87376e17da040ed04c9665ce8972930
+  port: 50160
+  server: 138.2.73.238
+  skip-cert-verify: true
+  sni: 138.2.73.238
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1754153293
-  - vless-721524026
-  - vmess-1071045860
-  - trojan-1769683865
-  - '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
-  - vless-1363486848
-  - '🇸🇬[www.v2nodes.com] trojan-SG-... #9'
-  - vless-1014378462
-  - trojan-1746303511
-  - vless-1752371474
-  - vless-1510329151
-  - vless-1713648997
-  - vless-1568131908
-  - trojan-1771819401
   - trojan-1751007048
-  - vmess-1078158516
-  - vless-522223673
-  - vless-1042196409
-  - vless-1712734906
-  - vless-1733288038
+  - vmess-1071893247
+  - trojan-1772545947
+  - trojan-1659399072
+  - trojan-1746303511
+  - vless-1757243692
+  - trojan-1740069225
+  - trojan-1772545960
+  - vless-1754153293
+  - trojan-1755566067
+  - vless-480356407
+  - hysteria2-1063751359
   type: select
 rules:
 - MATCH,PROXY

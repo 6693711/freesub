@@ -3,38 +3,36 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-95.85.253.241 2087",
-      "server": "95.85.253.241",
-      "server_port": 2087,
-      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tag": "🔒 VL-WS-TLS 🇷🇺 RU-91.215.43.248 443",
+      "server": "91.215.43.248",
+      "server_port": 443,
+      "uuid": "a5893c8b-28a2-4947-9a1c-708db25506c3",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.253.241",
+        "server_name": "my.kempekl.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gateway/v1/ws/a64eb463966ba9c4bfd628f1de0362ae",
+        "headers": {
+          "Host": "my.kempekl.online"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1768489477",
-      "server": "pl.golangwikito.cfd",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 743546",
+      "server": "144.31.49.47",
       "server_port": 443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "flow": "xtls-rprx-vision",
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
-        "server_name": "pl.golangwikito.cfd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg",
-          "short_id": "f8b695e5c59d028c"
-        }
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {

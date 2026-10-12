@@ -3,22 +3,39 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: nl1grpc
-  name: vless-1766466733
-  network: grpc
+- client-fingerprint: chrome
+  name: 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 144ms
+  network: ws
   port: 8443
-  server: 178.214.113.10
-  servername: n2.vimeostream.online
+  server: 77.72.85.247
+  servername: fdghyt.com
   tls: true
   type: vless
   udp: true
-  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  ws-opts:
+    headers:
+      Host: fdghyt.com
+    path: /vpn-wss/fluxor/59011/
+- client-fingerprint: chrome
+  name: 🆔anty_filter 🔒 VL-WS-N/A ❔ XX 134ms
+  network: ws
+  port: 8443
+  server: 77.72.85.247
+  servername: fdghyt.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  ws-opts:
+    headers:
+      Host: fdghyt.com
+    path: /vpn-wss/fluxor/59011/
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1766466733
+  - 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 144ms
+  - 🆔anty_filter 🔒 VL-WS-N/A ❔ XX 134ms
   type: select
 rules:
 - MATCH,PROXY

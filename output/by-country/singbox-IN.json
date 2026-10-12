@@ -3,20 +3,18 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "vmess-1781484129",
-      "server": "654168416355441.d6f54hd1j.cc",
-      "server_port": 443,
-      "uuid": "ecdc303d-bcbf-4129-bc02-dd67703f7081",
+      "tag": "vmess-2387859",
+      "server": "152.67.8.205",
+      "server_port": 80,
+      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
       "security": "auto",
       "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "server_name": "654168416355441.d6f54hd1j.cc"
-      },
       "transport": {
         "type": "ws",
         "path": "/",
-        "headers": {}
+        "headers": {
+          "Host": "152.67.8.205"
+        }
       }
     },
     {

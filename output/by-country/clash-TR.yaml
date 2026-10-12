@@ -1,0 +1,41 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 731394
+  port: 443
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  server: 78.135.73.47
+  servername: www.datadoghq.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: GunService
+  name: vless-1753896430
+  network: grpc
+  port: 8444
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  server: 62.60.233.157
+  servername: github.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 731394
+  - vless-1753896430
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
