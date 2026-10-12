@@ -2,126 +2,6 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1355866272",
-      "server": "18.183.215.124",
-      "server_port": 28573,
-      "uuid": "871bfce7-8440-4394-8d82-56b51f20fdad",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.sony.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg",
-          "short_id": "03653bc03be10c97"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇯🇵[www.v2nodes.com] trojan-JP-... #8",
-      "server": "amazed-mako.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "amazed-mako.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇯🇵[www.v2nodes.com] trojan-JP-... #13",
-      "server": "accurate-frog.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "accurate-frog.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1746322865",
-      "server": "18.183.212.83",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "normal-macaque.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1666452611",
-      "server": "13.231.247.130",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "concrete-aardvark.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1655392859",
-      "server": "assuring-skink.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "assuring-skink.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1645398595",
-      "server": "organic-caribou.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "organic-caribou.rooster465.autos"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1003515436",
-      "server": "172.67.156.147",
-      "server_port": 443,
-      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "tls": {
-        "enabled": true,
-        "server_name": "jp3.yohototo.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tyxyws",
-        "headers": {
-          "Host": "jp3.yohototo.top"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇯🇵[www.v2nodes.com] trojan-JP-... #4",
-      "server": "stable-python.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "stable-python.rooster465.autos"
-      }
-    },
-    {
       "type": "trojan",
       "tag": "trojan-1703768220",
       "server": "winning-marten.rooster465.autos",
@@ -134,160 +14,72 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1302924858",
-      "server": "18.183.215.124",
-      "server_port": 28573,
-      "uuid": "871bfce7-8440-4394-8d82-56b51f20fdad",
+      "tag": "vless-1656489962",
+      "server": "jpga01.jumpernode.site",
+      "server_port": 443,
+      "uuid": "05453546-201f-4e8d-97ae-fd70da0e951f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.sony.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg",
-          "short_id": "03653bc03be10c97"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1750682008",
-      "server": "142.91.108.25",
-      "server_port": 443,
-      "uuid": "ee18d188-14cc-417e-beb1-70e4add6d023",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "jp3.nztvpn.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM",
-          "short_id": "ea36c03d86f91287"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1470835078",
-      "server": "open.2ml.cc.cd",
-      "server_port": 5443,
-      "password": "my_super_password_123",
-      "tls": {
-        "enabled": true,
-        "server_name": "open.2ml.cc.cd",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-1093247054",
-      "server": "138.3.208.26",
-      "server_port": 50160,
-      "password": "184cdec28da5a09450803c8debcd2cc9",
-      "tls": {
-        "enabled": true,
-        "server_name": "138.3.208.26",
-        "insecure": true
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1755588922",
-      "server": "43.206.225.188",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "warm-krill.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1743792178",
-      "server": "optimal-penguin.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "optimal-penguin.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1652072063",
-      "server": "43.207.198.39",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "fancy-javelin.rooster465.autos"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-26652141",
-      "server": "3.114.220.22",
-      "server_port": 18007,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "amzn.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
+          "public_key": "AgTktefiMM58y7f-KFgEtmVti_YJbd0GPSkxNeJ0RH4",
+          "short_id": "c8e49965"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "trojan-1761419993",
-      "server": "allowed-poodle.rooster465.autos",
+      "tag": "trojan-1644712792",
+      "server": "assuring-skink.rooster465.autos",
       "server_port": 443,
       "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "allowed-poodle.rooster465.autos"
+        "server_name": "assuring-skink.rooster465.autos"
       }
     },
     {
       "type": "trojan",
-      "tag": "trojan-1698503403",
-      "server": "54.238.153.132",
+      "tag": "trojan-1740066471",
+      "server": "stable-python.rooster465.autos",
       "server_port": 443,
       "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "obliging-louse.rooster465.autos"
+        "server_name": "stable-python.rooster465.autos"
       }
     },
     {
       "type": "trojan",
-      "tag": "trojan-1785653479",
-      "server": "45.76.218.34",
-      "server_port": 32676,
-      "password": "7076b233-c844-4bb0-a7e1-cf8f1fa824e9",
+      "tag": "trojan-1749759390",
+      "server": "live-stallion.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "lazeno.vip"
+        "server_name": "live-stallion.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1643587519",
+      "server": "integral-rodent.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "integral-rodent.rooster465.autos"
       }
     },
     {
       "type": "vless",
-      "tag": "vless-470978003",
+      "tag": "vless-742657273",
       "server": "3.114.220.22",
       "server_port": 19645,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -297,13 +89,125 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
           "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
           "short_id": "48050fab"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1495885491",
+      "server": "open.2ml.cc.cd",
+      "server_port": 5443,
+      "password": "my_super_password_123",
+      "tls": {
+        "enabled": true,
+        "server_name": "127.0.0.1",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1682385957",
+      "server": "54.249.55.154",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "prime-corgi.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1643520540",
+      "server": "fancy-javelin.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "fancy-javelin.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1742696004",
+      "server": "legible-ram.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "legible-ram.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1738797245",
+      "server": "equipped-stingray.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "equipped-stingray.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1687384971",
+      "server": "54.250.237.143",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "accurate-frog.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1772537083",
+      "server": "evident-ant.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "evident-ant.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1783530226",
+      "server": "3.112.29.244",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "evident-ant.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵[www.v2nodes.com] trojan-JP-... #2",
+      "server": "allowed-poodle.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "allowed-poodle.rooster465.autos"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-1709198732",
+      "server": "138.2.21.246",
+      "server_port": 5443,
+      "password": "my_super_password_123",
+      "tls": {
+        "enabled": true,
+        "server_name": "138.2.21.246",
+        "insecure": true
       }
     },
     {
@@ -329,121 +233,91 @@
     },
     {
       "type": "hysteria2",
-      "tag": "hysteria2-1601948357",
-      "server": "open.2ml.cc.cd",
+      "tag": "hysteria2-1671852500",
+      "server": "138.2.21.246",
       "server_port": 5443,
       "password": "my_super_password_123",
       "tls": {
         "enabled": true,
-        "server_name": "off",
+        "server_name": "open.2ml.cc.cd",
         "insecure": true
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-721522923",
-      "server": "3.114.220.22",
-      "server_port": 19645,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🏴‍☠️ NA-162.159.254.3 443",
-      "server": "162.159.254.3",
+      "type": "trojan",
+      "tag": "trojan-1768942603",
+      "server": "allowed-poodle.rooster465.autos",
       "server_port": 443,
-      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "jp3.yohototo.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tyxyws",
-        "headers": {
-          "Host": "jp3.yohototo.top"
-        }
+        "server_name": "allowed-poodle.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1696475237",
+      "server": "54.249.55.154",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "prime-corgi.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-1661189388",
+      "server": "prime-corgi.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "prime-corgi.rooster465.autos"
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1048993114",
-      "server": "13.231.19.51",
-      "server_port": 11690,
-      "uuid": "e2b8b217-cffb-4d66-9b8b-eca6e4334032",
+      "tag": "vless-1344232343",
+      "server": "154.31.114.248",
+      "server_port": 50159,
+      "uuid": "d56624b2-35bb-468c-9b2a-e0b0df7230c1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.tesla.com",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg",
-          "short_id": "034885e346fd30"
+          "public_key": "j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA",
+          "short_id": "091e1c5db8451757"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "trojan-1647915030",
-      "server": "organic-caribou.rooster465.autos",
+      "tag": "trojan-1720683547",
+      "server": "concrete-aardvark.rooster465.autos",
       "server_port": 443,
       "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "organic-caribou.rooster465.autos"
+        "server_name": "concrete-aardvark.rooster465.autos"
       }
     },
     {
-      "type": "vless",
-      "tag": "vless-1291665423",
-      "server": "18.183.215.124",
-      "server_port": 28573,
-      "uuid": "871bfce7-8440-4394-8d82-56b51f20fdad",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.sony.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg",
-          "short_id": "03653bc03be10c97"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1666094665",
-      "server": "52.192.45.137",
+      "type": "hysteria2",
+      "tag": "hysteria2-1775679046",
+      "server": "vp3.yysyy.online",
       "server_port": 443,
-      "password": "UX82473651",
+      "password": "96ab5cd282733fd4c312a61f972f330a",
       "tls": {
         "enabled": true,
-        "server_name": "promoted-rattler.rooster465.autos"
+        "server_name": "vp3.yysyy.online",
+        "insecure": false
       }
     },
     {
