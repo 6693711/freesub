@@ -2,49 +2,8 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🔒 VL-WS-TLS 🇩🇪 DE-178.104.248.34 2087",
-      "server": "178.104.248.34",
-      "server_port": 2087,
-      "uuid": "a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d",
-      "tls": {
-        "enabled": true,
-        "server_name": "tuyiuoyuthgfdbf.localip.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/hokm",
-        "headers": {
-          "Host": "tuyiuoyuthgfdbf.localip.ir"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "shadowsocks-696780676",
-      "server": "2.58.81.221",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "kKEd0rBrd56Furjz"
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-1577674233",
-      "server": "actual-squid.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "actual-squid.rooster465.autos"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-11078",
+      "tag": "🏳️ ShatakVPN 525003",
       "server": "185.226.172.8",
       "server_port": 8008,
       "method": "aes-256-gcm",
@@ -52,35 +11,67 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1768268413",
-      "server": "defrnode.xyy123.bid",
+      "tag": "vless-1748616579",
+      "server": "178.17.57.33",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-89464982",
+      "server": "130.12.242.106",
       "server_port": 443,
-      "uuid": "8af93649-403b-46d8-9966-923d4c58402c",
+      "uuid": "bc058e69-0444-4c7b-98da-bd67f0b143da",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "p-y3-www-amazon-com-kalias.amazon.com",
+        "server_name": "deepl.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE",
-          "short_id": "0fa4a0e2493392"
+          "public_key": "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8",
+          "short_id": "15affa0af66dfc79"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "trojan-1696475229",
-      "server": "meet-goshawk.rooster465.autos",
+      "tag": "🔒 TR-TCP-TLS 🇩🇪 DE-63.178.198.94 443",
+      "server": "63.178.198.94",
       "server_port": 443,
       "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "meet-goshawk.rooster465.autos"
+        "server_name": "pleased-albacore.rooster465.autos"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 ShatakVPN 965136",
+      "server": "51.195.126.38",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2YdE4lFOid5a"
     },
     {
       "type": "direct",

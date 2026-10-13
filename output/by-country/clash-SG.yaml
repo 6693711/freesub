@@ -3,82 +3,42 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: trojan-1771819404
-  password: UX82473651
+- client-fingerprint: chrome
+  name: vless-1724815841
+  network: ws
   port: 443
-  server: 54.151.181.75
-  sni: moral-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: vmess-655845745
-  port: 18000
-  server: 149.88.23.207
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: trojan-1696475232
-  password: UX82473651
-  port: 443
-  server: inviting-ferret.rooster465.autos
-  sni: inviting-ferret.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1019502169
-  port: 12512
-  reality-opts:
-    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
-    short-id: e692a8250d2e2fd0
-  server: 46.137.202.178
-  servername: www.intel.com
+  server: free.nadun.store
+  servername: free.nadun.store
   tls: true
   type: vless
   udp: true
-  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
-- name: trojan-1766052357
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    headers: {}
+    path: /
+- name: trojan-1771819399
   password: UX82473651
   port: 443
   server: 3.1.252.137
   sni: brave-tomcat.rooster465.autos
   type: trojan
   udp: true
-- client-fingerprint: firefox
-  name: vless-1327864776
-  port: 2053
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-- name: 🔒 TR-TCP-TLS 🇸🇬 SG-56.10.9.77 443
-  password: UX82473651
-  port: 443
-  server: 56.10.9.77
-  sni: inviting-ferret.rooster465.autos
-  type: trojan
-  udp: true
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-81049727
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.0.111.82
-  servername: www.apple.com
+  name: vless-1774638893
+  network: ws
+  port: 443
+  server: free.nadun.store
+  servername: free.nadun.store
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: safari
-  name: vless-1791984389
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    headers:
+      Host: free.nadun.store
+    path: /
+- client-fingerprint: chrome
+  name: vless-1752686950
   port: 443
   reality-opts:
     public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
@@ -89,31 +49,9 @@ proxies:
   type: vless
   udp: true
   uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-- alterId: 0
-  cipher: auto
-  name: vmess-1075322096
-  port: 18000
-  server: ww11.levikogjgfdd.ir
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- cipher: rc4-md5
-  name: shadowsocks-125384
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 128.199.172.224
-  type: ss
-  udp: true
-- name: trojan-1788010897
-  password: UX82473651
-  port: 443
-  server: 47.131.250.125
-  sni: simple-molly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: safari
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: vless-1274597140
+  name: vless-1302924882
   port: 24146
   reality-opts:
     public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
@@ -124,38 +62,56 @@ proxies:
   type: vless
   udp: true
   uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  port: 16263
-  server: 47.237.74.17
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1015042547
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  server: 146.235.16.130
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
   type: vless
   udp: true
-  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
-- alterId: 0
-  cipher: auto
-  name: vmess-1575902260
-  port: 18000
-  server: 149.88.23.202
-  type: vmess
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-868570844
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  server: sg2-8sb.6121999.dpdns.org
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 806660
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  server: 146.235.16.130
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
 proxy-groups:
 - name: PROXY
   proxies:
-  - trojan-1771819404
-  - vmess-655845745
-  - trojan-1696475232
-  - vless-1019502169
-  - trojan-1766052357
-  - vless-1327864776
-  - 🔒 TR-TCP-TLS 🇸🇬 SG-56.10.9.77 443
-  - vless-81049727
-  - vless-1791984389
-  - vmess-1075322096
-  - shadowsocks-125384
-  - trojan-1788010897
-  - vless-1274597140
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  - vmess-1575902260
+  - vless-1724815841
+  - trojan-1771819399
+  - vless-1774638893
+  - vless-1752686950
+  - vless-1302924882
+  - vless-1015042547
+  - vless-868570844
+  - 🏳️ ShatakVPN 806660
   type: select
 rules:
 - MATCH,PROXY
