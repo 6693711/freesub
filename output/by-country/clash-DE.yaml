@@ -4,37 +4,10 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  name: 🔒 VL-WS-TLS 🇩🇪 DE-94.103.168.133 2087
+  name: 🔒 VL-WS-TLS 🇩🇪 DE-178.104.248.34 2087
   network: ws
   port: 2087
-  server: 94.103.168.133
-  servername: fert6.localip.ir
-  tls: true
-  type: vless
-  udp: true
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
-  ws-opts:
-    headers:
-      Host: fert6.localip.ir
-    path: /hokm
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 94ms
-  port: 443
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  server: 82.39.171.12
-  servername: yahoo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: chrome
-  name: 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 273ms
-  network: ws
-  port: 2087
-  server: tuyiuoyuthgfdbf.localip.ir
+  server: 178.104.248.34
   servername: tuyiuoyuthgfdbf.localip.ir
   tls: true
   type: vless
@@ -44,12 +17,56 @@ proxies:
     headers:
       Host: tuyiuoyuthgfdbf.localip.ir
     path: /hokm
+- cipher: aes-256-gcm
+  name: shadowsocks-696780676
+  password: kKEd0rBrd56Furjz
+  port: 443
+  server: 2.58.81.221
+  type: ss
+  udp: true
+- name: trojan-1577674233
+  password: UX82473651
+  port: 443
+  server: actual-squid.rooster465.autos
+  sni: actual-squid.rooster465.autos
+  type: trojan
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-11078
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1768268413
+  port: 443
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 0fa4a0e2493392
+  server: defrnode.xyy123.bid
+  servername: p-y3-www-amazon-com-kalias.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+- name: trojan-1696475229
+  password: UX82473651
+  port: 443
+  server: meet-goshawk.rooster465.autos
+  sni: meet-goshawk.rooster465.autos
+  type: trojan
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-WS-TLS 🇩🇪 DE-94.103.168.133 2087
-  - 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 94ms
-  - 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 273ms
+  - 🔒 VL-WS-TLS 🇩🇪 DE-178.104.248.34 2087
+  - shadowsocks-696780676
+  - trojan-1577674233
+  - shadowsocks-11078
+  - vless-1768268413
+  - trojan-1696475229
   type: select
 rules:
 - MATCH,PROXY

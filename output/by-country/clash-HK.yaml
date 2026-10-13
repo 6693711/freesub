@@ -3,20 +3,6 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-721489367
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: hysteria2-920243840
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2üá
-  type: hysteria2
 - name: hysteria2-1420323645
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -24,12 +10,31 @@ proxies:
   skip-cert-verify: true
   sni: https%3a%2f%2ft.me%2fwangcai2%d1%80%d2%b9%d2%af%d1%80%d2%b9%d2%af
   type: hysteria2
+- client-fingerprint: chrome
+  name: vless-1759492444
+  port: 443
+  reality-opts:
+    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
+    short-id: 56d4e7ae4f86fa39
+  server: 34.92.19.135
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
+- name: hysteria2-483633864
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2рҹүёрҹүі
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-721489367
-  - hysteria2-920243840
   - hysteria2-1420323645
+  - vless-1759492444
+  - hysteria2-483633864
   type: select
 rules:
 - MATCH,PROXY
