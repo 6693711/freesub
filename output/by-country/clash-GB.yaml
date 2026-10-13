@@ -1,0 +1,23 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1803378709
+  port: 443
+  server: laga20.api3-max.ru
+  servername: laga20.api3-max.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1803378709
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

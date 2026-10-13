@@ -3,35 +3,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
-  name: vless-1793446497
-  port: 443
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1797176974
+  port: 32134
   reality-opts:
-    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
-    short-id: 56d4e7ae4f86fa39
-  server: 34.92.19.135
-  servername: www.cloudflare.com
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: 6c6c7c97
+  server: 3696b38bsg.murphyweb.sbs
+  servername: buylite.music.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
-- name: hysteria2-468898830
+  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
+- name: hysteria2-721489368
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.174
   skip-cert-verify: true
-  sni: 202.146.222.174
+  sni: t.me
   type: hysteria2
-- name: hysteria2-1509475552
+- name: hysteria2-1532454246
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 202.146.222.29
   skip-cert-verify: true
-  sni: https://t.me/wangcai2üáüá
+  sni: https://t.me/wangcai2����
   type: hysteria2
-- client-fingerprint: chrome
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1802375222
+  name: vless-1807149356
   port: 39485
   reality-opts:
     public-key: pzmFiyOtVaKJpJlXYC_hJcDw0hiPvPZ661uZn4NO0Xs
@@ -42,26 +43,13 @@ proxies:
   type: vless
   udp: true
   uuid: 25b3faeb-89b0-4dff-b0a3-0e70997dc962
-- client-fingerprint: edge
-  name: vless-1772308879
-  port: 443
-  reality-opts:
-    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
-    short-id: 56d4e7ae4f86fa39
-  server: 34.92.19.135
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1793446497
-  - hysteria2-468898830
-  - hysteria2-1509475552
-  - vless-1802375222
-  - vless-1772308879
+  - vless-1797176974
+  - hysteria2-721489368
+  - hysteria2-1532454246
+  - vless-1807149356
   type: select
 rules:
 - MATCH,PROXY

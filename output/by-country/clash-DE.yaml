@@ -3,63 +3,71 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🏳️ ShatakVPN 525003
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
+- client-fingerprint: chrome
+  name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 528ms
+  network: ws
+  port: 2087
+  server: ops4asfseretuiyk.localip.ir
+  servername: ops4asfseretuiyk.localip.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  ws-opts:
+    headers:
+      Host: ops4asfseretuiyk.localip.ir
+    path: /hokm
+- cipher: chacha20-ietf-poly1305
+  name: 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 94ms
+  password: PWpjPo3tqhPN4yRZ
+  port: 20001
+  server: 8.209.74.72
   type: ss
   udp: true
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: GunService
-  name: vless-1748616579
-  network: grpc
-  port: 8444
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-    short-id: 457fab2ac885dbe0
-  server: 178.17.57.33
-  servername: github.com
-  tls: true
-  type: vless
+- alterId: 0
+  cipher: auto
+  name: vmess-1783786209
+  port: 22266
+  server: 31.76.11.83
+  type: vmess
   udp: true
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-89464982
-  port: 443
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  server: 130.12.242.106
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-- name: 🔒 TR-TCP-TLS 🇩🇪 DE-63.178.198.94 443
-  password: UX82473651
-  port: 443
-  server: 63.178.198.94
-  sni: pleased-albacore.rooster465.autos
-  type: trojan
-  udp: true
+  uuid: 2d8f57bd-12b5-41ad-a806-6501753c264c
 - cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 ShatakVPN 965136
+  name: shadowsocks-415241977
   password: 2YdE4lFOid5a
   port: 8388
   server: 51.195.126.38
   type: ss
   udp: true
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1669904596
+  port: 443
+  reality-opts:
+    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
+    short-id: e696e744
+  server: 2.27.69.128
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+- cipher: chacha20-ietf-poly1305
+  name: 🆔soskeynet 🔒 SS-TCP-TLS 🇩🇪 DE 94ms
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 525003
-  - vless-1748616579
-  - vless-89464982
-  - 🔒 TR-TCP-TLS 🇩🇪 DE-63.178.198.94 443
-  - 🇩🇪 ShatakVPN 965136
+  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 528ms
+  - 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 94ms
+  - vmess-1783786209
+  - shadowsocks-415241977
+  - vless-1669904596
+  - 🆔soskeynet 🔒 SS-TCP-TLS 🇩🇪 DE 94ms
   type: select
 rules:
 - MATCH,PROXY

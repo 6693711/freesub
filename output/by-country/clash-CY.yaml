@@ -3,17 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: 2022-blake3-aes-256-gcm
-  name: shadowsocks-1803081582
-  password: f2Nq5YLnyclPaWR8my7/Vdd3ZX8URncXZNly5+HcUSs=:dQ6WYcPpGX5xIxUVPAR8w1A9eY6kEVoKKW3HleJ6o8Y=
-  port: 8086
-  server: frr.drwrdoh.org
-  type: ss
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: vless-1519332968
+  port: 40443
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
+  server: 5.253.28.224
+  servername: deepl.com
+  tls: true
+  type: vless
   udp: true
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1803081582
+  - vless-1519332968
   type: select
 rules:
 - MATCH,PROXY
