@@ -3,21 +3,38 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🏳️ ShatakVPN 278630",
-      "server": "188.225.38.216",
+      "tag": "vless-281649961",
+      "server": "95.85.224.51",
       "server_port": 443,
-      "uuid": "30292475-4666-4c26-bcb2-338a0919958b",
+      "uuid": "342ab7e4-5a89-0001-8809-304120d4aa83",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lalibobi.online",
+        "server_name": "max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc",
+          "short_id": "a696de84963656de"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "lalibobi.orbit.v3.Connect"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 234463",
+      "server": "94.183.170.135",
+      "server_port": 8443,
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "estproxy4.lockdwn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {

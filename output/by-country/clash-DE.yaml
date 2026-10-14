@@ -3,55 +3,19 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: random
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | DEU
-  port: 1984
-  reality-opts:
-    public-key: ikKnBJfcuPy1U0O3Cb71zv_G1liM5QcAYhR10A0Ech0
-    short-id: 0f00666a
-  server: 177.1.187.139
-  servername: ruori.ai
-  tls: true
-  type: vless
-  udp: true
-  uuid: d9eb02da-a469-44a7-a393-ba1c5fbbc8c4
-- client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 569962
-  network: ws
-  port: 2087
-  server: 94.103.168.133
-  servername: fert6.localip.ir
-  tls: true
-  type: vless
-  udp: true
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
-  ws-opts:
-    headers:
-      Host: fert6.localip.ir
-    path: /hokm
-- alterId: 0
-  cipher: auto
-  name: 🆔v2ray1_ng 🔒 VM-TCP- ❔ XX 165ms
-  port: 11358
-  server: 188.121.120.86
-  type: vmess
-  udp: true
-  uuid: 874a6b6d-d569-4b64-b9a6-32d594e61325
-- client-fingerprint: random
-  grpc-opts:
-    grpc-service-name: de-grpc
-  name: vless-1806084672
-  network: grpc
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 99ms
   port: 443
   reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  server: de-1-1.unturned-rust-dead.lol
-  servername: de-1-1.unturned-rust-dead.lol
+    public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
+    short-id: 296f27de82dad7ff
+  server: 5.252.179.15
+  servername: www.bing.com
   tls: true
   type: vless
   udp: true
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  uuid: 0ab273e4-cea6-41d0-bbab-41071d2fc455
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: GunService
@@ -67,14 +31,34 @@ proxies:
   type: vless
   udp: true
   uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+- client-fingerprint: chrome
+  name: 🔒 VL-WS-TLS 🇩🇪 DE-46.225.46.136 2087
+  network: ws
+  port: 2087
+  server: 46.225.46.136
+  servername: hoert1rert.localip.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  ws-opts:
+    headers:
+      Host: hoert1rert.localip.ir
+    path: /hokm
+- cipher: aes-256-gcm
+  name: 🏳️ ShatakVPN 947171
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 213.202.208.199
+  type: ss
+  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🇩🇪 德国 | DEU
-  - 🏳️ ShatakVPN 569962
-  - 🆔v2ray1_ng 🔒 VM-TCP- ❔ XX 165ms
-  - vless-1806084672
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 99ms
   - vless-1741441896
+  - 🔒 VL-WS-TLS 🇩🇪 DE-46.225.46.136 2087
+  - 🏳️ ShatakVPN 947171
   type: select
 rules:
 - MATCH,PROXY

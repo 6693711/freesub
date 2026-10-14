@@ -1,0 +1,56 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: astracat
+  name: 🏳️ ShatakVPN 237449
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+    short-id: 6dbf4931096f9890
+  server: 31.59.210.37
+  servername: www.yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+- name: vless-274599317
+  network: ws
+  port: 22573
+  server: uae.unixzone.us
+  type: vless
+  udp: true
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  ws-opts:
+    headers:
+      Host: uae.unixzone.us
+    path: /
+- client-fingerprint: ios
+  grpc-opts:
+    grpc-service-name: astracat
+  name: vless-1781468094
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA
+    short-id: 7ec4374ffc6308fd
+  server: 31.59.210.32
+  servername: www.yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 237449
+  - vless-274599317
+  - vless-1781468094
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -3,22 +3,33 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: lalibobi.orbit.v3.Connect
-  name: 🏳️ ShatakVPN 278630
-  network: grpc
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-281649961
   port: 443
-  server: 188.225.38.216
-  servername: lalibobi.online
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  server: 95.85.224.51
+  servername: max.ru
   tls: true
   type: vless
   udp: true
-  uuid: 30292475-4666-4c26-bcb2-338a0919958b
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+- client-fingerprint: chrome
+  name: 🏳️ ShatakVPN 234463
+  port: 8443
+  server: 94.183.170.135
+  servername: estproxy4.lockdwn.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 278630
+  - vless-281649961
+  - 🏳️ ShatakVPN 234463
   type: select
 rules:
 - MATCH,PROXY
