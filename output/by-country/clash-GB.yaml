@@ -3,20 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1803378709
-  port: 443
-  server: laga20.api3-max.ru
-  servername: laga20.api3-max.ru
-  tls: true
-  type: vless
+- cipher: rc4-md5
+  name: shadowsocks-27285
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.18
+  type: ss
   udp: true
-  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1803378709
+  - shadowsocks-27285
   type: select
 rules:
 - MATCH,PROXY

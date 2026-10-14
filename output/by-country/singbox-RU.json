@@ -2,24 +2,15 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-1797358077",
-      "server": "193.233.202.250",
-      "server_port": 9443,
-      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "hysteria2-1796505847",
+      "server": "194.87.118.184",
+      "server_port": 2053,
+      "password": "7ab3c77e-8fcc-4848-918f-cae3d4eac794",
       "tls": {
         "enabled": true,
-        "server_name": "usa.edgeses.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
-          "short_id": "649ab61e575fdbc9"
-        }
+        "server_name": "194.87.118.184",
+        "insecure": true
       }
     },
     {

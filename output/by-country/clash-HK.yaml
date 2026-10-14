@@ -3,26 +3,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- name: hysteria2-1532454244
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2��
+  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1797176974
-  port: 32134
+  name: vless-1735041906
+  port: 443
   reality-opts:
-    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
-    short-id: 6c6c7c97
-  server: 3696b38bsg.murphyweb.sbs
-  servername: buylite.music.apple.com
+    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
+    short-id: 09353d6dc5b789
+  server: 82.29.36.250
+  servername: aws.amazon.com
   tls: true
   type: vless
   udp: true
-  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
-- name: hysteria2-721489368
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
+  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
 - name: hysteria2-1532454246
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -30,6 +30,40 @@ proxies:
   skip-cert-verify: true
   sni: https://t.me/wangcai2����
   type: hysteria2
+- name: hysteria2-1577670529
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: httpst.mewangcai2
+  type: hysteria2
+- name: hysteria2-1589277557
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2ⁿß
+  type: hysteria2
+- name: hysteria2-656706481
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
+  type: hysteria2
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1804392879
+  port: 39485
+  reality-opts:
+    public-key: pzmFiyOtVaKJpJlXYC_hJcDw0hiPvPZ661uZn4NO0Xs
+    short-id: b9
+  server: 103.193.173.51
+  servername: www.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 25b3faeb-89b0-4dff-b0a3-0e70997dc962
 - client-fingerprint: random
   flow: xtls-rprx-vision
   name: vless-1807149356
@@ -46,9 +80,13 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1797176974
-  - hysteria2-721489368
+  - hysteria2-1532454244
+  - vless-1735041906
   - hysteria2-1532454246
+  - hysteria2-1577670529
+  - hysteria2-1589277557
+  - hysteria2-656706481
+  - vless-1804392879
   - vless-1807149356
   type: select
 rules:

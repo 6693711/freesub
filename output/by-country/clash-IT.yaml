@@ -3,35 +3,16 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: vless-650644312
-  port: 2053
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-    short-id: 5b8a942318178e7b
-  server: 57.131.38.163
-  servername: www.apple.com
-  tls: true
+- name: vless-1808254622
+  port: 10086
+  server: 204.216.216.23
   type: vless
   udp: true
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
-- client-fingerprint: chrome
-  name: vless-1047808927
-  port: 2053
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-    short-id: 5b8a942318178e7b
-  server: 57.131.38.163
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-650644312
-  - vless-1047808927
+  - vless-1808254622
   type: select
 rules:
 - MATCH,PROXY

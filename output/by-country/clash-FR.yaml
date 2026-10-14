@@ -3,33 +3,55 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc-common3
+  name: vless-1403698678
+  network: grpc
+  port: 35108
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  server: 152.228.139.33
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1714665970
-  port: 443
-  server: 51.255.166.202
-  servername: e3k67dwms3-51255166202-direct.tavafog.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 593bf46b-8316-5050-9357-d8a41e4db78b
-- client-fingerprint: chrome
-  name: vless-1390077075
-  port: 2053
+  name: 🏳️ ShatakVPN 141246
+  port: 23576
   reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-    short-id: 50ba05992b05c1c3
-  server: 54.37.136.194
-  servername: www.cloudflare.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 62.210.91.10
+  servername: fuck.rkn
   tls: true
   type: vless
   udp: true
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc_common3
+  name: vless-1403698672
+  network: grpc
+  port: 51671
+  reality-opts:
+    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
+    short-id: 2fed44d8c59f7e71
+  server: 152.228.139.33
+  servername: www.sony.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1714665970
-  - vless-1390077075
+  - vless-1403698678
+  - 🏳️ ShatakVPN 141246
+  - vless-1403698672
   type: select
 rules:
 - MATCH,PROXY

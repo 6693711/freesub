@@ -3,9 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: safari
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1306367623
+  name: vless-1355866272
   port: 28573
   reality-opts:
     public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
@@ -16,25 +16,30 @@ proxies:
   type: vless
   udp: true
   uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- name: 🔒 TR-TCP-TLS 🇯🇵 JP-176.34.5.100 443
-  password: UX82473651
+- name: hysteria2-1549697709
+  password: 96ab5cd282733fd4c312a61f972f330a
   port: 443
-  server: 176.34.5.100
-  sni: assuring-skink.rooster465.autos
-  type: trojan
+  server: vp3.yysyy.online
+  skip-cert-verify: false
+  sni: vp3.yysyy.online
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: vmess-1571547860
+  network: ws
+  port: 80
+  server: 168.138.43.75
+  type: vmess
   udp: true
-- name: trojan-1645360474
-  password: UX82473651
-  port: 443
-  server: assuring-skink.rooster465.autos
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-  udp: true
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers: {}
+    path: /cctv13.m3u8
 - client-fingerprint: chrome
-  name: vless-1532046243
+  name: vless-1532046242
   network: ws
   port: 443
-  server: 104.21.70.228
+  server: 104.16.10.22
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -44,7 +49,59 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- name: trojan-1651470514
+- name: vless-1038685483
+  port: 443
+  server: 137.220.221.179
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-479071124
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1087240770
+  port: 11690
+  reality-opts:
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  server: 13.231.19.51
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-803630131
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: trojan-1751007051
+  password: UX82473651
+  port: 443
+  server: normal-macaque.rooster465.autos
+  sni: normal-macaque.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🔒 TR-TCP-TLS 🇯🇵 JP-13.230.139.12 443
   password: UX82473651
   port: 443
   server: 13.230.139.12
@@ -53,7 +110,7 @@ proxies:
   udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1344232343
+  name: vless-1007755579
   port: 50159
   reality-opts:
     public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
@@ -64,177 +121,126 @@ proxies:
   type: vless
   udp: true
   uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- name: trojan-1651719647
+- name: trojan-1703768264
+  password: UX82473651
+  port: 443
+  server: musical-terrier.rooster465.autos
+  sni: musical-terrier.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1407179626
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: trojan-1645360475
+  password: UX82473651
+  port: 443
+  server: fancy-javelin.rooster465.autos
+  sni: fancy-javelin.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1643514780
+  password: UX82473651
+  port: 443
+  server: assuring-skink.rooster465.autos
+  sni: assuring-skink.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1781602546
+  port: 27916
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: 6772eb2b7a
+  server: 39.109.110.80
+  servername: cdn-dynmedia-1.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- name: trojan-1652072051
+  password: UX82473651
+  port: 443
+  server: 176.34.5.100
+  sni: assuring-skink.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🔒 TR-TCP-TLS 🇯🇵 JP-54.249.36.167 443
+  password: UX82473651
+  port: 443
+  server: 54.249.36.167
+  sni: comic-poodle.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1669884357
+  password: UX82473651
+  port: 443
+  server: winning-marten.rooster465.autos
+  sni: winning-marten.rooster465.autos
+  type: trojan
+  udp: true
+- name: trojan-1720682564
   password: UX82473651
   port: 443
   server: 43.207.198.39
   sni: fancy-javelin.rooster465.autos
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1806113962
-  port: 443
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-  server: 142.91.108.25
-  servername: jp3.nztvpn.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-- client-fingerprint: chrome
-  name: vless-1532046226
-  network: ws
-  port: 443
-  server: 104.18.153.10
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- name: trojan-1698581192
-  password: UX82473651
-  port: 443
-  server: 54.65.177.190
-  sni: winning-marten.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: vless-1532046180
-  network: ws
-  port: 443
-  server: 104.19.33.237
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-700888653
-  port: 10583
+  name: vless-1625564551
+  port: 443
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  server: t9.qifei.app
+  servername: www.amazon.com
   tls: true
   type: vless
   udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-10287041
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: trojan-1696475226
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+- name: trojan-1644712788
   password: UX82473651
   port: 443
-  server: obliging-louse.rooster465.autos
-  sni: obliging-louse.rooster465.autos
+  server: fancy-javelin.rooster465.autos
+  sni: fancy-javelin.rooster465.autos
   type: trojan
   udp: true
-- name: trojan-1761419993
-  password: UX82473651
-  port: 443
-  server: allowed-poodle.rooster465.autos
-  sni: allowed-poodle.rooster465.autos
-  type: trojan
-  udp: true
-- name: hysteria2-1087758493
-  password: 184cdec28da5a09450803c8debcd2cc9
-  port: 50160
-  server: 138.3.208.26
-  skip-cert-verify: true
-  sni: 138.3.208.26
-  type: hysteria2
-- name: trojan-1660914756
-  password: UX82473651
-  port: 443
-  server: brief-glider.rooster465.autos
-  sni: brief-glider.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-962693501
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-656230605
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1775806975
-  port: 443
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-  server: 142.91.108.25
-  servername: jp3.nztvpn.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1306367623
-  - 🔒 TR-TCP-TLS 🇯🇵 JP-176.34.5.100 443
-  - trojan-1645360474
-  - vless-1532046243
-  - trojan-1651470514
-  - vless-1344232343
-  - trojan-1651719647
-  - vless-1806113962
-  - vless-1532046226
-  - trojan-1698581192
-  - vless-1532046180
-  - vless-700888653
-  - vless-10287041
-  - trojan-1696475226
-  - trojan-1761419993
-  - hysteria2-1087758493
-  - trojan-1660914756
-  - vless-962693501
-  - vless-656230605
-  - vless-1775806975
+  - vless-1355866272
+  - hysteria2-1549697709
+  - vmess-1571547860
+  - vless-1532046242
+  - vless-1038685483
+  - vless-479071124
+  - vless-1087240770
+  - vless-803630131
+  - trojan-1751007051
+  - 🔒 TR-TCP-TLS 🇯🇵 JP-13.230.139.12 443
+  - vless-1007755579
+  - trojan-1703768264
+  - vless-1407179626
+  - trojan-1645360475
+  - trojan-1643514780
+  - vless-1781602546
+  - trojan-1652072051
+  - 🔒 TR-TCP-TLS 🇯🇵 JP-54.249.36.167 443
+  - trojan-1669884357
+  - trojan-1720682564
+  - vless-1625564551
+  - trojan-1644712788
   type: select
 rules:
 - MATCH,PROXY

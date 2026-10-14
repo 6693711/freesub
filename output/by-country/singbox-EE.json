@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 278630",
+      "server": "188.225.38.216",
+      "server_port": 443,
+      "uuid": "30292475-4666-4c26-bcb2-338a0919958b",
+      "tls": {
+        "enabled": true,
+        "server_name": "lalibobi.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "lalibobi.orbit.v3.Connect"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

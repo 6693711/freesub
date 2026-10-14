@@ -1,0 +1,25 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: edge
+  grpc-opts:
+    grpc-service-name: lalibobi.orbit.v3.Connect
+  name: 🏳️ ShatakVPN 278630
+  network: grpc
+  port: 443
+  server: 188.225.38.216
+  servername: lalibobi.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 30292475-4666-4c26-bcb2-338a0919958b
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🏳️ ShatakVPN 278630
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891
