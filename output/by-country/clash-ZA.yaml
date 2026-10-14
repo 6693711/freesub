@@ -3,17 +3,35 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-246
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
-  port: 16233
-  server: 102.133.165.160
-  type: ss
+- client-fingerprint: chrome
+  name: vless-1742628622
+  port: 443
+  reality-opts:
+    public-key: dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4
+    short-id: 5ced03e42cc31aab
+  server: 34.35.189.111
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
+  uuid: 4758aee6-6d1a-4306-b460-2398b5af4e35
+- client-fingerprint: qq
+  name: vless-1765172220
+  port: 443
+  reality-opts:
+    public-key: bSN0cv0VMxmYZsNsMkkLndOTHZu74C1htJ2M71QMaVE
+    short-id: 89b3a20484eb43ec
+  server: 34.35.186.228
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8d65c8a7-4876-4556-bb6a-feccfb46ee81
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-246
+  - vless-1742628622
+  - vless-1765172220
   type: select
 rules:
 - MATCH,PROXY

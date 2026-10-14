@@ -3,6 +3,26 @@
   "outbounds": [
     {
       "type": "vless",
+      "tag": "vless-1279636589",
+      "server": "46.250.250.149",
+      "server_port": 2053,
+      "uuid": "b4caaf57-ad77-4948-a6f5-51b3513799bf",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M",
+          "short_id": "9922313fffed1c63"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "vless-1279651618",
       "server": "46.250.240.80",
       "server_port": 2053,
@@ -20,14 +40,6 @@
           "short_id": "4cc9dc65f7770115"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-165",
-      "server": "146.70.61.37",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "direct",

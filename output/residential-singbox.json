@@ -2,6 +2,26 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "🇹🇼 🇨🇳 台湾 | TWN",
+      "server": "fujrdt.d6f54hd1j.cc",
+      "server_port": 443,
+      "uuid": "d877dc6f-7323-4b47-a7dd-14228cbae854",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "fujrdt.d6f54hd1j.cc"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "fujrdt.d6f54hd1j.cc"
+        }
+      }
+    },
+    {
       "type": "direct",
       "tag": "direct"
     },

@@ -3,23 +3,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1785701113",
-      "server": "50.7.87.122",
-      "server_port": 443,
-      "uuid": "9c104116-b231-4626-94cb-6d8fc4d2b000",
-      "flow": "xtls-rprx-vision",
+      "tag": "vless-1784851435",
+      "server": "147.45.60.160",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
       "tls": {
         "enabled": true,
-        "server_name": "edge-fr.extazy.net",
+        "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY",
-          "short_id": "ba4b2afa9e7193ea"
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
       }
     },
     {

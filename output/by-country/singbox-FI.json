@@ -2,8 +2,16 @@
   "version": 1,
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1653901314",
+      "server": "185.103.110.68",
+      "server_port": 18283,
+      "method": "aes-128-gcm",
+      "password": "f9300a9bf39ae0347c3a3bfbc4dd7754"
+    },
+    {
       "type": "vless",
-      "tag": "vless-1776546197",
+      "tag": "vless-1786599426",
       "server": "95.111.212.241",
       "server_port": 443,
       "uuid": "924fe46b-b6e0-479e-ae7f-a3661680e706",
@@ -24,30 +32,7 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1769017718",
-      "server": "109.172.54.135",
-      "server_port": 8444,
-      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1786599426",
+      "tag": "vless-1782791581",
       "server": "95.111.212.241",
       "server_port": 443,
       "uuid": "924fe46b-b6e0-479e-ae7f-a3661680e706",
