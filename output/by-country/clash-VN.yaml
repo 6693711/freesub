@@ -5,20 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1568568958
-  port: 29172
+  name: vless-1805250588
+  port: 51279
   reality-opts:
-    public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
-  server: 103.172.197.2
-  servername: aws.amazon.com
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+    short-id: bb82c8
+  server: 154.21.203.106
+  servername: www.tesla.com
   tls: true
   type: vless
   udp: true
-  uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1568568958
+  - vless-1805250588
   type: select
 rules:
 - MATCH,PROXY

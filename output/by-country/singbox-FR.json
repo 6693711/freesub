@@ -2,77 +2,38 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🆔v2ray1_ng 🔓 VM-WS-N/A 🇵🇱 PL 226ms",
-      "server": "54.37.131.126",
-      "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 343ms",
-      "server": "cf1.w3bschool.ir",
-      "server_port": 2083,
-      "uuid": "7684d613-0ae9-41d2-9a38-66752ae680b4",
+      "tag": "vless-1260285707",
+      "server": "54.37.136.194",
+      "server_port": 2053,
+      "uuid": "e8a432c8-5d84-49a5-b822-67ed761a58f9",
       "tls": {
         "enabled": true,
-        "server_name": "ch.topdigit.ir",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/path",
-        "headers": {
-          "Host": "ch.topdigit.ir"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 487965",
-      "server": "62.210.91.2",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
+          "public_key": "Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A",
+          "short_id": "50ba05992b05c1c3"
         }
       }
     },
     {
       "type": "vmess",
-      "tag": "🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 225ms",
-      "server": "54.37.131.126",
+      "tag": "🆔v2ray1_ng 🔓 VM-WS-N/A ❔ XX 183ms",
+      "server": "145.239.55.210",
       "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
+      "uuid": "067fcd63-b215-4abd-8529-ae929a9971a9",
       "security": "auto",
       "alter_id": 0,
       "transport": {
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+          "Host": "google.whatsapp.snapp.torob.basalam.fortresshost.ir."
         }
       }
     },
